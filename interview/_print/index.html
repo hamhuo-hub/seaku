@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60447&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:60447/interview/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:60447/interview/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/interview/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/interview/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>Interview | 海阔集</title>
 <meta name="description" content="集百川者, 成海阔">
-<meta property="og:url" content="http://localhost:60447/interview/">
+<meta property="og:url" content="http://localhost:1313/interview/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Interview">
   <meta property="og:description" content="集百川者, 成海阔">
@@ -588,7 +588,49 @@ wait 只能在同步代码块, 同步静态方法, 同步类中使用, 这是因
 唤醒方式不同
 sleep 后线程进入 TIMED_WAITING状态, 计时结束后自动唤醒
 wait 后线程进入 WAITING状态, 必须由其他线程调用notify/ notifyAll 方法唤醒</p>
-<p>ThreadLocal</p>
+<h3 id="你在工作中用到过-threadlocal-吗">你在工作中用到过 ThreadLocal 吗？<a class="td-heading-self-link" href="#%e4%bd%a0%e5%9c%a8%e5%b7%a5%e4%bd%9c%e4%b8%ad%e7%94%a8%e5%88%b0%e8%bf%87-threadlocal-%e5%90%97" aria-label="Heading self-link"></a></h3>
+<p>存储用户信息</p>
+<p>用户在请求头携带token, 控制层根据token解析出用户的基本信息</p>
+<p>如果在服务层需要调用用户信息, 就可以把信息存入 ThreadLocal 跨方法调用</p>
+<h3 id="threadlocal-怎么实现的呢">ThreadLocal 怎么实现的呢?<a class="td-heading-self-link" href="#threadlocal-%e6%80%8e%e4%b9%88%e5%ae%9e%e7%8e%b0%e7%9a%84%e5%91%a2" aria-label="Heading self-link"></a></h3>
+<p>//弱引用
+//ThreadLocal原理
+//内存泄露</p>
+<p><code>ThreadLocal</code> 本身不存储任何值, 只是作为一个映射, 来映射线程的局部变量</p>
+<p>其中的 set get 方法 是访问线程自己的 <code>ThreadLocalMap</code></p>
+<p>Map 内部维护了一个 Entry数组, 该数组继承了弱引用, 使得内存不足自动触发GC时, 会回收 ThreadLocal对象, 防止内存泄露</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">static</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">Entry</span> <span style="color:#e78284">extends</span> WeakReference<span style="color:#99d1db;font-weight:bold">&lt;</span>ThreadLocal<span style="color:#99d1db;font-weight:bold">&lt;?&gt;&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">/** The value associated with this ThreadLocal. */</span>
+</span></span><span style="display:flex;"><span>    Object value;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//节点类</span>
+</span></span><span style="display:flex;"><span>    Entry(ThreadLocal<span style="color:#99d1db;font-weight:bold">&lt;?&gt;</span> k, Object v) {
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//key赋值</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e78284">super</span>(k);
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//value赋值</span>
+</span></span><span style="display:flex;"><span>        value <span style="color:#99d1db;font-weight:bold">=</span> v;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="threadlocal的内存泄露">ThreadLocal的内存泄露<a class="td-heading-self-link" href="#threadlocal%e7%9a%84%e5%86%85%e5%ad%98%e6%b3%84%e9%9c%b2" aria-label="Heading self-link"></a></h4>
+<p>ThreadLocal 设计为弱引用使得内存不足而触发GC时会被回收
+但是当线程一直运行, 并且Entry.value 一直被强引用到某个对象就会造成无法回收, 使得内存泄露</p>
+<p>这就需要使用完ThreadLocal后, 在finally调用 remove() 释放内存空间</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ca9ee6">try</span> {
+</span></span><span style="display:flex;"><span>    threadLocal.<span style="color:#8caaee">set</span>(value);
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">// 执行业务操作</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#ca9ee6">finally</span> {
+</span></span><span style="display:flex;"><span>    threadLocal.<span style="color:#8caaee">remove</span>(); <span style="color:#737994;font-style:italic">// 确保能够执行清理</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="threadlocalmap-的源码看过吗"><code>ThreadLocalMap</code> 的源码看过吗？<a class="td-heading-self-link" href="#threadlocalmap-%e7%9a%84%e6%ba%90%e7%a0%81%e7%9c%8b%e8%bf%87%e5%90%97" aria-label="Heading self-link"></a></h3>
+<p>ThreadLocalMap 是 ThreadLocal的核心数据结构
+是键值对格式的, 关注两个问题</p>
+<ol>
+<li>元素数组</li>
+<li>散列方法
+map中维护了一个Entry[] 数组, key是每个线程的ThreadLocal对象, value就是对应的隔离变量</li>
+</ol>
+<p>为了保证entry[] 放入时散布均匀, 保证性能, Map使用哈希取余法, 取出threadlocal的哈希码, 和数组长度取余, 哈希码的生成使用黄金分割数, 每生成一个ThreadLocal对象, 就会使hash增加, 好处就是hash分布的均匀</p>
+<h4 id="java内存模型的理解">Java内存模型的理解<a class="td-heading-self-link" href="#java%e5%86%85%e5%ad%98%e6%a8%a1%e5%9e%8b%e7%9a%84%e7%90%86%e8%a7%a3" aria-label="Heading self-link"></a></h4>
 
 </div>
 

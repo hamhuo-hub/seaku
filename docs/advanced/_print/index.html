@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60447&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:60447/docs/advanced/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:60447/docs/advanced/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/docs/advanced/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/advanced/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,18 +21,20 @@
 
 <title>Java进阶能力 | 海阔集</title>
 <meta name="description" content="内容来源:
-沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 什么是中间件? 为什么要用?
+沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
+Redis 中间件 消息队列 什么是中间件? 为什么要用?
 维基百科这样说
 中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
 简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
 中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。
 几个容易混淆的概念
 二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分 业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。 总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件">
-<meta property="og:url" content="http://localhost:60447/docs/advanced/">
+<meta property="og:url" content="http://localhost:1313/docs/advanced/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Java进阶能力">
   <meta property="og:description" content="内容来源:
-沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 什么是中间件? 为什么要用?
+沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
+Redis 中间件 消息队列 什么是中间件? 为什么要用?
 维基百科这样说
 中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
 简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
@@ -44,20 +46,22 @@
 
   <meta itemprop="name" content="Java进阶能力">
   <meta itemprop="description" content="内容来源:
-沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 什么是中间件? 为什么要用?
+沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
+Redis 中间件 消息队列 什么是中间件? 为什么要用?
 维基百科这样说
 中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
 简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
 中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。
 几个容易混淆的概念
 二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分 业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。 总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件">
-  <meta itemprop="dateModified" content="2025-02-08T22:25:01+08:00">
-  <meta itemprop="wordCount" content="27">
-  <meta itemprop="keywords" content="消息队列">
+  <meta itemprop="dateModified" content="2025-02-11T00:25:32+08:00">
+  <meta itemprop="wordCount" content="36">
+  <meta itemprop="keywords" content="消息队列,Redis">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Java进阶能力">
   <meta name="twitter:description" content="内容来源:
-沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 什么是中间件? 为什么要用?
+沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
+Redis 中间件 消息队列 什么是中间件? 为什么要用?
 维基百科这样说
 中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
 简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
@@ -236,6 +240,17 @@ This is the multi-page printable view of this section.
 <li><a href="https://www.rabbitmq.com/tutorials">rabbitMQ</a></li>
 <li><a href="https://javaguide.cn/">JavaGuide</a></li>
 <li><a href="https://www.zhihu.com/question/19730582/answer/1663627873">知乎-阿里大淘宝</a></li>
+</ul>
+<p>Java进阶能力
+Java作为一门编程语言, 需要和其他组件一起完成某个项目
+一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码</p>
+<ul>
+<li>Redis</li>
+<li>中间件
+<ul>
+<li>消息队列</li>
+</ul>
+</li>
 </ul>
 <p>什么是中间件? 为什么要用?</p>
 <p>维基百科这样说</p>

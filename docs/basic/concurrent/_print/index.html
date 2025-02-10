@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=60447&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:60447/docs/basic/concurrent/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:60447/docs/basic/concurrent/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/docs/basic/concurrent/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/basic/concurrent/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -22,7 +22,7 @@
 <title>Java并发编程 | 海阔集</title>
 <meta name="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 JavaGuide CLH锁 - Quner技术沙龙 操作系统 - 西电出版">
-<meta property="og:url" content="http://localhost:60447/docs/basic/concurrent/">
+<meta property="og:url" content="http://localhost:1313/docs/basic/concurrent/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Java并发编程">
   <meta property="og:description" content="内容来源:
@@ -836,6 +836,82 @@ synchronized 的另外一个重要的作用，synchronized 可保证一个线程
 	<blockquote>
 <p>前置
 <a href="/docs/basic/concurrent/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">线程池</a></p></blockquote>
+<p>是 Java 中提供的一种用于实现线程局部变量的工具类。它允许每个线程都拥有自己的独立副本，从而实现线程隔离，用于解决多线程中共享对象的线程安全问题。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250210182243836.png" alt="image.png"></p>
+<p>使用:</p>
+<p>创建 ThreadLocal对象</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">//创建一个ThreadLocal变量</span>
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">static</span> ThreadLocal<span style="color:#99d1db;font-weight:bold">&lt;</span>String<span style="color:#99d1db;font-weight:bold">&gt;</span> localVariable <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> ThreadLocal<span style="color:#99d1db;font-weight:bold">&lt;&gt;</span>();
+</span></span></code></pre></div><p>设置值</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">//设置ThreadLocal变量的值 localVariable.set(&#34;0001&#34;);</span>
+</span></span></code></pre></div><p>获取值</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">//获取ThreadLocal变量的值 String value = localVariable.get();</span>
+</span></span></code></pre></div><p>优点</p>
+<ol>
+<li>
+<p>线程隔离
+实现了变量的独占, 使变量不需要同步处理</p>
+</li>
+<li>
+<p>数据传递方便
+ThreadLocal 常用于在跨方法、跨类时传递上下文数据（如用户信息等），而不需要在方法间传递参数。</p>
+</li>
+</ol>
+<h4 id="threadlocalmap"><code>ThreadLocalMap</code><a class="td-heading-self-link" href="#threadlocalmap" aria-label="Heading self-link"></a></h4>
+<p>ThreadLocalMap, 一个key-value数据形式结构，也是ThreadLocal的核心。</p>
+<p>Map内部维护了一个Entry数组, 真正的数据存储在 Entry中, map的key是每个线程中ThreadLocal对象的哈希, value是隔离变量</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 初始容量
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> <span style="color:#e78284">int</span> INITIAL_CAPACITY <span style="color:#99d1db;font-weight:bold">=</span> 16;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * ThreadLocalMap数据真正存储在table中
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> Entry<span style="color:#99d1db;font-weight:bold">[]</span> table;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * ThreadLocalMap条数
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">int</span> size <span style="color:#99d1db;font-weight:bold">=</span> 0;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 达到这个大小，则扩容
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">int</span> threshold; <span style="color:#737994;font-style:italic">// 默认为0</span>
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250210192010058.png" alt="image.png"></p>
+<p>为了保证Entry[] 数组散步均匀, 哈希算法如下</p>
+<p>把对应的 key 映射到 table 数组的相应下标，ThreadLocalMap 用的是哈希取余法，取出 key 的 threadLocalHashCode，然后和 table 数组长度减一&amp;运算（相当于取余）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> key.<span style="color:#8caaee">threadLocalHashCode</span> <span style="color:#99d1db;font-weight:bold">&amp;</span> (table.<span style="color:#8caaee">length</span> <span style="color:#99d1db;font-weight:bold">-</span> 1);
+</span></span></code></pre></div><p>这里的hashcode由魔术数生成
+每创建一个 ThreadLocal 对象，它就会新增<code>0x61c88647</code>，这个值很特殊，它是<strong>斐波那契数</strong> 也叫 <strong>黄金分割数</strong>。<code>hash</code>增量为 这个数字，带来的好处就是 <code>hash</code> <strong>分布非常均匀</strong>。</p>
+<h4 id="inheritablethreadlocal"><code>InheritableThreadLocal()</code><a class="td-heading-self-link" href="#inheritablethreadlocal" aria-label="Heading self-link"></a></h4>
+<p>父子线程是无法传输数据的, 但是通过InheritableThreadLocal实例就可以在子线程拿到值</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">InheritableThreadLocalTest</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) {
+</span></span><span style="display:flex;"><span>        <span style="color:#e78284">final</span> ThreadLocal threadLocal <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> InheritableThreadLocal();
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">// 主线程</span>
+</span></span><span style="display:flex;"><span>        threadLocal.<span style="color:#8caaee">set</span>(<span style="color:#a6d189">&#34;父线程&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//子线程</span>
+</span></span><span style="display:flex;"><span>        Thread t <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Thread() {
+</span></span><span style="display:flex;"><span>            <span style="color:#8caaee;font-weight:bold">@Override</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">run</span>() {
+</span></span><span style="display:flex;"><span>                <span style="color:#e78284">super</span>.<span style="color:#8caaee">run</span>();
+</span></span><span style="display:flex;"><span>                System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;子线程 ，&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> threadLocal.<span style="color:#8caaee">get</span>());
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>        t.<span style="color:#8caaee">start</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>原理:</p>
+<p>在Thread中有一个变量</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ThreadLocal.<span style="color:#8caaee">ThreadLocalMap</span> inheritableThreadLocals <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">null</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">if</span> (inheritThreadLocals <span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> parent.<span style="color:#8caaee">inheritableThreadLocals</span> <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">null</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">this</span>.<span style="color:#8caaee">inheritableThreadLocals</span> <span style="color:#99d1db;font-weight:bold">=</span>
+</span></span><span style="display:flex;"><span>        ThreadLocal.<span style="color:#8caaee">createInheritedMap</span>(parent.<span style="color:#8caaee">inheritableThreadLocals</span>);
+</span></span></code></pre></div><p>在 Thread.init 的时候，如果父线程的<code>inheritableThreadLocals</code>不为空，就把它赋给当前线程（子线程）的<code>inheritableThreadLocals</code> 。</p>
 
 </div>
 
@@ -1084,15 +1160,43 @@ JMM 决定了一个线程对共享变量的写入何时对另外一个线程可�
 	<h1 id="pg-351a895f640e6e5b71c131358ebdad6d">10 - 线程池</h1>
     <div class="lead">池化技术的核心思想就是实现资源的复用，避免资源的重复创建和销毁带来的性能开销。</div>
 	<h4 id="什么是线程池">什么是线程池<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="Heading self-link"></a></h4>
-<p>线程池(ThreadPool) 是一种基于池化思想管理线程的工具
-线程的生命周期大致如下</p>
+<p>线程池(ThreadPool) 是一种基于池化思想管理线程的工具</p>
+<p>线程池解决的问题是, 在任意时刻下, 确定系统应该投入多少资源, 解决多少任务</p>
+<p>不将线程统一管理可能会出现以下问题</p>
+<ol>
+<li>频繁申请/销毁资源和调度资源，将带来额外的消耗，可能会非常巨大。</li>
+<li>对资源无限申请缺少抑制手段，易引发系统资源耗尽的风险。</li>
+<li>系统无法合理管理内部的资源分布，会降低系统的稳定性。</li>
+</ol>
+<p>为解决资源分配这个问题，线程池采用了“池化”（Pooling）思想。池化，顾名思义，是为了最大化收益并最小化风险，而将资源统一在一起管理的一种思想。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250210102309459.png" alt="image.png"></p>
+<p>线程池内部维护了许多线程, 当有新任务时就会分配一个空闲线程执行
+当所有线程都有任务时, 新的任务要么放到阻塞队列里面要么增加线程</p>
+<h4 id="使用线程池">使用线程池<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="Heading self-link"></a></h4>
+<p>用法:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 创建固定大小的线程池:</span>
+</span></span><span style="display:flex;"><span>ExecutorService executor <span style="color:#99d1db;font-weight:bold">=</span> Executors.<span style="color:#8caaee">newFixedThreadPool</span>(3);
+</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 提交任务:</span>
+</span></span><span style="display:flex;"><span>executor.<span style="color:#8caaee">submit</span>(task1);
+</span></span><span style="display:flex;"><span>executor.<span style="color:#8caaee">submit</span>(task2);
+</span></span><span style="display:flex;"><span>executor.<span style="color:#8caaee">submit</span>(task3);
+</span></span><span style="display:flex;"><span>executor.<span style="color:#8caaee">submit</span>(task4);
+</span></span><span style="display:flex;"><span>executor.<span style="color:#8caaee">submit</span>(task5);
+</span></span></code></pre></div><p>上述代码创建了大小为3的线程池, 并提交了5个任务</p>
+<p><code>ExecutorService</code>该接口要求实现工厂方法, 返回如下类型的线程池</p>
 <ul>
-<li>创建</li>
-<li>调度</li>
-<li>销毁</li>
+<li>FixedThreadPool：线程数固定的线程池；</li>
+<li>CachedThreadPool：线程数根据任务动态调整的线程池；</li>
+<li>ScheduledThreadPool:  定时执行线程池</li>
+<li>SingleThreadExecutor：仅单线程执行的线程池。</li>
 </ul>
-<p>这些操作需要额外的开销(业务计算以外的开销),</p>
 <h4 id="线程池原理解析">线程池原理解析<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0%e5%8e%9f%e7%90%86%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
+<p>Java的线程池核心实现为 <code>ThreadPoolExecutor</code></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250210180713994.png" alt="image.png"></p>
+<p>顶级接口 <code>Excutor</code> 提供了一种思想, 将任务提交与任务执行解耦
+用户只需提供 <code>Runnable</code> 对像, 将任务提交到执行器中, 剩余的线程调配和任务执行由执行器完成</p>
+<p>ExecutorService接口增加了一些能力：
+（1）扩充执行任务的能力，补充可以为一个或一批异步任务生成Future的方法；（2）提供了管控线程池的方法，比如停止线程池的运行。</p>
 <p>线程池构造类 <code>ThreadPoolExecutor</code>
 通过传入参数实现线程池的构造
 如下是成员变量,
@@ -1441,9 +1545,13 @@ Quner技术沙龙
 </span></span><span style="display:flex;"><span>    V <span style="color:#8caaee">call</span>() <span style="color:#e78284">throws</span> Exception;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>可以看到 <code>call()</code> 方法返回值为泛型 V</p>
+<blockquote>
+<p>而 <code>Callable&lt;&gt;</code> 允许返回值的一个任务</p>
+<p><code>Runnable</code> 接口代表一个可以由线程执行的任务, 实现 <code>Runnable</code> 而不是 <code>callable</code> 主要是线程池的兼容性考虑</p></blockquote>
 <h4 id="future-异步计算结果接口"><code>Future</code> 异步计算结果接口<a class="td-heading-self-link" href="#future-%e5%bc%82%e6%ad%a5%e8%ae%a1%e7%ae%97%e7%bb%93%e6%9e%9c%e6%8e%a5%e5%8f%a3" aria-label="Heading self-link"></a></h4>
-<p><code>Future</code> 表示异步计算的结果，提供了用于检查计算是否完成、等待计算完成、以及检索计算结果的方法。
-<code>Future</code> 类存储可以异步执行的耗时任务结果, 提高执行效率, 这是 <code>Future</code> 设计模式</p>
+<p><code>Future</code> 表示异步计算的结果，提供了用于检查计算是否完成、等待计算完成、以及检索计算结果的方法。</p>
+<blockquote>
+<p><code>Future</code> 接口的设计目标是允许任务在一个线程中执行，并且可以返回执行结果或抛出异常</p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">Future</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">boolean</span> <span style="color:#8caaee">cancel</span>(<span style="color:#e78284">boolean</span> mayInterruptIfRunning);
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">boolean</span> <span style="color:#8caaee">isCancelled</span>();
@@ -1460,72 +1568,78 @@ Quner技术沙龙
 </ul>
 <blockquote>
 <p>注意, <code>get()</code> 方法会阻塞主进程, 一直阻塞到定时结束或者线程返回</p></blockquote>
+<blockquote>
+<p><code>Future</code> 也属于<a href="/docs/basic/concurrent/aqs/">同步器</a>的一种
+因为类内部定义了线程的控制方法, 同步线程之间的状态
+<code>Future</code> 的同步机制主要体现在它的 <code>get()</code> 方法：</p>
+<ul>
+<li>如果任务已完成，<code>get()</code> 立即返回结果。</li>
+<li>如果任务尚未完成，<code>get()</code> 会将调用线程挂起，直到任务完成并且结果可用，才会唤醒线程并返回结果。</li>
+</ul></blockquote>
 <p><code>isDone()</code>：判断任务是否完成
 <code>isCancelled()</code>：判断任务是否被取消
 <code>cancel(boolean mayInterruptIfRunning)</code>：尝试取消此任务的执行，如果任务已经完成、已经取消或由于其他原因无法取消，则此尝试将失败
 参数 <code>mayInterruptIfRunning</code> 表示是否允许取消正在执行却没有执行完毕的任务</p>
 <h4 id="futuretask-异步计算接口实现类"><code>FutureTask</code> 异步计算接口实现类<a class="td-heading-self-link" href="#futuretask-%e5%bc%82%e6%ad%a5%e8%ae%a1%e7%ae%97%e6%8e%a5%e5%8f%a3%e5%ae%9e%e7%8e%b0%e7%b1%bb" aria-label="Heading self-link"></a></h4>
-<p>Future接口的基本实现类，提供了计算的启动和取消、查询计算是否完成以及检索计算结果的方法</p>
-<blockquote>
-<p><code>FutureTask</code> 也属于<a href="/docs/basic/concurrent/aqs/">同步器</a>的一种
-因为类内部定义了线程的控制方法, 同步线程之间的状态
-<code>FutureTask</code> 的同步机制主要体现在它的 <code>get()</code> 方法：</p>
-<ul>
-<li>如果任务已完成，<code>get()</code> 立即返回结果。</li>
-<li>如果任务尚未完成，<code>get()</code> 会将调用线程挂起，直到任务完成并且结果可用，才会唤醒线程并返回结果。</li>
-</ul></blockquote>
+<p><code>FutureTask&lt;T&gt;</code> 是 <code>Future</code> 的一个实现类，同时也是 <code>Runnable</code>，可以直接用线程启动。</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">FutureTask</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#e78284">implements</span> RunnableFuture<span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span>
-</span></span></code></pre></div><p>该接口实现了 <code>RunnableFuture</code> 和 <code>Future</code> 是该类具有异步计算结果和多线程的能力</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">RunnableFuture</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#e78284">extends</span> Runnable, Future<span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> {
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">RunnableFuture</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#e78284">extends</span> Runnable, Future<span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">run</span>();
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><blockquote>
-<p><code>Future</code> 接口的设计目标是允许任务在一个线程中执行，并且可以返回执行结果或抛出异常</p>
-<p><code>Runnable</code> 接口代表一个可以由线程执行的任务, 实现 <code>Runnable</code> 而不是 <code>callable</code> 主要是线程池的兼容性考虑</p>
-<p>而 <code>FutureTask</code> 本身是对异步任务的封装，它能够在任务执行时提供控制（例如，取消任务或检查是否完成）。</p>
-<p><code>FutureTask</code> 通过 <code>run()</code> 方法实现了 <code>Callable</code> 的任务执行逻辑，因此兼容了 <code>Callable</code> 的行为</p>
-<p>可以理解为 <code>Future</code> 接口是线程池和线程返回值的桥</p></blockquote>
+<p><code>FutureTask</code> 本身是对异步任务的封装，是 <code>Future</code> 的实现类, 实际的线程控制和结果计算是由其完成的</p>
+<p><code>FutureTask</code> 通过 <code>run()</code> 方法实现了 <code>Callable</code> 的任务执行逻辑，因此兼容了 <code>Callable</code> 的行为, 但其本身是 <code>Runnable</code> 的任务</p></blockquote>
 <p>使用例子</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 创建一个固定大小的线程池</span>
-</span></span><span style="display:flex;"><span>ExecutorService executorService <span style="color:#99d1db;font-weight:bold">=</span> Executors.<span style="color:#8caaee">newFixedThreadPool</span>(3);
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#81c8be">import</span> <span style="color:#ef9f76">java.util.concurrent.*</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 创建一系列 Callable</span>
-</span></span><span style="display:flex;"><span>Callable<span style="color:#99d1db;font-weight:bold">&lt;</span>Integer<span style="color:#99d1db;font-weight:bold">&gt;[]</span> tasks <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Callable<span style="color:#99d1db;font-weight:bold">[</span>5<span style="color:#99d1db;font-weight:bold">]</span>;
-</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> 0; i <span style="color:#99d1db;font-weight:bold">&lt;</span> tasks.<span style="color:#8caaee">length</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">final</span> <span style="color:#e78284">int</span> index <span style="color:#99d1db;font-weight:bold">=</span> i;
-</span></span><span style="display:flex;"><span>    tasks<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span> <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Callable<span style="color:#99d1db;font-weight:bold">&lt;</span>Integer<span style="color:#99d1db;font-weight:bold">&gt;</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#8caaee;font-weight:bold">@Override</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e78284">public</span> Integer <span style="color:#8caaee">call</span>() <span style="color:#e78284">throws</span> Exception {
-</span></span><span style="display:flex;"><span>            TimeUnit.<span style="color:#8caaee">SECONDS</span>.<span style="color:#8caaee">sleep</span>(index <span style="color:#99d1db;font-weight:bold">+</span> 1);
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">return</span> (index <span style="color:#99d1db;font-weight:bold">+</span> 1) <span style="color:#99d1db;font-weight:bold">*</span> 100;
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">FutureExample</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) <span style="color:#e78284">throws</span> Exception {
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">// 创建一个固定大小为3的线程池</span>
+</span></span><span style="display:flex;"><span>        ExecutorService executorService <span style="color:#99d1db;font-weight:bold">=</span> Executors.<span style="color:#8caaee">newFixedThreadPool</span>(3);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">// 创建一个 Callable 数组，用于存储 5 个任务</span>
+</span></span><span style="display:flex;"><span>        Callable<span style="color:#99d1db;font-weight:bold">&lt;</span>Integer<span style="color:#99d1db;font-weight:bold">&gt;[]</span> tasks <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Callable<span style="color:#99d1db;font-weight:bold">[</span>5<span style="color:#99d1db;font-weight:bold">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> 0; i <span style="color:#99d1db;font-weight:bold">&lt;</span> tasks.<span style="color:#8caaee">length</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#e78284">final</span> <span style="color:#e78284">int</span> index <span style="color:#99d1db;font-weight:bold">=</span> i;
+</span></span><span style="display:flex;"><span>            tasks<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span> <span style="color:#99d1db;font-weight:bold">=</span> () <span style="color:#99d1db;font-weight:bold">-&gt;</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">// 模拟任务执行时间，每个任务休眠 index+1 秒</span>
+</span></span><span style="display:flex;"><span>                TimeUnit.<span style="color:#8caaee">SECONDS</span>.<span style="color:#8caaee">sleep</span>(index <span style="color:#99d1db;font-weight:bold">+</span> 1);
+</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">// 任务返回 (index + 1) * 100</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#ca9ee6">return</span> (index <span style="color:#99d1db;font-weight:bold">+</span> 1) <span style="color:#99d1db;font-weight:bold">*</span> 100;
+</span></span><span style="display:flex;"><span>            };
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    };
-</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 将 Callable 包装为 FutureTask，并提交到线程池</span>
-</span></span><span style="display:flex;"><span>FutureTask<span style="color:#99d1db;font-weight:bold">&lt;</span>Integer<span style="color:#99d1db;font-weight:bold">&gt;[]</span> futureTasks <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> FutureTask<span style="color:#99d1db;font-weight:bold">[</span>tasks.<span style="color:#8caaee">length</span><span style="color:#99d1db;font-weight:bold">]</span>;
-</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> 0; i <span style="color:#99d1db;font-weight:bold">&lt;</span> tasks.<span style="color:#8caaee">length</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
-</span></span><span style="display:flex;"><span>    futureTasks<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span> <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> FutureTask<span style="color:#99d1db;font-weight:bold">&lt;&gt;</span>(tasks<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span>);
-</span></span><span style="display:flex;"><span>    executorService.<span style="color:#8caaee">submit</span>(futureTasks<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span>);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">// 使用 Future 数组存储任务的执行结果</span>
+</span></span><span style="display:flex;"><span>        Future<span style="color:#99d1db;font-weight:bold">&lt;</span>Integer<span style="color:#99d1db;font-weight:bold">&gt;[]</span> futures <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Future<span style="color:#99d1db;font-weight:bold">[</span>tasks.<span style="color:#8caaee">length</span><span style="color:#99d1db;font-weight:bold">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> 0; i <span style="color:#99d1db;font-weight:bold">&lt;</span> tasks.<span style="color:#8caaee">length</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">// 提交 Callable 任务到线程池，并返回 Future 对象</span>
+</span></span><span style="display:flex;"><span>            futures<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span> <span style="color:#99d1db;font-weight:bold">=</span> executorService.<span style="color:#8caaee">submit</span>(tasks<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span>);
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 获取任务结果</span>
-</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> 0; i <span style="color:#99d1db;font-weight:bold">&lt;</span> futureTasks.<span style="color:#8caaee">length</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
-</span></span><span style="display:flex;"><span>    System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;Result of task&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> (i <span style="color:#99d1db;font-weight:bold">+</span> 1) <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;: &#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> futureTasks<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span>.<span style="color:#8caaee">get</span>());
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">// 获取任务的执行结果</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">for</span> (<span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> 0; i <span style="color:#99d1db;font-weight:bold">&lt;</span> futures.<span style="color:#8caaee">length</span>; i<span style="color:#99d1db;font-weight:bold">++</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">// 调用 get() 方法，会阻塞直到任务完成</span>
+</span></span><span style="display:flex;"><span>            System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;Result of task &#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> (i <span style="color:#99d1db;font-weight:bold">+</span> 1) <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;: &#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> futures<span style="color:#99d1db;font-weight:bold">[</span>i<span style="color:#99d1db;font-weight:bold">]</span>.<span style="color:#8caaee">get</span>());
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 关闭线程池</span>
-</span></span><span style="display:flex;"><span>executorService.<span style="color:#8caaee">shutdown</span>();
-</span></span></code></pre></div><h4 id="completeablefuture-任务编排实现类"><code>CompleteableFuture</code> 任务编排实现类<a class="td-heading-self-link" href="#completeablefuture-%e4%bb%bb%e5%8a%a1%e7%bc%96%e6%8e%92%e5%ae%9e%e7%8e%b0%e7%b1%bb" aria-label="Heading self-link"></a></h4>
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">// 关闭线程池，释放资源</span>
+</span></span><span style="display:flex;"><span>        executorService.<span style="color:#8caaee">shutdown</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>了解
+<a href="/docs/basic/concurrent/%E7%BA%BF%E7%A8%8B%E6%B1%A0/"><code>executorService.submit()</code></a></p></blockquote>
+<p>上述代码定义了一系列 <code>callable</code> 任务, 包装为<code>FutureTask</code>便于线程池使用,  调用 执行器 创建了线程池服务并要求线程池服务执行提交的 <code>FutureTask</code></p>
+<blockquote>
+<p><code>Future&lt;Integer&gt;[] futures = new Future[tasks.length]</code> 这里是泛型
+实际绑定的是 <code>FutureTask</code></p></blockquote>
+<h4 id="completeablefuture-任务编排实现类"><code>CompleteableFuture</code> 任务编排实现类<a class="td-heading-self-link" href="#completeablefuture-%e4%bb%bb%e5%8a%a1%e7%bc%96%e6%8e%92%e5%ae%9e%e7%8e%b0%e7%b1%bb" aria-label="Heading self-link"></a></h4>
 <blockquote>
 <p>A <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html" title="interface in java.util.concurrent"><code>Future</code></a> that may be explicitly completed (setting its value and status), and may be used as a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="interface in java.util.concurrent"><code>CompletionStage</code></a>, supporting dependent functions and actions that trigger upon its completion.</p>
 <p><code>Future</code> 在实际使用过程中存在一些局限性比如不支持异步任务的编排组合以及
-使用<code>Future</code>获得异步执行结果时，要么调用阻塞方法<code>get()</code>，要么轮询看<code>isDone()</code>是否为<code>true</code>，这两种方法都不是很好，因为主线程也会被迫等待。</p>
-<ul>
-<li>从Java 8开始引入了<code>CompletableFuture</code>，它针对<code>Future</code>做了改进，可以传入回调对象，当异步任务完成或者发生异常时，自动调用回调对象的回调方法。</li>
-</ul></blockquote>
-<p><a href="https://liaoxuefeng.com/books/java/threading/completable-future/index.html">https://liaoxuefeng.com/books/java/threading/completable-future/index.html</a>
-<a href="https://javaguide.cn/java/concurrent/completablefuture-intro.html#future-%E4%BB%8B%E7%BB%8D">https://javaguide.cn/java/concurrent/completablefuture-intro.html#future-%E4%BB%8B%E7%BB%8D</a></p>
+使用<code>Future</code>获得异步执行结果时，要么调用阻塞方法<code>get()</code>，要么轮询看<code>isDone()</code>是否为<code>true</code>，这两种方法都不是很好，因为主线程也会被迫等待。</p></blockquote>
+<blockquote>
+<p>从Java 8开始引入了<code>CompletableFuture</code>，它针对<code>Future</code>做了改进，可以传入回调对象，当异步任务完成或者发生异常时，自动调用回调对象的回调方法。</p></blockquote>
 <h4 id="如何使用">如何使用<a class="td-heading-self-link" href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8" aria-label="Heading self-link"></a></h4>
 <p>创建一个<code>CompletableFuture</code>是通过<code>CompletableFuture.supplyAsync()</code>实现的，它需要一个实现了<code>Supplier</code>接口的对象：</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">Supplier</span><span style="color:#99d1db;font-weight:bold">&lt;</span>T<span style="color:#99d1db;font-weight:bold">&gt;</span> {
@@ -1583,6 +1697,10 @@ Quner技术沙龙
 </span></span><span style="display:flex;"><span>    }  
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><code>thenAcccept()</code> 不会阻塞线程, 是非阻塞的回调方法, 需要主线程手动等待完成</p>
+<blockquote>
+<p>引用:
+<a href="https://liaoxuefeng.com/books/java/threading/completable-future/index.html">https://liaoxuefeng.com/books/java/threading/completable-future/index.html</a>
+<a href="https://javaguide.cn/java/concurrent/completablefuture-intro.html#future-%E4%BB%8B%E7%BB%8D">https://javaguide.cn/java/concurrent/completablefuture-intro.html#future-%E4%BB%8B%E7%BB%8D</a></p></blockquote>
 
 </div>
 

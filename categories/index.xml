@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 海阔集</title>
-    <link>http://localhost:60447/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on 海阔集</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:60447/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java基础能力</title>
-      <link>http://localhost:60447/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/</link>
+      <link>http://localhost:1313/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60447/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/</guid>
+      <guid>http://localhost:1313/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/</guid>
       <description></description>
     </item>
     <item>
       <title>Java进阶能力</title>
-      <link>http://localhost:60447/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/</link>
+      <link>http://localhost:1313/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60447/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/</guid>
+      <guid>http://localhost:1313/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/</guid>
       <description></description>
     </item>
     <item>
       <title>Java面试</title>
-      <link>http://localhost:60447/categories/java%E9%9D%A2%E8%AF%95/</link>
+      <link>http://localhost:1313/categories/java%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60447/categories/java%E9%9D%A2%E8%AF%95/</guid>
+      <guid>http://localhost:1313/categories/java%E9%9D%A2%E8%AF%95/</guid>
       <description></description>
     </item>
     <item>
       <title>算法</title>
-      <link>http://localhost:60447/categories/%E7%AE%97%E6%B3%95/</link>
+      <link>http://localhost:1313/categories/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60447/categories/%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://localhost:1313/categories/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     <item>
       <title>通用能力</title>
-      <link>http://localhost:60447/categories/%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</link>
+      <link>http://localhost:1313/categories/%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:60447/categories/%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</guid>
+      <guid>http://localhost:1313/categories/%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/</guid>
       <description></description>
     </item>
   </channel>
