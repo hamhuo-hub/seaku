@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GC on 海阔集</title>
-    <link>http://localhost:58072/tags/gc/</link>
+    <link>http://localhost:51861/tags/gc/</link>
     <description>Recent content in GC on 海阔集</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:58072/tags/gc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:51861/tags/gc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java的四种引用</title>
-      <link>http://localhost:58072/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</link>
+      <link>http://localhost:51861/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:58072/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</guid>
+      <guid>http://localhost:51861/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</guid>
       <description>&lt;p&gt;强引用&#xA;A a=new A(); 此时引用a强引用对象A；不会被GC&#xA;即使OOM也不会回收对象, 而是抛异常&lt;/p&gt;&#xA;&lt;p&gt;弱引用&#xA;&lt;strong&gt;WeakReference.java&lt;/strong&gt; 是 Java1.2提供的一个类&#xA;当GC发现弱引用后会直接回收该对象&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51861&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:1313/docs/basic/mysql/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/basic/mysql/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:51861/docs/basic/mysql/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:51861/docs/basic/mysql/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>MySQL | 海阔集</title>
 <meta name="description" content="关系性数据库, 程序员的入门教程">
-<meta property="og:url" content="http://localhost:1313/docs/basic/mysql/">
+<meta property="og:url" content="http://localhost:51861/docs/basic/mysql/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="MySQL">
   <meta property="og:description" content="关系性数据库, 程序员的入门教程">
@@ -237,7 +237,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>9: <a href="#pg-08e11208f63c4c90dea1f03705b7cce5"></a></li>
+<li>9: <a href="#pg-08e11208f63c4c90dea1f03705b7cce5">数据库设计规范</a></li>
 
 
     
@@ -299,6 +299,8 @@ This is the multi-page printable view of this section.
 <p>那网络聊天怎么办? 编码不同根本无法识别</p>
 <p>为了解决这个问题，一个伟大的创想产生了——Unicode。Unicode编码系统为表达任意语言的任意字符而设计。
 被几种语言共用的字符通常使用相同的数字来编码, 不存在二义性。不再需要记录&quot;模式&quot;了</p>
+<p>MySQL的UTF-8最多支持三个字节</p>
+<p>UTF-8mb4支持四个字节</p>
 <h4 id="比较规则">比较规则<a class="td-heading-self-link" href="#%e6%af%94%e8%be%83%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h4>
 
 </div>
@@ -449,6 +451,15 @@ This is the multi-page printable view of this section.
 <blockquote>
 <p>了解:
 <a href="/docs/basic/mysql/mysql%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">MySQL条件查询</a></p></blockquote>
+<h4 id="统计">统计<a class="td-heading-self-link" href="#%e7%bb%9f%e8%ae%a1" aria-label="Heading self-link"></a></h4>
+<p>返回记录数</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">COUNT</span>(ProductID) <span style="color:#ca9ee6">FROM</span> Products;
+</span></span></code></pre></div><blockquote>
+<p>注意
+此方法会忽略NULL记录!</p>
+<p>COUNT(1)</p>
+<p>COUNT(<code>*</code>)</p>
+<p><code>count(1)</code> 是计算所有记录数，<code>1</code> 被视作一个常数值，在每一行都存在，因此与 <code>count(*)</code> 基本相同。</p></blockquote>
 
 </div>
 
@@ -612,7 +623,13 @@ This is the multi-page printable view of this section.
 </span></span></code></pre></div><p><code>OR</code>与其类似</p>
 <p>可以使用<code>()</code> 指定优先级</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">1</span> <span style="color:#ca9ee6">AND</span> (title <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;聊聊分库分表&#39;</span> <span style="color:#ca9ee6">OR</span> short_title <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#a6d189">&#39;&#39;</span>);
-</span></span></code></pre></div>
+</span></span></code></pre></div><p><code>in</code></p>
+<p>in查询相当于多个or条件的叠加，这个比较好理解，比如下面的查询：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> user_id <span style="color:#ca9ee6">in</span> (<span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">3</span>);
+</span></span></code></pre></div><p><code>exists</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> <span style="color:#ca9ee6">exists</span> (<span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> user_id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>);
+</span></span></code></pre></div><p>这两个都是条件嵌套</p>
+
 </div>
 
 
@@ -780,9 +797,28 @@ ACID</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-08e11208f63c4c90dea1f03705b7cce5">9 - </h1>
-    
-	
+	<h1 id="pg-08e11208f63c4c90dea1f03705b7cce5">9 - 数据库设计规范</h1>
+    <div class="lead">数据库的三大范式，它是数据库设计中最基本的三个规范</div>
+	<p>数据库的三大范式，它是数据库设计中最基本的三个规范，那么，三大范式是什么？在实际开发中，我们一定要严格遵守三大范式吗？</p>
+<h4 id="第一范式">第一范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%80%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
+<p>确保每列原子性
+也就是字段的值是原子的, 不可再分割</p>
+<h4 id="第二范式">第二范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%ba%8c%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
+<p>确保表中的每列和主键相关</p>
+<p>第二范式在第一范式的基础上, 消除表的部分依赖</p>
+<p>即非主键字段必须完全依赖于主键，而不是仅依赖于主键的一部分。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212002938008.png" alt="image.png"></p>
+<p>这里和订单id(主键) 有关的只有数量和商品ID</p>
+<p>拆成两张表</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212003059979.png" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212003105718.png" alt="image.png"></p>
+<h4 id="第三范式">第三范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%89%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
+<p>确保每列都与主键列直接相关, 而不是间接相关</p>
+<p>在第二范式的基础上, 消除表的传递依赖</p>
+<p>所有非主键字段必须直接依赖于主键，而不是通过其他非主键字段间接依赖。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212004058261.png" alt="image.png"></p>
+<p>在这个表中，<code>部门名称</code>依赖于<code>部门ID</code>，而<code>部门ID</code>依赖于主键<code>员工ID</code>，形成了传递依赖，违反了3NF。</p>
+
 </div>
 
 

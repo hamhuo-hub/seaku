@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=58072&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51861&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:58072/docs/basic/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:58072/docs/basic/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:51861/docs/basic/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:51861/docs/basic/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -22,7 +22,7 @@
 <title>Java基础能力 | 海阔集</title>
 <meta name="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ">
-<meta property="og:url" content="http://localhost:58072/docs/basic/">
+<meta property="og:url" content="http://localhost:51861/docs/basic/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Java基础能力">
   <meta property="og:description" content="内容来源:
@@ -500,7 +500,23 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>5.7: <a href="#pg-aec71f889e3edd1c2c139a8adbb7b003">事务</a></li>
+<li>5.7: <a href="#pg-72f6cc384aaed4cbd273131839780dae">MySQL连接</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.8: <a href="#pg-aec71f889e3edd1c2c139a8adbb7b003">事务</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.9: <a href="#pg-08e11208f63c4c90dea1f03705b7cce5">数据库设计规范</a></li>
 
 
     
@@ -2748,6 +2764,8 @@ A a=new A(); 此时引用a强引用对象A；不会被GC
 <p>那网络聊天怎么办? 编码不同根本无法识别</p>
 <p>为了解决这个问题，一个伟大的创想产生了——Unicode。Unicode编码系统为表达任意语言的任意字符而设计。
 被几种语言共用的字符通常使用相同的数字来编码, 不存在二义性。不再需要记录&quot;模式&quot;了</p>
+<p>MySQL的UTF-8最多支持三个字节</p>
+<p>UTF-8mb4支持四个字节</p>
 <h4 id="比较规则">比较规则<a class="td-heading-self-link" href="#%e6%af%94%e8%be%83%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h4>
 
 </div>
@@ -2898,6 +2916,15 @@ A a=new A(); 此时引用a强引用对象A；不会被GC
 <blockquote>
 <p>了解:
 <a href="/docs/basic/mysql/mysql%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">MySQL条件查询</a></p></blockquote>
+<h4 id="统计">统计<a class="td-heading-self-link" href="#%e7%bb%9f%e8%ae%a1" aria-label="Heading self-link"></a></h4>
+<p>返回记录数</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">COUNT</span>(ProductID) <span style="color:#ca9ee6">FROM</span> Products;
+</span></span></code></pre></div><blockquote>
+<p>注意
+此方法会忽略NULL记录!</p>
+<p>COUNT(1)</p>
+<p>COUNT(<code>*</code>)</p>
+<p><code>count(1)</code> 是计算所有记录数，<code>1</code> 被视作一个常数值，在每一行都存在，因此与 <code>count(*)</code> 基本相同。</p></blockquote>
 
 </div>
 
@@ -3061,7 +3088,13 @@ A a=new A(); 此时引用a强引用对象A；不会被GC
 </span></span></code></pre></div><p><code>OR</code>与其类似</p>
 <p>可以使用<code>()</code> 指定优先级</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">1</span> <span style="color:#ca9ee6">AND</span> (title <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;聊聊分库分表&#39;</span> <span style="color:#ca9ee6">OR</span> short_title <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#a6d189">&#39;&#39;</span>);
-</span></span></code></pre></div>
+</span></span></code></pre></div><p><code>in</code></p>
+<p>in查询相当于多个or条件的叠加，这个比较好理解，比如下面的查询：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> user_id <span style="color:#ca9ee6">in</span> (<span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">3</span>);
+</span></span></code></pre></div><p><code>exists</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> <span style="color:#ca9ee6">exists</span> (<span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> user_id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>);
+</span></span></code></pre></div><p>这两个都是条件嵌套</p>
+
 </div>
 
 
@@ -3147,12 +3180,47 @@ A a=new A(); 此时引用a强引用对象A；不会被GC
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-aec71f889e3edd1c2c139a8adbb7b003">5.7 - 事务</h1>
+	<h1 id="pg-72f6cc384aaed4cbd273131839780dae">5.7 - MySQL连接</h1>
+    <div class="lead">在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。</div>
+	<p>在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。</p>
+<p>连接分为三种 内,  左, 右</p>
+<h4 id="内连接">内连接<a class="td-heading-self-link" href="#%e5%86%85%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<p>INNER JOIN 返回两个表中满足连接条件的匹配行，以下是 INNER JOIN 语句的基本语法</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">INNER</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
+</span></span></code></pre></div><ul>
+<li><code>table1.column_name = table2.column_name</code> 是连接条件，指定了两个表中用于匹配的列。</li>
+</ul>
+<h4 id="左连接">左连接<a class="td-heading-self-link" href="#%e5%b7%a6%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<p>LEFT JOIN 返回左表的所有行，并包括右表中匹配的行，如果右表中没有匹配的行，将返回 NULL 值，以下是 LEFT JOIN 语句的基本语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">LEFT</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
+</span></span></code></pre></div><p>返回左表的所有行, 如果右表没有匹配就为NULL</p>
+<h4 id="右连接">右连接<a class="td-heading-self-link" href="#%e5%8f%b3%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<p>不常使用, 因为可以用左连接交换表顺序达到相同效果</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-aec71f889e3edd1c2c139a8adbb7b003">5.8 - 事务</h1>
     <div class="lead">在关系型数据库中，事务的重要性不言而喻，只要对数据库稍有了解的人都知道事务具有 ACID 四个基本属性</div>
 	<blockquote>
 <p>引用:
 go语言大佬, go语言设计与原理作者
-<a href="https://draveness.me/mysql-innodb/">面向信仰编程 - draveness</a></p></blockquote>
+[面向信仰编程 - draveness](<a href="https://draveness.me/mysql-innodb/">https://draveness.me/mysql-innodb/</a></p></blockquote>
 <p>在关系型数据库中，事务的重要性不言而喻，只要对数据库稍有了解的人都知道事务具有 ACID 四个基本属性，</p>
 <p>而我们不知道的可能就是数据库是如何实现这四个属性的；在这篇文章中，我们将对事务的实现进行分析，尝试理解数据库是如何实现事务的，当然我们也会在文章中简单对 MySQL 中对 ACID 的实现进行简单的介绍。</p>
 <p>原子性, 一致性, 隔离性, 持久性
@@ -3176,6 +3244,45 @@ ACID</p>
 <p>如果所有的事务的执行顺序都是线性的，那么对于事务的管理容易得多，但是允许事务的并行执行却能能够提升吞吐量和资源利用率，并且可以减少每个事务的等待时间。</p>
 <h4 id="一致性">一致性<a class="td-heading-self-link" href="#%e4%b8%80%e8%87%b4%e6%80%a7" aria-label="Heading self-link"></a></h4>
 <p>分为两种一致性</p>
+<p>ACID 和 CAP</p>
+<p>其中ACID定义为, 如果事务原子性的一个一致的数据库中独立运行, 那么执行之后数据库的状态是一定的, 在事务的执行的前后以及过程中不会违背对数据完整性的约束, 所有对数据库写入的操作都应该是合法的，并不能产生不合法的数据状态。</p>
+<p>CAP则是通常的一致性, 其实是说分布式系统中的各个节点中对于同一数据的拷贝有着相同的值, 也就是存储可见性</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-08e11208f63c4c90dea1f03705b7cce5">5.9 - 数据库设计规范</h1>
+    <div class="lead">数据库的三大范式，它是数据库设计中最基本的三个规范</div>
+	<p>数据库的三大范式，它是数据库设计中最基本的三个规范，那么，三大范式是什么？在实际开发中，我们一定要严格遵守三大范式吗？</p>
+<h4 id="第一范式">第一范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%80%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
+<p>确保每列原子性
+也就是字段的值是原子的, 不可再分割</p>
+<h4 id="第二范式">第二范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%ba%8c%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
+<p>确保表中的每列和主键相关</p>
+<p>第二范式在第一范式的基础上, 消除表的部分依赖</p>
+<p>即非主键字段必须完全依赖于主键，而不是仅依赖于主键的一部分。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212002938008.png" alt="image.png"></p>
+<p>这里和订单id(主键) 有关的只有数量和商品ID</p>
+<p>拆成两张表</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212003059979.png" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212003105718.png" alt="image.png"></p>
+<h4 id="第三范式">第三范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%89%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
+<p>确保每列都与主键列直接相关, 而不是间接相关</p>
+<p>在第二范式的基础上, 消除表的传递依赖</p>
+<p>所有非主键字段必须直接依赖于主键，而不是通过其他非主键字段间接依赖。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212004058261.png" alt="image.png"></p>
+<p>在这个表中，<code>部门名称</code>依赖于<code>部门ID</code>，而<code>部门ID</code>依赖于主键<code>员工ID</code>，形成了传递依赖，违反了3NF。</p>
 
 </div>
 
