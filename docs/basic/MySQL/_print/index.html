@@ -221,7 +221,23 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>7: <a href="#pg-aec71f889e3edd1c2c139a8adbb7b003">事务</a></li>
+<li>7: <a href="#pg-72f6cc384aaed4cbd273131839780dae">MySQL连接</a></li>
+
+
+    
+  
+    
+    
+	
+<li>8: <a href="#pg-aec71f889e3edd1c2c139a8adbb7b003">事务</a></li>
+
+
+    
+  
+    
+    
+	
+<li>9: <a href="#pg-08e11208f63c4c90dea1f03705b7cce5"></a></li>
 
 
     
@@ -682,12 +698,47 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-aec71f889e3edd1c2c139a8adbb7b003">7 - 事务</h1>
+	<h1 id="pg-72f6cc384aaed4cbd273131839780dae">7 - MySQL连接</h1>
+    <div class="lead">在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。</div>
+	<p>在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。</p>
+<p>连接分为三种 内,  左, 右</p>
+<h4 id="内连接">内连接<a class="td-heading-self-link" href="#%e5%86%85%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<p>INNER JOIN 返回两个表中满足连接条件的匹配行，以下是 INNER JOIN 语句的基本语法</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">INNER</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
+</span></span></code></pre></div><ul>
+<li><code>table1.column_name = table2.column_name</code> 是连接条件，指定了两个表中用于匹配的列。</li>
+</ul>
+<h4 id="左连接">左连接<a class="td-heading-self-link" href="#%e5%b7%a6%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<p>LEFT JOIN 返回左表的所有行，并包括右表中匹配的行，如果右表中没有匹配的行，将返回 NULL 值，以下是 LEFT JOIN 语句的基本语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">LEFT</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
+</span></span></code></pre></div><p>返回左表的所有行, 如果右表没有匹配就为NULL</p>
+<h4 id="右连接">右连接<a class="td-heading-self-link" href="#%e5%8f%b3%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<p>不常使用, 因为可以用左连接交换表顺序达到相同效果</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-aec71f889e3edd1c2c139a8adbb7b003">8 - 事务</h1>
     <div class="lead">在关系型数据库中，事务的重要性不言而喻，只要对数据库稍有了解的人都知道事务具有 ACID 四个基本属性</div>
 	<blockquote>
 <p>引用:
 go语言大佬, go语言设计与原理作者
-<a href="https://draveness.me/mysql-innodb/">面向信仰编程 - draveness</a></p></blockquote>
+[面向信仰编程 - draveness](<a href="https://draveness.me/mysql-innodb/">https://draveness.me/mysql-innodb/</a></p></blockquote>
 <p>在关系型数据库中，事务的重要性不言而喻，只要对数据库稍有了解的人都知道事务具有 ACID 四个基本属性，</p>
 <p>而我们不知道的可能就是数据库是如何实现这四个属性的；在这篇文章中，我们将对事务的实现进行分析，尝试理解数据库是如何实现事务的，当然我们也会在文章中简单对 MySQL 中对 ACID 的实现进行简单的介绍。</p>
 <p>原子性, 一致性, 隔离性, 持久性
@@ -711,7 +762,27 @@ ACID</p>
 <p>如果所有的事务的执行顺序都是线性的，那么对于事务的管理容易得多，但是允许事务的并行执行却能能够提升吞吐量和资源利用率，并且可以减少每个事务的等待时间。</p>
 <h4 id="一致性">一致性<a class="td-heading-self-link" href="#%e4%b8%80%e8%87%b4%e6%80%a7" aria-label="Heading self-link"></a></h4>
 <p>分为两种一致性</p>
+<p>ACID 和 CAP</p>
+<p>其中ACID定义为, 如果事务原子性的一个一致的数据库中独立运行, 那么执行之后数据库的状态是一定的, 在事务的执行的前后以及过程中不会违背对数据完整性的约束, 所有对数据库写入的操作都应该是合法的，并不能产生不合法的数据状态。</p>
+<p>CAP则是通常的一致性, 其实是说分布式系统中的各个节点中对于同一数据的拷贝有着相同的值, 也就是存储可见性</p>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-08e11208f63c4c90dea1f03705b7cce5">9 - </h1>
+    
+	
 </div>
 
 

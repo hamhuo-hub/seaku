@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="MySQL条件查询">
   <meta itemprop="description" content="真实的业务场景中，数量会非常大，有些甚至会有几百万、几千万条数据，如果不带上查询条件，一次性把全部数据查出来是不太现实的。">
-  <meta itemprop="wordCount" content="186">
+  <meta itemprop="wordCount" content="214">
   <meta itemprop="keywords" content="MySQL">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MySQL条件查询">
@@ -245,8 +245,12 @@
   <a href="/docs/basic/mysql/mysql%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-docsbasicmysqlmysqle69da1e4bbb6e69fa5e8afa2"><span class="td-sidebar-nav-active-item">MySQL条件查询</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbasicmysqlmysqle8a1a8e5a29ee588a0e694b9e69fa5-li">
   <a href="/docs/basic/mysql/mysql%E8%A1%A8%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsbasicmysqlmysqle8a1a8e5a29ee588a0e694b9e69fa5"><span class="">MySQL表操作</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbasicmysqlmysqle8bf9ee68ea5-li">
+  <a href="/docs/basic/mysql/mysql%E8%BF%9E%E6%8E%A5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsbasicmysqlmysqle8bf9ee68ea5"><span class="">MySQL连接</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbasicmysqle4ba8be58aa1-li">
   <a href="/docs/basic/mysql/%E4%BA%8B%E5%8A%A1/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsbasicmysqle4ba8be58aa1"><span class="">事务</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbasicmysqle695b0e68daee5ba93e8aebee8aea1e8a784e88c83-li">
+  <a href="/docs/basic/mysql/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsbasicmysqle695b0e68daee5ba93e8aebee8aea1e8a784e88c83"><span class="">数据库设计规范</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbasice9809ae9858de7aca6-li">
@@ -323,13 +327,14 @@
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/gc/" data-taxonomy-term="gc"><span class="taxonomy-label">GC</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/jvm/" data-taxonomy-term="jvm"><span class="taxonomy-label">JVM</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/list/" data-taxonomy-term="list"><span class="taxonomy-label">List</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span><span class="taxonomy-count">12</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/redis/" data-taxonomy-term="redis"><span class="taxonomy-label">Redis</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E5%88%86%E6%B2%BB/" data-taxonomy-term="%E5%88%86%E6%B2%BB"><span class="taxonomy-label">分治</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" data-taxonomy-term="%E5%8F%8C%E6%8C%87%E9%92%88"><span class="taxonomy-label">双指针</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-taxonomy-term="%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="taxonomy-label">字符串</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" data-taxonomy-term="%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B"><span class="taxonomy-label">并发编程</span><span class="taxonomy-count">17</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" data-taxonomy-term="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="taxonomy-label">操作系统</span><span class="taxonomy-count">7</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" data-taxonomy-term="%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="taxonomy-label">消息队列</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E7%9F%A9%E9%98%B5/" data-taxonomy-term="%E7%9F%A9%E9%98%B5"><span class="taxonomy-label">矩阵</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E9%80%92%E5%BD%92/" data-taxonomy-term="%E9%80%92%E5%BD%92"><span class="taxonomy-label">递归</span><span class="taxonomy-count">3</span></a></li>
@@ -340,9 +345,10 @@
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java基础能力</span><span class="taxonomy-count">30</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java基础能力</span><span class="taxonomy-count">32</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/java%E9%9D%A2%E8%AF%95/" data-taxonomy-term="java%E9%9D%A2%E8%AF%95"><span class="taxonomy-label">Java面试</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/java%E9%9D%A2%E8%AF%95/" data-taxonomy-term="java%E9%9D%A2%E8%AF%95"><span class="taxonomy-label">Java面试</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="http://localhost:1313/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/categories/%E7%AE%97%E6%B3%95/" data-taxonomy-term="%E7%AE%97%E6%B3%95"><span class="taxonomy-label">算法</span><span class="taxonomy-count">10</span></a></li>
         <li><a class="taxonomy-term" href="http://localhost:1313/categories/%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/" data-taxonomy-term="%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">通用能力</span><span class="taxonomy-count">5</span></a></li>
         </ul>
@@ -459,7 +465,13 @@
 </span></span></code></pre></div><p><code>OR</code>与其类似</p>
 <p>可以使用<code>()</code> 指定优先级</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">1</span> <span style="color:#ca9ee6">AND</span> (title <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;聊聊分库分表&#39;</span> <span style="color:#ca9ee6">OR</span> short_title <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#a6d189">&#39;&#39;</span>);
-</span></span></code></pre></div>
+</span></span></code></pre></div><p><code>in</code></p>
+<p>in查询相当于多个or条件的叠加，这个比较好理解，比如下面的查询：</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> user_id <span style="color:#ca9ee6">in</span> (<span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">3</span>);
+</span></span></code></pre></div><p><code>exists</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> <span style="color:#ca9ee6">exists</span> (<span style="color:#ca9ee6">select</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">from</span> <span style="color:#ca9ee6">user</span> <span style="color:#ca9ee6">where</span> user_id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">0</span>);
+</span></span></code></pre></div><p>这两个都是条件嵌套</p>
+
 	
 </div>
 

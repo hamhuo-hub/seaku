@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JVM on 海阔集</title>
-    <link>http://localhost:1313/tags/jvm/</link>
+    <link>http://localhost:58072/tags/jvm/</link>
     <description>Recent content in JVM on 海阔集</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:58072/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java的四种引用</title>
-      <link>http://localhost:1313/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</link>
+      <link>http://localhost:58072/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</guid>
+      <guid>http://localhost:58072/docs/basic/jvm/java%E7%9A%84%E5%9B%9B%E7%A7%8D%E5%BC%95%E7%94%A8/</guid>
       <description>&lt;p&gt;强引用&#xA;A a=new A(); 此时引用a强引用对象A；不会被GC&#xA;即使OOM也不会回收对象, 而是抛异常&lt;/p&gt;&#xA;&lt;p&gt;弱引用&#xA;&lt;strong&gt;WeakReference.java&lt;/strong&gt; 是 Java1.2提供的一个类&#xA;当GC发现弱引用后会直接回收该对象&lt;/p&gt;</description>
     </item>
     <item>
       <title>JVM</title>
-      <link>http://localhost:1313/docs/basic/jvm/</link>
+      <link>http://localhost:58072/docs/basic/jvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/basic/jvm/</guid>
+      <guid>http://localhost:58072/docs/basic/jvm/</guid>
       <description>&lt;p&gt;内容来源:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;沉默王二 GitHub 上开源的知识库《&lt;a href=&#34;https://github.com/itwanger/toBeBetterJavaer&#34;&gt;Java 进阶之路&lt;/a&gt;》&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://javaguide.cn/java/concurrent/&#34;&gt;JavaGuide&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/&#34;&gt;Geeksforgeeks&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.runoob.com/&#34;&gt;菜鸟教程&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
