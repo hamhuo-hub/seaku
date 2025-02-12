@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51861&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:51861/docs/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:51861/docs/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/docs/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -27,7 +27,7 @@
 心随远方，
 归于纯净，
 万物如初。">
-<meta property="og:url" content="http://localhost:51861/docs/">
+<meta property="og:url" content="http://localhost:1313/docs/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Documents">
   <meta property="og:description" content="力扣题目解析 题目涉及到的解法以标签的形式注解
@@ -597,7 +597,15 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1: <a href="#pg-0b739ddf4ac12a287833a333be50c4b5">操作系统</a></li>
+<li>3.1: <a href="#pg-ba122cf7907183afa423647bdbf535d5">Computer Internet</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.2: <a href="#pg-0b739ddf4ac12a287833a333be50c4b5">操作系统</a></li>
 
 
     
@@ -612,7 +620,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.1: <a href="#pg-dba4de2a5ad23e3fad6823748fe727da">CPU Cache 高速缓存</a></li>
+<li>3.2.1: <a href="#pg-dba4de2a5ad23e3fad6823748fe727da">CPU Cache 高速缓存</a></li>
 
 
     
@@ -620,7 +628,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.2: <a href="#pg-94628d373fdd7c6dd01faea18d824849">存储器的层次结构</a></li>
+<li>3.2.2: <a href="#pg-94628d373fdd7c6dd01faea18d824849">存储器的层次结构</a></li>
 
 
     
@@ -628,7 +636,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.3: <a href="#pg-84b8bbc13de58a3c160e939c30372d41">操作系统基本特性</a></li>
+<li>3.2.3: <a href="#pg-84b8bbc13de58a3c160e939c30372d41">操作系统基本特性</a></li>
 
 
     
@@ -636,7 +644,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.4: <a href="#pg-6cddd05f8413418ca6a835ba81732cd2">进程同步</a></li>
+<li>3.2.4: <a href="#pg-6cddd05f8413418ca6a835ba81732cd2">进程同步</a></li>
 
 
     
@@ -644,7 +652,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3.1.5: <a href="#pg-cee908a110ada7c6e4442621a5cba63d">进程的状态与转换</a></li>
+<li>3.2.5: <a href="#pg-cee908a110ada7c6e4442621a5cba63d">进程的状态与转换</a></li>
 
 
     
@@ -675,7 +683,31 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.1: <a href="#pg-a4d375d70ef2ae9ea76600983dbac534">消息队列</a></li>
+<li>4.1: <a href="#pg-c0333df9693e95d8b4a6758f9073b505">JWT</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-c7748db182c095cbf3afbf54e91a9dde">TTL</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.3: <a href="#pg-6584a1863892ecb310dc02695588346c">响应式编程Reactor库</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.4: <a href="#pg-a4d375d70ef2ae9ea76600983dbac534">消息队列</a></li>
 
 
     
@@ -690,13 +722,29 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.1.1: <a href="#pg-1338051e553f7921513994e5ccdc2d82"></a></li>
+<li>4.4.1: <a href="#pg-1338051e553f7921513994e5ccdc2d82"></a></li>
 
 
     
   
 
     </ul>
+    
+  
+    
+    
+	
+<li>4.5: <a href="#pg-9d099c622fce08014808a438406a5b28">网关Gateway</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.6: <a href="#pg-ca7712bf275374a77e97a3daa3f2c97c"></a></li>
+
+
     
   
 
@@ -1362,7 +1410,7 @@ synchronized 的另外一个重要的作用，synchronized 可保证一个线程
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-81976703554d30e4d0a1ddbd1d6055b1">2.2.5 - ThreadLocal</h1>
-    
+    <div class="lead">ThreadLocal 是Java中 lang 包下的一个类，是用来解决多线程下共享变量并发问题的，所谓共享变量即同一个变量在不同线程下赋予不同值, 而ThreadLocal会在不同线程中维护共享变量的独立副本</div>
 	<blockquote>
 <p>前置
 <a href="/docs/basic/concurrent/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">线程池</a></p></blockquote>
@@ -3193,6 +3241,8 @@ A a=new A(); 此时引用a强引用对象A；不会被GC
 <p>COUNT(1)</p>
 <p>COUNT(<code>*</code>)</p>
 <p><code>count(1)</code> 是计算所有记录数，<code>1</code> 被视作一个常数值，在每一行都存在，因此与 <code>count(*)</code> 基本相同。</p></blockquote>
+<h4 id="mysql的数据引擎有哪些">mysql的数据引擎有哪些?<a class="td-heading-self-link" href="#mysql%e7%9a%84%e6%95%b0%e6%8d%ae%e5%bc%95%e6%93%8e%e6%9c%89%e5%93%aa%e4%ba%9b" aria-label="Heading self-link"></a></h4>
+<p>区别是什么?</p>
 
 </div>
 
@@ -3625,7 +3675,32 @@ ACID</p>
 
 <div class="td-content" style="">
     
-	<h1 id="pg-0b739ddf4ac12a287833a333be50c4b5">3.1 - 操作系统</h1>
+	<h1 id="pg-ba122cf7907183afa423647bdbf535d5">3.1 - Computer Internet</h1>
+    <div class="lead">计算机因特网-电子工业版</div>
+	<h4 id="url-uri">URL, URI<a class="td-heading-self-link" href="#url-uri" aria-label="Heading self-link"></a></h4>
+<p>We have to deal with URLs every day. URL is an acronym that stands for <em>Uniform Resource Locator</em>.</p>
+<p>you can simply call it <em>address</em>. It&rsquo;s used as a string that denotes the location of a given resource on the Internet: a web page, an image, a mailbox, etc.</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212103958534.png" alt="image.png"></p>
+<p>What Is a URI?</p>
+<p>The URI acronym stands for <em>Uniform Resource Identifier</em>. It&rsquo;s follow rules same as URL</p>
+<p>So, are URLs and URIs the same thing? not really.</p>
+<p>a URL is a URI. Beyond the fact that it uses the same URI syntax, it also identifies a resource through an address. URI doesn&rsquo;t allow you to access any resource on the Web. URI work like an identifier. This identifier is nothing but a URI: a logical identifier for your API.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0b739ddf4ac12a287833a333be50c4b5">3.2 - 操作系统</h1>
     <div class="lead">Low level reference docs for your project.</div>
 	
 </div>
@@ -3650,7 +3725,7 @@ ACID</p>
 
 <div class="td-content" style="">
     
-	<h1 id="pg-dba4de2a5ad23e3fad6823748fe727da">3.1.1 - CPU Cache 高速缓存</h1>
+	<h1 id="pg-dba4de2a5ad23e3fad6823748fe727da">3.2.1 - CPU Cache 高速缓存</h1>
     <div class="lead">CPU 缓存是为了解决 CPU 处理速度和内存处理速度不对等的问题。</div>
 	<p><strong>CPU 缓存是为了解决 CPU 处理速度和内存处理速度不对等的问题。</strong></p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250205094918596.png" alt="image.png"></p>
@@ -3672,7 +3747,7 @@ ACID</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-94628d373fdd7c6dd01faea18d824849">3.1.2 - 存储器的层次结构</h1>
+	<h1 id="pg-94628d373fdd7c6dd01faea18d824849">3.2.2 - 存储器的层次结构</h1>
     <div class="lead">在计算机执行时，几乎每一条指令都涉及对存储器的访问，存储器的速度必须非常快，能与处理机的速度相匹配，否则会明显地影响到处理机的运行。</div>
 	<p>在计算机执行时，几乎每一条指令都涉及对存储器的访问，存储器的速度必须非常快，能与处理机的速度相匹配，否则会明显地影响到处理机的运行。</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250205094702438.png" alt="image.png"></p>
@@ -3720,7 +3795,7 @@ ACID</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-84b8bbc13de58a3c160e939c30372d41">3.1.3 - 操作系统基本特性</h1>
+	<h1 id="pg-84b8bbc13de58a3c160e939c30372d41">3.2.3 - 操作系统基本特性</h1>
     <div class="lead">操作系统有四大基本特性</div>
 	<h4 id="并发">并发<a class="td-heading-self-link" href="#%e5%b9%b6%e5%8f%91" aria-label="Heading self-link"></a></h4>
 <p>OS能够提高系统资源利用率的原因</p>
@@ -3785,7 +3860,7 @@ ACID</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-6cddd05f8413418ca6a835ba81732cd2">3.1.4 - 进程同步</h1>
+	<h1 id="pg-6cddd05f8413418ca6a835ba81732cd2">3.2.4 - 进程同步</h1>
     <div class="lead">无论是硬件临界资源还是软件临界资源多个进程必须互斥的对它进行访问在每个进程中访问临界资源的<strong>代码</strong>称之为临界区</div>
 	<blockquote>
 <p><em>临界资源</em></p>
@@ -3834,7 +3909,7 @@ ACID</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-cee908a110ada7c6e4442621a5cba63d">3.1.5 - 进程的状态与转换</h1>
+	<h1 id="pg-cee908a110ada7c6e4442621a5cba63d">3.2.5 - 进程的状态与转换</h1>
     <div class="lead">多个进程在并发执行时共享系统资源，致使它们在 运行过程中呈现间断性的运行规律，所以进程在其生命周期内可能具有多种状态。</div>
 	<h3 id="进程的状态与转换">进程的状态与转换<a class="td-heading-self-link" href="#%e8%bf%9b%e7%a8%8b%e7%9a%84%e7%8a%b6%e6%80%81%e4%b8%8e%e8%bd%ac%e6%8d%a2" aria-label="Heading self-link"></a></h3>
 <blockquote>
@@ -3943,7 +4018,62 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-a4d375d70ef2ae9ea76600983dbac534">4.1 - 消息队列</h1>
+	<h1 id="pg-c0333df9693e95d8b4a6758f9073b505">4.1 - JWT</h1>
+    
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c7748db182c095cbf3afbf54e91a9dde">4.2 - TTL</h1>
+    <div class="lead">基于 TransmittableThreadLocal (TTL) 自定义请求头拦截器，将Header 数据封装到线程变量中方便获取，减少用户信息数据库查询次数，同时验证当前用户有效期自动刷新有效期。</div>
+	<p><code>TransmittableThreadLocal</code> (TTL) 是增强版的 <code>ThreadLocal</code></p>
+<blockquote>
+<p>前置:
+<a href="ThreadLocal"><code>ThreadLocal</code></a></p></blockquote>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6584a1863892ecb310dc02695588346c">4.3 - 响应式编程Reactor库</h1>
+    
+	
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a4d375d70ef2ae9ea76600983dbac534">4.4 - 消息队列</h1>
     <div class="lead">消息中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的构建。消息中间件是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削峰等问题，实现高性能，高可用，可伸缩和最终一致性的系统架构。</div>
 	<p><a href="https://developer.aliyun.com/article/953777">https://developer.aliyun.com/article/953777</a></p>
 <h4 id="什么是消息队列">什么是消息队列<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%b6%88%e6%81%af%e9%98%9f%e5%88%97" aria-label="Heading self-link"></a></h4>
@@ -3976,7 +4106,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-1338051e553f7921513994e5ccdc2d82">4.1.1 - </h1>
+	<h1 id="pg-1338051e553f7921513994e5ccdc2d82">4.4.1 - </h1>
     
 	
 </div>
@@ -3986,6 +4116,273 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
     
 	
   
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9d099c622fce08014808a438406a5b28">4.5 - 网关Gateway</h1>
+    <div class="lead">网关是一个位于微服务架构前端的组件，它充当了所有微服务的入口</div>
+	<h4 id="什么是网关">什么是网关<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%bd%91%e5%85%b3" aria-label="Heading self-link"></a></h4>
+<p>网关负责路由请求、负载均衡、安全认证、流量控制、监控和日志记录等任务。</p>
+<p>我的理解是, 网关是请求真正进入服务前的过滤, 管理, 控制(重定向), 可以理解为保安大哥</p>
+<p>网关的结构</p>
+<ul>
+<li>
+<p>路由
+网关的基本模块, 由断言和过滤器组成</p>
+<ul>
+<li>
+<p>断言
+匹配规则, 当请求路径匹配时允许路由到相关服务
+实现一组匹配规则，让请求找到对应的 Route 进行处理</p>
+</li>
+<li>
+<p>过滤器
+响应式的过滤器链, 实现请求的过滤</p>
+<ul>
+<li>全局过滤器
+全局过滤器作用于所有的路由，不需要单独配置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212093859168.png" alt="image.png"></p>
+<p>客户端发起请求, 由 <code>Gateway Handler Mapping</code>
+接收, 这里执行断言并路由到 <code>Gateway Web Handler</code> 这里做过滤链, 过滤请求, 最后传递给服务
+过滤器可以在执行前和执行后回调</p>
+<blockquote>
+<p>在“pre”类型的过滤器可以做参数校验、权限校验、流量监控、日志输出、协议转换等;</p>
+<p>在“post”类型的过滤器中可以做响应内容、响应头的修改，日志的输出，流量监控等有着非常重要的作用。</p></blockquote>
+<blockquote>
+<p>了解:
+<a href="/docs/advanced/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8Breactor%E5%BA%93/">响应式编程</a></p></blockquote>
+<h4 id="自定义网关实现全局过滤器">自定义网关实现全局过滤器<a class="td-heading-self-link" href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%bd%91%e5%85%b3%e5%ae%9e%e7%8e%b0%e5%85%a8%e5%b1%80%e8%bf%87%e6%bb%a4%e5%99%a8" aria-label="Heading self-link"></a></h4>
+<p>网关选型<code>SpringCloudGateway</code></p>
+<p>模板工程基于 <code>pmhub</code></p>
+<p>新建自定义的全局过滤器</p>
+<p>全局过滤器需要实现 <code>GlobalFilter</code>
+过滤器需要确定执行顺序, 实现<code>Order</code> 接口</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">AuthFilter</span> <span style="color:#e78284">implements</span> GlobalFilter, Ordered
+</span></span></code></pre></div><p>该过滤器实现如下功能</p>
+<ol>
+<li>请求耗时记录</li>
+<li>白名单过滤</li>
+<li>Token鉴权</li>
+<li>日志输出</li>
+</ol>
+<p>请求耗时记录:</p>
+<p>全局过滤器的优先级较高, 因此把请求进入过滤器的时间作为起点, 业务执行完毕执行<code>post</code> 业务逻辑. 进行简单的时间相减</p>
+<p>白名单过滤:</p>
+<p><a href="/docs/advanced/nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/"><code>nacos</code></a> 配置白名单, 有些路径不需要严格的鉴权, 比如首页. 所有人发请求都能通过, 就直接跳过完事</p>
+<p><code>Token</code>鉴权:</p>
+<p>作为全局过滤器, 当用户请求进入应当进行身份鉴权, 过滤无效的请求
+从请求头里拿 <code>Token</code> , 跟缓存做匹配即可</p>
+<blockquote>
+<p><code>Redis</code> 策略是到期销毁, 不做更新</p></blockquote>
+<p>日志输出:
+在过滤链回调后执行, 代表服务执行完成
+结束时间减去开始时间就行</p>
+<p>为了方便解释, 我们一项项实现</p>
+<p>请求耗时:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#8caaee;font-weight:bold">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">AuthFilter</span> <span style="color:#e78284">implements</span> GlobalFilter, Ordered{
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//常量, 记录开始访问的时间</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> String BEGIN_VISIT_TIME <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;begin_visit_time&#34;</span>;<span style="color:#737994;font-style:italic">//开始访问时间</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//补上日志</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> Logger log <span style="color:#99d1db;font-weight:bold">=</span> LoggerFactory.<span style="color:#8caaee">getLogger</span>(AuthFilter.<span style="color:#8caaee">class</span>);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">//过滤器接口方法</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Override</span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> Mono<span style="color:#99d1db;font-weight:bold">&lt;</span>Void<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#8caaee">filter</span>(ServerWebExchange exchange, GatewayFilterChain chain) {
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//token和白名单稍后实现</span>
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//在上下文加上开始时间</span>
+</span></span><span style="display:flex;"><span>	exchange.<span style="color:#8caaee">getAttributes</span>().<span style="color:#8caaee">put</span>(BEGIN_VISIT_TIME, System.<span style="color:#8caaee">currentTimeMillis</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//等待链执行完成回调</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">return</span> chain.<span style="color:#8caaee">filter</span>(exchange)
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//链式调用then, 使用Mono.fromRunnable方法顺序执行日志输出</span>
+</span></span><span style="display:flex;"><span>	.<span style="color:#8caaee">then</span>(Mono.<span style="color:#8caaee">fromRunnable</span>{})
+</span></span><span style="display:flex;"><span>		<span style="color:#737994;font-style:italic">//日志输出的逻辑</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#737994;font-style:italic">// 记录接口访问日志  </span>
+</span></span><span style="display:flex;"><span>		Long beginVisitTime <span style="color:#99d1db;font-weight:bold">=</span> exchange.<span style="color:#8caaee">getAttribute</span>(BEGIN_VISIT_TIME);
+</span></span><span style="display:flex;"><span>		<span style="color:#ca9ee6">if</span> (beginVisitTime <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">null</span>){
+</span></span><span style="display:flex;"><span>			logData.<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;duration&#34;</span>, (System.<span style="color:#8caaee">currentTimeMillis</span>() <span style="color:#99d1db;font-weight:bold">-</span> beginVisitTime) <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;ms&#34;</span>);
+</span></span><span style="display:flex;"><span>			log.<span style="color:#8caaee">info</span>(<span style="color:#a6d189">&#34;访问接口信息: {}&#34;</span>, logData);
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>白名单过滤</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#8caaee;font-weight:bold">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">AuthFilter</span> <span style="color:#e78284">implements</span> GlobalFilter, Ordered{
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//常量, 记录开始访问的时间</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> String BEGIN_VISIT_TIME <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;begin_visit_time&#34;</span>;<span style="color:#737994;font-style:italic">//开始访问时间</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//补上日志</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> Logger log <span style="color:#99d1db;font-weight:bold">=</span> LoggerFactory.<span style="color:#8caaee">getLogger</span>(AuthFilter.<span style="color:#8caaee">class</span>);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">//过滤器接口方法</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Override</span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> Mono<span style="color:#99d1db;font-weight:bold">&lt;</span>Void<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#8caaee">filter</span>(ServerWebExchange exchange, GatewayFilterChain chain) {
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//白名单</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//首先拿到请求路径</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//上下文拿请求</span>
+</span></span><span style="display:flex;"><span>	ServerHttpRequest request <span style="color:#99d1db;font-weight:bold">=</span> exchange.<span style="color:#8caaee">getRequest</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//请求拿请求路径, 先拿URI, 再去掉首部</span>
+</span></span><span style="display:flex;"><span>	String url <span style="color:#99d1db;font-weight:bold">=</span> request.<span style="color:#8caaee">getURI</span>().<span style="color:#8caaee">getPath</span>();
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">// 跳过不需要验证的路径, 直接进下一级</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">if</span> (StringUtils.<span style="color:#8caaee">matches</span>(url, ignoreWhite.<span style="color:#8caaee">getWhites</span>())) {  
+</span></span><span style="display:flex;"><span>	    <span style="color:#ca9ee6">return</span> chain.<span style="color:#8caaee">filter</span>(exchange);  
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//在上下文加上开始时间</span>
+</span></span><span style="display:flex;"><span>	exchange.<span style="color:#8caaee">getAttributes</span>().<span style="color:#8caaee">put</span>(BEGIN_VISIT_TIME, System.<span style="color:#8caaee">currentTimeMillis</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//等待链执行完成回调</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">return</span> chain.<span style="color:#8caaee">filter</span>(exchange)
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//链式调用then, 使用Mono.fromRunnable方法顺序执行日志输出</span>
+</span></span><span style="display:flex;"><span>	.<span style="color:#8caaee">then</span>(Mono.<span style="color:#8caaee">fromRunnable</span>{})
+</span></span><span style="display:flex;"><span>		<span style="color:#737994;font-style:italic">//日志输出的逻辑</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#737994;font-style:italic">// 记录接口访问日志  </span>
+</span></span><span style="display:flex;"><span>		Long beginVisitTime <span style="color:#99d1db;font-weight:bold">=</span> exchange.<span style="color:#8caaee">getAttribute</span>(BEGIN_VISIT_TIME);
+</span></span><span style="display:flex;"><span>		<span style="color:#ca9ee6">if</span> (beginVisitTime <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">null</span>){
+</span></span><span style="display:flex;"><span>			logData.<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;duration&#34;</span>, (System.<span style="color:#8caaee">currentTimeMillis</span>() <span style="color:#99d1db;font-weight:bold">-</span> beginVisitTime) <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;ms&#34;</span>);
+</span></span><span style="display:flex;"><span>			log.<span style="color:#8caaee">info</span>(<span style="color:#a6d189">&#34;访问接口信息: {}&#34;</span>, logData);
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>token鉴权:
+选型 <a href="/docs/advanced/jwt/"><code>Jwt</code></a></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#8caaee;font-weight:bold">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">AuthFilter</span> <span style="color:#e78284">implements</span> GlobalFilter, Ordered{
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//常量, 记录开始访问的时间</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> String BEGIN_VISIT_TIME <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;begin_visit_time&#34;</span>;<span style="color:#737994;font-style:italic">//开始访问时间</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//补上日志</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> Logger log <span style="color:#99d1db;font-weight:bold">=</span> LoggerFactory.<span style="color:#8caaee">getLogger</span>(AuthFilter.<span style="color:#8caaee">class</span>);
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//补上redis</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Autowired</span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> RedisService redisService;
+</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">//过滤器接口方法</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Override</span>  
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> Mono<span style="color:#99d1db;font-weight:bold">&lt;</span>Void<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#8caaee">filter</span>(ServerWebExchange exchange, GatewayFilterChain chain) {
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//白名单</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//首先拿到请求路径</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//上下文拿请求</span>
+</span></span><span style="display:flex;"><span>	ServerHttpRequest request <span style="color:#99d1db;font-weight:bold">=</span> exchange.<span style="color:#8caaee">getRequest</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//请求拿请求路径, 先拿URI, 再去掉首部</span>
+</span></span><span style="display:flex;"><span>	String url <span style="color:#99d1db;font-weight:bold">=</span> request.<span style="color:#8caaee">getURI</span>().<span style="color:#8caaee">getPath</span>();
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">// 跳过不需要验证的路径, 直接进下一级, 返回链的执行结果</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">if</span> (StringUtils.<span style="color:#8caaee">matches</span>(url, ignoreWhite.<span style="color:#8caaee">getWhites</span>())) {  
+</span></span><span style="display:flex;"><span>	    <span style="color:#ca9ee6">return</span> chain.<span style="color:#8caaee">filter</span>(exchange);  
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//剩下的请求过筛子</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//从请求拿token</span>
+</span></span><span style="display:flex;"><span>	String token <span style="color:#99d1db;font-weight:bold">=</span> getToken(request);
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">if</span> (StringUtils.<span style="color:#8caaee">isEmpty</span>(token)) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">return</span> unauthorizedResponse(exchange, <span style="color:#a6d189">&#34;令牌不能为空&#34;</span>);  
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//拿JWT的声明, 这里写了一个字符串工具拿声明, 令牌秘钥就在工具里</span>
+</span></span><span style="display:flex;"><span>	Claims claims <span style="color:#99d1db;font-weight:bold">=</span> JwtUtils.<span style="color:#8caaee">parseToken</span>(token);
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">if</span> (claims <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span>) {  
+</span></span><span style="display:flex;"><span>	    <span style="color:#ca9ee6">return</span> unauthorizedResponse(exchange, <span style="color:#a6d189">&#34;令牌已过期或验证不正确！&#34;</span>);  
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//从声明拿用户ID</span>
+</span></span><span style="display:flex;"><span>	String userkey <span style="color:#99d1db;font-weight:bold">=</span> JwtUtils.<span style="color:#8caaee">getUserKey</span>(claims);  
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//从缓存匹配用户ID的token, 这里getTokenKey格式化, 就加了个前缀</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e78284">boolean</span> islogin <span style="color:#99d1db;font-weight:bold">=</span> redisService.<span style="color:#8caaee">hasKey</span>(getTokenKey(userkey));
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">if</span> (<span style="color:#99d1db;font-weight:bold">!</span>islogin) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">return</span> unauthorizedResponse(exchange, <span style="color:#a6d189">&#34;登录状态已过期&#34;</span>);  
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//最后从声明拿用户详细信息</span>
+</span></span><span style="display:flex;"><span>	String userid <span style="color:#99d1db;font-weight:bold">=</span> JwtUtils.<span style="color:#8caaee">getUserId</span>(claims);  
+</span></span><span style="display:flex;"><span>	String username <span style="color:#99d1db;font-weight:bold">=</span> JwtUtils.<span style="color:#8caaee">getUserName</span>(claims);  
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">if</span> (StringUtils.<span style="color:#8caaee">isEmpty</span>(userid) <span style="color:#99d1db;font-weight:bold">||</span> StringUtils.<span style="color:#8caaee">isEmpty</span>(username)) {  
+</span></span><span style="display:flex;"><span>	    <span style="color:#ca9ee6">return</span> unauthorizedResponse(exchange, <span style="color:#a6d189">&#34;令牌验证失败&#34;</span>);  
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//重新设置请求, 鉴权完毕</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//设置用户信息到请求  </span>
+</span></span><span style="display:flex;"><span>	addHeader(mutate, SecurityConstants.<span style="color:#8caaee">USER_KEY</span>, userkey);  
+</span></span><span style="display:flex;"><span>	addHeader(mutate, SecurityConstants.<span style="color:#8caaee">DETAILS_USER_ID</span>, userid);  
+</span></span><span style="display:flex;"><span>	addHeader(mutate, SecurityConstants.<span style="color:#8caaee">DETAILS_USERNAME</span>, username);  
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">// 内部请求来源参数清除（防止网关携带内部请求标识，造成系统安全风险）  </span>
+</span></span><span style="display:flex;"><span>	removeHeader(mutate, SecurityConstants.<span style="color:#8caaee">FROM_SOURCE</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//在上下文加上开始时间</span>
+</span></span><span style="display:flex;"><span>	exchange.<span style="color:#8caaee">getAttributes</span>().<span style="color:#8caaee">put</span>(BEGIN_VISIT_TIME, System.<span style="color:#8caaee">currentTimeMillis</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//等待链执行完成回调</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">return</span> chain.<span style="color:#8caaee">filter</span>(exchange)
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//链式调用then, 使用Mono.fromRunnable方法顺序执行日志输出</span>
+</span></span><span style="display:flex;"><span>	.<span style="color:#8caaee">then</span>(Mono.<span style="color:#8caaee">fromRunnable</span>{})
+</span></span><span style="display:flex;"><span>		<span style="color:#737994;font-style:italic">//日志输出的逻辑</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#737994;font-style:italic">// 记录接口访问日志  </span>
+</span></span><span style="display:flex;"><span>		Long beginVisitTime <span style="color:#99d1db;font-weight:bold">=</span> exchange.<span style="color:#8caaee">getAttribute</span>(BEGIN_VISIT_TIME);  
+</span></span><span style="display:flex;"><span>		<span style="color:#ca9ee6">if</span> (beginVisitTime <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">null</span>) {  
+</span></span><span style="display:flex;"><span>		    URI uri <span style="color:#99d1db;font-weight:bold">=</span> exchange.<span style="color:#8caaee">getRequest</span>().<span style="color:#8caaee">getURI</span>();  
+</span></span><span style="display:flex;"><span>		    Map<span style="color:#99d1db;font-weight:bold">&lt;</span>String, Object<span style="color:#99d1db;font-weight:bold">&gt;</span> logData <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> HashMap<span style="color:#99d1db;font-weight:bold">&lt;&gt;</span>();  
+</span></span><span style="display:flex;"><span>		    logData.<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;host&#34;</span>, uri.<span style="color:#8caaee">getHost</span>());  
+</span></span><span style="display:flex;"><span>		    logData.<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;port&#34;</span>, uri.<span style="color:#8caaee">getPort</span>());  
+</span></span><span style="display:flex;"><span>		    logData.<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;path&#34;</span>, uri.<span style="color:#8caaee">getPath</span>());  
+</span></span><span style="display:flex;"><span>		    logData.<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;query&#34;</span>, uri.<span style="color:#8caaee">getRawQuery</span>());  
+</span></span><span style="display:flex;"><span>		    logData.<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;duration&#34;</span>, (System.<span style="color:#8caaee">currentTimeMillis</span>() <span style="color:#99d1db;font-weight:bold">-</span> beginVisitTime) <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;ms&#34;</span>);  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>		    log.<span style="color:#8caaee">info</span>(<span style="color:#a6d189">&#34;访问接口信息: {}&#34;</span>, logData);  
+</span></span><span style="display:flex;"><span>		    log.<span style="color:#8caaee">info</span>(<span style="color:#a6d189">&#34;我是美丽分割线: ###################################################&#34;</span>);  
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>addHeader</code> 和 <code>removeHeader</code> 其实没什么说的, 就是重新构造了个请求, 方便后续服务直接拿信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">private</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">addHeader</span>(ServerHttpRequest.<span style="color:#8caaee">Builder</span> mutate, String name, Object value) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">if</span> (value <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span>) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span>;  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>    String valueStr <span style="color:#99d1db;font-weight:bold">=</span> value.<span style="color:#8caaee">toString</span>();  
+</span></span><span style="display:flex;"><span>    String valueEncode <span style="color:#99d1db;font-weight:bold">=</span> ServletUtils.<span style="color:#8caaee">urlEncode</span>(valueStr);  
+</span></span><span style="display:flex;"><span>    mutate.<span style="color:#8caaee">header</span>(name, valueEncode);  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">private</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">removeHeader</span>(ServerHttpRequest.<span style="color:#8caaee">Builder</span> mutate, String name) {  
+</span></span><span style="display:flex;"><span>    mutate.<span style="color:#8caaee">headers</span>(httpHeaders <span style="color:#99d1db;font-weight:bold">-&gt;</span> httpHeaders.<span style="color:#8caaee">remove</span>(name)).<span style="color:#8caaee">build</span>();  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ca7712bf275374a77e97a3daa3f2c97c">4.6 - </h1>
+    
+	
+</div>
+
+
 
     
 	
