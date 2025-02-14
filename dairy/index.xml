@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>日志 on 海阔集</title>
-    <link>http://localhost:1313/dairy/</link>
+    <link>http://localhost:51674/dairy/</link>
     <description>Recent content in 日志 on 海阔集</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/dairy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:51674/dairy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2月10日</title>
-      <link>http://localhost:1313/dairy/2%E6%9C%8810%E6%97%A5/</link>
+      <link>http://localhost:51674/dairy/2%E6%9C%8810%E6%97%A5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/dairy/2%E6%9C%8810%E6%97%A5/</guid>
+      <guid>http://localhost:51674/dairy/2%E6%9C%8810%E6%97%A5/</guid>
       <description>&lt;p&gt;知识网络的构建非常有效&#xA;完成了知识体系梳理, 让知识点之间互相联系, 达到互相补充的目的, 达到系统性学习的要求&#xA;使用Obisidian后完成单元的时间从1个月缩短至5天&lt;/p&gt;&#xA;&lt;p&gt;目前的问题:&#xA;在知识点构建过程会引用未知知识点, 如果使用深度优先策略会导致单个知识点构建时间过长&#xA;使用广度优先策略会导致知识点构建不充分, 导致难以理解甚至错误&lt;/p&gt;&#xA;&lt;p&gt;todo:&#xA;找到构建知识点的策略&lt;/p&gt;&#xA;&lt;p&gt;待实践:&#xA;层次递进法（分层次学习）&lt;/p&gt;&#xA;&lt;p&gt;先广度遍历建立基础，再针对难点深度学习。&#xA;先粗略标注知识点（例如在 Obsidian 中使用标签），然后逐步填充内容。&#xA;设定“&lt;em&gt;&lt;strong&gt;深度阈值&lt;/strong&gt;&lt;/em&gt;”，例如最多深入两层，避免陷入细节漩涡。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;关键路径法（关键知识点优先）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;找出知识体系中的核心概念（如“动机图”或“概念网络”），优先构建这些关键点。&#xA;采用“知识辐射”策略，从&lt;em&gt;&lt;strong&gt;核心知识点&lt;/strong&gt;&lt;/em&gt;向外扩展，保证整体理解不受阻碍。&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;自适应探索法（按难度动态调整）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;在学习过程中动态调整策略：遇到理解困难时，切换为局部深度探索，否则维持广度推进。&#xA;利用&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;问题驱动学习（Problem-Based Learning, PBL），遇到卡点时再深入，而非预先穷举所有相关知识。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;时间配额法（限制单个知识点时间）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;设定时间上限，例如每个&lt;em&gt;&lt;strong&gt;知识点最多20分钟&lt;/strong&gt;&lt;/em&gt;，如果仍有未解决的问题，则标记为“待深入”，后续再集中攻克。&#xA;通过设定学习周期（如“5天初步构建，10天复盘深化”）来避免单点耗时过多。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2月11日</title>
-      <link>http://localhost:1313/dairy/2%E6%9C%8811%E6%97%A5/</link>
+      <link>http://localhost:51674/dairy/2%E6%9C%8811%E6%97%A5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/dairy/2%E6%9C%8811%E6%97%A5/</guid>
+      <guid>http://localhost:51674/dairy/2%E6%9C%8811%E6%97%A5/</guid>
       <description>&lt;p&gt;太忙了, 忘记写日志了&lt;/p&gt;&#xA;&lt;p&gt;实践了&lt;code&gt;层次递进法&lt;/code&gt; 将任务量缩减分层遍历任务, 逐层深入, 在一天完成了&lt;code&gt;MySQL&lt;/code&gt; 模块的整体结构&lt;/p&gt;&#xA;&lt;p&gt;归纳如下, 遍历层数限制为2层, 当知识点层数超过2层时采取两种策略&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI 归纳, 减少搜索深度&lt;/li&gt;&#xA;&lt;li&gt;放弃, 继续广度学习&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;第一种策略很好理解, AI将深度的理论归纳为表层结果, 减少厚度&lt;/p&gt;&#xA;&lt;p&gt;第二种策略的理论基础是, 知识点并非树状而是网状结构&lt;/p&gt;&#xA;&lt;p&gt;并发编程下有子节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163428470.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;子节点下还有 &lt;code&gt;孙&lt;/code&gt; 节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163437158.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这看起来是层层递进的树结构, 但是总体来看:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163553822.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这是一张网络, 当广度搜索时原先的节点在不同的搜索区域会&lt;code&gt;升级&lt;/code&gt;, 从子节点升级为父节点, 从而达到&#xA;缩小厚度的结果&lt;/p&gt;&#xA;&lt;p&gt;比如搜索路径 并发编程&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212164020208.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;此时 &lt;code&gt;AQS&lt;/code&gt; 是第三层节点, 学习自旋锁和CLH锁时就应该放弃&lt;/p&gt;&#xA;&lt;p&gt;放弃后转为广度搜索, 开始遍历之前的二级节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212164241043.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;此时在广度搜索基础上, &lt;code&gt;AQS&lt;/code&gt; 自动降级了, 通俗来讲就是学习AQS的基础打牢了, 可以将任意的二级节点作为基础向下遍历了&lt;/p&gt;&#xA;&lt;p&gt;上述可知, 层级学习的核心是广度搜索结合深度搜索, 前提是有系统的学习路径, 思想是逐层递进, 优先搭建网络, 之后丰满节点&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;阅读:&lt;/p&gt;&#xA;&lt;p&gt;***问题驱动学习（Problem-Based Learning, PBL）&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
   </channel>

@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51674&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:1313/interview/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/interview/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:51674/interview/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:51674/interview/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>Interview | 海阔集</title>
 <meta name="description" content="集百川者, 成海阔">
-<meta property="og:url" content="http://localhost:1313/interview/">
+<meta property="og:url" content="http://localhost:51674/interview/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Interview">
   <meta property="og:description" content="集百川者, 成海阔">
@@ -30,7 +30,6 @@
 
   <meta itemprop="name" content="Interview">
   <meta itemprop="description" content="集百川者, 成海阔">
-  <meta itemprop="dateModified" content="2025-02-08T22:25:01+08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Interview">
   <meta name="twitter:description" content="集百川者, 成海阔">
@@ -171,15 +170,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-f22f3d25374ac1589ffdbc1ff61ee144">MySQL</a></li>
-
-
-    
-  
-    
-    
-	
-<li>2: <a href="#pg-0f9684a7e74b102f3a9bc577a8c12cf8">并发编程</a></li>
+<li>1: <a href="#pg-3ba27469f4a6cfdff3f63f1f25af62a6"></a></li>
 
 
     
@@ -210,516 +201,30 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-f22f3d25374ac1589ffdbc1ff61ee144">1 - MySQL</h1>
-    <div class="lead">MySQL面试题, 84道</div>
-	<h4 id="什么是mysql">什么是MySQL<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%afmysql" aria-label="Heading self-link"></a></h4>
-<p>一种开源的关系型数据库, 使用频率很高</p>
-<h4 id="怎么删除创建一张表和设定主键">怎么删除/创建一张表和设定主键<a class="td-heading-self-link" href="#%e6%80%8e%e4%b9%88%e5%88%a0%e9%99%a4%e5%88%9b%e5%bb%ba%e4%b8%80%e5%bc%a0%e8%a1%a8%e5%92%8c%e8%ae%be%e5%ae%9a%e4%b8%bb%e9%94%ae" aria-label="Heading self-link"></a></h4>
-<p>删除</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">drop</span> <span style="color:#e78284">表名</span> <span style="color:#ca9ee6">from</span> <span style="color:#e78284">数据库</span>;
-</span></span></code></pre></div><p>创建</p>
-<p>首先指定数据库</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>use <span style="color:#ca9ee6">database</span>;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">create</span> <span style="color:#e78284">表</span> <span style="color:#e78284">{</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">列名</span> <span style="color:#e78284">数据类型</span>;
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">列名</span> <span style="color:#e78284">数据类型</span>;
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">列名</span> <span style="color:#e78284">数据类型</span>;
-</span></span><span style="display:flex;"><span><span style="color:#e78284">}</span>
-</span></span></code></pre></div><p>设定主键</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">primary</span> <span style="color:#ca9ee6">key</span> (<span style="color:#e78284">列名</span>); 
-</span></span></code></pre></div><p>sql升序排序</p>
-<pre tabindex="0"><code>select 字段 from 数据库 order by desc/asc
-</code></pre><p>此外，如果我需要根据多个字段进行排序，例如先按工资降序排列，再按名字升序排列，我可以使用：</p>
-<pre tabindex="0"><code>SELECT id, name, salary
-FROM employees
-ORDER BY salary DESC, name ASC;
-</code></pre><h4 id="mysql-的内连接左连接右连接有什么区别">MySQL 的内连接、左连接、右连接有什么区别?<a class="td-heading-self-link" href="#mysql-%e7%9a%84%e5%86%85%e8%bf%9e%e6%8e%a5%e5%b7%a6%e8%bf%9e%e6%8e%a5%e5%8f%b3%e8%bf%9e%e6%8e%a5%e6%9c%89%e4%bb%80%e4%b9%88%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
-<p>内联, 返回两个表的交集
-左联, 返回左表所有记录, 右表匹配返回, 没有匹配的值填空
-右联是左联把表换个顺序</p>
-<h4 id="数据库三大范式">数据库三大范式<a class="td-heading-self-link" href="#%e6%95%b0%e6%8d%ae%e5%ba%93%e4%b8%89%e5%a4%a7%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
-<p>第一范式, 表的每一列都是不可分割的基本单元</p>
-<p>地址作为省市区的集合应该拆成四个字段</p>
-<p>第二范式, 在第一范式的基础上, 消除部分依赖</p>
-<p>所有非主键字段都应该依赖主键, 而不能只与主键的某一部分相关。</p>
-<p>比如订单ID和商品ID和商品名, 单价</p>
-<p>应该将其拆分为订单表、订单商品关联表、商品表。</p>
-<p>第三范式. 在第二范式的基础上消除传递依赖</p>
-<p>非主键列应该只依赖于主键列，不依赖于其他非主键列。</p>
-<p>设计订单信息表的时候，可以把客户名称、所属公司、联系方式等信息拆分到客户信息表中，然后在订单信息表中用客户编号进行关联。</p>
-<h4 id="建表时注意哪些问题">建表时注意哪些问题?<a class="td-heading-self-link" href="#%e5%bb%ba%e8%a1%a8%e6%97%b6%e6%b3%a8%e6%84%8f%e5%93%aa%e4%ba%9b%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h4>
-<p>在建表的时候，首先可以考虑表是否符合数据库范式，也就是确保字段不可再分，消除非主键依赖，确保字段仅依赖于主键。</p>
-<p>然后在选择字段类型时，尽量选择合适的数据类型。</p>
-<p>在字符集上，尽量选择 utf8mb4，这样不仅可以支持中文和英文，还可以支持表情符号等。</p>
-<p>当数据量较大时（比如上千万行数据），需要考虑分表。比如订单表，可以采用水平分表的方式来分散存储压力。</p>
-<h4 id="varchar-和-char的区别">Varchar 和 char的区别<a class="td-heading-self-link" href="#varchar-%e5%92%8c-char%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
-<p>字符串, 固定空间, 小于固定空间的用空格填充
-速度快, 空间换时间</p>
-<p>可变字符, - 插入的数据是多长，就按照多长来存储；
-时间换空间, 存取慢, 但占用空间小</p>
-<h3 id="datetime-和-timestamp-的异同">DATETIME 和 TIMESTAMP 的异同？<a class="td-heading-self-link" href="#datetime-%e5%92%8c-timestamp-%e7%9a%84%e5%bc%82%e5%90%8c" aria-label="Heading self-link"></a></h3>
-<p>都可以存储时间 YYYY-MM-DD HH:MM:SS</p>
-<p><strong>日期范围</strong>：DATETIME 的日期范围是 <code>1000-01-01 00:00:00.000000</code> 到 <code>9999-12-31 23:59:59.999999</code> 无时区</p>
-<p>TIMESTAMP 的时间范围是<code>1970-01-01 00:00:01.000000</code> UTC <code>到 ``2038-01-09 03:14:07.999999</code> 有时区</p>
-<p><strong>存储空间</strong>：DATETIME 的存储空间为 8 字节；TIMESTAMP 的存储空间为 4 字节</p>
-<h3 id="in-和-exists-的区别">in 和 exists 的区别？<a class="td-heading-self-link" href="#in-%e5%92%8c-exists-%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h3>
-<ol>
-<li>如果查询的两个表大小相当，那么用 in 和 exists 差别不大。</li>
-</ol>
-<h3 id="dropdelete-与-truncate-的区别">drop、delete 与 truncate 的区别？<a class="td-heading-self-link" href="#dropdelete-%e4%b8%8e-truncate-%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h3>
-<p>三者都是删除
-drop从库中删除表, 所有记录,索引权限</p>
-<h3 id="count1count-与-count列名-的区别">count(1)、count(<code>*</code>) 与 count(列名) 的区别？<a class="td-heading-self-link" href="#count1count-%e4%b8%8e-count%e5%88%97%e5%90%8d-%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h3>
-<h4 id="记录货币用什么好">记录货币用什么好<a class="td-heading-self-link" href="#%e8%ae%b0%e5%bd%95%e8%b4%a7%e5%b8%81%e7%94%a8%e4%bb%80%e4%b9%88%e5%a5%bd" aria-label="Heading self-link"></a></h4>
-<p><code>Decimal</code></p>
-<p>DECIMAL 和 NUMERIC 值作为字符串存储，而不是作为二进制浮点数，以便保存那些值的小数精度</p>
-<h4 id="记录emoji有什么好">记录Emoji有什么好?<a class="td-heading-self-link" href="#%e8%ae%b0%e5%bd%95emoji%e6%9c%89%e4%bb%80%e4%b9%88%e5%a5%bd" aria-label="Heading self-link"></a></h4>
-<p>emoji是4个字节的UTF-8字符
-而utf-8字符集最多支持3个字节</p>
-
-</div>
-
-
-
+	<h1 id="pg-3ba27469f4a6cfdff3f63f1f25af62a6">1 - </h1>
     
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-0f9684a7e74b102f3a9bc577a8c12cf8">2 - 并发编程</h1>
-    <div class="lead">面试-并发编程</div>
-	<h4 id="并行和并发的区别">并行和并发的区别<a class="td-heading-self-link" href="#%e5%b9%b6%e8%a1%8c%e5%92%8c%e5%b9%b6%e5%8f%91%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
-<p>处理器同时处理多个任务为并行
-处理器在一定的时间间隔, 交替处理任务交并发</p>
-<p>类似红绿灯, 路口所有车道车辆通信为并行
-但是路口一定时间间隔内只允许一辆车通过, 不同车道的车交替通过叫并发</p>
-<h4 id="什么是线程安全">什么是线程安全<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8" aria-label="Heading self-link"></a></h4>
-<blockquote>
-<p>2/5/2025</p></blockquote>
-<p>线程安全是指,  多线程环境下访问共享资源时, 线程可以正确执行, 而不会出现问题</p>
-<p>线程安全有以下几个问题</p>
-<p>可见性问题
-线程对共享变量的修改能被其他线程立即看到
-可以通过 volatile 关键字保证数据一致性</p>
-<p>原子性问题
-操作是不可分割的, 成功则全部成功, 失败则全部失败
-原子性可以通过正确的同步机制 如 syncroizd 关键字实现线程同步以及原子操作来保证, 防止操作被意外中断</p>
-<p>活跃性问题
-当多线程争夺有限资源时可能会导致死锁, 饥饿等问题</p>
-<h4 id="如何保证线程安全">如何保证线程安全<a class="td-heading-self-link" href="#%e5%a6%82%e4%bd%95%e4%bf%9d%e8%af%81%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8" aria-label="Heading self-link"></a></h4>
-<blockquote>
-<p>2/9</p></blockquote>
-<p>为了保证线程安全，可以使用 synchronized 关键字或 ReentrantLock 来保证共享资源的互斥访问。</p>
-<p>对于简单的变量操作，可以使用 Atomic 类来实现无锁线程安全。</p>
-<p>可以使用线程安全容器，如 ConcurrentHashMap 或 CopyOnWriteArrayList。</p>
-<p>对于每个线程独立的数据，可以使用 ThreadLocal 来为每个线程提供独立的变量副本。</p>
-<p>对于简单的状态标志，可以使用 volatile 关键字确保多线程间的可见性。</p>
-<h4 id="有个int的变量为0十个线程轮流对其进行操作循环10000次结果是大于小于还是等于10万为什么">有个int的变量为0，十个线程轮流对其进行++操作（循环10000次），结果是大于小于还是等于10万，为什么？<a class="td-heading-self-link" href="#%e6%9c%89%e4%b8%aaint%e7%9a%84%e5%8f%98%e9%87%8f%e4%b8%ba0%e5%8d%81%e4%b8%aa%e7%ba%bf%e7%a8%8b%e8%bd%ae%e6%b5%81%e5%af%b9%e5%85%b6%e8%bf%9b%e8%a1%8c%e6%93%8d%e4%bd%9c%e5%be%aa%e7%8e%af10000%e6%ac%a1%e7%bb%93%e6%9e%9c%e6%98%af%e5%a4%a7%e4%ba%8e%e5%b0%8f%e4%ba%8e%e8%bf%98%e6%98%af%e7%ad%89%e4%ba%8e10%e4%b8%87%e4%b8%ba%e4%bb%80%e4%b9%88" aria-label="Heading self-link"></a></h4>
-<p>小于</p>
-<p>int++ 实际上可以分解为三步：</p>
-<ol>
-<li>读取变量的值。</li>
-<li>将读取到的值加 1。</li>
-<li>将结果写回变量。</li>
-</ol>
-<p>多线程并发操作共享的i 会出现竞态条件</p>
-<ul>
-<li>线程 1 读取变量值为 0。</li>
-<li>线程 2 也读取变量值为 0。</li>
-<li>线程 1 进行加法运算并将结果 1 写回变量。</li>
-<li>线程 2 进行加法运算并将结果 1 写回变量，覆盖了线程 1 的结果。</li>
-</ul>
-<h4 id="场景有一个-key-对应的-value-是一个json-结构json-当中有好几个子任务这些子任务如果对-key-进行修改的话会不会存在线程安全的问题如何解决如果是多个节点的情况应该怎么加锁">场景:有一个 key 对应的 value 是一个json 结构，json 当中有好几个子任务，这些子任务如果对 key 进行修改的话,会不会存在线程安全的问题?如何解决?如果是多个节点的情况，应该怎么加锁?<a class="td-heading-self-link" href="#%e5%9c%ba%e6%99%af%e6%9c%89%e4%b8%80%e4%b8%aa-key-%e5%af%b9%e5%ba%94%e7%9a%84-value-%e6%98%af%e4%b8%80%e4%b8%aajson-%e7%bb%93%e6%9e%84json-%e5%bd%93%e4%b8%ad%e6%9c%89%e5%a5%bd%e5%87%a0%e4%b8%aa%e5%ad%90%e4%bb%bb%e5%8a%a1%e8%bf%99%e4%ba%9b%e5%ad%90%e4%bb%bb%e5%8a%a1%e5%a6%82%e6%9e%9c%e5%af%b9-key-%e8%bf%9b%e8%a1%8c%e4%bf%ae%e6%94%b9%e7%9a%84%e8%af%9d%e4%bc%9a%e4%b8%8d%e4%bc%9a%e5%ad%98%e5%9c%a8%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e7%9a%84%e9%97%ae%e9%a2%98%e5%a6%82%e4%bd%95%e8%a7%a3%e5%86%b3%e5%a6%82%e6%9e%9c%e6%98%af%e5%a4%9a%e4%b8%aa%e8%8a%82%e7%82%b9%e7%9a%84%e6%83%85%e5%86%b5%e5%ba%94%e8%af%a5%e6%80%8e%e4%b9%88%e5%8a%a0%e9%94%81" aria-label="Heading self-link"></a></h4>
-<p>会</p>
-<p>单机环境下, 也就是单节点
-可以通过 syncroized 或者ReentranLock 实现线程互斥读写</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @program: alog  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @description: 多线程修改key  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author: hamhuo  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> **/</span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">keyAndJson</span> {  
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//使用重入锁正确互斥  </span>
-</span></span><span style="display:flex;"><span>    ReentrantLock lock <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> ReentrantLock();  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> String key <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;{\&#34;tasks\&#34;: [\&#34;task1\&#34;, \&#34;task2\&#34;]}&#34;</span>;  
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//线程读方法  </span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> String <span style="color:#8caaee">readJson</span>() {  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//上锁, 互斥读  </span>
-</span></span><span style="display:flex;"><span>        lock.<span style="color:#8caaee">lock</span>();  
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">try</span>{  
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">return</span> key.<span style="color:#8caaee">trim</span>();  
-</span></span><span style="display:flex;"><span>        }<span style="color:#ca9ee6">catch</span>(Exception e){  
-</span></span><span style="display:flex;"><span>            e.<span style="color:#8caaee">printStackTrace</span>();  
-</span></span><span style="display:flex;"><span>        }<span style="color:#ca9ee6">finally</span> {  
-</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">//finally解锁  </span>
-</span></span><span style="display:flex;"><span>            lock.<span style="color:#8caaee">unlock</span>();  
-</span></span><span style="display:flex;"><span>        }  
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">null</span>;  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//线程写方法  </span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">writeJson</span>(String json) {  
-</span></span><span style="display:flex;"><span>        lock.<span style="color:#8caaee">lock</span>();  
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">try</span>{  
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">this</span>.<span style="color:#8caaee">key</span> <span style="color:#99d1db;font-weight:bold">=</span> json;  
-</span></span><span style="display:flex;"><span>        }<span style="color:#ca9ee6">catch</span>(Exception e){  
-</span></span><span style="display:flex;"><span>            e.<span style="color:#8caaee">printStackTrace</span>();  
-</span></span><span style="display:flex;"><span>        }<span style="color:#ca9ee6">finally</span> {  
-</span></span><span style="display:flex;"><span>            lock.<span style="color:#8caaee">unlock</span>();  
-</span></span><span style="display:flex;"><span>        }  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>多节点下, 需要使用分布式锁 Redisson 来保证对 key 的修改操作是原子的
-//todo redis</p>
-<h4 id="讲一个线程安全的场景">讲一个线程安全的场景<a class="td-heading-self-link" href="#%e8%ae%b2%e4%b8%80%e4%b8%aa%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e7%9a%84%e5%9c%ba%e6%99%af" aria-label="Heading self-link"></a></h4>
-<p>实现单例模式时需要确保线程安全</p>
-<p>单例模式确保一个类只有一个实例，并提供一个全局访问点。在多线程环境下，如果多个线程同时尝试创建实例，单例类必须确保只创建一个实例。</p>
-<p>饿汉式通过在类加载时初始化一个静态实例保证线程安全</p>
-<p>懒汉式通过双重检查实现线程安全</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">singleton</span> {  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">volatile</span> singleton instance;  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> <span style="color:#8caaee">singleton</span>() {};  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> singleton <span style="color:#8caaee">getInstance</span>() {  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//双重锁定  </span>
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//第一重, 检查是否实例已经生成, 这里允许多线程异步访问  </span>
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">if</span> (instance <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span>) {  
-</span></span><span style="display:flex;"><span>            <span style="color:#e78284">synchronized</span> (singleton.<span style="color:#8caaee">class</span>) {  
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//单线程环境  </span>
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//第二重, 目的是生成实例时确保只有一个线程生成  </span>
-</span></span><span style="display:flex;"><span>                <span style="color:#ca9ee6">if</span> (instance <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span>) {  
-</span></span><span style="display:flex;"><span>                    instance <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> singleton();  
-</span></span><span style="display:flex;"><span>                    <span style="color:#ca9ee6">return</span> instance;  
-</span></span><span style="display:flex;"><span>                }  
-</span></span><span style="display:flex;"><span>            }  
-</span></span><span style="display:flex;"><span>        }  
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span> instance;  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>当然, 直接使用枚举返回单例最合适, **因为<strong><strong>Java</strong></strong>虚拟机会保证枚举对象的唯一性，因此每一个枚举类型和定义的枚举变量在<strong><strong>JVM</strong></strong>中都是唯一的</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">enum</span> Singleton {
-</span></span><span style="display:flex;"><span>     INSTANCE;
-</span></span><span style="display:flex;"><span>     <span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">businessMethod</span>() {
-</span></span><span style="display:flex;"><span>          System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;我是一个单例！&#34;</span>);
-</span></span><span style="display:flex;"><span>     }
-</span></span></code></pre></div><h4 id="什么是进程和线程">什么是进程和线程<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e8%bf%9b%e7%a8%8b%e5%92%8c%e7%ba%bf%e7%a8%8b" aria-label="Heading self-link"></a></h4>
-<p>进程是程序的一次执行, 是系统分配资源的基本单位,
-线程是进程的子任务, 是系统调度的基本单位</p>
-<p>多个线程可以同一个进程的共享资源如内存, 每个线程有自己的栈和寄存器</p>
-<h4 id="线程的共享内存是什么">线程的共享内存是什么<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%85%b1%e4%ba%ab%e5%86%85%e5%ad%98%e6%98%af%e4%bb%80%e4%b9%88" aria-label="Heading self-link"></a></h4>
-<blockquote>
-<p>2/5/2025</p></blockquote>
-<p>在Java中共享内存是Java线程通信的一种方式, 允许线程之间传递数据
-Java的共享内存模型也叫JMM, JMM决定了线程对共享变量的写何时对其他线程可见共享变量存储在主存储中, 线程内部有该变量的副本
-线程之间的通信必须先让一个线程刷新共享变量, 之后JMM同步另一个线程的副本</p>
-<blockquote>
-<p>引用:
-<a href="https://cloud.baidu.com/article/3075183">https://cloud.baidu.com/article/3075183</a></p></blockquote>
-<blockquote>
-<ol>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的字节跳动商业化一面的原题：进程和线程区别，线程共享内存和进程共享内存的区别</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的小米春招同学 K 一面面试原题：协程和线程和进程的区别</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的字节跳动面经同学 1 Java 后端技术一面面试原题：线程和进程有什么区别？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的华为 OD 面经同学 1 一面面试原题：对于多线程编程的了解?</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的美团面经同学 2 Java 后端技术一面面试原题：进程和线程的区别？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的华为面经同学 9 Java 通用软件开发一面面试原题：进程和线程的区别</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的 小公司面经合集好未来测开面经同学 3 测开一面面试原题：进程和线程的区别</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的招商银行面经同学 6 招银网络科技面试原题：进程和线程的区别？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的用友面试原题：线程和进程的区别</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的vivo 面经同学 10 技术一面面试原题：线程的概念，线程有哪些状态</li>
-</ol></blockquote>
-<h4 id="线程的创建方式">线程的创建方式<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%88%9b%e5%bb%ba%e6%96%b9%e5%bc%8f" aria-label="Heading self-link"></a></h4>
-<p>继承Thread类, 重写run方法, 调用 start()启动线程
-实现Runnable接口, 重写run方法, 创建 Thread对象并传入Runnable任务对象, 调用 start() 启动线程
-实现Callable&lt;&gt;接口, 重写call方法, 新建 FutureTask 类打包任务, 创建 Thread对象并传入FutureTask任务对象, 调用start()启动线程</p>
-<p>前两中线程执行没有返回值, 第三中可以获取执行结果</p>
-<h4 id="启动一个java程序里面有哪些线程">启动一个Java程序里面有哪些线程?<a class="td-heading-self-link" href="#%e5%90%af%e5%8a%a8%e4%b8%80%e4%b8%aajava%e7%a8%8b%e5%ba%8f%e9%87%8c%e9%9d%a2%e6%9c%89%e5%93%aa%e4%ba%9b%e7%ba%bf%e7%a8%8b" aria-label="Heading self-link"></a></h4>
-<p>main线程
-垃圾回收守护线程
-JIT及时编译线程</p>
-<p>可以通过下列代码追踪</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">class</span> <span style="color:#e5c890">ThreadLister</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) {
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">// 获取所有线程的堆栈跟踪</span>
-</span></span><span style="display:flex;"><span>        Map<span style="color:#99d1db;font-weight:bold">&lt;</span>Thread, StackTraceElement<span style="color:#99d1db;font-weight:bold">[]&gt;</span> threads <span style="color:#99d1db;font-weight:bold">=</span> Thread.<span style="color:#8caaee">getAllStackTraces</span>();
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">for</span> (Thread thread : threads.<span style="color:#8caaee">keySet</span>()) {
-</span></span><span style="display:flex;"><span>            System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;Thread: &#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> thread.<span style="color:#8caaee">getName</span>() <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34; (ID=&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> thread.<span style="color:#8caaee">getId</span>() <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;)&#34;</span>);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><blockquote>
-<ol>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的字节跳动面经同学 1 Java 后端技术一面面试原题：有多少种实现线程的方法？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的农业银行同学 1 面试原题：实现线程的方式和区别</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的农业银行面经同学 3 Java 后端面试原题：说说线程的创建方法</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的小公司面经合集同学 1 Java 后端面试原题：线程创建的方式？Runable 和 Callable 有什么区别？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的阿里面经同学 5 阿里妈妈 Java 后端技术一面面试原题：一个 8G 内存的系统最多能创建多少线程?（奇怪的问题，答了一些 pcb、页表、虚拟机栈什么的）启动一个 Java 程序，你能说说里面有哪些线程吗？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的招商银行面经同学 6 招银网络科技面试原题：如何创建线程？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的百度面经同学 1 文心一言 25 实习 Java 后端面试原题：java 如何创建线程？每次都要创建新线程来实现异步操作，很繁琐，有了解线程池吗？</li>
-<li><a href="https://javabetter.cn/zhishixingqiu/mianshi.html">Java 面试指南（付费）</a>收录的美团面经同学 4 一面面试原题：平时怎么使用多线程</li>
-</ol></blockquote>
-<h4 id="调用-start-方法会执行-run-为什么不直接执行-run">调用 start() 方法会执行 run(), 为什么不直接执行 run()<a class="td-heading-self-link" href="#%e8%b0%83%e7%94%a8-start-%e6%96%b9%e6%b3%95%e4%bc%9a%e6%89%a7%e8%a1%8c-run-%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e7%9b%b4%e6%8e%a5%e6%89%a7%e8%a1%8c-run" aria-label="Heading self-link"></a></h4>
-<p>直接调用run()方法会按照普通方法执行, 也就是在当前进程执行不会创建新的线程
-start() 方法创建新线程后会在新线程调用run()实现多线程</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">class</span> <span style="color:#e5c890">MyThread</span> extend Thread{
-</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@override</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">run</span>(){
-</span></span><span style="display:flex;"><span>	
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="线程共有几种状态">线程共有几种状态?<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e5%85%b1%e6%9c%89%e5%87%a0%e7%a7%8d%e7%8a%b6%e6%80%81" aria-label="Heading self-link"></a></h4>
-<p>线程共有6种状态</p>
-<p>NEW, RUANNABLE, WAIT, TIMED_WAIT, BLOCK, TERMINATE</p>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250208162007896.png" alt="image.png"></p>
-<p>如何强制终止进程?</p>
-<p>调用 <code>interrupt()</code> 方法, 设置中断标志, 通知线程中断</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">class</span> <span style="color:#e5c890">MyTask</span> <span style="color:#e78284">implements</span> Runnable {  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#8caaee;font-weight:bold">@Override</span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">run</span>(){  
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">while</span> (<span style="color:#99d1db;font-weight:bold">!</span>Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">isInterrupted</span>()) {  
-</span></span><span style="display:flex;"><span>                System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;running&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">getName</span>());  
-</span></span><span style="display:flex;"><span>                <span style="color:#ca9ee6">try</span> {  
-</span></span><span style="display:flex;"><span>                    <span style="color:#737994;font-style:italic">//线程睡1秒, 防止控制台滚动过快, 看不到效果  </span>
-</span></span><span style="display:flex;"><span>                    Thread.<span style="color:#8caaee">sleep</span>(1000);  
-</span></span><span style="display:flex;"><span>                }<span style="color:#ca9ee6">catch</span>(InterruptedException E){  
-</span></span><span style="display:flex;"><span>                    Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>                    System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;Thread interrupted, exiting...&#34;</span>);  
-</span></span><span style="display:flex;"><span>                    <span style="color:#ca9ee6">break</span>;  
-</span></span><span style="display:flex;"><span>                }  
-</span></span><span style="display:flex;"><span>            }  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>}  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#e78284">class</span> <span style="color:#e5c890">Main</span>{  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) <span style="color:#e78284">throws</span> InterruptedException{  
-</span></span><span style="display:flex;"><span>        MyTask task <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> MyTask();  
-</span></span><span style="display:flex;"><span>        Thread t1 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Thread(task);  
-</span></span><span style="display:flex;"><span>        Thread t2 <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Thread(task);  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//启动线程  </span>
-</span></span><span style="display:flex;"><span>        t1.<span style="color:#8caaee">start</span>();  
-</span></span><span style="display:flex;"><span>        t2.<span style="color:#8caaee">start</span>();  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//主线程休眠3秒. 保证线程正常启动, 防止t1刚被启动就终止没有效果  </span>
-</span></span><span style="display:flex;"><span>        Thread.<span style="color:#8caaee">sleep</span>(3000);  
-</span></span><span style="display:flex;"><span>        t1.<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="线程上下文切换">线程上下文切换?<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e4%b8%8a%e4%b8%8b%e6%96%87%e5%88%87%e6%8d%a2" aria-label="Heading self-link"></a></h4>
-<p>多线程的目的是充分利用CPU资源
-但是并发环境下单线程的CPU一段时间内线程是逐个执行的</p>
-<p>CPU会将时间片分给占用的线程, 当时间片用完, CPU就轮转到下一个线程, 这就是上下文切换</p>
-<h4 id="线程可以多核调度吗">线程可以多核调度吗<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e5%8f%af%e4%bb%a5%e5%a4%9a%e6%a0%b8%e8%b0%83%e5%ba%a6%e5%90%97" aria-label="Heading self-link"></a></h4>
-<p>可以</p>
-<p>多核处理器提供了并行执行多个线程的能力。每个核心可以独立执行一个或多个线程</p>
-<p>线程是CPU调度的最小单位, 可以通过多核调度实现线程并行处理</p>
-<h4 id="守护线程了解吗">守护线程了解吗<a class="td-heading-self-link" href="#%e5%ae%88%e6%8a%a4%e7%ba%bf%e7%a8%8b%e4%ba%86%e8%a7%a3%e5%90%97" aria-label="Heading self-link"></a></h4>
-<p>Java的线程分为两类
-用户线程, 守护线程</p>
-<p>守护线程默认的优先级比较低</p>
-<ul>
-<li>所有用户线程结束后守护线程自动结束</li>
-<li>当所有用户线程结束后JVM停止, 不管守护线程是否结束</li>
-<li>线程默认是非守护线程</li>
-</ul>
-<p>比如启动一个程序, main线程是用户线程, 同时还会启动垃圾回收线程等守护线程</p>
-<h4 id="线程间有哪些通信方式">线程间有哪些通信方式?<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e9%97%b4%e6%9c%89%e5%93%aa%e4%ba%9b%e9%80%9a%e4%bf%a1%e6%96%b9%e5%bc%8f" aria-label="Heading self-link"></a></h4>
-<p>线程之间交换信息有如下方式</p>
-<ul>
-<li>使用共享对象, 修改同一个变量
-比如 volatile syncroized 关键字
-volatile 可以保证对共享变量的修改立刻对其他线程可见</li>
-</ul>
-<p>syncroized 可以保证临界区变量可见性, 和临界区的互斥访问</p>
-<ul>
-<li>使用 <code>wait()</code> <code>notify()</code> 同步方法</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @program: alog  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @description: 通信方式  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author: hamhuo  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> **/</span>  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span><span style="color:#e78284">class</span> <span style="color:#e5c890">SharedObject</span> {  
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//共享的消息  </span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> String message;  
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//判断标志  </span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> <span style="color:#e78284">boolean</span> hasMessage <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">false</span>;  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">synchronized</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">writeMessage</span>(String message) <span style="color:#e78284">throws</span> InterruptedException {  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//线程不断监听是否消息被消费  </span>
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//这里逻辑是消息不被消费, 不写新的消息  </span>
-</span></span><span style="display:flex;"><span>        System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;writer loop&#34;</span>);  
-</span></span><span style="display:flex;"><span>        Thread.<span style="color:#8caaee">sleep</span>(1000);  
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">while</span> (hasMessage) {  
-</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">//有消息就等着消费  </span>
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">try</span> {  
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//防止无意义的循环竞争, 直接等待  </span>
-</span></span><span style="display:flex;"><span>                wait();  
-</span></span><span style="display:flex;"><span>            } <span style="color:#ca9ee6">catch</span> (InterruptedException e) {  
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//等的不耐烦了. 可能会需要强制中断  </span>
-</span></span><span style="display:flex;"><span>                Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>            }  
-</span></span><span style="display:flex;"><span>        }  
-</span></span><span style="display:flex;"><span>        Thread.<span style="color:#8caaee">sleep</span>(1000);  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//写消息  </span>
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">this</span>.<span style="color:#8caaee">message</span> <span style="color:#99d1db;font-weight:bold">=</span> message;  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//设置消息提醒  </span>
-</span></span><span style="display:flex;"><span>        hasMessage <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">true</span>;  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//通知方法, 唤醒所有阻塞在obj的线程  </span>
-</span></span><span style="display:flex;"><span>        notifyAll();  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">synchronized</span> String <span style="color:#8caaee">readMessage</span>() <span style="color:#e78284">throws</span> InterruptedException {  
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//监听是否有消息读  </span>
-</span></span><span style="display:flex;"><span>        Thread.<span style="color:#8caaee">sleep</span>(1000);  
-</span></span><span style="display:flex;"><span>        System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;read loop&#34;</span>);  
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">while</span> (<span style="color:#99d1db;font-weight:bold">!</span>hasMessage) {  
-</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">//无消息则等  </span>
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">try</span> {  
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//防止无意义的循环竞争, 直接等待  </span>
-</span></span><span style="display:flex;"><span>                wait();  
-</span></span><span style="display:flex;"><span>            } <span style="color:#ca9ee6">catch</span> (InterruptedException e) {  
-</span></span><span style="display:flex;"><span>                Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>            }  
-</span></span><span style="display:flex;"><span>        }  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>        hasMessage <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">false</span>;  
-</span></span><span style="display:flex;"><span>        notifyAll();  
-</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span> message;  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>}  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">class</span> <span style="color:#e5c890">twi</span> {  
-</span></span><span style="display:flex;"><span>        <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) <span style="color:#e78284">throws</span> InterruptedException {  
-</span></span><span style="display:flex;"><span>            SharedObject sharedObject <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> SharedObject();  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>            Thread writer <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Thread(() <span style="color:#99d1db;font-weight:bold">-&gt;</span> {  
-</span></span><span style="display:flex;"><span>                <span style="color:#ca9ee6">try</span> {  
-</span></span><span style="display:flex;"><span>                    sharedObject.<span style="color:#8caaee">writeMessage</span>(<span style="color:#a6d189">&#34;Hello from Writer!&#34;</span>);  
-</span></span><span style="display:flex;"><span>                } <span style="color:#ca9ee6">catch</span> (InterruptedException e) {  
-</span></span><span style="display:flex;"><span>                    Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>                }  
-</span></span><span style="display:flex;"><span>            });  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>            Thread reader <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Thread(() <span style="color:#99d1db;font-weight:bold">-&gt;</span> {  
-</span></span><span style="display:flex;"><span>                String message <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ef9f76">null</span>;  
-</span></span><span style="display:flex;"><span>                <span style="color:#ca9ee6">try</span> {  
-</span></span><span style="display:flex;"><span>                    message <span style="color:#99d1db;font-weight:bold">=</span> sharedObject.<span style="color:#8caaee">readMessage</span>();  
-</span></span><span style="display:flex;"><span>                } <span style="color:#ca9ee6">catch</span> (InterruptedException e) {  
-</span></span><span style="display:flex;"><span>                    Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>                }  
-</span></span><span style="display:flex;"><span>                System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;Reader received: &#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> message);  
-</span></span><span style="display:flex;"><span>            });  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>            writer.<span style="color:#8caaee">start</span>();  
-</span></span><span style="display:flex;"><span>            reader.<span style="color:#8caaee">start</span>();  
-</span></span><span style="display:flex;"><span>            Thread.<span style="color:#8caaee">sleep</span>(3000);  
-</span></span><span style="display:flex;"><span>        }  
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>线程的通信方法一般和锁一起使用, 实现线程的同步与通信</p>
-<ul>
-<li>使用<code>Exchanger</code>
-<code>Exchanger</code> 是一个同步点, 可以在线程之间交换数据, 一个线程调用 <code>exchange()</code> 方法, 进入同步点, 等待就绪, 将数据传递给另一个线程, 同时接受另一个线程的数据</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @program: alog  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @description: 交换器  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author: hamhuo  
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> **/</span><span style="color:#e78284">class</span> <span style="color:#e5c890">FillAndEmpty</span> {  
-</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) {  
-</span></span><span style="display:flex;"><span>        Exchanger<span style="color:#99d1db;font-weight:bold">&lt;</span>String<span style="color:#99d1db;font-weight:bold">&gt;</span> ex <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Exchanger<span style="color:#99d1db;font-weight:bold">&lt;&gt;</span>();  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>        Thread t <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Thread(() <span style="color:#99d1db;font-weight:bold">-&gt;</span> {  
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">try</span>{  
-</span></span><span style="display:flex;"><span>                String message <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;hello from star&#34;</span>;  
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//这里会将message的内容做传递  </span>
-</span></span><span style="display:flex;"><span>                String responce <span style="color:#99d1db;font-weight:bold">=</span> ex.<span style="color:#8caaee">exchange</span>(message);  
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//执行到此, 代表传递完毕  </span>
-</span></span><span style="display:flex;"><span>                System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(responce <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;Earth&#34;</span>);  
-</span></span><span style="display:flex;"><span>            }<span style="color:#ca9ee6">catch</span> (InterruptedException e){  
-</span></span><span style="display:flex;"><span>                Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>            }  
-</span></span><span style="display:flex;"><span>        });  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>        Thread v <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Thread(() <span style="color:#99d1db;font-weight:bold">-&gt;</span> {  
-</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">try</span>{  
-</span></span><span style="display:flex;"><span>                String message <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;response from earth&#34;</span>;  
-</span></span><span style="display:flex;"><span>                <span style="color:#737994;font-style:italic">//这里会将message的内容做传递  </span>
-</span></span><span style="display:flex;"><span>                String responce <span style="color:#99d1db;font-weight:bold">=</span> ex.<span style="color:#8caaee">exchange</span>(message);  
-</span></span><span style="display:flex;"><span>                System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(responce <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;Alience&#34;</span>);  
-</span></span><span style="display:flex;"><span>            }<span style="color:#ca9ee6">catch</span> (InterruptedException e){  
-</span></span><span style="display:flex;"><span>                Thread.<span style="color:#8caaee">currentThread</span>().<span style="color:#8caaee">interrupt</span>();  
-</span></span><span style="display:flex;"><span>            }  
-</span></span><span style="display:flex;"><span>        });  
-</span></span><span style="display:flex;"><span>  
-</span></span><span style="display:flex;"><span>        t.<span style="color:#8caaee">start</span>();  
-</span></span><span style="display:flex;"><span>        v.<span style="color:#8caaee">start</span>();  
-</span></span><span style="display:flex;"><span>    }  
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
-<li><code>CompleteableFuture</code>
-CompletableFuture 是 Java 8 引入的一个类，支持异步编程，允许线程在完成计算后将结果传递给其他线程。</li>
-</ul>
-<h4 id="sleep和wait的区别">sleep和wait的区别<a class="td-heading-self-link" href="#sleep%e5%92%8cwait%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
-<blockquote>
-<p>2/9</p></blockquote>
-<p>sleep 使线程休眠, 但不会释放线程持有的锁, 是Thread类的方法
-wait 使线程等待, 释放线程持有的锁, 是Object类的方法
-使用条件不同
-sleep 可以在任何位置调用
-wait 只能在同步代码块, 同步静态方法, 同步类中使用, 这是因为使用wait()的前提是线程持有当前对象的锁
-唤醒方式不同
-sleep 后线程进入 TIMED_WAITING状态, 计时结束后自动唤醒
-wait 后线程进入 WAITING状态, 必须由其他线程调用notify/ notifyAll 方法唤醒</p>
-<h3 id="你在工作中用到过-threadlocal-吗">你在工作中用到过 ThreadLocal 吗？<a class="td-heading-self-link" href="#%e4%bd%a0%e5%9c%a8%e5%b7%a5%e4%bd%9c%e4%b8%ad%e7%94%a8%e5%88%b0%e8%bf%87-threadlocal-%e5%90%97" aria-label="Heading self-link"></a></h3>
-<p>存储用户信息</p>
-<p>用户在请求头携带token, 控制层根据token解析出用户的基本信息</p>
-<p>如果在服务层需要调用用户信息, 就可以把信息存入 ThreadLocal 跨方法调用</p>
-<h3 id="threadlocal-怎么实现的呢">ThreadLocal 怎么实现的呢?<a class="td-heading-self-link" href="#threadlocal-%e6%80%8e%e4%b9%88%e5%ae%9e%e7%8e%b0%e7%9a%84%e5%91%a2" aria-label="Heading self-link"></a></h3>
-<p>//弱引用
-//ThreadLocal原理
-//内存泄露</p>
-<p><code>ThreadLocal</code> 本身不存储任何值, 只是作为一个映射, 来映射线程的局部变量</p>
-<p>其中的 set get 方法 是访问线程自己的 <code>ThreadLocalMap</code></p>
-<p>Map 内部维护了一个 Entry数组, 该数组继承了弱引用, 使得内存不足自动触发GC时, 会回收 ThreadLocal对象, 防止内存泄露</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">static</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">Entry</span> <span style="color:#e78284">extends</span> WeakReference<span style="color:#99d1db;font-weight:bold">&lt;</span>ThreadLocal<span style="color:#99d1db;font-weight:bold">&lt;?&gt;&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">/** The value associated with this ThreadLocal. */</span>
-</span></span><span style="display:flex;"><span>    Object value;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//节点类</span>
-</span></span><span style="display:flex;"><span>    Entry(ThreadLocal<span style="color:#99d1db;font-weight:bold">&lt;?&gt;</span> k, Object v) {
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//key赋值</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e78284">super</span>(k);
-</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//value赋值</span>
-</span></span><span style="display:flex;"><span>        value <span style="color:#99d1db;font-weight:bold">=</span> v;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="threadlocal的内存泄露">ThreadLocal的内存泄露<a class="td-heading-self-link" href="#threadlocal%e7%9a%84%e5%86%85%e5%ad%98%e6%b3%84%e9%9c%b2" aria-label="Heading self-link"></a></h4>
-<p>ThreadLocal 设计为弱引用使得内存不足而触发GC时会被回收
-但是当线程一直运行, 并且Entry.value 一直被强引用到某个对象就会造成无法回收, 使得内存泄露</p>
-<p>这就需要使用完ThreadLocal后, 在finally调用 remove() 释放内存空间</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ca9ee6">try</span> {
-</span></span><span style="display:flex;"><span>    threadLocal.<span style="color:#8caaee">set</span>(value);
-</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">// 执行业务操作</span>
-</span></span><span style="display:flex;"><span>} <span style="color:#ca9ee6">finally</span> {
-</span></span><span style="display:flex;"><span>    threadLocal.<span style="color:#8caaee">remove</span>(); <span style="color:#737994;font-style:italic">// 确保能够执行清理</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="threadlocalmap-的源码看过吗"><code>ThreadLocalMap</code> 的源码看过吗？<a class="td-heading-self-link" href="#threadlocalmap-%e7%9a%84%e6%ba%90%e7%a0%81%e7%9c%8b%e8%bf%87%e5%90%97" aria-label="Heading self-link"></a></h3>
-<p>ThreadLocalMap 是 ThreadLocal的核心数据结构
-是键值对格式的, 关注两个问题</p>
-<ol>
-<li>元素数组</li>
-<li>散列方法
-map中维护了一个Entry[] 数组, key是每个线程的ThreadLocal对象, value就是对应的隔离变量</li>
-</ol>
-<p>为了保证entry[] 放入时散布均匀, 保证性能, Map使用哈希取余法, 取出threadlocal的哈希码, 和数组长度取余, 哈希码的生成使用黄金分割数, 每生成一个ThreadLocal对象, 就会使hash增加, 好处就是hash分布的均匀</p>
-<h4 id="java内存模型的理解">Java内存模型的理解<a class="td-heading-self-link" href="#java%e5%86%85%e5%ad%98%e6%a8%a1%e5%9e%8b%e7%9a%84%e7%90%86%e8%a7%a3" aria-label="Heading self-link"></a></h4>
+	<h4 id="请说说-mysql-的内联左联右联的区别">请说说 MySQL 的内联、左联、右联的区别。<a class="td-heading-self-link" href="#%e8%af%b7%e8%af%b4%e8%af%b4-mysql-%e7%9a%84%e5%86%85%e8%81%94%e5%b7%a6%e8%81%94%e5%8f%b3%e8%81%94%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
+<p>内联就是返回两张表都匹配的记录, 只返回两张表都存在的记录
+左联, 返回左表所有记录, 不管右表是否有相匹配的记录,如果没有结果集中右表就填NULL
+右联, 返回右表所有记录, 不管左表有没有匹配的记录</p>
+<p>订单表, 订单顾客映射表, 可以通过订单ID关联</p>
+<p>内联</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">LEFT</span>(a.title, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> articleTitle, <span style="color:#ca9ee6">LEFT</span>(<span style="color:#ca9ee6">c</span>.content, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span>
+</span></span><span style="display:flex;"><span>CommentContent
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">order</span> a
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">INNER</span> <span style="color:#ca9ee6">JOIN</span> ORDERCONSUMER <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">c</span>.order_id
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>;
+</span></span></code></pre></div><p>左联</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">LEFT</span>(a.title, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> ArticleTitle, <span style="color:#ca9ee6">LEFT</span>(<span style="color:#ca9ee6">c</span>.content, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> CommentContent <span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">order</span> a <span style="color:#ca9ee6">LEFT</span> <span style="color:#ca9ee6">JOIN</span> ORDERCONSUMER <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">c</span>.article_id <span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>;
+</span></span></code></pre></div><p>右联</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">LEFT</span>(a.title, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> ArticleTitle, <span style="color:#ca9ee6">LEFT</span>(<span style="color:#ca9ee6">c</span>.content, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> CommentContent <span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">comment</span> <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">RIGHT</span> <span style="color:#ca9ee6">JOIN</span> article a <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">c</span>.article_id <span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>;
+</span></span></code></pre></div><h4 id="mysql-第-3-10-条记录怎么查">MySQL 第 3-10 条记录怎么查？<a class="td-heading-self-link" href="#mysql-%e7%ac%ac-3-10-%e6%9d%a1%e8%ae%b0%e5%bd%95%e6%80%8e%e4%b9%88%e6%9f%a5" aria-label="Heading self-link"></a></h4>
+<p>使用 LIMIT 关键字,  结合第一个偏移量, 第二个行数</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">table_name</span> <span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">8</span>;
+</span></span></code></pre></div><h4 id="mysql的数据引擎有哪些-区别">mysql的数据引擎有哪些, 区别<a class="td-heading-self-link" href="#mysql%e7%9a%84%e6%95%b0%e6%8d%ae%e5%bc%95%e6%93%8e%e6%9c%89%e5%93%aa%e4%ba%9b-%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
+<p>多种数据引擎, 常见的有 MyISAM, InnoDB, MEMORY 等
+//todo</p>
+<h4 id="查询优化联合索引覆盖索引">查询优化、联合索引、覆盖索引<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96%e8%81%94%e5%90%88%e7%b4%a2%e5%bc%95%e8%a6%86%e7%9b%96%e7%b4%a2%e5%bc%95" aria-label="Heading self-link"></a></h4>
 
 </div>
 
