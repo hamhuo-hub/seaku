@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaWeb on 海阔集</title>
+    <link>http://localhost:1313/docs/basic/javaweb/</link>
+    <description>Recent content in JavaWeb on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/docs/basic/javaweb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Servlet</title>
+      <link>http://localhost:1313/docs/basic/javaweb/servlet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/basic/javaweb/servlet/</guid>
+      <description>&lt;p&gt;Servlet 是整个JavaWeb的核心&lt;/p&gt;&#xA;&lt;p&gt;当请求传入服务器后, 服务器会交给一个&lt;code&gt;Servlet&lt;/code&gt; 处理, 该 &lt;code&gt;Servlet&lt;/code&gt; 可以根据请求生成动态的内容&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;查询数据库，&lt;/li&gt;&#xA;&lt;li&gt;处理表单数据，&lt;/li&gt;&#xA;&lt;li&gt;返回动态生成的 HTML 页面，&lt;/li&gt;&#xA;&lt;li&gt;或者返回 JSON 数据供前端使用等。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;之后 &lt;code&gt;Servlet&lt;/code&gt; 会生成响应, 比如 HTML 或者 Json返回浏览器&lt;/p&gt;&#xA;&lt;p&gt;感性认识: &lt;code&gt;Servlet&lt;/code&gt; 像是一个组件, 其中Java服务器使用的 &lt;code&gt;Servlet&lt;/code&gt; 负责生成动态内容(请求处理), 其他 &lt;code&gt;Servlet&lt;/code&gt; 负责处理静态资源, 错误页面等&lt;/p&gt;&#xA;&lt;p&gt;举个例子：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;如果你访问一个静态页面（如 &lt;code&gt;index.html&lt;/code&gt;），Tomcat 会将这个静态页面直接返回给你。这就跟后端服务器没关系了, 直接在 &lt;code&gt;Tomcat&lt;/code&gt; 中的某一个 Servlet 就能完成&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;如果你访问一个动态页面（如使用 Spring MVC 的控制器来处理请求），Tomcat 会将请求交给 &lt;code&gt;DispatcherServlet&lt;/code&gt;，然后 &lt;code&gt;DispatcherServlet&lt;/code&gt; 会找到相应的 &lt;code&gt;Controller&lt;/code&gt;，&lt;code&gt;Controller&lt;/code&gt; 会生成一些数据，交给视图解析器，将模板与数据结合，最后生成一个完整的 HTML 页面。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

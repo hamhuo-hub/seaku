@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on 海阔集</title>
-    <link>http://localhost:51674/tags/docker/</link>
+    <link>http://localhost:1313/tags/docker/</link>
     <description>Recent content in Docker on 海阔集</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:51674/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java基础能力</title>
-      <link>http://localhost:51674/docs/basic/</link>
+      <link>http://localhost:1313/docs/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:51674/docs/basic/</guid>
+      <guid>http://localhost:1313/docs/basic/</guid>
       <description>&lt;p&gt;内容来源:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;沉默王二 GitHub 上开源的知识库《&lt;a href=&#34;https://github.com/itwanger/toBeBetterJavaer&#34;&gt;Java 进阶之路&lt;/a&gt;》&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rabbitmq.com/tutorials&#34;&gt;rabbitMQ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>

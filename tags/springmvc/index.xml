@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SpringMVC on 海阔集</title>
+    <link>http://localhost:1313/tags/springmvc/</link>
+    <description>Recent content in SpringMVC on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/tags/springmvc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intercepter拦截器</title>
+      <link>http://localhost:1313/docs/advanced/intercepter%E6%8B%A6%E6%88%AA%E5%99%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/advanced/intercepter%E6%8B%A6%E6%88%AA%E5%99%A8/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

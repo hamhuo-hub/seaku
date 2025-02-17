@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51674&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:51674/docs/basic/mysql/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:51674/docs/basic/mysql/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/docs/basic/mysql/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/basic/mysql/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>MySQL | 海阔集</title>
 <meta name="description" content="关系性数据库, 程序员的入门教程">
-<meta property="og:url" content="http://localhost:51674/docs/basic/mysql/">
+<meta property="og:url" content="http://localhost:1313/docs/basic/mysql/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="MySQL">
   <meta property="og:description" content="关系性数据库, 程序员的入门教程">
@@ -282,12 +282,10 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-e03b3b407ae2c157a75929111db4a065">1 - MySQL字符集和比较规则</h1>
     <div class="lead">当我们创建数据库或者表的时候，就要指定字符集和比较规则。 不指定则MySQL 默认。</div>
-	<h4 id="字符集">字符集<a class="td-heading-self-link" href="#%e5%ad%97%e7%ac%a6%e9%9b%86" aria-label="Heading self-link"></a></h4>
-<p>计算机的世界里，它是只认识 0 和 1 的, 那汉字怎么办? 英文怎么办?</p>
+	<h4 id="字符集">字符集<a class="td-heading-self-link" href="#%e5%ad%97%e7%ac%a6%e9%9b%86" aria-label="Heading self-link"></a></h4><p>计算机的世界里，它是只认识 0 和 1 的, 那汉字怎么办? 英文怎么办?</p>
 <p>我们在屏幕上看到的英文、汉字等字符是二进制数转换之后的结果</p>
 <p>通俗的说，按照何种规则将字符存储在计算机中，如&rsquo;a&rsquo;用什么表示，称为&quot;编码&quot;；反之，将存储在计算机中的二进制数解析显示出来，称为&quot;解码&quot;,如果使用了错误的解码规则，则导致&rsquo;a&rsquo;解析成&rsquo;b&rsquo;或者乱码。</p>
-<h4 id="ascii字符集编码">ASCII字符集&amp;编码<a class="td-heading-self-link" href="#ascii%e5%ad%97%e7%ac%a6%e9%9b%86%e7%bc%96%e7%a0%81" aria-label="Heading self-link"></a></h4>
-<blockquote>
+<h4 id="ascii字符集编码">ASCII字符集&amp;编码<a class="td-heading-self-link" href="#ascii%e5%ad%97%e7%ac%a6%e9%9b%86%e7%bc%96%e7%a0%81" aria-label="Heading self-link"></a></h4><blockquote>
 <p>ASCII(American Standard Code for Information Interchange，美国信息交换标准代码)</p>
 <p>是基于拉丁字母的一套电脑编码系统。它主要用于显示现代英语</p></blockquote>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250211010458860.png" alt="image.png"></p>
@@ -295,22 +293,19 @@ This is the multi-page printable view of this section.
 <p>ASCII的最大缺点是只能显示26个基本拉丁字母、阿拉伯数目字和英式标点符号，因此只能用于显示现代美国英语</p>
 <blockquote>
 <p>已经淘汰</p></blockquote>
-<h3 id="gbxxxx字符集编码">GBXXXX字符集&amp;编码<a class="td-heading-self-link" href="#gbxxxx%e5%ad%97%e7%ac%a6%e9%9b%86%e7%bc%96%e7%a0%81" aria-label="Heading self-link"></a></h3>
-<p>计算机发明之处及后面很长一段时间，只用应用于美国及西方一些发达国家，ASCII能够很好满足用户的需求。</p>
+<h3 id="gbxxxx字符集编码">GBXXXX字符集&amp;编码<a class="td-heading-self-link" href="#gbxxxx%e5%ad%97%e7%ac%a6%e9%9b%86%e7%bc%96%e7%a0%81" aria-label="Heading self-link"></a></h3><p>计算机发明之处及后面很长一段时间，只用应用于美国及西方一些发达国家，ASCII能够很好满足用户的需求。</p>
 <p>但是当天朝也有了计算机之后，为了显示中文，必须设计一套编码规则用于将汉字转换为计算机可以接受的数字系统的字符集。</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250211010616455.png" alt="image.png"></p>
 <blockquote>
 <p>什么都有, 基本东亚文字全了</p></blockquote>
 <p>GBK是对GB2312-80的扩展, 收录了繁体</p>
-<h2 id="unicode字符集utf编码">Unicode字符集&amp;UTF编码<a class="td-heading-self-link" href="#unicode%e5%ad%97%e7%ac%a6%e9%9b%86utf%e7%bc%96%e7%a0%81" aria-label="Heading self-link"></a></h2>
-<p><em>你说的对, 但是每个国家有自己的编码</em></p>
+<h2 id="unicode字符集utf编码">Unicode字符集&amp;UTF编码<a class="td-heading-self-link" href="#unicode%e5%ad%97%e7%ac%a6%e9%9b%86utf%e7%bc%96%e7%a0%81" aria-label="Heading self-link"></a></h2><p><em>你说的对, 但是每个国家有自己的编码</em></p>
 <p>那网络聊天怎么办? 编码不同根本无法识别</p>
 <p>为了解决这个问题，一个伟大的创想产生了——Unicode。Unicode编码系统为表达任意语言的任意字符而设计。
 被几种语言共用的字符通常使用相同的数字来编码, 不存在二义性。不再需要记录&quot;模式&quot;了</p>
 <p>MySQL的UTF-8最多支持三个字节</p>
 <p>UTF-8mb4支持四个字节</p>
 <h4 id="比较规则">比较规则<a class="td-heading-self-link" href="#%e6%af%94%e8%be%83%e8%a7%84%e5%88%99" aria-label="Heading self-link"></a></h4>
-
 </div>
 
 
@@ -328,26 +323,22 @@ This is the multi-page printable view of this section.
 	<h1 id="pg-fadb4161cda4eb7aee82d35d77a64105">2 - MySQL数据库操作</h1>
     <div class="lead">十分钟快速上手MySQL</div>
 	<p>十分钟快速上手MySQL</p>
-<h4 id="创建数据库">创建数据库<a class="td-heading-self-link" href="#%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">create</span> <span style="color:#ca9ee6">database</span> <span style="color:#e78284">数据库名</span>;
+<h4 id="创建数据库">创建数据库<a class="td-heading-self-link" href="#%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h4><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">create</span> <span style="color:#ca9ee6">database</span> <span style="color:#e78284">数据库名</span>;
 </span></span></code></pre></div><blockquote>
 <p>提示:</p>
 <ol>
 <li>上下箭头可以切换之前执行的指令</li>
 <li>记得加分号</li>
 </ol></blockquote>
-<h4 id="切换数据库">切换数据库<a class="td-heading-self-link" href="#%e5%88%87%e6%8d%a2%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>use <span style="color:#e78284">数据库名</span>;
-</span></span></code></pre></div><h4 id="删除数据库">删除数据库<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h4>
-<blockquote>
+<h4 id="切换数据库">切换数据库<a class="td-heading-self-link" href="#%e5%88%87%e6%8d%a2%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h4><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>use <span style="color:#e78284">数据库名</span>;
+</span></span></code></pre></div><h4 id="删除数据库">删除数据库<a class="td-heading-self-link" href="#%e5%88%a0%e9%99%a4%e6%95%b0%e6%8d%ae%e5%ba%93" aria-label="Heading self-link"></a></h4><blockquote>
 <p>提示:
 这个指令一般不用😂</p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">drop</span> <span style="color:#ca9ee6">database</span> <span style="color:#e78284">数据库名</span>;
 </span></span></code></pre></div><blockquote>
 <p>了解
 <a href="/docs/basic/mysql/mysql%E8%A1%A8%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/">表</a></p></blockquote>
-<h4 id="java交互mysql">Java交互MySQL<a class="td-heading-self-link" href="#java%e4%ba%a4%e4%ba%92mysql" aria-label="Heading self-link"></a></h4>
-<p>上述都是命令行操作</p>
+<h4 id="java交互mysql">Java交互MySQL<a class="td-heading-self-link" href="#java%e4%ba%a4%e4%ba%92mysql" aria-label="Heading self-link"></a></h4><p>上述都是命令行操作</p>
 <p>如何在Java程序对数据库进行操作?</p>
 <blockquote>
 <p>驱动
@@ -419,8 +410,7 @@ This is the multi-page printable view of this section.
 接下来的操作默认是单库操作
 也就是说需要先选中某个数据库,
 快去选择吧</p></blockquote>
-<h4 id="查询单个字段">查询单个字段<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e5%8d%95%e4%b8%aa%e5%ad%97%e6%ae%b5" aria-label="Heading self-link"></a></h4>
-<blockquote>
+<h4 id="查询单个字段">查询单个字段<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e5%8d%95%e4%b8%aa%e5%ad%97%e6%ae%b5" aria-label="Heading self-link"></a></h4><blockquote>
 <p>记录
 我们把表中的每一行叫做一个“记录”，每一个记录包含这行中的所有信息，就像在<a href="https://baike.baidu.com/item/%E9%80%9A%E8%AE%AF%E5%BD%95/9635277?fromModule=lemma_inlink">通讯录</a>数据库中某个人全部的信息，但记录在数据库中并没有专门的记录名，常常用它所在的行数表示这是第几个记录。</p></blockquote>
 <blockquote>
@@ -428,39 +418,32 @@ This is the multi-page printable view of this section.
 字段是比记录更小的单位，字段集合组成记录，每个字段描述文献的某一特征，即<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%A1%B9/3227309?fromModule=lemma_inlink">数据项</a>，并有唯一的供计算机识别的<a href="https://baike.baidu.com/item/%E5%AD%97%E6%AE%B5%E6%A0%87%E8%AF%86%E7%AC%A6/53627692?fromModule=lemma_inlink">字段标识符</a>。</p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#e78284">字段名</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表名</span>;
 </span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250211000414373.png" alt="image.png"></p>
-<h4 id="别名">别名<a class="td-heading-self-link" href="#%e5%88%ab%e5%90%8d" aria-label="Heading self-link"></a></h4>
-<p>查出来的字段名字太长, 先更换名字
+<h4 id="别名">别名<a class="td-heading-self-link" href="#%e5%88%ab%e5%90%8d" aria-label="Heading self-link"></a></h4><p>查出来的字段名字太长, 先更换名字
 可以使用 <code>AS</code> 关键字，格式如下所示</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#e78284">字段名</span> <span style="color:#ca9ee6">AS</span> <span style="color:#e78284">别名</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表名</span>;
 </span></span></code></pre></div><p>这通常会在多表进行联合查询或者 Java 程序端和 MySQL 表字段不一致时使用。</p>
 <p>比如说，Java 程序端的字段名是 <code>articleTitle</code>，那我们就可以使用别名来解决这个问题。</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title <span style="color:#ca9ee6">AS</span> articleTitle <span style="color:#ca9ee6">FROM</span> article;
-</span></span></code></pre></div><h4 id="查询多个字段">查询多个字段<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e5%a4%9a%e4%b8%aa%e5%ad%97%e6%ae%b5" aria-label="Heading self-link"></a></h4>
-<p>有时候我们需要同时拿到多个字段</p>
+</span></span></code></pre></div><h4 id="查询多个字段">查询多个字段<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e5%a4%9a%e4%b8%aa%e5%ad%97%e6%ae%b5" aria-label="Heading self-link"></a></h4><p>有时候我们需要同时拿到多个字段</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#e78284">字段</span><span style="color:#ef9f76">1</span>, <span style="color:#e78284">字段</span><span style="color:#ef9f76">2</span>, <span style="color:#e78284">字段</span><span style="color:#ef9f76">3</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表名</span>;
-</span></span></code></pre></div><h4 id="查询所有字段">查询所有字段<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e6%89%80%e6%9c%89%e5%ad%97%e6%ae%b5" aria-label="Heading self-link"></a></h4>
-<blockquote>
+</span></span></code></pre></div><h4 id="查询所有字段">查询所有字段<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e6%89%80%e6%9c%89%e5%ad%97%e6%ae%b5" aria-label="Heading self-link"></a></h4><blockquote>
 <p>了解
 <a href="%E9%80%9A%E9%85%8D%E7%AC%A6.md">通配符</a></p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表名</span>;
-</span></span></code></pre></div><h4 id="查询结果去重">查询结果去重<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e7%bb%93%e6%9e%9c%e5%8e%bb%e9%87%8d" aria-label="Heading self-link"></a></h4>
-<p>有可能多个记录会有相同的字段值, 这很正常
+</span></span></code></pre></div><h4 id="查询结果去重">查询结果去重<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e7%bb%93%e6%9e%9c%e5%8e%bb%e9%87%8d" aria-label="Heading self-link"></a></h4><p>有可能多个记录会有相同的字段值, 这很正常
 懒得一个个分辨可以去重
 使用 <code>DISTINCT</code> 关键字进行查询</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">DISTINCT</span> <span style="color:#e78284">字段名</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表名</span>;
-</span></span></code></pre></div><h4 id="查询结果排序">查询结果排序<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e7%bb%93%e6%9e%9c%e6%8e%92%e5%ba%8f" aria-label="Heading self-link"></a></h4>
-<p>当结果集中需要排序时，可以使用 <code>ORDER BY</code> 关键字进行查询，格式如下所示：</p>
+</span></span></code></pre></div><h4 id="查询结果排序">查询结果排序<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e7%bb%93%e6%9e%9c%e6%8e%92%e5%ba%8f" aria-label="Heading self-link"></a></h4><p>当结果集中需要排序时，可以使用 <code>ORDER BY</code> 关键字进行查询，格式如下所示：</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#e78284">字段名</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表名</span> <span style="color:#ca9ee6">ORDER</span> <span style="color:#ca9ee6">BY</span> <span style="color:#e78284">字段名</span> [<span style="color:#ca9ee6">ASC</span><span style="color:#99d1db;font-weight:bold">|</span><span style="color:#ca9ee6">DESC</span>];
-</span></span></code></pre></div><h4 id="查询结果限制条数">查询结果限制条数<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e7%bb%93%e6%9e%9c%e9%99%90%e5%88%b6%e6%9d%a1%e6%95%b0" aria-label="Heading self-link"></a></h4>
-<p>我们只想要其中的1条或多条, 从哪里开始找, 查找几行结束</p>
+</span></span></code></pre></div><h4 id="查询结果限制条数">查询结果限制条数<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e7%bb%93%e6%9e%9c%e9%99%90%e5%88%b6%e6%9d%a1%e6%95%b0" aria-label="Heading self-link"></a></h4><p>我们只想要其中的1条或多条, 从哪里开始找, 查找几行结束</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#e78284">字段名</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表名</span> <span style="color:#ca9ee6">LIMIT</span> <span style="color:#e78284">开始行</span>,<span style="color:#e78284">行数</span>;
 </span></span></code></pre></div><blockquote>
 <p>开始行也叫偏移量（OFFSET），默认是 0，可以缺省。</p></blockquote>
 <blockquote>
 <p>了解:
 <a href="/docs/basic/mysql/mysql%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">MySQL条件查询</a></p></blockquote>
-<h4 id="统计">统计<a class="td-heading-self-link" href="#%e7%bb%9f%e8%ae%a1" aria-label="Heading self-link"></a></h4>
-<p>返回记录数</p>
+<h4 id="统计">统计<a class="td-heading-self-link" href="#%e7%bb%9f%e8%ae%a1" aria-label="Heading self-link"></a></h4><p>返回记录数</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">COUNT</span>(ProductID) <span style="color:#ca9ee6">FROM</span> Products;
 </span></span></code></pre></div><blockquote>
 <p>注意
@@ -468,8 +451,7 @@ This is the multi-page printable view of this section.
 <p>COUNT(1)</p>
 <p>COUNT(<code>*</code>)</p>
 <p><code>count(1)</code> 是计算所有记录数，<code>1</code> 被视作一个常数值，在每一行都存在，因此与 <code>count(*)</code> 基本相同。</p></blockquote>
-<h4 id="mysql的数据引擎有哪些">mysql的数据引擎有哪些?<a class="td-heading-self-link" href="#mysql%e7%9a%84%e6%95%b0%e6%8d%ae%e5%bc%95%e6%93%8e%e6%9c%89%e5%93%aa%e4%ba%9b" aria-label="Heading self-link"></a></h4>
-<p>区别是什么?</p>
+<h4 id="mysql的数据引擎有哪些">mysql的数据引擎有哪些?<a class="td-heading-self-link" href="#mysql%e7%9a%84%e6%95%b0%e6%8d%ae%e5%bc%95%e6%93%8e%e6%9c%89%e5%93%aa%e4%ba%9b" aria-label="Heading self-link"></a></h4><p>区别是什么?</p>
 
 </div>
 
@@ -488,8 +470,7 @@ This is the multi-page printable view of this section.
 	<h1 id="pg-5c7eb05872462e8972765a1ac361bc03">4 - MySQL数据类型</h1>
     <div class="lead">当我们要创建表的时候，就要根据业务需求，选择合适的数据类型。</div>
 	<p>表是由不同数据类型的列组成的，然后填充了一行一行的数据。当我们要创建表的时候，就要根据业务需求，选择合适的数据类型。</p>
-<h4 id="整数类型">整数类型<a class="td-heading-self-link" href="#%e6%95%b4%e6%95%b0%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4>
-<table>
+<h4 id="整数类型">整数类型<a class="td-heading-self-link" href="#%e6%95%b4%e6%95%b0%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4><table>
   <thead>
       <tr>
           <th>类型名称</th>
@@ -523,14 +504,12 @@ This is the multi-page printable view of this section.
 <li>记录id, 主键id等使用 <code>bigint</code></li>
 <li>其他用<code>int</code></li>
 </ul>
-<h5 id="符号">符号?<a class="td-heading-self-link" href="#%e7%ac%a6%e5%8f%b7" aria-label="Heading self-link"></a></h5>
-<p>这里注意, MySQL是存在有/无符号整型之分的, Java默认有符号</p>
+<h5 id="符号">符号?<a class="td-heading-self-link" href="#%e7%ac%a6%e5%8f%b7" aria-label="Heading self-link"></a></h5><p>这里注意, MySQL是存在有/无符号整型之分的, Java默认有符号</p>
 <p>当涉及到负数表示时, 为了兼容, Java中必须使用<code>Long</code> 型</p>
 <p>因为Java的<code>int</code>范围和MySQL不同分别是-2147483648 到 2147483647, 和 0 到 4294967295(无符号)</p>
 <p>所以在设计表时, 整数的符号也要考虑</p>
 <p>像自增 ID，肯定是无符号的，所以我们会在定义的时候将其设置为 <code>unsigned</code></p>
-<h5 id="显示宽度">显示宽度?<a class="td-heading-self-link" href="#%e6%98%be%e7%a4%ba%e5%ae%bd%e5%ba%a6" aria-label="Heading self-link"></a></h5>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">CREATE</span> <span style="color:#ca9ee6">TABLE</span> <span style="color:#99d1db;font-weight:bold">`</span>test<span style="color:#99d1db;font-weight:bold">`</span> (
+<h5 id="显示宽度">显示宽度?<a class="td-heading-self-link" href="#%e6%98%be%e7%a4%ba%e5%ae%bd%e5%ba%a6" aria-label="Heading self-link"></a></h5><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">CREATE</span> <span style="color:#ca9ee6">TABLE</span> <span style="color:#99d1db;font-weight:bold">`</span>test<span style="color:#99d1db;font-weight:bold">`</span> (
 </span></span><span style="display:flex;"><span>  <span style="color:#99d1db;font-weight:bold">`</span>id<span style="color:#99d1db;font-weight:bold">`</span> <span style="color:#99d1db">int</span>(<span style="color:#ef9f76">10</span>) unsigned <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">NULL</span> AUTO_INCREMENT,
 </span></span><span style="display:flex;"><span>  <span style="color:#99d1db;font-weight:bold">`</span>int10<span style="color:#99d1db;font-weight:bold">`</span> <span style="color:#99d1db">int</span>(<span style="color:#ef9f76">10</span>) <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">NULL</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#99d1db;font-weight:bold">`</span>int11<span style="color:#99d1db;font-weight:bold">`</span> <span style="color:#99d1db">int</span>(<span style="color:#ef9f76">11</span>) <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">NULL</span>,
@@ -562,8 +541,7 @@ This is the multi-page printable view of this section.
 	<p>SELECT 查询没有查询条件。比如只返回姓名为xx的人, 年龄为xx的人等条件</p>
 <p>要知道，真实的业务场景中，数量会非常大，有些甚至会有几百万、几千万条数据，如果不带上查询条件，一次性把全部数据查出来是不太现实的。</p>
 <p>所以，我们通常要求在执行 SELECT 查询时，都要带上查询条件。那这一节，我们就来学习一些简单的 WHERE 条件查询。</p>
-<h4 id="查询操作符">查询操作符<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4>
-<table>
+<h4 id="查询操作符">查询操作符<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4><table>
   <thead>
       <tr>
           <th>操作符</th>
@@ -607,8 +585,7 @@ This is the multi-page printable view of this section.
 <p>示例:
 查找id大于1000的文章</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#ef9f76">1000</span>;
-</span></span></code></pre></div><h4 id="区间查询">区间查询<a class="td-heading-self-link" href="#%e5%8c%ba%e9%97%b4%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4>
-<p>利用一个 <code>&gt;=</code> 和一个 <code>&lt;=</code>，配合 <code>AND</code> 关键字，就可以实现区间查询</p>
+</span></span></code></pre></div><h4 id="区间查询">区间查询<a class="td-heading-self-link" href="#%e5%8c%ba%e9%97%b4%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4><p>利用一个 <code>&gt;=</code> 和一个 <code>&lt;=</code>，配合 <code>AND</code> 关键字，就可以实现区间查询</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#e78284">字段名</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表</span> <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">&gt;=</span> <span style="color:#ef9f76">1000</span> <span style="color:#ca9ee6">AND</span> user_id <span style="color:#99d1db;font-weight:bold">&lt;=</span> <span style="color:#ef9f76">2000</span>;
 </span></span></code></pre></div><p>查询上下界id为1000 到 2000 的文章</p>
 <blockquote>
@@ -619,14 +596,12 @@ This is the multi-page printable view of this section.
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">BETWEEN</span> <span style="color:#ef9f76">1000</span> <span style="color:#ca9ee6">AND</span> <span style="color:#ef9f76">2000</span>;
 </span></span></code></pre></div><blockquote>
 <p>感觉比Python简单</p></blockquote>
-<h4 id="枚举查询">枚举查询<a class="td-heading-self-link" href="#%e6%9e%9a%e4%b8%be%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4>
-<p>当区间为1, 其实就是枚举, 这就不需要指定上下界了
+<h4 id="枚举查询">枚举查询<a class="td-heading-self-link" href="#%e6%9e%9a%e4%b8%be%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4><p>当区间为1, 其实就是枚举, 这就不需要指定上下界了
 我们可以直接指定数值 用 <code>IN</code></p>
 <p>查询 user_id 是 1、2、3 的文章</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#ca9ee6">IN</span> (<span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">3</span>); 
 </span></span></code></pre></div><p>当然可以取反. 此略</p>
-<h4 id="逻辑操作符">逻辑操作符<a class="td-heading-self-link" href="#%e9%80%bb%e8%be%91%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4>
-<p>除了数据操作符外还可以进行逻辑判断</p>
+<h4 id="逻辑操作符">逻辑操作符<a class="td-heading-self-link" href="#%e9%80%bb%e8%be%91%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4><p>除了数据操作符外还可以进行逻辑判断</p>
 <p>其实上文的 <code>AND</code> 就是一个</p>
 <p><code>AND</code> 操作符用于组合多个查询条件，只有当所有的条件都满足时，才会返回结果</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">1</span> <span style="color:#ca9ee6">AND</span> title <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;something&#39;</span>;
@@ -656,8 +631,7 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-dd6b1cabeabe05faa69894fce4691a32">6 - MySQL索引</h1>
     <div class="lead">除了对于准备面试来说非常重要之外，善用索引对 SQL 的性能提升非常明显，是一个性价比较高的 SQL 优化手段。</div>
-	<h4 id="索引介绍">索引介绍<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e4%bb%8b%e7%bb%8d" aria-label="Heading self-link"></a></h4>
-<p>我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最多的，也是最容易出问题的，还是一些复杂的查询操作，所以查询语句的优化显然是重中之重。</p>
+	<h4 id="索引介绍">索引介绍<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e4%bb%8b%e7%bb%8d" aria-label="Heading self-link"></a></h4><p>我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最多的，也是最容易出问题的，还是一些复杂的查询操作，所以查询语句的优化显然是重中之重。</p>
 <p>**索引是一种用于快速查询和检索数据的数据结构，其本质可以看成是一种排序好的数据结构。通过存储指向数据行的指针，可以快速定位和访问表中的特定数据。</p>
 <p>开始之前, 我们直观的体会下索引</p>
 <p>如果要查询 mysql 单词, 我们就需要字符匹配, 首先是 m, y 之后是 s,q l
@@ -667,9 +641,7 @@ This is the multi-page printable view of this section.
 <blockquote>
 <p>了解:
 <a href="%E9%82%A3%E4%BA%9B%E7%88%B1%E8%BF%87%E7%9A%84%E6%A0%91,%E5%B7%B2%E7%BB%8F%E9%95%BF%E6%88%90%E4%BA%86%E6%A3%AE%E6%9E%97.md">数据结构-树</a></p></blockquote>
-<h4 id="索引的类型">索引的类型<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e7%9a%84%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4>
-<h5 id="主键索引">主键索引:<a class="td-heading-self-link" href="#%e4%b8%bb%e9%94%ae%e7%b4%a2%e5%bc%95" aria-label="Heading self-link"></a></h5>
-<p>数据表的主键列使用的就是主键索引。</p>
+<h4 id="索引的类型">索引的类型<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e7%9a%84%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4><h5 id="主键索引">主键索引:<a class="td-heading-self-link" href="#%e4%b8%bb%e9%94%ae%e7%b4%a2%e5%bc%95" aria-label="Heading self-link"></a></h5><p>数据表的主键列使用的就是主键索引。</p>
 <p>一张数据表只能有一个主键, 并且不能重复, 不能为NULL</p>
 <p>INNODB中, 引擎在没有显示指定主键的情况下, 会优先判断检查是否有唯一索引且没有NULL的字段, 如果有就选择该字段为默认的主键, 否则引擎自动创建一个自增主键</p>
 
@@ -692,8 +664,7 @@ This is the multi-page printable view of this section.
 	<p>有了数据库以后，我们就可以在数据库中对表进行增删改查了</p>
 <p>MySQL是关系型数据库, 这个名词通俗来说就是把世界上的一切物体都实体化, 通过属性之间的关系管理数据</p>
 <p>实体化的结果叫做表, 数据库中以表为组织单位存储数据</p>
-<h4 id="查表">查表<a class="td-heading-self-link" href="#%e6%9f%a5%e8%a1%a8" aria-label="Heading self-link"></a></h4>
-<p>首先指定数据库</p>
+<h4 id="查表">查表<a class="td-heading-self-link" href="#%e6%9f%a5%e8%a1%a8" aria-label="Heading self-link"></a></h4><p>首先指定数据库</p>
 <p>查看当前数据库中的所有表，可以使用 </p>
 <p><code>show tables</code></p>
 <p>不首先指定数据库的话</p>
@@ -701,8 +672,7 @@ This is the multi-page printable view of this section.
 <blockquote>
 <p>提示:
 这是查看表名的操作, 跟表结构没关系</p></blockquote>
-<h4 id="建表">建表<a class="td-heading-self-link" href="#%e5%bb%ba%e8%a1%a8" aria-label="Heading self-link"></a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">create</span> <span style="color:#ca9ee6">table</span> <span style="color:#e78284">表名</span>(
+<h4 id="建表">建表<a class="td-heading-self-link" href="#%e5%bb%ba%e8%a1%a8" aria-label="Heading self-link"></a></h4><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">create</span> <span style="color:#ca9ee6">table</span> <span style="color:#e78284">表名</span>(
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">列名</span><span style="color:#ef9f76">1</span> <span style="color:#e78284">数据类型</span><span style="color:#ef9f76">1</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">列名</span><span style="color:#ef9f76">2</span> <span style="color:#e78284">数据类型</span><span style="color:#ef9f76">2</span>,
 </span></span><span style="display:flex;"><span>    ...
@@ -721,24 +691,21 @@ This is the multi-page printable view of this section.
 </span></span><span style="display:flex;"><span>    ...
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">列名</span>n <span style="color:#e78284">数据类型</span>n
 </span></span><span style="display:flex;"><span>);
-</span></span></code></pre></div><h4 id="注释">注释<a class="td-heading-self-link" href="#%e6%b3%a8%e9%87%8a" aria-label="Heading self-link"></a></h4>
-<p>是的, 表也有注释, 在上百张表的情况下, 注释就很重要了</p>
+</span></span></code></pre></div><h4 id="注释">注释<a class="td-heading-self-link" href="#%e6%b3%a8%e9%87%8a" aria-label="Heading self-link"></a></h4><p>是的, 表也有注释, 在上百张表的情况下, 注释就很重要了</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">create</span> <span style="color:#ca9ee6">table</span> <span style="color:#e78284">表名</span>(
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">列名</span><span style="color:#ef9f76">1</span> <span style="color:#e78284">数据类型</span><span style="color:#ef9f76">1</span> <span style="color:#ca9ee6">comment</span> <span style="color:#a6d189">&#39;注释1&#39;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">列名</span><span style="color:#ef9f76">2</span> <span style="color:#e78284">数据类型</span><span style="color:#ef9f76">2</span> <span style="color:#ca9ee6">comment</span> <span style="color:#a6d189">&#39;注释2&#39;</span>,
 </span></span><span style="display:flex;"><span>    ...
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">列名</span>n <span style="color:#e78284">数据类型</span>n <span style="color:#ca9ee6">comment</span> <span style="color:#a6d189">&#39;注释n&#39;</span>
 </span></span><span style="display:flex;"><span>) <span style="color:#ca9ee6">comment</span> <span style="color:#a6d189">&#39;表注释&#39;</span>;
-</span></span></code></pre></div><h4 id="查看表结构">查看表结构<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e8%a1%a8%e7%bb%93%e6%9e%84" aria-label="Heading self-link"></a></h4>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">desc</span> <span style="color:#e78284">表名</span>;
+</span></span></code></pre></div><h4 id="查看表结构">查看表结构<a class="td-heading-self-link" href="#%e6%9f%a5%e7%9c%8b%e8%a1%a8%e7%bb%93%e6%9e%84" aria-label="Heading self-link"></a></h4><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">desc</span> <span style="color:#e78284">表名</span>;
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">describe</span> <span style="color:#e78284">表名</span>;
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">explain</span> <span style="color:#e78284">表名</span>;
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">show</span> columns <span style="color:#ca9ee6">from</span> <span style="color:#e78284">表名</span>;
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">show</span> fields <span style="color:#ca9ee6">from</span> <span style="color:#e78284">表名</span>;
 </span></span></code></pre></div><p>上述指令效果完全一样</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250210235526115.png" alt="image.png"></p>
-<h4 id="改表">改表<a class="td-heading-self-link" href="#%e6%94%b9%e8%a1%a8" aria-label="Heading self-link"></a></h4>
-<p>这需要一些数据库底层原理基础知识才能操作, 此处略过</p>
+<h4 id="改表">改表<a class="td-heading-self-link" href="#%e6%94%b9%e8%a1%a8" aria-label="Heading self-link"></a></h4><p>这需要一些数据库底层原理基础知识才能操作, 此处略过</p>
 <blockquote>
 <p>了解
 <a href="/docs/basic/mysql/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%80%E5%8D%95%E6%9F%A5%E8%AF%A2/">MySQL数据库简单查询</a>
@@ -762,22 +729,19 @@ This is the multi-page printable view of this section.
     <div class="lead">在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。</div>
 	<p>在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。</p>
 <p>连接分为三种 内,  左, 右</p>
-<h4 id="内连接">内连接<a class="td-heading-self-link" href="#%e5%86%85%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
-<p>INNER JOIN 返回两个表中满足连接条件的匹配行，以下是 INNER JOIN 语句的基本语法</p>
+<h4 id="内连接">内连接<a class="td-heading-self-link" href="#%e5%86%85%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4><p>INNER JOIN 返回两个表中满足连接条件的匹配行，以下是 INNER JOIN 语句的基本语法</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">INNER</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
 </span></span></code></pre></div><ul>
 <li><code>table1.column_name = table2.column_name</code> 是连接条件，指定了两个表中用于匹配的列。</li>
 </ul>
-<h4 id="左连接">左连接<a class="td-heading-self-link" href="#%e5%b7%a6%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
-<p>LEFT JOIN 返回左表的所有行，并包括右表中匹配的行，如果右表中没有匹配的行，将返回 NULL 值，以下是 LEFT JOIN 语句的基本语法：</p>
+<h4 id="左连接">左连接<a class="td-heading-self-link" href="#%e5%b7%a6%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4><p>LEFT JOIN 返回左表的所有行，并包括右表中匹配的行，如果右表中没有匹配的行，将返回 NULL 值，以下是 LEFT JOIN 语句的基本语法：</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">LEFT</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
 </span></span></code></pre></div><p>返回左表的所有行, 如果右表没有匹配就为NULL</p>
-<h4 id="右连接">右连接<a class="td-heading-self-link" href="#%e5%8f%b3%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
-<p>不常使用, 因为可以用左连接交换表顺序达到相同效果</p>
+<h4 id="右连接">右连接<a class="td-heading-self-link" href="#%e5%8f%b3%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4><p>不常使用, 因为可以用左连接交换表顺序达到相同效果</p>
 
 </div>
 
@@ -803,13 +767,11 @@ go语言大佬, go语言设计与原理作者
 <p>而我们不知道的可能就是数据库是如何实现这四个属性的；在这篇文章中，我们将对事务的实现进行分析，尝试理解数据库是如何实现事务的，当然我们也会在文章中简单对 MySQL 中对 ACID 的实现进行简单的介绍。</p>
 <p>原子性, 一致性, 隔离性, 持久性
 ACID</p>
-<h4 id="原子性">原子性<a class="td-heading-self-link" href="#%e5%8e%9f%e5%ad%90%e6%80%a7" aria-label="Heading self-link"></a></h4>
-<p>事务就是一系列的操作，要么全部都执行，要都不执行，这其实就是对事务原子性的刻画</p>
+<h4 id="原子性">原子性<a class="td-heading-self-link" href="#%e5%8e%9f%e5%ad%90%e6%80%a7" aria-label="Heading self-link"></a></h4><p>事务就是一系列的操作，要么全部都执行，要都不执行，这其实就是对事务原子性的刻画</p>
 <p>如果事务不具备原子性，那么就没办法保证同一个事务中的所有操作都被执行或者未被执行了，整个数据库系统就既不可用也不可信。</p>
 <blockquote>
 <p>数据库的事务提交也是多线程并发的, 适用并发编程</p></blockquote>
-<h4 id="持久性">持久性<a class="td-heading-self-link" href="#%e6%8c%81%e4%b9%85%e6%80%a7" aria-label="Heading self-link"></a></h4>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250211011722492.png" alt="image.png"></p>
+<h4 id="持久性">持久性<a class="td-heading-self-link" href="#%e6%8c%81%e4%b9%85%e6%80%a7" aria-label="Heading self-link"></a></h4><p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250211011722492.png" alt="image.png"></p>
 <p>数据被写入到数据库中，那么数据一定能够被安全存储在磁盘上, 这就是持久性</p>
 <p>可能会奇怪, 除非硬盘挂掉, 为什么会存在持久性问题呢</p>
 <p>其实持久性并非问题, 而是一种原则</p>
@@ -817,11 +779,9 @@ ACID</p>
 也就是当数据被写到硬盘后, 不允许撤销!</p>
 <blockquote>
 <p><em>当事务已经被提交之后，就无法再次回滚了，唯一能够撤回已经提交的事务的方式就是创建一个相反的事务对原操作进行『补偿』，这也是事务持久性的体现之一。</em></p></blockquote>
-<h4 id="隔离性">隔离性<a class="td-heading-self-link" href="#%e9%9a%94%e7%a6%bb%e6%80%a7" aria-label="Heading self-link"></a></h4>
-<p>数据库的事务之间没有隔离性, 就会发生级联回滚的问题, 造成性能上的巨大损失</p>
+<h4 id="隔离性">隔离性<a class="td-heading-self-link" href="#%e9%9a%94%e7%a6%bb%e6%80%a7" aria-label="Heading self-link"></a></h4><p>数据库的事务之间没有隔离性, 就会发生级联回滚的问题, 造成性能上的巨大损失</p>
 <p>如果所有的事务的执行顺序都是线性的，那么对于事务的管理容易得多，但是允许事务的并行执行却能能够提升吞吐量和资源利用率，并且可以减少每个事务的等待时间。</p>
-<h4 id="一致性">一致性<a class="td-heading-self-link" href="#%e4%b8%80%e8%87%b4%e6%80%a7" aria-label="Heading self-link"></a></h4>
-<p>分为两种一致性</p>
+<h4 id="一致性">一致性<a class="td-heading-self-link" href="#%e4%b8%80%e8%87%b4%e6%80%a7" aria-label="Heading self-link"></a></h4><p>分为两种一致性</p>
 <p>ACID 和 CAP</p>
 <p>其中ACID定义为, 如果事务原子性的一个一致的数据库中独立运行, 那么执行之后数据库的状态是一定的, 在事务的执行的前后以及过程中不会违背对数据完整性的约束, 所有对数据库写入的操作都应该是合法的，并不能产生不合法的数据状态。</p>
 <p>CAP则是通常的一致性, 其实是说分布式系统中的各个节点中对于同一数据的拷贝有着相同的值, 也就是存储可见性</p>
@@ -843,11 +803,9 @@ ACID</p>
 	<h1 id="pg-08e11208f63c4c90dea1f03705b7cce5">10 - 数据库设计规范</h1>
     <div class="lead">数据库的三大范式，它是数据库设计中最基本的三个规范</div>
 	<p>数据库的三大范式，它是数据库设计中最基本的三个规范，那么，三大范式是什么？在实际开发中，我们一定要严格遵守三大范式吗？</p>
-<h4 id="第一范式">第一范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%80%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
-<p>确保每列原子性
+<h4 id="第一范式">第一范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%80%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4><p>确保每列原子性
 也就是字段的值是原子的, 不可再分割</p>
-<h4 id="第二范式">第二范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%ba%8c%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
-<p>确保表中的每列和主键相关</p>
+<h4 id="第二范式">第二范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%ba%8c%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4><p>确保表中的每列和主键相关</p>
 <p>第二范式在第一范式的基础上, 消除表的部分依赖</p>
 <p>即非主键字段必须完全依赖于主键，而不是仅依赖于主键的一部分。</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212002938008.png" alt="image.png"></p>
@@ -855,8 +813,7 @@ ACID</p>
 <p>拆成两张表</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212003059979.png" alt="image.png"></p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212003105718.png" alt="image.png"></p>
-<h4 id="第三范式">第三范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%89%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4>
-<p>确保每列都与主键列直接相关, 而不是间接相关</p>
+<h4 id="第三范式">第三范式<a class="td-heading-self-link" href="#%e7%ac%ac%e4%b8%89%e8%8c%83%e5%bc%8f" aria-label="Heading self-link"></a></h4><p>确保每列都与主键列直接相关, 而不是间接相关</p>
 <p>在第二范式的基础上, 消除表的传递依赖</p>
 <p>所有非主键字段必须直接依赖于主键，而不是通过其他非主键字段间接依赖。</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212004058261.png" alt="image.png"></p>

@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51674&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:51674/leetcode/tree/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:51674/leetcode/tree/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/leetcode/tree/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/leetcode/tree/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>树 | 海阔集</title>
 <meta name="description" content="集百川者, 成海阔">
-<meta property="og:url" content="http://localhost:51674/leetcode/tree/">
+<meta property="og:url" content="http://localhost:1313/leetcode/tree/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="树">
   <meta property="og:description" content="集百川者, 成海阔">
@@ -30,6 +30,7 @@
 
   <meta itemprop="name" content="树">
   <meta itemprop="description" content="集百川者, 成海阔">
+  <meta itemprop="dateModified" content="2025-02-14T22:44:15+08:00">
   <meta itemprop="keywords" content="算法">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="树">
@@ -184,6 +185,14 @@ This is the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>3: <a href="#pg-ded19053b0a737df98dc65d882a85b37">543. 二叉树的直径</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -212,11 +221,41 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-2a111b2e63d7d046222ba8ab3914270a">1 - 101. 对称二叉树</h1>
     <div class="lead">给你一个二叉树的根节点 root ， 检查它是否轴对称。</div>
-	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4>
-<p>给你一个二叉树的根节点 <code>root</code> ， 检查它是否轴对称。</p>
-<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4>
-<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4>
-<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
+	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4><p>给你一个二叉树的根节点 <code>root</code> ， 检查它是否轴对称。</p>
+<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4><p>简单</p>
+<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4><p><img src="https://pic.leetcode.cn/1698026966-JDYPDU-image.png" alt=""></p>
+<p>输入：root = [1,2,2,3,4,4,3]
+输出：true</p>
+<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4><p>递归检查子树即可, 要求每一层的左右子树必须一致</p>
+<p>先写辅助的递归, 在递归中检查左右子树是否一致, 也就是每一层左右节点是否相等</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">boolean</span> <span style="color:#8caaee">isMirror</span>(TreeNode r1, TreeNode r2){
+</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//第一出口, 左右节点同时为NULL</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#ca9ee6">if</span>(r1 <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span> <span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> r2 <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span>){
+</span></span><span style="display:flex;"><span>          <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//如果两个节点不同时为空, 代表左右两颗树层数不一致</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">if</span>(r1 <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span> <span style="color:#99d1db;font-weight:bold">||</span> r2 <span style="color:#99d1db;font-weight:bold">==</span> <span style="color:#ef9f76">null</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//递归体, 检查该层节点以及子树是否相等</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">return</span> (r1.<span style="color:#8caaee">val</span> <span style="color:#99d1db;font-weight:bold">==</span> r2.<span style="color:#8caaee">val</span>) <span style="color:#99d1db;font-weight:bold">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>        ismirror(r1.<span style="color:#8caaee">left</span>, r2.<span style="color:#8caaee">right</span>) <span style="color:#99d1db;font-weight:bold">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>        ismirror(r2.<span style="color:#8caaee">left</span>, r1.<span style="color:#8caaee">right</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>首先传递, 当某一层节点为NULL是回归
+一旦发现左右子树不一致就返回<code>false</code>, 并将错误回归
+当左右子树同时传递完成, 代表层数一致, 检查节点数值
+之后按照对称性, 传递</p>
+<ul>
+<li>
+<p>左节点的左子树, 右节点的右子树;</p>
+</li>
+<li>
+<p>右节点的左子树和左节点的右子树</p>
+</li>
+</ul>
 
 </div>
 
@@ -234,15 +273,11 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-ba8a851a6a526f1a58d07675913b467e">2 - 104. 二叉树的最大深度</h1>
     
-	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4>
-<p>给定一个二叉树 <code>root</code> ，返回其最大深度。</p>
+	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4><p>给定一个二叉树 <code>root</code> ，返回其最大深度。</p>
 <p>二叉树的 <strong>最大深度</strong> 是指从根节点到最远叶子节点的最长路径上的节点数。</p>
-<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4>
-<p>简单</p>
-<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250214202853412.png" alt="image.png"></p>
-<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
-<p>此题就是经典的遍历</p>
+<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4><p>简单</p>
+<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4><p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250214202853412.png" alt="image.png"></p>
+<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4><p>此题就是经典的遍历</p>
 <p>那么二叉树有两种遍历, BFS.DFS
 我们选择DFS</p>
 <p>DFS使用递归实现深度遍历
@@ -269,6 +304,23 @@ This is the multi-page printable view of this section.
 第二个出口, 子节点变量完成</p>
 <p>选择左右两支中最深的返回即可</p>
 
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ded19053b0a737df98dc65d882a85b37">3 - 543. 二叉树的直径</h1>
+    
+	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4><h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4><h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4><h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
 </div>
 
 

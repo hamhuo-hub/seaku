@@ -1,10 +1,10 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=51674&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:51674/docs/general/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:51674/docs/general/index.xml">
+<link rel="canonical" type="text/html" href="http://localhost:1313/docs/general/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/docs/general/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -21,7 +21,7 @@
 
 <title>通用能力 | 海阔集</title>
 <meta name="description" content="计科学生必备的能力">
-<meta property="og:url" content="http://localhost:51674/docs/general/">
+<meta property="og:url" content="http://localhost:1313/docs/general/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="通用能力">
   <meta property="og:description" content="计科学生必备的能力">
@@ -263,8 +263,7 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-ba122cf7907183afa423647bdbf535d5">1 - Computer Internet</h1>
     <div class="lead">计算机因特网-电子工业版</div>
-	<h4 id="url-uri">URL, URI<a class="td-heading-self-link" href="#url-uri" aria-label="Heading self-link"></a></h4>
-<p>We have to deal with URLs every day. URL is an acronym that stands for <em>Uniform Resource Locator</em>.</p>
+	<h4 id="url-uri">URL, URI<a class="td-heading-self-link" href="#url-uri" aria-label="Heading self-link"></a></h4><p>We have to deal with URLs every day. URL is an acronym that stands for <em>Uniform Resource Locator</em>.</p>
 <p>you can simply call it <em>address</em>. It&rsquo;s used as a string that denotes the location of a given resource on the Internet: a web page, an image, a mailbox, etc.</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212103958534.png" alt="image.png"></p>
 <p>What Is a URI?</p>
@@ -383,51 +382,41 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-84b8bbc13de58a3c160e939c30372d41">2.3 - 操作系统基本特性</h1>
     <div class="lead">操作系统有四大基本特性</div>
-	<h4 id="并发">并发<a class="td-heading-self-link" href="#%e5%b9%b6%e5%8f%91" aria-label="Heading self-link"></a></h4>
-<p>OS能够提高系统资源利用率的原因</p>
+	<h4 id="并发">并发<a class="td-heading-self-link" href="#%e5%b9%b6%e5%8f%91" aria-label="Heading self-link"></a></h4><p>OS能够提高系统资源利用率的原因</p>
 <p>并发是指<strong>多个任务在同一时间段内被处理</strong>，但并不意味着它们必须是<strong>同时</strong>发生的。实际上，处理器可能会在同一时刻只能处理一个任务，但操作系统通过切换任务的方式让多个任务在短时间间隔内“交替”执行。</p>
 <ul>
 <li><strong>并发的关键特点</strong>是：在同一时间段内，多个任务会被交替执行，这种交替执行给人感觉是同时进行的。操作系统调度器负责任务切换。</li>
 </ul>
-<h4 id="共享"><strong>共享</strong><a class="td-heading-self-link" href="#%e5%85%b1%e4%ba%ab" aria-label="Heading self-link"></a></h4>
-<p>在操作系统中，共享资源需要控制不同进程或线程的访问，常见的控制方式有 <strong>互斥</strong> 和 <strong>同时</strong>。</p>
+<h4 id="共享"><strong>共享</strong><a class="td-heading-self-link" href="#%e5%85%b1%e4%ba%ab" aria-label="Heading self-link"></a></h4><p>在操作系统中，共享资源需要控制不同进程或线程的访问，常见的控制方式有 <strong>互斥</strong> 和 <strong>同时</strong>。</p>
 <ul>
 <li><strong>共享资源</strong>是指多个进程或线程可以访问同一块内存或设备资源。例如，多个进程同时访问打印机、磁带机等共享设备。</li>
 <li><strong>操作系统中的共享</strong>通常是通过 <strong>锁机制</strong>（如互斥锁、读写锁等）来避免资源竞争问题，确保资源访问的有序性。</li>
 </ul>
-<h5 id="1-互斥">1. 互斥<a class="td-heading-self-link" href="#1-%e4%ba%92%e6%96%a5" aria-label="Heading self-link"></a></h5>
-<p>互斥是指在<strong>某一时间</strong>，只能允许<strong>一个进程或线程</strong>访问共享资源，防止并发执行时的资源冲突。</p>
+<h5 id="1-互斥">1. 互斥<a class="td-heading-self-link" href="#1-%e4%ba%92%e6%96%a5" aria-label="Heading self-link"></a></h5><p>互斥是指在<strong>某一时间</strong>，只能允许<strong>一个进程或线程</strong>访问共享资源，防止并发执行时的资源冲突。</p>
 <ul>
 <li>例如，打印机是共享资源，但同一时刻只能由一个进程打印，其他进程需等待。</li>
 <li>操作系统通过 <strong>互斥锁（Mutex）</strong> 来保证同一时间内只有一个进程（或线程）能访问资源。</li>
 </ul>
-<h5 id="2-同时">2. 同时<a class="td-heading-self-link" href="#2-%e5%90%8c%e6%97%b6" aria-label="Heading self-link"></a></h5>
-<p>同时是指多个进程或线程<strong>在时间上交替执行</strong>共享资源的访问请求，而非在同一时刻访问。
+<h5 id="2-同时">2. 同时<a class="td-heading-self-link" href="#2-%e5%90%8c%e6%97%b6" aria-label="Heading self-link"></a></h5><p>同时是指多个进程或线程<strong>在时间上交替执行</strong>共享资源的访问请求，而非在同一时刻访问。
 例如，某个设备在微观上并不是完全同时被多个进程访问，而是交替执行。</p>
-<h4 id="虚拟"><strong>虚拟</strong><a class="td-heading-self-link" href="#%e8%99%9a%e6%8b%9f" aria-label="Heading self-link"></a></h4>
-<p>操作系统通过软件技术为应用程序和用户提供的一种抽象和隔离机制，使得多个程序可以在相同的硬件资源上独立运行，并且每个程序认为它独占系统资源，实际上是操作系统通过合理调度和资源分配来共享这些资源。</p>
-<h5 id="时分复用time-division-multiplexing-tdm">时分复用（Time Division Multiplexing, TDM）<a class="td-heading-self-link" href="#%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8time-division-multiplexing-tdm" aria-label="Heading self-link"></a></h5>
-<p>时分复用是指<strong>通过时间片轮转的方式</strong>将处理器时间分配给多个用户或任务。每个用户在指定的时间段内占用资源，其他用户则需等待空闲时间。</p>
+<h4 id="虚拟"><strong>虚拟</strong><a class="td-heading-self-link" href="#%e8%99%9a%e6%8b%9f" aria-label="Heading self-link"></a></h4><p>操作系统通过软件技术为应用程序和用户提供的一种抽象和隔离机制，使得多个程序可以在相同的硬件资源上独立运行，并且每个程序认为它独占系统资源，实际上是操作系统通过合理调度和资源分配来共享这些资源。</p>
+<h5 id="时分复用time-division-multiplexing-tdm">时分复用（Time Division Multiplexing, TDM）<a class="td-heading-self-link" href="#%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8time-division-multiplexing-tdm" aria-label="Heading self-link"></a></h5><p>时分复用是指<strong>通过时间片轮转的方式</strong>将处理器时间分配给多个用户或任务。每个用户在指定的时间段内占用资源，其他用户则需等待空闲时间。</p>
 <ul>
 <li><strong>例子</strong>：操作系统通过时间片轮转的方式将 CPU 时间分配给各个进程，保证每个进程都有机会执行。</li>
 </ul>
-<h5 id="空分复用frequency-division-multiplexing-fdm">空分复用（Frequency Division Multiplexing, FDM）<a class="td-heading-self-link" href="#%e7%a9%ba%e5%88%86%e5%a4%8d%e7%94%a8frequency-division-multiplexing-fdm" aria-label="Heading self-link"></a></h5>
-<p>空分复用通过将<strong>频带划分成多个较小的频带</strong>来为不同的通信用户提供服务，每个用户在一个独立的频带内通信。</p>
+<h5 id="空分复用frequency-division-multiplexing-fdm">空分复用（Frequency Division Multiplexing, FDM）<a class="td-heading-self-link" href="#%e7%a9%ba%e5%88%86%e5%a4%8d%e7%94%a8frequency-division-multiplexing-fdm" aria-label="Heading self-link"></a></h5><p>空分复用通过将<strong>频带划分成多个较小的频带</strong>来为不同的通信用户提供服务，每个用户在一个独立的频带内通信。</p>
 <ul>
 <li><strong>例子</strong>：在无线通信中，多个通信设备通过不同的频率带宽进行通讯。每个设备占用一个特定频段。</li>
 </ul>
-<h4 id="异步">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5" aria-label="Heading self-link"></a></h4>
-<blockquote>
+<h4 id="异步">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5" aria-label="Heading self-link"></a></h4><blockquote>
 <p>在多道程序并发的环境下，每个程序何时执行、何时暂停 都是未知的，即他们以不可预知的速度向前推进，</p>
 <p>操作系统 应当保证程序执行结果的可再现性。</p></blockquote>
 <p><strong>执行顺序</strong></p>
-<h5 id="同步">同步<a class="td-heading-self-link" href="#%e5%90%8c%e6%ad%a5" aria-label="Heading self-link"></a></h5>
-<p>同步是指任务的执行是<strong>按顺序进行</strong>的，一个任务完成后，另一个任务才能开始执行。</p>
+<h5 id="同步">同步<a class="td-heading-self-link" href="#%e5%90%8c%e6%ad%a5" aria-label="Heading self-link"></a></h5><p>同步是指任务的执行是<strong>按顺序进行</strong>的，一个任务完成后，另一个任务才能开始执行。</p>
 <ul>
 <li><strong>例子</strong>：多个进程依次在 CPU 上执行，前一个任务完成后，后一个任务才能开始。</li>
 </ul>
-<h5 id="异步-1">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5-1" aria-label="Heading self-link"></a></h5>
-<p>异步是指任务的执行<strong>不必按顺序进行</strong>，多个任务可以并行执行，任务之间的执行顺序不受限制。每个任务执行时不会阻塞其他任务的执行。</p>
+<h5 id="异步-1">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5-1" aria-label="Heading self-link"></a></h5><p>异步是指任务的执行<strong>不必按顺序进行</strong>，多个任务可以并行执行，任务之间的执行顺序不受限制。每个任务执行时不会阻塞其他任务的执行。</p>
 <ul>
 <li><strong>例子</strong>：在事件驱动的程序中，任务的执行顺序可能不固定，可以由事件触发机制来决定。</li>
 </ul>
@@ -460,8 +449,7 @@ This is the multi-page printable view of this section.
 <p>多个进程必须互斥的对它进行访问</p>
 <p>在每个进程中访问临界资源的这段<strong>代码</strong>称之为临界区</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/image-20250109233136840.png" alt="image-20250109233136840"></p></blockquote>
-<h4 id="临界区的作用">临界区的作用<a class="td-heading-self-link" href="#%e4%b8%b4%e7%95%8c%e5%8c%ba%e7%9a%84%e4%bd%9c%e7%94%a8" aria-label="Heading self-link"></a></h4>
-<ol>
+<h4 id="临界区的作用">临界区的作用<a class="td-heading-self-link" href="#%e4%b8%b4%e7%95%8c%e5%8c%ba%e7%9a%84%e4%bd%9c%e7%94%a8" aria-label="Heading self-link"></a></h4><ol>
 <li>保护共享资源</li>
 </ol>
 <p>通过互斥访问机制，任意时刻只有一个线程修改和访问共享数据</p>
@@ -497,18 +485,15 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-cee908a110ada7c6e4442621a5cba63d">2.5 - 进程的状态与转换</h1>
     <div class="lead">多个进程在并发执行时共享系统资源，致使它们在 运行过程中呈现间断性的运行规律，所以进程在其生命周期内可能具有多种状态。</div>
-	<h3 id="进程的状态与转换">进程的状态与转换<a class="td-heading-self-link" href="#%e8%bf%9b%e7%a8%8b%e7%9a%84%e7%8a%b6%e6%80%81%e4%b8%8e%e8%bd%ac%e6%8d%a2" aria-label="Heading self-link"></a></h3>
-<blockquote>
+	<h3 id="进程的状态与转换">进程的状态与转换<a class="td-heading-self-link" href="#%e8%bf%9b%e7%a8%8b%e7%9a%84%e7%8a%b6%e6%80%81%e4%b8%8e%e8%bd%ac%e6%8d%a2" aria-label="Heading self-link"></a></h3><blockquote>
 <p>多个进程在并发执行时共享系统资源，</p>
 <p>致使它们在 运行过程中呈现间断性的运行规律，</p>
 <p>所以进程在其生命周期内可能具有多种状态。</p></blockquote>
-<h4 id="基本状态">基本状态<a class="td-heading-self-link" href="#%e5%9f%ba%e6%9c%ac%e7%8a%b6%e6%80%81" aria-label="Heading self-link"></a></h4>
-<p>就绪(Ready)状态</p>
+<h4 id="基本状态">基本状态<a class="td-heading-self-link" href="#%e5%9f%ba%e6%9c%ac%e7%8a%b6%e6%80%81" aria-label="Heading self-link"></a></h4><p>就绪(Ready)状态</p>
 <p>执行(Running)状态</p>
 <p>阻塞(Block)状态</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250205105205700.png" alt="image.png"></p>
-<h4 id="创建与终止状态">创建与终止状态<a class="td-heading-self-link" href="#%e5%88%9b%e5%bb%ba%e4%b8%8e%e7%bb%88%e6%ad%a2%e7%8a%b6%e6%80%81" aria-label="Heading self-link"></a></h4>
-<p>创建状态</p>
+<h4 id="创建与终止状态">创建与终止状态<a class="td-heading-self-link" href="#%e5%88%9b%e5%bb%ba%e4%b8%8e%e7%bb%88%e6%ad%a2%e7%8a%b6%e6%80%81" aria-label="Heading self-link"></a></h4><p>创建状态</p>
 <p>进程正在被创建</p>
 <p>创建工作尚未完成，进程不能被调度运行</p>
 <p>终止状态</p>
