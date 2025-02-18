@@ -170,7 +170,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-3ba27469f4a6cfdff3f63f1f25af62a6"></a></li>
+<li>1: <a href="#pg-3ba27469f4a6cfdff3f63f1f25af62a6">MySQL</a></li>
 
 
     
@@ -201,8 +201,8 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-3ba27469f4a6cfdff3f63f1f25af62a6">1 - </h1>
-    
+	<h1 id="pg-3ba27469f4a6cfdff3f63f1f25af62a6">1 - MySQL</h1>
+    <div class="lead">MySQL面试</div>
 	<h4 id="请说说-mysql-的内联左联右联的区别">请说说 MySQL 的内联、左联、右联的区别。<a class="td-heading-self-link" href="#%e8%af%b7%e8%af%b4%e8%af%b4-mysql-%e7%9a%84%e5%86%85%e8%81%94%e5%b7%a6%e8%81%94%e5%8f%b3%e8%81%94%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4><p>内联就是返回两张表都匹配的记录, 只返回两张表都存在的记录
 左联, 返回左表所有记录, 不管右表是否有相匹配的记录,如果没有结果集中右表就填NULL
 右联, 返回右表所有记录, 不管左表有没有匹配的记录</p>
@@ -211,7 +211,7 @@ This is the multi-page printable view of this section.
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">LEFT</span>(a.title, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> articleTitle, <span style="color:#ca9ee6">LEFT</span>(<span style="color:#ca9ee6">c</span>.content, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span>
 </span></span><span style="display:flex;"><span>CommentContent
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">order</span> a
-</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">INNER</span> <span style="color:#ca9ee6">JOIN</span> ORDERCONSUMER <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">c</span>.order_id
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">INNER</span> <span style="color:#ca9ee6">JOIN</span> ORDERCONSUMER <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> c.order_id
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>;
 </span></span></code></pre></div><p>左联</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">LEFT</span>(a.title, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> ArticleTitle, <span style="color:#ca9ee6">LEFT</span>(<span style="color:#ca9ee6">c</span>.content, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> CommentContent <span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">order</span> a <span style="color:#ca9ee6">LEFT</span> <span style="color:#ca9ee6">JOIN</span> ORDERCONSUMER <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">c</span>.article_id <span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>;
@@ -265,7 +265,7 @@ This is the multi-page printable view of this section.
         <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
-    <a target="_blank" rel="noopener" href="https://github.com/google/docsy" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/hamhuo-hub/seaku" aria-label="GitHub">
       <i class="fab fa-github"></i>
     </a>
   </li>

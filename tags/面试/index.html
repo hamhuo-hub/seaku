@@ -1,10 +1,9 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=54941&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:54941/docs/advanced/mq/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:54941/docs/advanced/mq/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/tags/%E9%9D%A2%E8%AF%95/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
@@ -19,23 +18,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>消息队列 | 海阔集</title>
-<meta name="description" content="消息中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的构建。消息中间件是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削峰等问题，实现高性能，高可用，可伸缩和最终一致性的系统架构。">
-<meta property="og:url" content="http://localhost:54941/docs/advanced/mq/">
+<title>面试 | 海阔集</title>
+<meta name="description" content="集百川者, 成海阔">
+<meta property="og:url" content="http://localhost:1313/tags/%E9%9D%A2%E8%AF%95/">
   <meta property="og:site_name" content="海阔集">
-  <meta property="og:title" content="消息队列">
-  <meta property="og:description" content="消息中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的构建。消息中间件是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削峰等问题，实现高性能，高可用，可伸缩和最终一致性的系统架构。">
+  <meta property="og:title" content="面试">
+  <meta property="og:description" content="集百川者, 成海阔">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="消息队列">
-  <meta itemprop="description" content="消息中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的构建。消息中间件是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削峰等问题，实现高性能，高可用，可伸缩和最终一致性的系统架构。">
-  <meta itemprop="dateModified" content="2025-02-08T22:25:01+08:00">
-  <meta itemprop="wordCount" content="16">
-  <meta itemprop="keywords" content="消息队列">
+  <meta itemprop="name" content="面试">
+  <meta itemprop="description" content="集百川者, 成海阔">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="消息队列">
-  <meta name="twitter:description" content="消息中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的构建。消息中间件是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削峰等问题，实现高性能，高可用，可伸缩和最终一致性的系统架构。">
+  <meta name="twitter:title" content="面试">
+  <meta name="twitter:description" content="集百川者, 成海阔">
 <link href="/scss/main.css" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -47,7 +43,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-section">
+  <body class="td-term">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -58,7 +54,7 @@
         <a class="nav-link" href="/leetcode/"><span>Alog</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/docs/"><span>Doc</span></a>
+        <a class="nav-link" href="/docs/"><span>Doc</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/interview/"><span>Interview</span></a>
@@ -135,73 +131,52 @@
 </div>
 </nav>
     </header>
-    <div class="container-fluid td-outer">
-      <div class="td-main">
-        <div class="row flex-xl-nowrap">
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
-            
-
-
-
-
+    <div class="container-fluid td-default td-outer">
+      <main role="main" class="td-main">
+        
 <div class="td-content">
-<div class="pageinfo pageinfo-primary d-print-none">
-<p>
-This is the multi-page printable view of this section.
-<a href="#" onclick="print();return false;">Click here to print</a>.
-</p><p>
-<a href="/docs/advanced/mq/">Return to the regular view of this page</a>.
-</p>
-</div>
-
-
-
-<h1 class="title">消息队列</h1>
-<div class="lead">消息中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的构建。消息中间件是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削峰等问题，实现高性能，高可用，可伸缩和最终一致性的系统架构。</div>
-
-
-
-
-    <ul>
-    
-  
-  
-  
-  
-
-  
-
+  <main class="taxonomy-taxonomy-page">
+    <h1>Tag: <span>面试</span></h1>
+    <div>
+      
+    </div>
+    <div>
+      
+        
+        <article class="card article-teaser article-type-docs">
+          <h3><a href="/interview/mysql/">MySQL</a></h3>
+          <nav class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/interview/">Interview</a></li>
+  <li class="breadcrumb-item">
+    MySQL</li>
+  </ol>
+</nav><p>MySQL面试</p>
+          <header class="article-meta">
+            <div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="http://localhost:1313/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span></a></li>
+    <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E9%9D%A2%E8%AF%95/" data-taxonomy-term="%E9%9D%A2%E8%AF%95"><span class="taxonomy-label">面试</span></a></li>
     </ul>
-
-
-<div class="content">
-      <p><a href="https://developer.aliyun.com/article/953777">https://developer.aliyun.com/article/953777</a></p>
-<h4 id="什么是消息队列">什么是消息队列<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%b6%88%e6%81%af%e9%98%9f%e5%88%97" aria-label="Heading self-link"></a></h4><p>消息队列（Message Queue，简称MQ）指保存消息的一个容器，其实本质就是一个保存数据的队列。</p>
-<p>消息中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的构建。
-消息中间件是分布式系统中重要的组件，主要解决应用解耦，异步消息，流量削峰等问题，实现高性能，高可用，可伸缩和最终一致性的系统架构。</p>
-<p>可以理解为: 消息队列, 分布式做异步通信, 流量削峰, 服务解耦的重要角色</p>
-<p>平滑处理: 放到缓存, 依次处理, 实现削峰填谷, 消息中间件可以通过缓存请求，避免系统崩
-溃。</p>
-
 </div>
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="http://localhost:1313/categories/%E9%9D%A2%E8%AF%95/" data-taxonomy-term="%E9%9D%A2%E8%AF%95"><span class="taxonomy-label">面试</span></a></li>
+    </ul>
 </div>
 
+  </header>
+        </article>
+      
+    </div>
+    <a href="http://localhost:1313/tags/" class="all-taxonomy-terms">All Tags</a>
+  </main>
+</div>
 
-  
-  
-  
-  
-
-  
-  
-
-  
-
-
-
-          </main>
-        </div>
-      </div>
+      </main>
       <footer class="td-footer row d-print-none">
   <div class="container-fluid">
     <div class="row mx-md-2">
@@ -232,7 +207,7 @@ This is the multi-page printable view of this section.
         <ul class="td-footer__links-list">
   
   <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
-    <a target="_blank" rel="noopener" href="https://github.com/google/docsy" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/hamhuo-hub/seaku" aria-label="GitHub">
       <i class="fab fa-github"></i>
     </a>
   </li>
