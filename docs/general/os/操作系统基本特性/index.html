@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="操作系统基本特性">
   <meta itemprop="description" content="操作系统有四大基本特性">
-  <meta itemprop="wordCount" content="44">
+  <meta itemprop="wordCount" content="53">
   <meta itemprop="keywords" content="操作系统">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="操作系统基本特性">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -425,41 +425,51 @@
 </div>
 
   </header>
-	<h4 id="并发">并发<a class="td-heading-self-link" href="#%e5%b9%b6%e5%8f%91" aria-label="Heading self-link"></a></h4><p>OS能够提高系统资源利用率的原因</p>
+	<h4 id="并发">并发<a class="td-heading-self-link" href="#%e5%b9%b6%e5%8f%91" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>OS能够提高系统资源利用率的原因</p>
 <p>并发是指<strong>多个任务在同一时间段内被处理</strong>，但并不意味着它们必须是<strong>同时</strong>发生的。实际上，处理器可能会在同一时刻只能处理一个任务，但操作系统通过切换任务的方式让多个任务在短时间间隔内“交替”执行。</p>
 <ul>
 <li><strong>并发的关键特点</strong>是：在同一时间段内，多个任务会被交替执行，这种交替执行给人感觉是同时进行的。操作系统调度器负责任务切换。</li>
 </ul>
-<h4 id="共享"><strong>共享</strong><a class="td-heading-self-link" href="#%e5%85%b1%e4%ba%ab" aria-label="Heading self-link"></a></h4><p>在操作系统中，共享资源需要控制不同进程或线程的访问，常见的控制方式有 <strong>互斥</strong> 和 <strong>同时</strong>。</p>
+<h4 id="共享"><strong>共享</strong><a class="td-heading-self-link" href="#%e5%85%b1%e4%ba%ab" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>在操作系统中，共享资源需要控制不同进程或线程的访问，常见的控制方式有 <strong>互斥</strong> 和 <strong>同时</strong>。</p>
 <ul>
 <li><strong>共享资源</strong>是指多个进程或线程可以访问同一块内存或设备资源。例如，多个进程同时访问打印机、磁带机等共享设备。</li>
 <li><strong>操作系统中的共享</strong>通常是通过 <strong>锁机制</strong>（如互斥锁、读写锁等）来避免资源竞争问题，确保资源访问的有序性。</li>
 </ul>
-<h5 id="1-互斥">1. 互斥<a class="td-heading-self-link" href="#1-%e4%ba%92%e6%96%a5" aria-label="Heading self-link"></a></h5><p>互斥是指在<strong>某一时间</strong>，只能允许<strong>一个进程或线程</strong>访问共享资源，防止并发执行时的资源冲突。</p>
+<h5 id="1-互斥">1. 互斥<a class="td-heading-self-link" href="#1-%e4%ba%92%e6%96%a5" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>互斥是指在<strong>某一时间</strong>，只能允许<strong>一个进程或线程</strong>访问共享资源，防止并发执行时的资源冲突。</p>
 <ul>
 <li>例如，打印机是共享资源，但同一时刻只能由一个进程打印，其他进程需等待。</li>
 <li>操作系统通过 <strong>互斥锁（Mutex）</strong> 来保证同一时间内只有一个进程（或线程）能访问资源。</li>
 </ul>
-<h5 id="2-同时">2. 同时<a class="td-heading-self-link" href="#2-%e5%90%8c%e6%97%b6" aria-label="Heading self-link"></a></h5><p>同时是指多个进程或线程<strong>在时间上交替执行</strong>共享资源的访问请求，而非在同一时刻访问。
+<h5 id="2-同时">2. 同时<a class="td-heading-self-link" href="#2-%e5%90%8c%e6%97%b6" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>同时是指多个进程或线程<strong>在时间上交替执行</strong>共享资源的访问请求，而非在同一时刻访问。
 例如，某个设备在微观上并不是完全同时被多个进程访问，而是交替执行。</p>
-<h4 id="虚拟"><strong>虚拟</strong><a class="td-heading-self-link" href="#%e8%99%9a%e6%8b%9f" aria-label="Heading self-link"></a></h4><p>操作系统通过软件技术为应用程序和用户提供的一种抽象和隔离机制，使得多个程序可以在相同的硬件资源上独立运行，并且每个程序认为它独占系统资源，实际上是操作系统通过合理调度和资源分配来共享这些资源。</p>
-<h5 id="时分复用time-division-multiplexing-tdm">时分复用（Time Division Multiplexing, TDM）<a class="td-heading-self-link" href="#%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8time-division-multiplexing-tdm" aria-label="Heading self-link"></a></h5><p>时分复用是指<strong>通过时间片轮转的方式</strong>将处理器时间分配给多个用户或任务。每个用户在指定的时间段内占用资源，其他用户则需等待空闲时间。</p>
+<h4 id="虚拟"><strong>虚拟</strong><a class="td-heading-self-link" href="#%e8%99%9a%e6%8b%9f" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>操作系统通过软件技术为应用程序和用户提供的一种抽象和隔离机制，使得多个程序可以在相同的硬件资源上独立运行，并且每个程序认为它独占系统资源，实际上是操作系统通过合理调度和资源分配来共享这些资源。</p>
+<h5 id="时分复用time-division-multiplexing-tdm">时分复用（Time Division Multiplexing, TDM）<a class="td-heading-self-link" href="#%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8time-division-multiplexing-tdm" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>时分复用是指<strong>通过时间片轮转的方式</strong>将处理器时间分配给多个用户或任务。每个用户在指定的时间段内占用资源，其他用户则需等待空闲时间。</p>
 <ul>
 <li><strong>例子</strong>：操作系统通过时间片轮转的方式将 CPU 时间分配给各个进程，保证每个进程都有机会执行。</li>
 </ul>
-<h5 id="空分复用frequency-division-multiplexing-fdm">空分复用（Frequency Division Multiplexing, FDM）<a class="td-heading-self-link" href="#%e7%a9%ba%e5%88%86%e5%a4%8d%e7%94%a8frequency-division-multiplexing-fdm" aria-label="Heading self-link"></a></h5><p>空分复用通过将<strong>频带划分成多个较小的频带</strong>来为不同的通信用户提供服务，每个用户在一个独立的频带内通信。</p>
+<h5 id="空分复用frequency-division-multiplexing-fdm">空分复用（Frequency Division Multiplexing, FDM）<a class="td-heading-self-link" href="#%e7%a9%ba%e5%88%86%e5%a4%8d%e7%94%a8frequency-division-multiplexing-fdm" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>空分复用通过将<strong>频带划分成多个较小的频带</strong>来为不同的通信用户提供服务，每个用户在一个独立的频带内通信。</p>
 <ul>
 <li><strong>例子</strong>：在无线通信中，多个通信设备通过不同的频率带宽进行通讯。每个设备占用一个特定频段。</li>
 </ul>
-<h4 id="异步">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5" aria-label="Heading self-link"></a></h4><blockquote>
+<h4 id="异步">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
 <p>在多道程序并发的环境下，每个程序何时执行、何时暂停 都是未知的，即他们以不可预知的速度向前推进，</p>
 <p>操作系统 应当保证程序执行结果的可再现性。</p></blockquote>
 <p><strong>执行顺序</strong></p>
-<h5 id="同步">同步<a class="td-heading-self-link" href="#%e5%90%8c%e6%ad%a5" aria-label="Heading self-link"></a></h5><p>同步是指任务的执行是<strong>按顺序进行</strong>的，一个任务完成后，另一个任务才能开始执行。</p>
+<h5 id="同步">同步<a class="td-heading-self-link" href="#%e5%90%8c%e6%ad%a5" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>同步是指任务的执行是<strong>按顺序进行</strong>的，一个任务完成后，另一个任务才能开始执行。</p>
 <ul>
 <li><strong>例子</strong>：多个进程依次在 CPU 上执行，前一个任务完成后，后一个任务才能开始。</li>
 </ul>
-<h5 id="异步-1">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5-1" aria-label="Heading self-link"></a></h5><p>异步是指任务的执行<strong>不必按顺序进行</strong>，多个任务可以并行执行，任务之间的执行顺序不受限制。每个任务执行时不会阻塞其他任务的执行。</p>
+<h5 id="异步-1">异步<a class="td-heading-self-link" href="#%e5%bc%82%e6%ad%a5-1" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>异步是指任务的执行<strong>不必按顺序进行</strong>，多个任务可以并行执行，任务之间的执行顺序不受限制。每个任务执行时不会阻塞其他任务的执行。</p>
 <ul>
 <li><strong>例子</strong>：在事件驱动的程序中，任务的执行顺序可能不固定，可以由事件触发机制来决定。</li>
 </ul>

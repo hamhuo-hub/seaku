@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="通信工具类">
   <meta itemprop="description" content="JDK 中提供了一些并发编程中常用的通信工具类以供我们开发者使用。它们都在 JUC 包下。先总体概括一下都有哪些工具类，它们有什么作用，然后再分别介绍它们的主要使用方法和原理。">
-  <meta itemprop="wordCount" content="248">
+  <meta itemprop="wordCount" content="249">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="通信工具类">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -456,7 +456,8 @@
       </tr>
   </tbody>
 </table>
-<h3 id="countdownlatch"><code>CountDownLatch</code><a class="td-heading-self-link" href="#countdownlatch" aria-label="Heading self-link"></a></h3><p>一个减法计数器, 基于信号量</p>
+<h3 id="countdownlatch"><code>CountDownLatch</code><a class="td-heading-self-link" href="#countdownlatch" aria-label="Heading self-link"></a></h3>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>一个减法计数器, 基于信号量</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">class</span> <span style="color:#e5c890">CountTest</span>{
 </span></span><span style="display:flex;"><span>	  <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) <span style="color:#e78284">throws</span> InterruptedException {
 </span></span><span style="display:flex;"><span>		<span style="color:#737994;font-style:italic">//设置一个尺寸为10的信号量</span>
@@ -481,7 +482,8 @@
 <li><code>countDown()</code> 调用后计数减一</li>
 <li><code>await()</code> 使线程挂起</li>
 </ul>
-<h4 id="exchanger"><code>Exchanger</code><a class="td-heading-self-link" href="#exchanger" aria-label="Heading self-link"></a></h4><blockquote>
+<h4 id="exchanger"><code>Exchanger</code><a class="td-heading-self-link" href="#exchanger" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
 <p>A synchronization point at which threads can pair and swap elements within pairs. Each thread presents some object on entry to the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Exchanger.html#exchange-V-"><code>exchange</code></a> method, matches with a partner thread, and receives its partner&rsquo;s object on return. An Exchanger may be viewed as a bidirectional form of a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/SynchronousQueue.html" title="class in java.util.concurrent"><code>SynchronousQueue</code></a>. Exchangers may be useful in applications such as genetic algorithms and pipeline designs.</p></blockquote>
 <ul>
 <li>此类提供对外的操作是同步的；</li>

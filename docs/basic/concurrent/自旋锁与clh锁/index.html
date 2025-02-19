@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="自旋锁与CLH锁">
   <meta itemprop="description" content="AQS 类的核心数据结构是一种名为 `Craig, Landin, and Hagersten locks`（下称 CLH 锁）的变体。">
-  <meta itemprop="wordCount" content="144">
+  <meta itemprop="wordCount" content="145">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="自旋锁与CLH锁">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -433,7 +433,8 @@
 <p>这些同步器都是基于 AbstractQueuedSynchronizer（下称 AQS）这个简单的框架来构建的</p>
 <p>AQS 类的核心数据结构是一种名为 <code>Craig, Landin, and Hagersten locks</code>（下称 CLH 锁）的变体。</p>
 <p>CLH锁是自旋锁的一种改良</p>
-<h4 id="自旋锁">自旋锁<a class="td-heading-self-link" href="#%e8%87%aa%e6%97%8b%e9%94%81" aria-label="Heading self-link"></a></h4><p>自旋锁是互斥锁的一种实现, 用于保证线程间正确互斥</p>
+<h4 id="自旋锁">自旋锁<a class="td-heading-self-link" href="#%e8%87%aa%e6%97%8b%e9%94%81" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>自旋锁是互斥锁的一种实现, 用于保证线程间正确互斥</p>
 <p>获取锁时，线程会对一个原子变量循环执行 <code>compareAndSet</code> 方法，直到该方法返回成功时即为成功获取锁</p>
 <blockquote>
 <p><code>compareAndSet</code> 方法底层由[[CAS(compare-and-swap)]]实现</p></blockquote>
@@ -445,7 +446,8 @@
 <li>性能问题, 长时间自旋并且由于锁状态变更需要修改状态变量, 导致CPU的高速缓存在线程间频繁同步, 很消耗CPU
 ![[content/en/docs/Basic/Concurrent/Pasted image 20250203202833.png]]</li>
 </ul>
-<h4 id="clh锁">CLH锁<a class="td-heading-self-link" href="#clh%e9%94%81" aria-label="Heading self-link"></a></h4><blockquote>
+<h4 id="clh锁">CLH锁<a class="td-heading-self-link" href="#clh%e9%94%81" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
 <p><a href="/docs/basic/concurrent/volatile%E5%85%B3%E9%94%AE%E5%AD%97/">volatile关键字</a></p></blockquote>
 <p>这是对自旋锁的改进版本
 主要针对上述两个缺点做了改进</p>

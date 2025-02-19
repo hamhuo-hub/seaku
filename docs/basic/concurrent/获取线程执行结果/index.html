@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="获取线程执行结果">
   <meta itemprop="description" content="实际项目中，一个接口可能需要同时获取多种不同的数据，然后再汇总返回，如果是串行（按顺序依次执行每个任务）执行的话，接口的响应速度会非常慢。考虑到这些任务之间有大部分都是 无前后顺序关联 的，可以 并行执行 ，就比如说调用获取商品详情的时候，可以同时调用获取物流信息。通过并行执行多个任务的方式，接口的响应速度会得到大幅优化。">
-  <meta itemprop="wordCount" content="469">
+  <meta itemprop="wordCount" content="473">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="获取线程执行结果">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -433,7 +433,8 @@
 实现 <code>Callable&lt;&gt;</code> 接口</p>
 <p>前 2 种方式都有一个缺陷：在执行完任务之后无法获取执行结果。这对需要前置任务返回值的线程来说很重要</p>
 <p>Java 1.5 提供了 Callable、Future、FutureTask，它们可以在任务执行完后得到执行结果</p>
-<h4 id="callable">Callable&lt;&gt;<a class="td-heading-self-link" href="#callable" aria-label="Heading self-link"></a></h4><p><code>callable</code> 源码如下</p>
+<h4 id="callable">Callable&lt;&gt;<a class="td-heading-self-link" href="#callable" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><code>callable</code> 源码如下</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">Callable</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> {
 </span></span><span style="display:flex;"><span>    V <span style="color:#8caaee">call</span>() <span style="color:#e78284">throws</span> Exception;
 </span></span><span style="display:flex;"><span>}
@@ -441,7 +442,8 @@
 <blockquote>
 <p>而 <code>Callable&lt;&gt;</code> 允许返回值的一个任务</p>
 <p><code>Runnable</code> 接口代表一个可以由线程执行的任务, 实现 <code>Runnable</code> 而不是 <code>callable</code> 主要是线程池的兼容性考虑</p></blockquote>
-<h4 id="future-异步计算结果接口"><code>Future</code> 异步计算结果接口<a class="td-heading-self-link" href="#future-%e5%bc%82%e6%ad%a5%e8%ae%a1%e7%ae%97%e7%bb%93%e6%9e%9c%e6%8e%a5%e5%8f%a3" aria-label="Heading self-link"></a></h4><p><code>Future</code> 表示异步计算的结果，提供了用于检查计算是否完成、等待计算完成、以及检索计算结果的方法。</p>
+<h4 id="future-异步计算结果接口"><code>Future</code> 异步计算结果接口<a class="td-heading-self-link" href="#future-%e5%bc%82%e6%ad%a5%e8%ae%a1%e7%ae%97%e7%bb%93%e6%9e%9c%e6%8e%a5%e5%8f%a3" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><code>Future</code> 表示异步计算的结果，提供了用于检查计算是否完成、等待计算完成、以及检索计算结果的方法。</p>
 <blockquote>
 <p><code>Future</code> 接口的设计目标是允许任务在一个线程中执行，并且可以返回执行结果或抛出异常</p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">Future</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> {
@@ -472,7 +474,8 @@
 <code>isCancelled()</code>：判断任务是否被取消
 <code>cancel(boolean mayInterruptIfRunning)</code>：尝试取消此任务的执行，如果任务已经完成、已经取消或由于其他原因无法取消，则此尝试将失败
 参数 <code>mayInterruptIfRunning</code> 表示是否允许取消正在执行却没有执行完毕的任务</p>
-<h4 id="futuretask-异步计算接口实现类"><code>FutureTask</code> 异步计算接口实现类<a class="td-heading-self-link" href="#futuretask-%e5%bc%82%e6%ad%a5%e8%ae%a1%e7%ae%97%e6%8e%a5%e5%8f%a3%e5%ae%9e%e7%8e%b0%e7%b1%bb" aria-label="Heading self-link"></a></h4><p><code>FutureTask&lt;T&gt;</code> 是 <code>Future</code> 的一个实现类，同时也是 <code>Runnable</code>，可以直接用线程启动。</p>
+<h4 id="futuretask-异步计算接口实现类"><code>FutureTask</code> 异步计算接口实现类<a class="td-heading-self-link" href="#futuretask-%e5%bc%82%e6%ad%a5%e8%ae%a1%e7%ae%97%e6%8e%a5%e5%8f%a3%e5%ae%9e%e7%8e%b0%e7%b1%bb" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><code>FutureTask&lt;T&gt;</code> 是 <code>Future</code> 的一个实现类，同时也是 <code>Runnable</code>，可以直接用线程启动。</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">FutureTask</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#e78284">implements</span> RunnableFuture<span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">RunnableFuture</span><span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#e78284">extends</span> Runnable, Future<span style="color:#99d1db;font-weight:bold">&lt;</span>V<span style="color:#99d1db;font-weight:bold">&gt;</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">void</span> <span style="color:#8caaee">run</span>();
@@ -524,13 +527,15 @@
 <blockquote>
 <p><code>Future&lt;Integer&gt;[] futures = new Future[tasks.length]</code> 这里是泛型
 实际绑定的是 <code>FutureTask</code></p></blockquote>
-<h4 id="completeablefuture-任务编排实现类"><code>CompleteableFuture</code> 任务编排实现类<a class="td-heading-self-link" href="#completeablefuture-%e4%bb%bb%e5%8a%a1%e7%bc%96%e6%8e%92%e5%ae%9e%e7%8e%b0%e7%b1%bb" aria-label="Heading self-link"></a></h4><blockquote>
+<h4 id="completeablefuture-任务编排实现类"><code>CompleteableFuture</code> 任务编排实现类<a class="td-heading-self-link" href="#completeablefuture-%e4%bb%bb%e5%8a%a1%e7%bc%96%e6%8e%92%e5%ae%9e%e7%8e%b0%e7%b1%bb" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
 <p>A <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html" title="interface in java.util.concurrent"><code>Future</code></a> that may be explicitly completed (setting its value and status), and may be used as a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="interface in java.util.concurrent"><code>CompletionStage</code></a>, supporting dependent functions and actions that trigger upon its completion.</p>
 <p><code>Future</code> 在实际使用过程中存在一些局限性比如不支持异步任务的编排组合以及
 使用<code>Future</code>获得异步执行结果时，要么调用阻塞方法<code>get()</code>，要么轮询看<code>isDone()</code>是否为<code>true</code>，这两种方法都不是很好，因为主线程也会被迫等待。</p></blockquote>
 <blockquote>
 <p>从Java 8开始引入了<code>CompletableFuture</code>，它针对<code>Future</code>做了改进，可以传入回调对象，当异步任务完成或者发生异常时，自动调用回调对象的回调方法。</p></blockquote>
-<h4 id="如何使用">如何使用<a class="td-heading-self-link" href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8" aria-label="Heading self-link"></a></h4><p>创建一个<code>CompletableFuture</code>是通过<code>CompletableFuture.supplyAsync()</code>实现的，它需要一个实现了<code>Supplier</code>接口的对象：</p>
+<h4 id="如何使用">如何使用<a class="td-heading-self-link" href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>创建一个<code>CompletableFuture</code>是通过<code>CompletableFuture.supplyAsync()</code>实现的，它需要一个实现了<code>Supplier</code>接口的对象：</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">interface</span> <span style="color:#e5c890">Supplier</span><span style="color:#99d1db;font-weight:bold">&lt;</span>T<span style="color:#99d1db;font-weight:bold">&gt;</span> {
 </span></span><span style="display:flex;"><span>    T <span style="color:#8caaee">get</span>();
 </span></span><span style="display:flex;"><span>}

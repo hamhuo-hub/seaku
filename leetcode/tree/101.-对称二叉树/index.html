@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="101. 对称二叉树">
   <meta itemprop="description" content="给你一个二叉树的根节点 root ， 检查它是否轴对称。">
-  <meta itemprop="wordCount" content="70">
+  <meta itemprop="wordCount" content="73">
   <meta itemprop="keywords" content="树">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="101. 对称二叉树">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -311,12 +311,16 @@
 </div>
 
   </header>
-	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4><p>给你一个二叉树的根节点 <code>root</code> ， 检查它是否轴对称。</p>
-<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4><p>简单</p>
-<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4><p><img src="https://pic.leetcode.cn/1698026966-JDYPDU-image.png" alt=""></p>
+	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>给你一个二叉树的根节点 <code>root</code> ， 检查它是否轴对称。</p>
+<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>简单</p>
+<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><img src="https://pic.leetcode.cn/1698026966-JDYPDU-image.png" alt=""></p>
 <p>输入：root = [1,2,2,3,4,4,3]
 输出：true</p>
-<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4><p>递归检查子树即可, 要求每一层的左右子树必须一致</p>
+<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>递归检查子树即可, 要求每一层的左右子树必须一致</p>
 <p>先写辅助的递归, 在递归中检查左右子树是否一致, 也就是每一层左右节点是否相等</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">boolean</span> <span style="color:#8caaee">isMirror</span>(TreeNode r1, TreeNode r2){
 </span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//第一出口, 左右节点同时为NULL</span>

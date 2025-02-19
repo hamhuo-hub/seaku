@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="MySQL连接">
   <meta itemprop="description" content="在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。">
-  <meta itemprop="wordCount" content="53">
+  <meta itemprop="wordCount" content="56">
   <meta itemprop="keywords" content="MySQL">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MySQL连接">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -427,19 +427,22 @@
   </header>
 	<p>在前几章节中，我们已经学会了如何在一张表中读取数据，这是相对简单的，但是在真正的应用中经常需要从多个数据表中读取数据。</p>
 <p>连接分为三种 内,  左, 右</p>
-<h4 id="内连接">内连接<a class="td-heading-self-link" href="#%e5%86%85%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4><p>INNER JOIN 返回两个表中满足连接条件的匹配行，以下是 INNER JOIN 语句的基本语法</p>
+<h4 id="内连接">内连接<a class="td-heading-self-link" href="#%e5%86%85%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>INNER JOIN 返回两个表中满足连接条件的匹配行，以下是 INNER JOIN 语句的基本语法</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">INNER</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
 </span></span></code></pre></div><ul>
 <li><code>table1.column_name = table2.column_name</code> 是连接条件，指定了两个表中用于匹配的列。</li>
 </ul>
-<h4 id="左连接">左连接<a class="td-heading-self-link" href="#%e5%b7%a6%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4><p>LEFT JOIN 返回左表的所有行，并包括右表中匹配的行，如果右表中没有匹配的行，将返回 NULL 值，以下是 LEFT JOIN 语句的基本语法：</p>
+<h4 id="左连接">左连接<a class="td-heading-self-link" href="#%e5%b7%a6%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>LEFT JOIN 返回左表的所有行，并包括右表中匹配的行，如果右表中没有匹配的行，将返回 NULL 值，以下是 LEFT JOIN 语句的基本语法：</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> column1, column2, ...
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">FROM</span> table1
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">LEFT</span> <span style="color:#ca9ee6">JOIN</span> table2 <span style="color:#ca9ee6">ON</span> table1.<span style="color:#ca9ee6">column_name</span> <span style="color:#99d1db;font-weight:bold">=</span> table2.<span style="color:#ca9ee6">column_name</span>;
 </span></span></code></pre></div><p>返回左表的所有行, 如果右表没有匹配就为NULL</p>
-<h4 id="右连接">右连接<a class="td-heading-self-link" href="#%e5%8f%b3%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4><p>不常使用, 因为可以用左连接交换表顺序达到相同效果</p>
+<h4 id="右连接">右连接<a class="td-heading-self-link" href="#%e5%8f%b3%e8%bf%9e%e6%8e%a5" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>不常使用, 因为可以用左连接交换表顺序达到相同效果</p>
 
 	
 </div>

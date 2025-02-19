@@ -31,7 +31,7 @@
 
   <meta itemprop="name" content="24. 两两交换链表中的节点">
   <meta itemprop="description" content="给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）">
-  <meta itemprop="wordCount" content="112">
+  <meta itemprop="wordCount" content="115">
   <meta itemprop="keywords" content="链表,递归">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="24. 两两交换链表中的节点">
@@ -127,7 +127,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -151,7 +151,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -313,13 +313,17 @@
 </div>
 
   </header>
-	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4><p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。
+	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。
 你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。</p>
-<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4><p>中等</p>
-<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4><p><img src="https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg" alt=""></p>
+<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>中等</p>
+<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><img src="https://assets.leetcode.com/uploads/2020/10/03/swap_ex1.jpg" alt=""></p>
 <p>输入：head = [1,2,3,4]
 输出：[2,1,4,3]</p>
-<h4 id="分析">分析:<a class="td-heading-self-link" href="#%e5%88%86%e6%9e%90" aria-label="Heading self-link"></a></h4><p>看到这道题，我们要先搞清楚什么是两两交换，比如 1-&gt;2-&gt;3-&gt;4，交换后就是 2-&gt;1-&gt;4-&gt;3。</p>
+<h4 id="分析">分析:<a class="td-heading-self-link" href="#%e5%88%86%e6%9e%90" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>看到这道题，我们要先搞清楚什么是两两交换，比如 1-&gt;2-&gt;3-&gt;4，交换后就是 2-&gt;1-&gt;4-&gt;3。</p>
 <p>第一个和第二个交换，第三个和第四个交换，以此类推。</p>
 <p>那么就可以把整个链转为子链, 通过递归处理</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**

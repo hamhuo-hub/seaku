@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="线程安全问题">
   <meta itemprop="description" content="线程安全问题涉及数据竞争、资源竞争、竞态条件、死锁和饥饿等，常见于多线程并发访问共享资源时。">
-  <meta itemprop="wordCount" content="31">
+  <meta itemprop="wordCount" content="35">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="线程安全问题">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -429,16 +429,20 @@
 <p>前置
 <a href="/docs/basic/concurrent/%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B/">线程与进程</a></p></blockquote>
 <p>线程安全是指, 在多线程环境下, 多个线程对共享资源进行并发访问和操作时可能出现的问题</p>
-<h4 id="常见的线程安全问题">常见的线程安全问题<a class="td-heading-self-link" href="#%e5%b8%b8%e8%a7%81%e7%9a%84%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h4><h5 id="可见性问题">可见性问题<a class="td-heading-self-link" href="#%e5%8f%af%e8%a7%81%e6%80%a7%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h5><p>确保一个线程对共享变量的修改可以立即被其他线程看到。
+<h4 id="常见的线程安全问题">常见的线程安全问题<a class="td-heading-self-link" href="#%e5%b8%b8%e8%a7%81%e7%9a%84%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><h5 id="可见性问题">可见性问题<a class="td-heading-self-link" href="#%e5%8f%af%e8%a7%81%e6%80%a7%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>确保一个线程对共享变量的修改可以立即被其他线程看到。
 数据竞争
 当多个线程同时访问和修改共享变量时,
 没有适当的同步机制来保护数据一致性, 会导致不可预测的结果</p>
 <p>volatile 关键字可以保证了变量的修改对所有线程立即可见，并防止编译器优化导致的可见性问题。</p>
-<h5 id="原子性问题">原子性问题<a class="td-heading-self-link" href="#%e5%8e%9f%e5%ad%90%e6%80%a7%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h5><p>确保当某个线程修改共享变量时，没有其他线程可以同时修改这个变量，即这个操作是不可分割的。
+<h5 id="原子性问题">原子性问题<a class="td-heading-self-link" href="#%e5%8e%9f%e5%ad%90%e6%80%a7%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>确保当某个线程修改共享变量时，没有其他线程可以同时修改这个变量，即这个操作是不可分割的。
 如果操作的原子性被破坏, 就会导致只有部分操作成功使得结果无法预测</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250205194927449.png" alt="image.png"></p>
 <p>原子性可以通过互斥锁（如 synchronized）或原子操作（如 AtomicInteger 类中的方法）来保证。</p>
-<h5 id="活跃性问题">活跃性问题<a class="td-heading-self-link" href="#%e6%b4%bb%e8%b7%83%e6%80%a7%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h5><p>资源竞争
+<h5 id="活跃性问题">活跃性问题<a class="td-heading-self-link" href="#%e6%b4%bb%e8%b7%83%e6%80%a7%e9%97%ae%e9%a2%98" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>资源竞争
 多个线程争夺有限的资源, 没有适当的同步机制会导致资源分配问题</p>
 <ul>
 <li>死锁

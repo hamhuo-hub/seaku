@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="MySQL条件查询">
   <meta itemprop="description" content="真实的业务场景中，数量会非常大，有些甚至会有几百万、几千万条数据，如果不带上查询条件，一次性把全部数据查出来是不太现实的。">
-  <meta itemprop="wordCount" content="211">
+  <meta itemprop="wordCount" content="214">
   <meta itemprop="keywords" content="MySQL">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MySQL条件查询">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -428,7 +428,8 @@
 	<p>SELECT 查询没有查询条件。比如只返回姓名为xx的人, 年龄为xx的人等条件</p>
 <p>要知道，真实的业务场景中，数量会非常大，有些甚至会有几百万、几千万条数据，如果不带上查询条件，一次性把全部数据查出来是不太现实的。</p>
 <p>所以，我们通常要求在执行 SELECT 查询时，都要带上查询条件。那这一节，我们就来学习一些简单的 WHERE 条件查询。</p>
-<h4 id="查询操作符">查询操作符<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4><table>
+<h4 id="查询操作符">查询操作符<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><table>
   <thead>
       <tr>
           <th>操作符</th>
@@ -472,7 +473,8 @@
 <p>示例:
 查找id大于1000的文章</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">&gt;</span> <span style="color:#ef9f76">1000</span>;
-</span></span></code></pre></div><h4 id="区间查询">区间查询<a class="td-heading-self-link" href="#%e5%8c%ba%e9%97%b4%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4><p>利用一个 <code>&gt;=</code> 和一个 <code>&lt;=</code>，配合 <code>AND</code> 关键字，就可以实现区间查询</p>
+</span></span></code></pre></div><h4 id="区间查询">区间查询<a class="td-heading-self-link" href="#%e5%8c%ba%e9%97%b4%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>利用一个 <code>&gt;=</code> 和一个 <code>&lt;=</code>，配合 <code>AND</code> 关键字，就可以实现区间查询</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#e78284">字段名</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#e78284">表</span> <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">&gt;=</span> <span style="color:#ef9f76">1000</span> <span style="color:#ca9ee6">AND</span> user_id <span style="color:#99d1db;font-weight:bold">&lt;=</span> <span style="color:#ef9f76">2000</span>;
 </span></span></code></pre></div><p>查询上下界id为1000 到 2000 的文章</p>
 <blockquote>
@@ -483,12 +485,14 @@
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">BETWEEN</span> <span style="color:#ef9f76">1000</span> <span style="color:#ca9ee6">AND</span> <span style="color:#ef9f76">2000</span>;
 </span></span></code></pre></div><blockquote>
 <p>感觉比Python简单</p></blockquote>
-<h4 id="枚举查询">枚举查询<a class="td-heading-self-link" href="#%e6%9e%9a%e4%b8%be%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4><p>当区间为1, 其实就是枚举, 这就不需要指定上下界了
+<h4 id="枚举查询">枚举查询<a class="td-heading-self-link" href="#%e6%9e%9a%e4%b8%be%e6%9f%a5%e8%af%a2" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>当区间为1, 其实就是枚举, 这就不需要指定上下界了
 我们可以直接指定数值 用 <code>IN</code></p>
 <p>查询 user_id 是 1、2、3 的文章</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#ca9ee6">IN</span> (<span style="color:#ef9f76">1</span>, <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">3</span>); 
 </span></span></code></pre></div><p>当然可以取反. 此略</p>
-<h4 id="逻辑操作符">逻辑操作符<a class="td-heading-self-link" href="#%e9%80%bb%e8%be%91%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4><p>除了数据操作符外还可以进行逻辑判断</p>
+<h4 id="逻辑操作符">逻辑操作符<a class="td-heading-self-link" href="#%e9%80%bb%e8%be%91%e6%93%8d%e4%bd%9c%e7%ac%a6" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>除了数据操作符外还可以进行逻辑判断</p>
 <p>其实上文的 <code>AND</code> 就是一个</p>
 <p><code>AND</code> 操作符用于组合多个查询条件，只有当所有的条件都满足时，才会返回结果</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> title, user_id, create_time <span style="color:#ca9ee6">FROM</span> article <span style="color:#ca9ee6">WHERE</span> user_id <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">1</span> <span style="color:#ca9ee6">AND</span> title <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#39;something&#39;</span>;

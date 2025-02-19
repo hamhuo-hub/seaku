@@ -159,7 +159,7 @@ Redis 中间件 消息队列 什么是中间件? 为什么要用?
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -349,7 +349,8 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
     
 	<h1 id="pg-38f4341f5c736c9b8527e28ffac0e0ed">1 - FastDFS分布式存储</h1>
     <div class="lead">分布式存储中间件</div>
-	<h4 id="为什么需要文件服务器">为什么需要文件服务器?<a class="td-heading-self-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e6%96%87%e4%bb%b6%e6%9c%8d%e5%8a%a1%e5%99%a8" aria-label="Heading self-link"></a></h4><p>浏览器请求可能会携带头像文件, 服务器处理后存储在本地磁盘</p>
+	<h4 id="为什么需要文件服务器">为什么需要文件服务器?<a class="td-heading-self-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e6%96%87%e4%bb%b6%e6%9c%8d%e5%8a%a1%e5%99%a8" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>浏览器请求可能会携带头像文件, 服务器处理后存储在本地磁盘</p>
 <p>但是假如还有一个服务需要操作订单</p>
 <p>那么就需要异步从存储头像拿头像</p>
 <p>也就是说用户信息业务崩溃后, 导致订单服务器也一并崩溃</p>
@@ -357,7 +358,8 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 <p>当用户在订单管理修改信息后, 还需要同步到用户信息服务器</p>
 <p>这需要传递两次, 还要保证一致性, 倒不如直接把服务器分离, 只传递文件地址
 这样就可以减少服务间的传递, 而且也不需要传递大尺寸的文件, 只要传链接就可以</p>
-<h4 id="使用">使用<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8" aria-label="Heading self-link"></a></h4><p>检查nacos配置
+<h4 id="使用">使用<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>检查nacos配置
 第三方服务</p>
 <p>下载地址是由nginx管理的, 所以还需要nginx配置</p>
 <p>注入fastdfs客户端
@@ -394,7 +396,8 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 	<h1 id="pg-9fd358a2c6b87bf8be30b498be988e29">2 - FastExcel报表组件</h1>
     <div class="lead">报表组件</div>
 	<p>提前封装好一些服务</p>
-<h4 id="快速导入">快速导入<a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%af%bc%e5%85%a5" aria-label="Heading self-link"></a></h4><p>组件扫描</p>
+<h4 id="快速导入">快速导入<a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%af%bc%e5%85%a5" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>组件扫描</p>
 <p>写一个单元测试
 导入excel客户端
 生成excle
@@ -419,7 +422,8 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
     
 	<h1 id="pg-f1299715e9211356fdc2af2754d09890">3 - Gateway网关</h1>
     <div class="lead">网关是一个位于微服务架构前端的组件，它充当了所有微服务的入口</div>
-	<h4 id="什么是网关">什么是网关<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%bd%91%e5%85%b3" aria-label="Heading self-link"></a></h4><p>网关负责路由请求、负载均衡、安全认证、流量控制、监控和日志记录等任务。</p>
+	<h4 id="什么是网关">什么是网关<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%bd%91%e5%85%b3" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>网关负责路由请求、负载均衡、安全认证、流量控制、监控和日志记录等任务。</p>
 <p>我的理解是, 网关是请求真正进入服务前的过滤, 管理, 控制(重定向), 可以理解为保安大哥</p>
 <p>网关的结构</p>
 <ul>
@@ -453,9 +457,11 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 <blockquote>
 <p>了解:
 <a href="/docs/advanced/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8Breactor%E5%BA%93/">响应式编程</a></p></blockquote>
-<h4 id="过滤器">过滤器<a class="td-heading-self-link" href="#%e8%bf%87%e6%bb%a4%e5%99%a8" aria-label="Heading self-link"></a></h4><p>过滤器是由 <code>Servlet</code> 容器管理的, 也就是说初始化</p>
+<h4 id="过滤器">过滤器<a class="td-heading-self-link" href="#%e8%bf%87%e6%bb%a4%e5%99%a8" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>过滤器是由 <code>Servlet</code> 容器管理的, 也就是说初始化</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250217183936830.png" alt="image.png"></p>
-<h4 id="自定义网关实现全局过滤器">自定义网关实现全局过滤器<a class="td-heading-self-link" href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%bd%91%e5%85%b3%e5%ae%9e%e7%8e%b0%e5%85%a8%e5%b1%80%e8%bf%87%e6%bb%a4%e5%99%a8" aria-label="Heading self-link"></a></h4><blockquote>
+<h4 id="自定义网关实现全局过滤器">自定义网关实现全局过滤器<a class="td-heading-self-link" href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%bd%91%e5%85%b3%e5%ae%9e%e7%8e%b0%e5%85%a8%e5%b1%80%e8%bf%87%e6%bb%a4%e5%99%a8" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
 <p>网关选型<code>SpringCloudGateway</code> 这是目前比较新的选择</p>
 <p>模板工程基于 <code>pmhub</code></p></blockquote>
 <p>新建自定义的全局过滤器</p>
@@ -744,7 +750,8 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
     
 	<h1 id="pg-9eb741bdf8a663bbb2615ad4c4a5cf43">8 - SpringMVC</h1>
     <div class="lead">MVC 也就是 Model-View-Controller, 这种模式用于应用程序的分层开发</div>
-	<h4 id="mvc模式快速扫盲">MVC模式快速扫盲<a class="td-heading-self-link" href="#mvc%e6%a8%a1%e5%bc%8f%e5%bf%ab%e9%80%9f%e6%89%ab%e7%9b%b2" aria-label="Heading self-link"></a></h4><blockquote>
+	<h4 id="mvc模式快速扫盲">MVC模式快速扫盲<a class="td-heading-self-link" href="#mvc%e6%a8%a1%e5%bc%8f%e5%bf%ab%e9%80%9f%e6%89%ab%e7%9b%b2" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
 <p>以 <code>SpringMVC</code> 为例</p></blockquote>
 
 </div>
@@ -767,7 +774,8 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 <blockquote>
 <p>前置:
 <a href="ThreadLocal"><code>ThreadLocal</code></a>, <a href="/docs/advanced/intercepter%E6%8B%A6%E6%88%AA%E5%99%A8/">拦截器</a></p></blockquote>
-<h4 id="实现ttl">实现<code>TTL</code><a class="td-heading-self-link" href="#%e5%ae%9e%e7%8e%b0ttl" aria-label="Heading self-link"></a></h4><p>流程图如下</p>
+<h4 id="实现ttl">实现<code>TTL</code><a class="td-heading-self-link" href="#%e5%ae%9e%e7%8e%b0ttl" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>流程图如下</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250216213034195.png" alt="image.png"></p>
 <blockquote>
 <p>前置:

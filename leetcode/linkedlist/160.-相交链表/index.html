@@ -31,7 +31,7 @@
 
   <meta itemprop="name" content="160. 相交链表">
   <meta itemprop="description" content="给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 null 。">
-  <meta itemprop="wordCount" content="118">
+  <meta itemprop="wordCount" content="122">
   <meta itemprop="keywords" content="双指针,链表">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="160. 相交链表">
@@ -127,7 +127,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -151,7 +151,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -313,16 +313,20 @@
 </div>
 
   </header>
-	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4><p>给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 <code>null</code> 。</p>
+	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>给你两个单链表的头节点 <code>headA</code> 和 <code>headB</code> ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 <code>null</code> 。</p>
 <p>图示两个链表在节点 <code>c1</code> 开始相交</p>
 <p><a href="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png"><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png" alt=""></a></p>
 <p>题目数据 <strong>保证</strong> 整个链式结构中不存在环。</p>
-<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4><p>简单</p>
-<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4><p><strong>示例 1：</strong></p>
+<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>简单</p>
+<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><strong>示例 1：</strong></p>
 <p><a href="https://assets.leetcode.com/uploads/2018/12/13/160_example_1.png"><img src="https://assets.leetcode.com/uploads/2021/03/05/160_example_1_1.png" alt=""></a></p>
 <p>输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3</p>
 <p>输出：Intersected at &lsquo;8&rsquo;</p>
-<h4 id="分析">分析:<a class="td-heading-self-link" href="#%e5%88%86%e6%9e%90" aria-label="Heading self-link"></a></h4><p>判断相交在链表中是一项很基本, 也很重要的算法</p>
+<h4 id="分析">分析:<a class="td-heading-self-link" href="#%e5%88%86%e6%9e%90" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>判断相交在链表中是一项很基本, 也很重要的算法</p>
 <p>我们可以将两个链表分别遍历并放入哈希表中去重, 但是当数组较长时会浪费许多资源</p>
 <p>其实这道题的核心是找出第一个相交节点, 而非全部节点, 所以可以使用双指针同时遍历两个链表</p>
 <p>大致思路如下:</p>

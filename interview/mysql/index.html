@@ -31,7 +31,7 @@
 
   <meta itemprop="name" content="MySQL">
   <meta itemprop="description" content="MySQL面试">
-  <meta itemprop="wordCount" content="106">
+  <meta itemprop="wordCount" content="109">
   <meta itemprop="keywords" content="MySQL,面试">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MySQL">
@@ -127,7 +127,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -151,7 +151,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -272,7 +272,8 @@
 </div>
 
   </header>
-	<h4 id="请说说-mysql-的内联左联右联的区别">请说说 MySQL 的内联、左联、右联的区别。<a class="td-heading-self-link" href="#%e8%af%b7%e8%af%b4%e8%af%b4-mysql-%e7%9a%84%e5%86%85%e8%81%94%e5%b7%a6%e8%81%94%e5%8f%b3%e8%81%94%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4><p>内联就是返回两张表都匹配的记录, 只返回两张表都存在的记录
+	<h4 id="请说说-mysql-的内联左联右联的区别">请说说 MySQL 的内联、左联、右联的区别。<a class="td-heading-self-link" href="#%e8%af%b7%e8%af%b4%e8%af%b4-mysql-%e7%9a%84%e5%86%85%e8%81%94%e5%b7%a6%e8%81%94%e5%8f%b3%e8%81%94%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>内联就是返回两张表都匹配的记录, 只返回两张表都存在的记录
 左联, 返回左表所有记录, 不管右表是否有相匹配的记录,如果没有结果集中右表就填NULL
 右联, 返回右表所有记录, 不管左表有没有匹配的记录</p>
 <p>订单表, 订单顾客映射表, 可以通过订单ID关联</p>
@@ -286,11 +287,14 @@
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">LEFT</span>(a.title, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> ArticleTitle, <span style="color:#ca9ee6">LEFT</span>(<span style="color:#ca9ee6">c</span>.content, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> CommentContent <span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">order</span> a <span style="color:#ca9ee6">LEFT</span> <span style="color:#ca9ee6">JOIN</span> ORDERCONSUMER <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">c</span>.article_id <span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>;
 </span></span></code></pre></div><p>右联</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#ca9ee6">LEFT</span>(a.title, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> ArticleTitle, <span style="color:#ca9ee6">LEFT</span>(<span style="color:#ca9ee6">c</span>.content, <span style="color:#ef9f76">20</span>) <span style="color:#ca9ee6">AS</span> CommentContent <span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">comment</span> <span style="color:#ca9ee6">c</span> <span style="color:#ca9ee6">RIGHT</span> <span style="color:#ca9ee6">JOIN</span> article a <span style="color:#ca9ee6">ON</span> a.id <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">c</span>.article_id <span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>;
-</span></span></code></pre></div><h4 id="mysql-第-3-10-条记录怎么查">MySQL 第 3-10 条记录怎么查？<a class="td-heading-self-link" href="#mysql-%e7%ac%ac-3-10-%e6%9d%a1%e8%ae%b0%e5%bd%95%e6%80%8e%e4%b9%88%e6%9f%a5" aria-label="Heading self-link"></a></h4><p>使用 LIMIT 关键字,  结合第一个偏移量, 第二个行数</p>
+</span></span></code></pre></div><h4 id="mysql-第-3-10-条记录怎么查">MySQL 第 3-10 条记录怎么查？<a class="td-heading-self-link" href="#mysql-%e7%ac%ac-3-10-%e6%9d%a1%e8%ae%b0%e5%bd%95%e6%80%8e%e4%b9%88%e6%9f%a5" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>使用 LIMIT 关键字,  结合第一个偏移量, 第二个行数</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">SELECT</span> <span style="color:#99d1db;font-weight:bold">*</span> <span style="color:#ca9ee6">FROM</span> <span style="color:#ca9ee6">table_name</span> <span style="color:#ca9ee6">LIMIT</span> <span style="color:#ef9f76">2</span>, <span style="color:#ef9f76">8</span>;
-</span></span></code></pre></div><h4 id="mysql的数据引擎有哪些-区别">mysql的数据引擎有哪些, 区别<a class="td-heading-self-link" href="#mysql%e7%9a%84%e6%95%b0%e6%8d%ae%e5%bc%95%e6%93%8e%e6%9c%89%e5%93%aa%e4%ba%9b-%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4><p>多种数据引擎, 常见的有 MyISAM, InnoDB, MEMORY 等
+</span></span></code></pre></div><h4 id="mysql的数据引擎有哪些-区别">mysql的数据引擎有哪些, 区别<a class="td-heading-self-link" href="#mysql%e7%9a%84%e6%95%b0%e6%8d%ae%e5%bc%95%e6%93%8e%e6%9c%89%e5%93%aa%e4%ba%9b-%e5%8c%ba%e5%88%ab" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>多种数据引擎, 常见的有 MyISAM, InnoDB, MEMORY 等
 //todo</p>
 <h4 id="查询优化联合索引覆盖索引">查询优化、联合索引、覆盖索引<a class="td-heading-self-link" href="#%e6%9f%a5%e8%af%a2%e4%bc%98%e5%8c%96%e8%81%94%e5%90%88%e7%b4%a2%e5%bc%95%e8%a6%86%e7%9b%96%e7%b4%a2%e5%bc%95" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" />
 	
 </div>
 

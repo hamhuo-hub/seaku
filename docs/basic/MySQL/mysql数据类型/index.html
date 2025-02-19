@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="MySQL数据类型">
   <meta itemprop="description" content="当我们要创建表的时候，就要根据业务需求，选择合适的数据类型。">
-  <meta itemprop="wordCount" content="106">
+  <meta itemprop="wordCount" content="108">
   <meta itemprop="keywords" content="MySQL">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MySQL数据类型">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -426,7 +426,8 @@
 
   </header>
 	<p>表是由不同数据类型的列组成的，然后填充了一行一行的数据。当我们要创建表的时候，就要根据业务需求，选择合适的数据类型。</p>
-<h4 id="整数类型">整数类型<a class="td-heading-self-link" href="#%e6%95%b4%e6%95%b0%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4><table>
+<h4 id="整数类型">整数类型<a class="td-heading-self-link" href="#%e6%95%b4%e6%95%b0%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><table>
   <thead>
       <tr>
           <th>类型名称</th>
@@ -460,12 +461,14 @@
 <li>记录id, 主键id等使用 <code>bigint</code></li>
 <li>其他用<code>int</code></li>
 </ul>
-<h5 id="符号">符号?<a class="td-heading-self-link" href="#%e7%ac%a6%e5%8f%b7" aria-label="Heading self-link"></a></h5><p>这里注意, MySQL是存在有/无符号整型之分的, Java默认有符号</p>
+<h5 id="符号">符号?<a class="td-heading-self-link" href="#%e7%ac%a6%e5%8f%b7" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>这里注意, MySQL是存在有/无符号整型之分的, Java默认有符号</p>
 <p>当涉及到负数表示时, 为了兼容, Java中必须使用<code>Long</code> 型</p>
 <p>因为Java的<code>int</code>范围和MySQL不同分别是-2147483648 到 2147483647, 和 0 到 4294967295(无符号)</p>
 <p>所以在设计表时, 整数的符号也要考虑</p>
 <p>像自增 ID，肯定是无符号的，所以我们会在定义的时候将其设置为 <code>unsigned</code></p>
-<h5 id="显示宽度">显示宽度?<a class="td-heading-self-link" href="#%e6%98%be%e7%a4%ba%e5%ae%bd%e5%ba%a6" aria-label="Heading self-link"></a></h5><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">CREATE</span> <span style="color:#ca9ee6">TABLE</span> <span style="color:#99d1db;font-weight:bold">`</span>test<span style="color:#99d1db;font-weight:bold">`</span> (
+<h5 id="显示宽度">显示宽度?<a class="td-heading-self-link" href="#%e6%98%be%e7%a4%ba%e5%ae%bd%e5%ba%a6" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#ca9ee6">CREATE</span> <span style="color:#ca9ee6">TABLE</span> <span style="color:#99d1db;font-weight:bold">`</span>test<span style="color:#99d1db;font-weight:bold">`</span> (
 </span></span><span style="display:flex;"><span>  <span style="color:#99d1db;font-weight:bold">`</span>id<span style="color:#99d1db;font-weight:bold">`</span> <span style="color:#99d1db">int</span>(<span style="color:#ef9f76">10</span>) unsigned <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">NULL</span> AUTO_INCREMENT,
 </span></span><span style="display:flex;"><span>  <span style="color:#99d1db;font-weight:bold">`</span>int10<span style="color:#99d1db;font-weight:bold">`</span> <span style="color:#99d1db">int</span>(<span style="color:#ef9f76">10</span>) <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">NULL</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#99d1db;font-weight:bold">`</span>int11<span style="color:#99d1db;font-weight:bold">`</span> <span style="color:#99d1db">int</span>(<span style="color:#ef9f76">11</span>) <span style="color:#ca9ee6">NOT</span> <span style="color:#ca9ee6">NULL</span>,

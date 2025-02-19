@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="线程池">
   <meta itemprop="description" content="池化技术的核心思想就是实现资源的复用，避免资源的重复创建和销毁带来的性能开销。">
-  <meta itemprop="wordCount" content="198">
+  <meta itemprop="wordCount" content="201">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="线程池">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -425,7 +425,8 @@
 </div>
 
   </header>
-	<h4 id="什么是线程池">什么是线程池<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="Heading self-link"></a></h4><p>线程池(ThreadPool) 是一种基于池化思想管理线程的工具</p>
+	<h4 id="什么是线程池">什么是线程池<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>线程池(ThreadPool) 是一种基于池化思想管理线程的工具</p>
 <p>线程池解决的问题是, 在任意时刻下, 确定系统应该投入多少资源, 解决多少任务</p>
 <p>不将线程统一管理可能会出现以下问题</p>
 <ol>
@@ -437,7 +438,8 @@
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250210102309459.png" alt="image.png"></p>
 <p>线程池内部维护了许多线程, 当有新任务时就会分配一个空闲线程执行
 当所有线程都有任务时, 新的任务要么放到阻塞队列里面要么增加线程</p>
-<h4 id="使用线程池">使用线程池<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="Heading self-link"></a></h4><p>用法:</p>
+<h4 id="使用线程池">使用线程池<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>用法:</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 创建固定大小的线程池:</span>
 </span></span><span style="display:flex;"><span>ExecutorService executor <span style="color:#99d1db;font-weight:bold">=</span> Executors.<span style="color:#8caaee">newFixedThreadPool</span>(3);
 </span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">// 提交任务:</span>
@@ -454,7 +456,8 @@
 <li>ScheduledThreadPool:  定时执行线程池</li>
 <li>SingleThreadExecutor：仅单线程执行的线程池。</li>
 </ul>
-<h4 id="线程池原理解析">线程池原理解析<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0%e5%8e%9f%e7%90%86%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4><p>Java的线程池核心实现为 <code>ThreadPoolExecutor</code></p>
+<h4 id="线程池原理解析">线程池原理解析<a class="td-heading-self-link" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0%e5%8e%9f%e7%90%86%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>Java的线程池核心实现为 <code>ThreadPoolExecutor</code></p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250210180713994.png" alt="image.png"></p>
 <p>顶级接口 <code>Excutor</code> 提供了一种思想, 将任务提交与任务执行解耦
 用户只需提供 <code>Runnable</code> 对像, 将任务提交到执行器中, 剩余的线程调配和任务执行由执行器完成</p>

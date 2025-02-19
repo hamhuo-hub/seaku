@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="ReentrantLock重入锁">
   <meta itemprop="description" content="java.util.concurrent.locks包提供的ReentrantLock用于替代synchronized加锁">
-  <meta itemprop="wordCount" content="61">
+  <meta itemprop="wordCount" content="64">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="ReentrantLock重入锁">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -425,14 +425,16 @@
 </div>
 
   </header>
-	<h4 id="重入性">重入性<a class="td-heading-self-link" href="#%e9%87%8d%e5%85%a5%e6%80%a7" aria-label="Heading self-link"></a></h4><p>重入性指当线程需要再次获取同一把锁时, 不会因为自身而造成死锁, 锁的本质是<strong>作用于代码块或方法</strong>，而不是线程的整个执行上下文。即使线程已经持有锁，进入新的同步方法或代码块时，仍然需要执行<strong>获取锁</strong>的操作，确保锁的计数正确。</p>
+	<h4 id="重入性">重入性<a class="td-heading-self-link" href="#%e9%87%8d%e5%85%a5%e6%80%a7" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>重入性指当线程需要再次获取同一把锁时, 不会因为自身而造成死锁, 锁的本质是<strong>作用于代码块或方法</strong>，而不是线程的整个执行上下文。即使线程已经持有锁，进入新的同步方法或代码块时，仍然需要执行<strong>获取锁</strong>的操作，确保锁的计数正确。</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250209113038176.png" alt="image.png"></p>
 <p>所以支持重入性应该解决下列问题</p>
 <ul>
 <li>由于获得多次相同的锁, 需要计数以释放相同次数</li>
 <li>相同线程再次获取锁应当直接成功, 防止死锁</li>
 </ul>
-<h4 id="为什么需要reentrantlock">为什么需要<code>ReentrantLock</code><a class="td-heading-self-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81reentrantlock" aria-label="Heading self-link"></a></h4><p>Java语言直接提供了<code>synchronized</code>关键字用于加锁，但这种锁一是很重，二是获取时必须一直等待，没有额外的尝试机制。</p>
+<h4 id="为什么需要reentrantlock">为什么需要<code>ReentrantLock</code><a class="td-heading-self-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81reentrantlock" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>Java语言直接提供了<code>synchronized</code>关键字用于加锁，但这种锁一是很重，二是获取时必须一直等待，没有额外的尝试机制。</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#ca9ee6">if</span> (lock.<span style="color:#8caaee">tryLock</span>(1, TimeUnit.<span style="color:#8caaee">SECONDS</span>)) {
 </span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">try</span> {
 </span></span><span style="display:flex;"><span>        ...
@@ -443,7 +445,8 @@
 </span></span></code></pre></div><p><code>java.util.concurrent.locks</code>包提供的<code>ReentrantLock</code>用于替代<code>synchronized</code>加锁</p>
 <p>尝试获取锁的时候，最多等待1秒。如果1秒后仍未获取到锁，<code>tryLock()</code>返回<code>false</code>，程序就可以做一些额外处理，而不是无限等待下去。</p>
 <p>所以，使用<code>ReentrantLock</code>比直接使用<code>synchronized</code>更安全，线程在<code>tryLock()</code>失败的时候不会导致死锁。</p>
-<h1 id="reentrantlock使用">ReentrantLock使用<a class="td-heading-self-link" href="#reentrantlock%e4%bd%bf%e7%94%a8" aria-label="Heading self-link"></a></h1><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">Counter</span> {
+<h1 id="reentrantlock使用">ReentrantLock使用<a class="td-heading-self-link" href="#reentrantlock%e4%bd%bf%e7%94%a8" aria-label="Heading self-link"></a></h1>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">Counter</span> {
 </span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">//和关键字不同, 需要获得一个重入锁对象</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> <span style="color:#e78284">final</span> Lock lock <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> ReentrantLock();
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> <span style="color:#e78284">int</span> count;

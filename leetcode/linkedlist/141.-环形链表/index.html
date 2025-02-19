@@ -31,7 +31,7 @@
 
   <meta itemprop="name" content="141. 环形链表">
   <meta itemprop="description" content="给你一个链表的头节点 head ，判断链表中是否有环。">
-  <meta itemprop="wordCount" content="95">
+  <meta itemprop="wordCount" content="99">
   <meta itemprop="keywords" content="链表,双指针">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="141. 环形链表">
@@ -127,7 +127,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -151,7 +151,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -313,16 +313,20 @@
 </div>
 
   </header>
-	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4><p>给你一个链表的头节点 <code>head</code> ，判断链表中是否有环。</p>
+	<h4 id="题意">题意:<a class="td-heading-self-link" href="#%e9%a2%98%e6%84%8f" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>给你一个链表的头节点 <code>head</code> ，判断链表中是否有环。</p>
 <p>如果链表中有某个节点，可以通过连续跟踪 <code>next</code> 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（索引从 0 开始）。<strong>注意：<code>pos</code> 不作为参数进行传递</strong> 。仅仅是为了标识链表的实际情况。</p>
 <p><em>如果链表中存在环</em> ，则返回 <code>true</code> 。 否则，返回 <code>false</code> 。</p>
-<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4><p>简单</p>
-<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4><p><strong>示例 1：</strong></p>
+<h4 id="难度">难度:<a class="td-heading-self-link" href="#%e9%9a%be%e5%ba%a6" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>简单</p>
+<h4 id="示例">示例:<a class="td-heading-self-link" href="#%e7%a4%ba%e4%be%8b" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><strong>示例 1：</strong></p>
 <p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt=""></p>
 <p>输入：head = [3,2,0,-4], pos = 1
 输出：true
 解释：链表中有一个环，其尾部连接到第二个节点。</p>
-<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4><p>使用循环遍历链表查重的方法内存和时间开销很大</p>
+<h4 id="解析">解析:<a class="td-heading-self-link" href="#%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>使用循环遍历链表查重的方法内存和时间开销很大</p>
 <p>这里介绍一种算法, 龟兔赛跑算法, 就是快慢指针</p>
 <p>定义两个指针, 二者遍历速度不同, 这样就可以保证快指针在有环的情况下可以追上慢指针</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">Solution</span> {

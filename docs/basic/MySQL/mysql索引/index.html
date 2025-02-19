@@ -30,7 +30,7 @@
 
   <meta itemprop="name" content="MySQL索引">
   <meta itemprop="description" content="除了对于准备面试来说非常重要之外，善用索引对 SQL 的性能提升非常明显，是一个性价比较高的 SQL 优化手段。">
-  <meta itemprop="wordCount" content="30">
+  <meta itemprop="wordCount" content="33">
   <meta itemprop="keywords" content="MySQL">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MySQL索引">
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -150,7 +150,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -425,7 +425,8 @@
 </div>
 
   </header>
-	<h4 id="索引介绍">索引介绍<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e4%bb%8b%e7%bb%8d" aria-label="Heading self-link"></a></h4><p>我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最多的，也是最容易出问题的，还是一些复杂的查询操作，所以查询语句的优化显然是重中之重。</p>
+	<h4 id="索引介绍">索引介绍<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e4%bb%8b%e7%bb%8d" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>我们知道一般的应用系统，读写比例在10:1左右，而且插入操作和一般的更新操作很少出现性能问题，遇到最多的，也是最容易出问题的，还是一些复杂的查询操作，所以查询语句的优化显然是重中之重。</p>
 <p>**索引是一种用于快速查询和检索数据的数据结构，其本质可以看成是一种排序好的数据结构。通过存储指向数据行的指针，可以快速定位和访问表中的特定数据。</p>
 <p>开始之前, 我们直观的体会下索引</p>
 <p>如果要查询 mysql 单词, 我们就需要字符匹配, 首先是 m, y 之后是 s,q l
@@ -435,7 +436,9 @@
 <blockquote>
 <p>了解:
 <a href="%E9%82%A3%E4%BA%9B%E7%88%B1%E8%BF%87%E7%9A%84%E6%A0%91,%E5%B7%B2%E7%BB%8F%E9%95%BF%E6%88%90%E4%BA%86%E6%A3%AE%E6%9E%97.md">数据结构-树</a></p></blockquote>
-<h4 id="索引的类型">索引的类型<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e7%9a%84%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4><h5 id="主键索引">主键索引:<a class="td-heading-self-link" href="#%e4%b8%bb%e9%94%ae%e7%b4%a2%e5%bc%95" aria-label="Heading self-link"></a></h5><p>数据表的主键列使用的就是主键索引。</p>
+<h4 id="索引的类型">索引的类型<a class="td-heading-self-link" href="#%e7%b4%a2%e5%bc%95%e7%9a%84%e7%b1%bb%e5%9e%8b" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><h5 id="主键索引">主键索引:<a class="td-heading-self-link" href="#%e4%b8%bb%e9%94%ae%e7%b4%a2%e5%bc%95" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>数据表的主键列使用的就是主键索引。</p>
 <p>一张数据表只能有一个主键, 并且不能重复, 不能为NULL</p>
 <p>INNODB中, 引擎在没有显示指定主键的情况下, 会优先判断检查是否有唯一索引且没有NULL的字段, 如果有就选择该字段为默认的主键, 否则引擎自动创建一个自增主键</p>
 

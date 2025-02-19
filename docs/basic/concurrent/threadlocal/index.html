@@ -32,7 +32,7 @@
   <meta itemprop="name" content="ThreadLocal">
   <meta itemprop="description" content="ThreadLocal 是Java中 lang 包下的一个类，是用来解决多线程下共享变量并发问题的，所谓共享变量即同一个变量在不同线程下赋予不同值, 而ThreadLocal会在不同线程中维护共享变量的独立副本">
   <meta itemprop="dateModified" content="2025-02-12T22:22:54+08:00">
-  <meta itemprop="wordCount" content="168">
+  <meta itemprop="wordCount" content="170">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="ThreadLocal">
@@ -128,7 +128,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -152,7 +152,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -451,7 +451,8 @@
 ThreadLocal 常用于在跨方法、跨类时传递上下文数据（如用户信息等），而不需要在方法间传递参数。</p>
 </li>
 </ol>
-<h4 id="threadlocalmap"><code>ThreadLocalMap</code><a class="td-heading-self-link" href="#threadlocalmap" aria-label="Heading self-link"></a></h4><p>ThreadLocalMap, 一个key-value数据形式结构，也是ThreadLocal的核心。</p>
+<h4 id="threadlocalmap"><code>ThreadLocalMap</code><a class="td-heading-self-link" href="#threadlocalmap" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>ThreadLocalMap, 一个key-value数据形式结构，也是ThreadLocal的核心。</p>
 <p>Map内部维护了一个Entry数组, 真正的数据存储在 Entry中, map的key是每个线程中ThreadLocal对象的哈希, value是隔离变量</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**
 </span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 初始容量
@@ -478,7 +479,8 @@ ThreadLocal 常用于在跨方法、跨类时传递上下文数据（如用户�
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">int</span> i <span style="color:#99d1db;font-weight:bold">=</span> key.<span style="color:#8caaee">threadLocalHashCode</span> <span style="color:#99d1db;font-weight:bold">&amp;</span> (table.<span style="color:#8caaee">length</span> <span style="color:#99d1db;font-weight:bold">-</span> 1);
 </span></span></code></pre></div><p>这里的hashcode由魔术数生成
 每创建一个 ThreadLocal 对象，它就会新增<code>0x61c88647</code>，这个值很特殊，它是<strong>斐波那契数</strong> 也叫 <strong>黄金分割数</strong>。<code>hash</code>增量为 这个数字，带来的好处就是 <code>hash</code> <strong>分布非常均匀</strong>。</p>
-<h4 id="inheritablethreadlocal"><code>InheritableThreadLocal()</code><a class="td-heading-self-link" href="#inheritablethreadlocal" aria-label="Heading self-link"></a></h4><p>父子线程是无法传输数据的, 但是通过InheritableThreadLocal实例就可以在子线程拿到值</p>
+<h4 id="inheritablethreadlocal"><code>InheritableThreadLocal()</code><a class="td-heading-self-link" href="#inheritablethreadlocal" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>父子线程是无法传输数据的, 但是通过InheritableThreadLocal实例就可以在子线程拿到值</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">InheritableThreadLocalTest</span> {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) {

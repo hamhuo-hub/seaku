@@ -32,7 +32,7 @@
   <meta itemprop="name" content="AQS">
   <meta itemprop="description" content="**AQS**是`AbstractQueuedSynchronizer`的简称，即`抽象的队列同步器`">
   <meta itemprop="dateModified" content="2025-02-09T23:36:01+08:00">
-  <meta itemprop="wordCount" content="513">
+  <meta itemprop="wordCount" content="518">
   <meta itemprop="keywords" content="并发编程">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="AQS">
@@ -128,7 +128,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -152,7 +152,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0f01c4e97ff40a354e85195edf9a3a67.json"
+    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -433,10 +433,12 @@
 <li>队列：使用先进先出（FIFO）的队列存储数据；</li>
 <li>同步：实现了同步的功能。</li>
 </ul>
-<h4 id="为什么需要-aqs">为什么需要 <code>AQS</code><a class="td-heading-self-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81-aqs" aria-label="Heading self-link"></a></h4><p>AQS 是一个用来构建锁和同步器的框架，使用 AQS 能简单且高效地构造出应用广泛的同步器
+<h4 id="为什么需要-aqs">为什么需要 <code>AQS</code><a class="td-heading-self-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81-aqs" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>AQS 是一个用来构建锁和同步器的框架，使用 AQS 能简单且高效地构造出应用广泛的同步器
 简单的说,  存储并管理线程同步的模板</p>
 <p>具体的同步器（如 <code>ReentrantLock</code>、<code>CountDownLatch</code>、<code>Semaphore</code>, <a href="/docs/basic/concurrent/%E8%8E%B7%E5%8F%96%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E7%BB%93%E6%9E%9C/">FutureTask</a>等）是通过继承 <code>AQS</code> 并实现一些抽象方法来实现资源的具体获取和释放行为的。</p>
-<h4 id="aqs的作用是什么"><code>AQS</code>的作用是什么?<a class="td-heading-self-link" href="#aqs%e7%9a%84%e4%bd%9c%e7%94%a8%e6%98%af%e4%bb%80%e4%b9%88" aria-label="Heading self-link"></a></h4><blockquote>
+<h4 id="aqs的作用是什么"><code>AQS</code>的作用是什么?<a class="td-heading-self-link" href="#aqs%e7%9a%84%e4%bd%9c%e7%94%a8%e6%98%af%e4%bb%80%e4%b9%88" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
 <p>了解
 <a href="/docs/basic/concurrent/%E8%87%AA%E6%97%8B%E9%94%81%E4%B8%8Eclh%E9%94%81/">自旋锁与CLH锁</a></p></blockquote>
 <p><code>AQS</code> 是一个 <strong>抽象类</strong>，它为具体的同步器提供了一个通用的执行框架。
@@ -451,7 +453,8 @@
 <ol start="3">
 <li>线程的挂起与唤醒等机制。</li>
 </ol>
-<h4 id="aqs的数据结构">AQS的数据结构<a class="td-heading-self-link" href="#aqs%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" aria-label="Heading self-link"></a></h4><p>既然是控制线程, 那么数据结构应对并发相应的优化
+<h4 id="aqs的数据结构">AQS的数据结构<a class="td-heading-self-link" href="#aqs%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>既然是控制线程, 那么数据结构应对并发相应的优化
 AQS的核心数据结构是基于 CLH队列锁改进的
 <img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/Pasted%20image%2020250203211340.png" alt="Pasted image 20250203211340.png">
 CLH队列锁有如下缺点</p>
@@ -540,7 +543,8 @@ CLH队列锁有如下缺点</p>
 </span></span><span style="display:flex;"><span>    Node node <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> Node(Thread.<span style="color:#8caaee">currentThread</span>(), mode);
 </span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">// 其它代码省略</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="aqs源码解析">AQS源码解析<a class="td-heading-self-link" href="#aqs%e6%ba%90%e7%a0%81%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4><p>AQS 的设计是基于<a href="/docs/basic/concurrent/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">模板方法模式</a>的，它有一些方法必须要子类实现，它们主要有：</p>
+</span></span></code></pre></div><h4 id="aqs源码解析">AQS源码解析<a class="td-heading-self-link" href="#aqs%e6%ba%90%e7%a0%81%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>AQS 的设计是基于<a href="/docs/basic/concurrent/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">模板方法模式</a>的，它有一些方法必须要子类实现，它们主要有：</p>
 <ul>
 <li><code>isHeldExclusively()</code>：该线程是否正在独占资源。只有用到 condition 才需要去实现它。</li>
 <li><code>tryAcquire(int)</code>：独占方式。尝试获取资源，成功则返回 true，失败则返回 false。</li>
@@ -552,7 +556,8 @@ CLH队列锁有如下缺点</p>
 <p>比较特殊的是, 这里的抽象方法并没有加 <code>abstract</code> 关键字
 这是因为并非AQS的所有抽象方法都需要子类实现, 所以子类只重写需要的方法就行</p></blockquote>
 <p>子类不是重点, 我们来看模板类, 也就是AQS的逻辑</p>
-<h5 id="获取资源">获取资源<a class="td-heading-self-link" href="#%e8%8e%b7%e5%8f%96%e8%b5%84%e6%ba%90" aria-label="Heading self-link"></a></h5><p>获取资源的入口是 <code>acquire(int arg)</code>方法。arg 是要获取的资源个数，在独占模式下始终为 1。我们先来看看这个方法的逻辑：</p>
+<h5 id="获取资源">获取资源<a class="td-heading-self-link" href="#%e8%8e%b7%e5%8f%96%e8%b5%84%e6%ba%90" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>获取资源的入口是 <code>acquire(int arg)</code>方法。arg 是要获取的资源个数，在独占模式下始终为 1。我们先来看看这个方法的逻辑：</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">final</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">accquire</span>(<span style="color:#e78284">int</span> arg) {
 </span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">// tryAcquire 再次尝试获取锁资源，如果尝试成功，返回true，尝试失败返回false</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">if</span> (<span style="color:#99d1db;font-weight:bold">!</span>tryAcquire(arg) <span style="color:#99d1db;font-weight:bold">&amp;&amp;</span>
@@ -601,7 +606,8 @@ CLH队列锁有如下缺点</p>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>在队列的尾部插入新的 Node 节点，但是需要注意的是由于 AQS 中会存在多个线程同时争夺资源的情况，因此肯定会出现多个线程同时插入节点的操作，在这里是通过 CAS 自旋的方式保证了操作的线程安全性。</p>
-<h5 id="释放资源">释放资源<a class="td-heading-self-link" href="#%e9%87%8a%e6%94%be%e8%b5%84%e6%ba%90" aria-label="Heading self-link"></a></h5><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">final</span> <span style="color:#e78284">boolean</span> <span style="color:#8caaee">release</span>(<span style="color:#e78284">int</span> arg) {
+<h5 id="释放资源">释放资源<a class="td-heading-self-link" href="#%e9%87%8a%e6%94%be%e8%b5%84%e6%ba%90" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">final</span> <span style="color:#e78284">boolean</span> <span style="color:#8caaee">release</span>(<span style="color:#e78284">int</span> arg) {
 </span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">if</span> (tryRelease(arg)) {
 </span></span><span style="display:flex;"><span>        Node h <span style="color:#99d1db;font-weight:bold">=</span> head;
 </span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">if</span> (h <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">null</span> <span style="color:#99d1db;font-weight:bold">&amp;&amp;</span> h.<span style="color:#8caaee">waitStatus</span> <span style="color:#99d1db;font-weight:bold">!=</span> 0)

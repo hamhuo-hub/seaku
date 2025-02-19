@@ -21,5 +21,12 @@
       <guid>https://hamhuo.xyz/dairy/2%E6%9C%8811%E6%97%A5/</guid>
       <description>&lt;p&gt;太忙了, 忘记写日志了&lt;/p&gt;&#xA;&lt;p&gt;实践了&lt;code&gt;层次递进法&lt;/code&gt; 将任务量缩减分层遍历任务, 逐层深入, 在一天完成了&lt;code&gt;MySQL&lt;/code&gt; 模块的整体结构&lt;/p&gt;&#xA;&lt;p&gt;归纳如下, 遍历层数限制为2层, 当知识点层数超过2层时采取两种策略&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI 归纳, 减少搜索深度&lt;/li&gt;&#xA;&lt;li&gt;放弃, 继续广度学习&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;第一种策略很好理解, AI将深度的理论归纳为表层结果, 减少厚度&lt;/p&gt;&#xA;&lt;p&gt;第二种策略的理论基础是, 知识点并非树状而是网状结构&lt;/p&gt;&#xA;&lt;p&gt;并发编程下有子节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163428470.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;子节点下还有 &lt;code&gt;孙&lt;/code&gt; 节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163437158.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这看起来是层层递进的树结构, 但是总体来看:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163553822.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这是一张网络, 当广度搜索时原先的节点在不同的搜索区域会&lt;code&gt;升级&lt;/code&gt;, 从子节点升级为父节点, 从而达到&#xA;缩小厚度的结果&lt;/p&gt;&#xA;&lt;p&gt;比如搜索路径 并发编程&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212164020208.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;此时 &lt;code&gt;AQS&lt;/code&gt; 是第三层节点, 学习自旋锁和CLH锁时就应该放弃&lt;/p&gt;&#xA;&lt;p&gt;放弃后转为广度搜索, 开始遍历之前的二级节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212164241043.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;此时在广度搜索基础上, &lt;code&gt;AQS&lt;/code&gt; 自动降级了, 通俗来讲就是学习AQS的基础打牢了, 可以将任意的二级节点作为基础向下遍历了&lt;/p&gt;&#xA;&lt;p&gt;上述可知, 层级学习的核心是广度搜索结合深度搜索, 前提是有系统的学习路径, 思想是逐层递进, 优先搭建网络, 之后丰满节点&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;阅读:&lt;/p&gt;&#xA;&lt;p&gt;***问题驱动学习（Problem-Based Learning, PBL）&lt;/p&gt;&lt;/blockquote&gt;</description>
     </item>
+    <item>
+      <title>2月19日</title>
+      <link>https://hamhuo.xyz/dairy/2%E6%9C%8819%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/dairy/2%E6%9C%8819%E6%97%A5/</guid>
+      <description>&lt;p&gt;站点成功注册到google&#xA;其中几个要点&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;默认的 hugo server 指令会在所有页面拒绝索引, 要使用 hugo &amp;ndash;gc 或者 hugo&lt;/li&gt;&#xA;&lt;li&gt;google的sitemap有一个陈年bug, 站点地图必须使用双斜线并且末尾加斜线&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
   </channel>
 </rss>
