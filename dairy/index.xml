@@ -26,7 +26,21 @@
       <link>https://hamhuo.xyz/dairy/2%E6%9C%8819%E6%97%A5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hamhuo.xyz/dairy/2%E6%9C%8819%E6%97%A5/</guid>
-      <description>&lt;p&gt;站点成功注册到google&#xA;其中几个要点&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;默认的 hugo server 指令会在所有页面拒绝索引, 要使用 hugo &amp;ndash;gc 或者 hugo&lt;/li&gt;&#xA;&lt;li&gt;google的sitemap有一个陈年bug, 站点地图必须使用双斜线并且末尾加斜线&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+      <description>&lt;p&gt;站点成功注册到google&#xA;其中几个要点&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;默认的 hugo server 指令会在所有页面拒绝索引, 要使用 hugo &amp;ndash;gc 或者 hugo&lt;/li&gt;&#xA;&lt;li&gt;google收录的sitemap有一个陈年bug, 站点地图必须使用双斜线并且末尾加斜线&lt;/li&gt;&#xA;&lt;li&gt;百度收录推荐用www但是加上前缀会导致跳转, 盲猜是个bug&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>2月20日</title>
+      <link>https://hamhuo.xyz/dairy/2%E6%9C%8820%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/dairy/2%E6%9C%8820%E6%97%A5/</guid>
+      <description>&lt;p&gt;项目开始了&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;高兴 加入了天才噜噜噜的群&lt;/li&gt;&#xA;&lt;li&gt;高兴 redis缓存一致模型我一个人搞出来了&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hamhuo.xyz/dairy/2%E6%9C%8821%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/dairy/2%E6%9C%8821%E6%97%A5/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

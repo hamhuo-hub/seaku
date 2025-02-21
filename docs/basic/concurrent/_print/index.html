@@ -131,7 +131,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.fa9b03205b3ec184ff6051dc325191e8.json"
+    data-offline-search-index-json-src="/offline-search-index.57c97b0d4c4578c4d5841673c34c565e.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -314,7 +314,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>18: <a href="#pg-b75dc17122f7fa6015c2c9c6f785bfb9"></a></li>
+<li>18: <a href="#pg-3289dc0cf77ebdd3067bf799eab51ff2"></a></li>
 
 
     
@@ -322,15 +322,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>19: <a href="#pg-3289dc0cf77ebdd3067bf799eab51ff2"></a></li>
-
-
-    
-  
-    
-    
-	
-<li>20: <a href="#pg-0d0829b705f81a8c8a6adb4575b07ebf"></a></li>
+<li>19: <a href="#pg-0d0829b705f81a8c8a6adb4575b07ebf"></a></li>
 
 
     
@@ -487,7 +479,7 @@ CLH队列锁有如下缺点</p>
 </span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">// 其它代码省略</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="aqs源码解析">AQS源码解析<a class="td-heading-self-link" href="#aqs%e6%ba%90%e7%a0%81%e8%a7%a3%e6%9e%90" aria-label="Heading self-link"></a></h4>
-<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>AQS 的设计是基于<a href="/docs/basic/concurrent/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">模板方法模式</a>的，它有一些方法必须要子类实现，它们主要有：</p>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>AQS 的设计是基于<a href="%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95.md">模板方法</a>的，它有一些方法必须要子类实现，它们主要有：</p>
 <ul>
 <li><code>isHeldExclusively()</code>：该线程是否正在独占资源。只有用到 condition 才需要去实现它。</li>
 <li><code>tryAcquire(int)</code>：独占方式。尝试获取资源，成功则返回 true，失败则返回 false。</li>
@@ -1876,189 +1868,7 @@ Quner技术沙龙
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b75dc17122f7fa6015c2c9c6f785bfb9">18 - </h1>
-    
-	<p>#设计模式</p>
-<blockquote>
-<p>[!NOTE]
-模板方法
-定义了一个算法的骨架，而将一些步骤延迟到子类中，模版方法使得子类可以在不改变算法结构的情况下，重新定义算法的步骤。
-模版方法定义了一个算法的步骤，并且允许子类为一个或多个步骤提供实现。</p></blockquote>
-<p>算法就是实现某个功能的步骤
-我们以工作为例
-工作这个过程分为 打卡, 开机, 打代码, 提交关机, 走人
-我们先来定义模板类</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">abstract</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">Worker</span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">protected</span> String name;
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#8caaee">Worker</span>(String name)
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#ca9ee6">this</span>.<span style="color:#8caaee">name</span> <span style="color:#99d1db;font-weight:bold">=</span> name;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 记录一天的工作
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">final</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">workOneDay</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;-----------------work start ---------------&#34;</span>);
-</span></span><span style="display:flex;"><span>		enterCompany();
-</span></span><span style="display:flex;"><span>		computerOn();
-</span></span><span style="display:flex;"><span>		work();
-</span></span><span style="display:flex;"><span>		computerOff();
-</span></span><span style="display:flex;"><span>		exitCompany();
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;-----------------work end ---------------&#34;</span>);
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 打代码
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">abstract</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">work</span>();
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 关闭电脑
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">computerOff</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;关闭电脑&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 打开电脑
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">private</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">computerOn</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;打开电脑&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 进入公司
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">enterCompany</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;进入公司&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 离开公司
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">exitCompany</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;离开公司&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>其中大部分方法都实现了(演示方便, 有返回值就行)
-唯独打代码没实现, 那么这个方法延迟到子类实现, 我们看下孩子们是如何实现的
-劳大:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">ITWorker</span> <span style="color:#e78284">extends</span> Worker
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#8caaee">ITWorker</span>(String name)
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#e78284">super</span>(name);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Override</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">work</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;孩子们快跑, 我在finally返回了&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>皮衣黄</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">HRWorker</span> <span style="color:#e78284">extends</span> Worker
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#8caaee">HRWorker</span>(String name)
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#e78284">super</span>(name);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Override</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">work</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;孩子们快跑, deepseek跳过了CUDA&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>马圣</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">QAWorker</span> <span style="color:#e78284">extends</span> Worker
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#8caaee">QAWorker</span>(String name)
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#e78284">super</span>(name);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Override</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">work</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;孩子们快跑, DOGE要开人啦&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>这样所有子类只需完成小部分逻辑即可实现功能</p>
-<p>![[content/en/docs/Basic/Concurrent/Pasted image 20250203230102.png]]</p>
-<h4 id="钩子">钩子<a class="td-heading-self-link" href="#%e9%92%a9%e5%ad%90" aria-label="Heading self-link"></a></h4>
-<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
-<p>[!NOTE]
-钩子的由来：</p>
-<ul>
-<li><strong>“钩子”</strong> 这个名字形象地表达了方法在模板方法模式中的角色：它就像一个钩子，可以被子类“挂”上去（重写），也可以“留空”。</li>
-<li>子类重写钩子方法，就相当于“挂”上去了，它能改变或增加一些行为；如果不重写钩子方法，就相当于“没挂”——这时模板方法会使用父类提供的默认实现。</li>
-<li>可以当成开关理解</li>
-</ul></blockquote>
-<p>父类可以留几个钩子
-比如是否打印时间</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">boolean</span> <span style="color:#8caaee">isNeedPrintDate</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">false</span>;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	<span style="color:#737994;font-style:italic">/**
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 * 离开公司
-</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">	 */</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">exitCompany</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#ca9ee6">if</span> (isNeedPrintDate())
-</span></span><span style="display:flex;"><span>		{
-</span></span><span style="display:flex;"><span>			System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">print</span>(<span style="color:#ca9ee6">new</span> Date().<span style="color:#8caaee">toLocaleString</span>()<span style="color:#99d1db;font-weight:bold">+</span><span style="color:#a6d189">&#34;--&gt;&#34;</span>);
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(name <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;离开公司&#34;</span>);
-</span></span><span style="display:flex;"><span>	}
-</span></span></code></pre></div><p>子类重写钩子, 就可以选择算法分支了, 也就是是否打印时间</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>	<span style="color:#8caaee;font-weight:bold">@Override</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#e78284">public</span> <span style="color:#e78284">boolean</span> <span style="color:#8caaee">isNeedPrintDate</span>()
-</span></span><span style="display:flex;"><span>	{
-</span></span><span style="display:flex;"><span>		<span style="color:#ca9ee6">return</span> <span style="color:#ef9f76">true</span>;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	
-</span></span></code></pre></div><p>总结:
-其实模板方法就是把一类操作提取出统一的逻辑
-将不同的参数, 细节等延迟到子类实现</p>
-<blockquote>
-<p>[!引用]
-<a href="https://blog.csdn.net/lmj623565791/article/details/26276093">https://blog.csdn.net/lmj623565791/article/details/26276093</a></p></blockquote>
-
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-3289dc0cf77ebdd3067bf799eab51ff2">19 - </h1>
+	<h1 id="pg-3289dc0cf77ebdd3067bf799eab51ff2">18 - </h1>
     
 	
 </div>
@@ -2075,7 +1885,7 @@ Quner技术沙龙
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-0d0829b705f81a8c8a6adb4575b07ebf">20 - </h1>
+	<h1 id="pg-0d0829b705f81a8c8a6adb4575b07ebf">19 - </h1>
     
 	
 </div>
