@@ -130,7 +130,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.0d725ceeecc9e39625c77f7c4edbc9af.json"
+    data-offline-search-index-json-src="/offline-search-index.6ea2ec4236e4e66bd22720e0473606b1.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -4512,7 +4512,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 </span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span> SwaggerCore.<span style="color:#8caaee">defaultDocketBuilder</span>(<span style="color:#a6d189">&#34;消息推送&#34;</span>, <span style="color:#a6d189">&#34;com.zeroone.star.mq.controller&#34;</span>, <span style="color:#a6d189">&#34;publish&#34;</span>);  
 </span></span><span style="display:flex;"><span>    }  
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>消息发布组件 <code>RmqPublish</code></p>
+</span></span></code></pre></div><p>消息发布组件 <code>RmqPublish</code> , 该组件封装了发布方法</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
 </span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;p&gt; * 描述：消息发布组件  
 </span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;/p&gt;  
@@ -4528,8 +4528,69 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 </span></span><span style="display:flex;"><span>        source.<span style="color:#8caaee">output</span>().<span style="color:#8caaee">send</span>(MessageBuilder.<span style="color:#8caaee">withPayload</span>(dto).<span style="color:#8caaee">build</span>());  
 </span></span><span style="display:flex;"><span>    }  
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>这里通知DTO封装的是 websocket 的客户端id 和消息</p>
-<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"></code></pre></div>
+</span></span></code></pre></div><p>这里通知DTO封装的是 <code>websocket</code> 的客户端id 和消息</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;p&gt; * 描述：示例通知数据对象  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;/p&gt;  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author hamhuo  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @version 1.0.0  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> */</span><span style="color:#8caaee;font-weight:bold">@Data</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">SampleNotifyDTO</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">     * 客户端编号  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">     */</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> String clientId;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">     * 通知消息内容  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">     */</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">private</span> String message;  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>继续之前, 我们要解释一下发布组件</p>
+<ul>
+<li><code>@Component</code> 是声明式注解, 要求 <code>Spring</code> 作为组件注入</li>
+<li>通过 <code>@Resourse</code> 注入了一个依赖, 该注解会查找指定名称的资源/Bean, 如果不指定就通过反射拿指定类型的资源, 这里查找到了一个 <code>Source</code></li>
+<li><code>Source</code> 接口返回一个 <code>MessageChannel</code> 这个可以理解为发送消息到消息队列</li>
+<li>构建信息后链式调用 output 返回一个 MC, 调用MC发送信息</li>
+</ul>
+<p>Source 信息源接口如下</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250224211221207.png" alt="image.png"></p>
+<p>其中 <code>@OutPut</code> 注解 要求 <code>Spring</code> 容器将名字为 <code>OUTPUT</code> 值的消息频道与中间件绑定</p>
+<p>因此这里我们需要做一些配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">rocketmq</span>:  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">binder</span>:  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">name-server</span>: ${rocket-mq.name-server}  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">bindings</span>:  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">output</span>:  
+</span></span><span style="display:flex;"><span>      <span style="color:#ca9ee6">producer</span>:  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">group</span>: socketGroup  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">sync</span>: <span style="color:#ef9f76">true</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">bindings</span>:  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">output</span>:  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">destination</span>: test-topic  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">content-type</span>: application/json
+</span></span></code></pre></div><p>我们先看<code>mq</code>的配置</p>
+<p><code>spring.cloud.rocketmq</code> 下配置名称服务器地址, 这里已经通过 <code>nacos</code> 配置好了</p>
+<blockquote>
+<p><strong>RocketMQ</strong> 的 <strong>NameServer</strong> 是 RocketMQ 集群中的一个核心组件，它提供了一个简单的服务注册与发现机制。具体来说，<strong>NameServer</strong> 主要用于管理 RocketMQ Broker 的信息，客户端通过访问 NameServer 来查询和获取消息队列的路由信息，从而实现消息的发送和接收。</p></blockquote>
+<p>这是为了让 Spring Cloud Stream 知道如何将消息发送到 RocketMQ</p>
+<p>之后再配置  <code>bindings.output</code> 下配置生产者</p>
+<ul>
+<li><code>producer.group</code>: 配置生产者的 <strong>消费组</strong>，用于指定该生产者的分组。</li>
+<li><code>sync</code>: 如果设置为 <code>true</code>，则表示生产者将同步发送消息。即，发送消息后会等待消息发送确认，确保消息发送成功。</li>
+</ul>
+<blockquote>
+<p>生产者就是在 RocketMQ 中生产信息的角色</p></blockquote>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250224212653226.png" alt="image.png"></p>
+<p>然后是第二个 <code>bindings</code>, 这是 Spring Cloud 的配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">bindings</span>:  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">output</span>:  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">destination</span>: test-topic  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">content-type</span>: application/json
+</span></span></code></pre></div><p>这里的 <code>output</code> 配置与 <code>Source.OUTPUT</code> 直接相关。通过这个配置，Spring Cloud Stream 会将 <code>Source.OUTPUT</code> 这个输出通道的 <strong>消息目标</strong>（即 <code>destination</code>）设置为 <code>test-topic</code>，并且设置消息的 <strong>内容类型</strong> 为 <code>application/json</code>。这意味着，消息将通过名为 <code>output</code> 的通道发送到 <code>test-topic</code> 主题，并且消息格式是 JSON。</p>
+<p>总结下, 为了保证代码松耦合, Spring 将消息发送和驱动(也就是连接不同品牌的MQ)分离开, 将驱动交由第三方提供. spring只需要调用Source发送消息即可</p>
+
 </div>
 
 
@@ -5100,7 +5161,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 </span></span><span style="display:flex;"><span>Connection: Upgrade
 </span></span></code></pre></div><p>收到成功响应后表示WebSocket“握手”成功，这样，代表WebSocket的这个TCP连接将不会被服务器关闭，而是一直保持，服务器可随时向浏览器推送消息，浏览器也可随时向服务器推送消息。双方推送的消息既可以是文本消息，也可以是二进制消息，一般来说，绝大部分应用程序会推送基于JSON的文本消息。</p>
 <h4 id="使用-websocket">使用 Websocket<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8-websocket" aria-label="Heading self-link"></a></h4>
-<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>开始前阅读 <a href="/docs/advanced/">架构说明</a></p>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>开始前阅读 <a href="content/en/docs/Advanced/_index.md">架构说明</a></p>
 <p>建立新模块 <code>sample-ws</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">&lt;!-- ws --&gt;</span>  
 </span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;dependency&gt;</span>  

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Masssey University on 海阔集</title>
+    <link>https://hamhuo.xyz/categories/masssey-university/</link>
+    <description>Recent content in Masssey University on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://hamhuo.xyz/categories/masssey-university/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>_index</title>
+      <link>https://hamhuo.xyz/gamingprogramming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/gamingprogramming/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In this course, we will explore a range of essential topics for implementing computer games including fundamental computer graphics, games software architecture and game physics systems. The course contains a significant practical computer lab component where students are guided through the games development process.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;3D is NOT included&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250224103344778.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intro</title>
+      <link>https://hamhuo.xyz/sysanalysismodelling/w1/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/sysanalysismodelling/w1/intro/</guid>
+      <description>&lt;p&gt;System?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Archive Goals&lt;/li&gt;&#xA;&lt;li&gt;Add Value (MOST IMPORTANT!!!)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;how to add hours&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why we need model&lt;/p&gt;&#xA;&lt;p&gt;we need required that everybody understand&#xA;clear and no confusion&lt;/p&gt;&#xA;&lt;p&gt;data, interface,  performance&lt;/p&gt;&#xA;&lt;p&gt;and a solution focussed on solution&lt;/p&gt;&#xA;&lt;p&gt;What is SAD?&lt;/p&gt;&#xA;&lt;p&gt;ensure systems meets the need, somtimes customer doesn&amp;rsquo;t explained the need accurately&lt;/p&gt;&#xA;&lt;p&gt;ensure system quality&lt;/p&gt;&#xA;&lt;p&gt;Provided Value to organization&lt;/p&gt;&#xA;&lt;p&gt;goals:&#xA;translaes, conncts, conmmunicates&lt;/p&gt;&#xA;&lt;p&gt;bridges the gap between the users/organisation and the technological details&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Introduction</title>
+      <link>https://hamhuo.xyz/gamingprogramming/w1/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/gamingprogramming/w1/introduction/</guid>
+      <description>&lt;p&gt;Goal: Gobot Snake&#xA;Lan: Java (JGG)&#xA;Need to finish a game in 3h&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
