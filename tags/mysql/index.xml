@@ -8,13 +8,6 @@
     <language>en</language>
     <atom:link href="https://hamhuo.xyz/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Java基础能力</title>
-      <link>https://hamhuo.xyz/docs/basic/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/docs/basic/</guid>
-      <description>&lt;p&gt;内容来源:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;沉默王二 GitHub 上开源的知识库《&lt;a href=&#34;https://github.com/itwanger/toBeBetterJavaer&#34;&gt;Java 进阶之路&lt;/a&gt;》&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.rabbitmq.com/tutorials&#34;&gt;rabbitMQ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
       <title>MySQL</title>
       <link>https://hamhuo.xyz/docs/basic/mysql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -19,7 +19,7 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>海阔集</title>
+<title>Java进阶能力 | 海阔集</title>
 <meta name="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
@@ -27,7 +27,7 @@ wms-sample-mq 模块 pom.xml
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
 <meta property="og:url" content="https://hamhuo.xyz/docs/advanced/">
   <meta property="og:site_name" content="海阔集">
-  <meta property="og:title" content="海阔集">
+  <meta property="og:title" content="Java进阶能力">
   <meta property="og:description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
@@ -36,16 +36,17 @@ wms-sample-mq 模块 pom.xml
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="海阔集">
+  <meta itemprop="name" content="Java进阶能力">
   <meta itemprop="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
 wms-sample-mq 模块 pom.xml
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
-  <meta itemprop="dateModified" content="2025-02-24T10:04:22+08:00">
+  <meta itemprop="dateModified" content="2025-02-24T22:40:40+08:00">
   <meta itemprop="wordCount" content="108">
+  <meta itemprop="keywords" content="Java进阶能力">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="海阔集">
+  <meta name="twitter:title" content="Java进阶能力">
   <meta name="twitter:description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
@@ -78,6 +79,9 @@ wms-sample-mq 模块 pom.xml
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/interview/"><span>Interview</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/massey/"><span>MasseyCourse</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -142,7 +146,7 @@ wms-sample-mq 模块 pom.xml
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ea2ec4236e4e66bd22720e0473606b1.json"
+    data-offline-search-index-json-src="/offline-search-index.f7900d0229f39f8ae0d7386597a03a69.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -166,7 +170,7 @@ wms-sample-mq 模块 pom.xml
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ea2ec4236e4e66bd22720e0473606b1.json"
+    data-offline-search-index-json-src="/offline-search-index.f7900d0229f39f8ae0d7386597a03a69.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -179,9 +183,7 @@ wms-sample-mq 模块 pom.xml
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
   <a href="/docs/" title="Documents" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Doc</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsoverview-li">
-  <a href="/docs/overview/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsoverview"><span class="">Java Overview</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbasic-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsbasic-li">
   <a href="/docs/basic/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsbasic"><span class="">Java基础能力</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsbasicdocker-li">
@@ -310,7 +312,7 @@ wms-sample-mq 模块 pom.xml
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsadvanced-li">
-  <a href="/docs/advanced/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docsadvanced"><span class="td-sidebar-nav-active-item"></span></a>
+  <a href="/docs/advanced/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docsadvanced"><span class="td-sidebar-nav-active-item">Java进阶能力</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsadvancedfastdfs-li">
   <a href="/docs/advanced/fastdfs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsadvancedfastdfs"><span class=""></span></a>
@@ -361,7 +363,7 @@ wms-sample-mq 模块 pom.xml
 <a href="https://github.com/hamhuo-hub/seaku/tree/main/C:%5cUsers%5chamhuo%5cDocuments%5cGitHub%5cseaku%5ccontent%5cen%5cdocs%5cAdvanced%5c_index.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
   <a href="https://github.com/hamhuo-hub/seaku/edit/main/C:%5cUsers%5chamhuo%5cDocuments%5cGitHub%5cseaku%5ccontent%5cen%5cdocs%5cAdvanced%5c_index.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
   <a href="https://github.com/hamhuo-hub/seaku/new/main/C:/Users/hamhuo/Documents/GitHub/seaku/content/en/docs/Advanced?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
-  <a href="https://github.com/hamhuo-hub/seaku/issues/new?title=" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/hamhuo-hub/seaku/issues/new?title=Java%e8%bf%9b%e9%98%b6%e8%83%bd%e5%8a%9b" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
   <a href="https://github.com/hamhuo-hub/seaku/issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
   <a id="print" href="/docs/advanced/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
@@ -371,7 +373,6 @@ wms-sample-mq 模块 pom.xml
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/docker/" data-taxonomy-term="docker"><span class="taxonomy-label">Docker</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gc/" data-taxonomy-term="gc"><span class="taxonomy-label">GC</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/internet/" data-taxonomy-term="internet"><span class="taxonomy-label">Internet</span><span class="taxonomy-count">1</span></a></li>
@@ -379,14 +380,14 @@ wms-sample-mq 模块 pom.xml
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-taxonomy-term="java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="taxonomy-label">Java数据类型</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/jvm/" data-taxonomy-term="jvm"><span class="taxonomy-label">JVM</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/list/" data-taxonomy-term="list"><span class="taxonomy-label">List</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span><span class="taxonomy-count">13</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span><span class="taxonomy-count">12</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/spring/" data-taxonomy-term="spring"><span class="taxonomy-label">Spring</span><span class="taxonomy-count">3</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" data-taxonomy-term="%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="taxonomy-label">中间件</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" data-taxonomy-term="%E5%88%86%E5%B8%83%E5%BC%8F"><span class="taxonomy-label">分布式</span><span class="taxonomy-count">5</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E5%88%86%E6%B2%BB/" data-taxonomy-term="%E5%88%86%E6%B2%BB"><span class="taxonomy-label">分治</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E5%8F%8C%E6%8C%87%E9%92%88/" data-taxonomy-term="%E5%8F%8C%E6%8C%87%E9%92%88"><span class="taxonomy-label">双指针</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" data-taxonomy-term="%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="taxonomy-label">字符串</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" data-taxonomy-term="%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B"><span class="taxonomy-label">并发编程</span><span class="taxonomy-count">18</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" data-taxonomy-term="%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B"><span class="taxonomy-label">并发编程</span><span class="taxonomy-count">17</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" data-taxonomy-term="%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="taxonomy-label">操作系统</span><span class="taxonomy-count">7</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E6%A0%91/" data-taxonomy-term="%E6%A0%91"><span class="taxonomy-label">树</span><span class="taxonomy-count">1</span></a></li>
@@ -402,8 +403,8 @@ wms-sample-mq 模块 pom.xml
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java基础能力</span><span class="taxonomy-count">39</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/masssey-university/" data-taxonomy-term="masssey-university"><span class="taxonomy-label">Masssey University</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">10</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/masssey-university/" data-taxonomy-term="masssey-university"><span class="taxonomy-label">Masssey University</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E7%AE%97%E6%B3%95/" data-taxonomy-term="%E7%AE%97%E6%B3%95"><span class="taxonomy-label">算法</span><span class="taxonomy-count">16</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/" data-taxonomy-term="%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">通用能力</span><span class="taxonomy-count">6</span></a></li>
@@ -422,15 +423,21 @@ wms-sample-mq 模块 pom.xml
   <li class="breadcrumb-item">
     <a href="/docs/">Doc</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    </li>
+    Java进阶能力</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1></h1>
+	<h1>Java进阶能力</h1>
   
 	<header class="article-meta">
-		
+		<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span></a></li>
+    </ul>
+</div>
+
   </header>
 	<p>内容来源:</p>
 <ul>
@@ -588,7 +595,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
             </div>
         </div>
 <div class="td-page-meta__lastmod">
-  Last modified February 24, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/ed4497e9512c4476006aaadab1a1f44d3b839fd4">ws mq (ed4497e)</a>
+  Last modified February 24, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/66b531241161c0127b3e00c058b60b246e18c480">更新目录 (66b5312)</a>
 </div>
 </div>
 

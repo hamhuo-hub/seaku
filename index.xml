@@ -8,13 +8,6 @@
     <language>en</language>
     <atom:link href="https://hamhuo.xyz/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Java Overview</title>
-      <link>https://hamhuo.xyz/docs/overview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/docs/overview/</guid>
-      <description>&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;&#xA;&lt;p&gt;Welcome to the Java Overview page. Here you will find key information about what Java is, why you might want to use it, and how it can benefit your projects.&lt;/p&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;h2 id=&#34;what-is-java&#34;&gt;What is Java?&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#what-is-java&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;Java is a widely-used, high-level programming language known for its simplicity, portability, and performance. It allows developers to write code once and run it anywhere, thanks to the Java Virtual Machine (JVM). Java has been a staple of enterprise-level applications and Android development for decades.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>101. 对称二叉树</title>
       <link>https://hamhuo.xyz/leetcode/tree/101.-%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -184,16 +177,16 @@
     </item>
     <item>
       <title>Intro</title>
-      <link>https://hamhuo.xyz/sysanalysismodelling/w1/intro/</link>
+      <link>https://hamhuo.xyz/massey/sysanalysismodelling/w1/intro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/sysanalysismodelling/w1/intro/</guid>
+      <guid>https://hamhuo.xyz/massey/sysanalysismodelling/w1/intro/</guid>
       <description>&lt;p&gt;System?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Archive Goals&lt;/li&gt;&#xA;&lt;li&gt;Add Value (MOST IMPORTANT!!!)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;how to add hours&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why we need model&lt;/p&gt;&#xA;&lt;p&gt;we need required that everybody understand&#xA;clear and no confusion&lt;/p&gt;&#xA;&lt;p&gt;data, interface,  performance&lt;/p&gt;&#xA;&lt;p&gt;and a solution focussed on solution&lt;/p&gt;&#xA;&lt;p&gt;What is SAD?&lt;/p&gt;&#xA;&lt;p&gt;ensure systems meets the need, somtimes customer doesn&amp;rsquo;t explained the need accurately&lt;/p&gt;&#xA;&lt;p&gt;ensure system quality&lt;/p&gt;&#xA;&lt;p&gt;Provided Value to organization&lt;/p&gt;&#xA;&lt;p&gt;goals:&#xA;translaes, conncts, conmmunicates&lt;/p&gt;&#xA;&lt;p&gt;bridges the gap between the users/organisation and the technological details&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introduction</title>
-      <link>https://hamhuo.xyz/gamingprogramming/w1/introduction/</link>
+      <link>https://hamhuo.xyz/massey/gamingprogramming/w1/introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/gamingprogramming/w1/introduction/</guid>
+      <guid>https://hamhuo.xyz/massey/gamingprogramming/w1/introduction/</guid>
       <description>&lt;p&gt;Goal: Gobot Snake&#xA;Lan: Java (JGG)&#xA;Need to finish a game in 3h&lt;/p&gt;</description>
     </item>
     <item>

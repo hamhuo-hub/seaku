@@ -19,7 +19,7 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>海阔集</title>
+<title>Java进阶能力 | 海阔集</title>
 <meta name="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
@@ -27,7 +27,7 @@ wms-sample-mq 模块 pom.xml
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
 <meta property="og:url" content="https://hamhuo.xyz/docs/advanced/">
   <meta property="og:site_name" content="海阔集">
-  <meta property="og:title" content="海阔集">
+  <meta property="og:title" content="Java进阶能力">
   <meta property="og:description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
@@ -36,16 +36,17 @@ wms-sample-mq 模块 pom.xml
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="海阔集">
+  <meta itemprop="name" content="Java进阶能力">
   <meta itemprop="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
 wms-sample-mq 模块 pom.xml
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
-  <meta itemprop="dateModified" content="2025-02-24T10:04:22+08:00">
+  <meta itemprop="dateModified" content="2025-02-24T22:40:40+08:00">
   <meta itemprop="wordCount" content="108">
+  <meta itemprop="keywords" content="Java进阶能力">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="海阔集">
+  <meta name="twitter:title" content="Java进阶能力">
   <meta name="twitter:description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
 Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
@@ -78,6 +79,9 @@ wms-sample-mq 模块 pom.xml
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/interview/"><span>Interview</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/massey/"><span>MasseyCourse</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -142,7 +146,7 @@ wms-sample-mq 模块 pom.xml
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.6ea2ec4236e4e66bd22720e0473606b1.json"
+    data-offline-search-index-json-src="/offline-search-index.f7900d0229f39f8ae0d7386597a03a69.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -172,7 +176,7 @@ This is the multi-page printable view of this section.
 
 
 
-<h1 class="title"></h1>
+<h1 class="title">Java进阶能力</h1>
 
 
 
