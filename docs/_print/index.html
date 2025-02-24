@@ -130,7 +130,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.57c97b0d4c4578c4d5841673c34c565e.json"
+    data-offline-search-index-json-src="/offline-search-index.0d725ceeecc9e39625c77f7c4edbc9af.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -715,7 +715,61 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.1: <a href="#pg-38f4341f5c736c9b8527e28ffac0e0ed">FastDFS分布式存储</a></li>
+<li>4.1: <a href="#pg-8de04a498ba25614a38d6b0cb1d8b8f5"></a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.1.1: <a href="#pg-c14dae7660b6f10b299eff82f06a2fc9">FastDFS分布式存储</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-d75357891f2402fcb7bcf0658b8cbe44"></a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.2.1: <a href="#pg-5634ab316a081d8d70af5cd4a7c2f1a2">RocketMQ</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4.3: <a href="#pg-9fd358a2c6b87bf8be30b498be988e29">FastExcel报表组件</a></li>
 
 
     
@@ -723,7 +777,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.2: <a href="#pg-9fd358a2c6b87bf8be30b498be988e29">FastExcel报表组件</a></li>
+<li>4.4: <a href="#pg-f1299715e9211356fdc2af2754d09890">Gateway网关</a></li>
 
 
     
@@ -731,7 +785,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.3: <a href="#pg-f1299715e9211356fdc2af2754d09890">Gateway网关</a></li>
+<li>4.5: <a href="#pg-6857812a3bba27f9dd966a2fc7c18397">Intercepter拦截器</a></li>
 
 
     
@@ -739,7 +793,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.4: <a href="#pg-6857812a3bba27f9dd966a2fc7c18397">Intercepter拦截器</a></li>
+<li>4.6: <a href="#pg-c0333df9693e95d8b4a6758f9073b505">JWT</a></li>
 
 
     
@@ -747,23 +801,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.5: <a href="#pg-c0333df9693e95d8b4a6758f9073b505">JWT</a></li>
-
-
-    
-  
-    
-    
-	
-<li>4.6: <a href="#pg-ca7712bf275374a77e97a3daa3f2c97c">Nacos配置中心</a></li>
-
-
-    
-  
-    
-    
-	
-<li>4.7: <a href="#pg-a5aa6e6b6b4e77005002ce06083cc293">RocketMQ</a></li>
+<li>4.7: <a href="#pg-ca7712bf275374a77e97a3daa3f2c97c">Nacos配置中心</a></li>
 
 
     
@@ -787,7 +825,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.10: <a href="#pg-308ae1c4b0a5ebcbc311194a88517449">响应式编程Reactor库</a></li>
+<li>4.10: <a href="#pg-9689cbf2ee7dd31cf7eca75dca810419">WebSocket</a></li>
 
 
     
@@ -795,7 +833,15 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4.11: <a href="#pg-22cd8a954af59004f35b2e8530004f5e">声明式服务</a></li>
+<li>4.11: <a href="#pg-308ae1c4b0a5ebcbc311194a88517449">响应式编程Reactor库</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.12: <a href="#pg-22cd8a954af59004f35b2e8530004f5e">声明式服务</a></li>
 
 
     
@@ -4161,25 +4207,71 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码</p>
 <ul>
 <li>Redis</li>
+<li>WebSocket</li>
+<li>FastExcel报表</li>
+<li>Gateway网关(SpringCloudGateway)</li>
 <li>中间件
 <ul>
 <li>消息队列</li>
+<li>Nacos配置中心</li>
+<li>Sential声明式服务</li>
 </ul>
 </li>
 </ul>
-<p>什么是中间件? 为什么要用?</p>
-<p>维基百科这样说</p>
-<blockquote>
-<p>中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。</p></blockquote>
-<p>简单来说：<strong>中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。</strong></p>
-<p>中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。</p>
-<p>几个容易混淆的概念</p>
-<ol>
-<li>二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分</li>
-<li>业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。</li>
-</ol>
-<p>总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件</p>
-
+<p>需要相关模块依赖, 如下是模块的实例</p>
+<p><code>wms-sample-mq</code> 模块
+<code>pom.xml</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;project</span> <span style="color:#8caaee">xmlns=</span><span style="color:#a6d189">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#8caaee">xmlns:xsi=</span><span style="color:#a6d189">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8caaee">xsi:schemaLocation=</span><span style="color:#a6d189">&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#ca9ee6">&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;modelVersion&gt;</span>4.0.0<span style="color:#ca9ee6">&lt;/modelVersion&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;parent&gt;</span>        <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.hamhuo.star<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-java<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;version&gt;</span>${revision}<span style="color:#ca9ee6">&lt;/version&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;relativePath&gt;</span>../pom.xml<span style="color:#ca9ee6">&lt;/relativePath&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;/parent&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-sample<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;dependencies&gt;</span>        <span style="color:#737994;font-style:italic">&lt;!-- spring mvc --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">&lt;!-- common --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.hamhuo<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-common<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.hamhuo.star<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-domain<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">&lt;!-- alibaba nacos discovery --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.alibaba.cloud<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-cloud-starter-alibaba-nacos-discovery<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">&lt;!-- alibaba nacos config --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.alibaba.cloud<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-cloud-starter-alibaba-nacos-config<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;/dependencies&gt;</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;/project&gt;</span>
+</span></span></code></pre></div><p>启动类</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;p&gt; 描述：模块程序启动入口  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;/p&gt;  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> */</span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@SpringBootApplication</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableDiscoveryClient</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableBinding</span>(Source.<span style="color:#8caaee">class</span>)  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">MqApplication</span> {  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) {  
+</span></span><span style="display:flex;"><span>        SpringApplication.<span style="color:#8caaee">run</span>(MqApplication.<span style="color:#8caaee">class</span>, args);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 </div>
 
 
@@ -4202,7 +4294,32 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-38f4341f5c736c9b8527e28ffac0e0ed">4.1 - FastDFS分布式存储</h1>
+	<h1 id="pg-8de04a498ba25614a38d6b0cb1d8b8f5">4.1 - </h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-c14dae7660b6f10b299eff82f06a2fc9">4.1.1 - FastDFS分布式存储</h1>
     <div class="lead">分布式存储中间件</div>
 	<h4 id="为什么需要文件服务器">为什么需要文件服务器?<a class="td-heading-self-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e6%96%87%e4%bb%b6%e6%9c%8d%e5%8a%a1%e5%99%a8" aria-label="Heading self-link"></a></h4>
 <meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>浏览器请求可能会携带头像文件, 服务器处理后存储在本地磁盘</p>
@@ -4241,6 +4358,10 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
     
 	
   
+
+    
+	
+  
     
     
 	
@@ -4248,7 +4369,186 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-9fd358a2c6b87bf8be30b498be988e29">4.2 - FastExcel报表组件</h1>
+	<h1 id="pg-d75357891f2402fcb7bcf0658b8cbe44">4.2 - </h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-5634ab316a081d8d70af5cd4a7c2f1a2">4.2.1 - RocketMQ</h1>
+    <div class="lead">MQ的一种, 高并发常用</div>
+	<blockquote>
+<p>了解: <a href="WebSocket">WebSocket</a></p></blockquote>
+<p>学习过 <code>websocekt</code> 后, 我们知道通过建立长连接可以实现 服务器和浏览器的双向推送
+通过浏览器协调, 可以实现端对端的通信
+<code>webServer</code> 初始化一个 Session 池作为核心容器, 当 <code>webServer</code> 在分布式中作为服务注入时, 其他服务也要调用消息怎么办?</p>
+<p>可以让其他服务作为消费者, 让服务生产消息, 但是<code>webserver</code> 一旦负责消息通讯和消息生产职责就不再单一, 需要解耦</p>
+<p>长连接传递的消息是即时的, 一旦连接断开消息就会丢失, 我们需要一个方法持久化消息</p>
+<p>长连接会阻塞服务线程, 建立连接后双方不得不占用一个线程持续的监听, 需要把监听的任务解耦出去. 一旦并发消息过多, 服务器可能会崩溃</p>
+<p>综上, 我们有了消息队列</p>
+<ul>
+<li>
+<ol>
+<li><strong>异步通信</strong></li>
+</ol>
+</li>
+</ul>
+<p><strong>场景描述</strong>：当系统中的应用程序需要异步通信时，可以使用消息中间件来实现。<br>
+<strong>示例</strong>：在一个电商系统中，订单系统下单后需要给库存系统发送异步消息，以减少系统之间的耦合，避免同步调用导致的性能问题或响应延迟。</p>
+<p><strong>优势</strong>：</p>
+<ul>
+<li><strong>减少耦合</strong>：系统可以在不等待响应的情况下继续进行其他操作。</li>
+<li><strong>提高系统性能</strong>：减少了同步阻塞，提高了响应速度。</li>
+</ul>
+<hr>
+<ol start="2">
+<li><strong>应用解耦</strong></li>
+</ol>
+<p><strong>场景描述</strong>：当应用程序需要进行松耦合的通信时，可以使用消息中间件来实现。<br>
+<strong>示例</strong>：在微服务架构中，不同服务之间可以通过消息中间件进行通信，避免直接调用服务导致的依赖关系过强。</p>
+<p><strong>优势</strong>：</p>
+<ul>
+<li><strong>降低耦合度</strong>：服务之间通过消息中间件进行通信，不需要直接调用，提高系统的灵活性。</li>
+<li><strong>增强可维护性</strong>：服务之间的更新和维护不影响其他服务。</li>
+</ul>
+<hr>
+<ol start="3">
+<li><strong>消息排队</strong></li>
+</ol>
+<p><strong>场景描述</strong>：当系统中需要处理大量的消息时，可以使用消息中间件来实现消息排队，确保消息的顺序和可靠性。<br>
+<strong>示例</strong>：在金融行业中，需要处理大量的交易消息，消息中间件可以实现消息排队，确保每笔交易都得到正确处理。</p>
+<p><strong>优势</strong>：</p>
+<ul>
+<li><strong>保证消息顺序</strong>：确保按顺序处理每条消息。</li>
+<li><strong>消息可靠性</strong>：即使出现系统故障，未处理的消息仍然可以从队列中恢复。</li>
+</ul>
+<hr>
+<ol start="4">
+<li><strong>负载均衡</strong></li>
+</ol>
+<p><strong>场景描述</strong>：当系统需要处理大量的请求时，可以使用消息中间件来实现负载均衡。<br>
+<strong>示例</strong>：在电商系统中，订单系统下单请求可以通过消息中间件发送到多个库存系统中，从而实现负载均衡。</p>
+<p><strong>优势</strong>：</p>
+<ul>
+<li><strong>分担负载</strong>：通过将消息分发到多个消费者，实现负载均衡，避免单点压力。</li>
+<li><strong>提高系统吞吐量</strong>：通过多节点并发处理提高系统处理能力。</li>
+</ul>
+<hr>
+<ol start="5">
+<li><strong>系统削峰填谷</strong></li>
+</ol>
+<p><strong>场景描述</strong>：当系统中出现高峰期时，可以使用消息中间件来平滑处理请求。<br>
+<strong>示例</strong>：在电商系统中，双十一等促销活动可能会导致系统请求量急剧增加，消息中间件可以通过缓存请求，避免系统崩溃。</p>
+<p><strong>优势</strong>：</p>
+<ul>
+<li><strong>平滑流量</strong>：在高峰期通过消息队列缓存请求，避免系统过载。</li>
+<li><strong>提高系统稳定性</strong>：避免高并发请求导致的性能瓶颈或服务崩溃。</li>
+</ul>
+<h4 id="使用-rocketmq">使用 <code>RocketMQ</code><a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8-rocketmq" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>并发环境下的消息队列用阿里提供的 <code>RocketMQ</code> 合适</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ca9ee6">server</span>:  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">port</span>: ${sp.publish}  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">spring</span>:  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">application</span>:  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">name</span>: ${sn.publish}  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">cloud</span>:  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">stream</span>:  
+</span></span><span style="display:flex;"><span>      <span style="color:#ca9ee6">rocketmq</span>:  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">binder</span>:  
+</span></span><span style="display:flex;"><span>          <span style="color:#ca9ee6">name-server</span>: ${rocket-mq.name-server}  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">bindings</span>:  
+</span></span><span style="display:flex;"><span>          <span style="color:#ca9ee6">output</span>:  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">producer</span>:  
+</span></span><span style="display:flex;"><span>              <span style="color:#ca9ee6">group</span>: socketGroup  
+</span></span><span style="display:flex;"><span>              <span style="color:#ca9ee6">sync</span>: <span style="color:#ef9f76">true</span>  
+</span></span><span style="display:flex;"><span>      <span style="color:#ca9ee6">bindings</span>:  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">output</span>:  
+</span></span><span style="display:flex;"><span>          <span style="color:#ca9ee6">destination</span>: test-topic  
+</span></span><span style="display:flex;"><span>          <span style="color:#ca9ee6">content-type</span>: application/json  
+</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">#开启MQ的日志  </span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">logging</span>:  
+</span></span><span style="display:flex;"><span>  <span style="color:#ca9ee6">level</span>:  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">com</span>:  
+</span></span><span style="display:flex;"><span>      <span style="color:#ca9ee6">alibaba</span>:  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">cloud</span>:  
+</span></span><span style="display:flex;"><span>          <span style="color:#ca9ee6">stream</span>:  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">binder</span>:  
+</span></span><span style="display:flex;"><span>              <span style="color:#ca9ee6">rocketmq</span>: DEBUG
+</span></span></code></pre></div><p>项目依赖</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.alibaba.cloud<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-cloud-starter-stream-rocketmq<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>写 <code>Swagger</code> 配置, 不同于 <code>webSocket</code> mq作为异步消息组件可以用C-S模型, 也就是请求-响应模型, 我们从 swagger测试请求响应</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;p&gt; * 描述：Swagger配置  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;/p&gt;  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author hamhuo  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @version 1.0.0  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> */</span><span style="color:#8caaee;font-weight:bold">@Configuration</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableSwagger2WebMvc</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">SwaggerConfig</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#8caaee;font-weight:bold">@Bean</span>  
+</span></span><span style="display:flex;"><span>    Docket <span style="color:#8caaee">rpApi</span>() {  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span> SwaggerCore.<span style="color:#8caaee">defaultDocketBuilder</span>(<span style="color:#a6d189">&#34;消息推送&#34;</span>, <span style="color:#a6d189">&#34;com.zeroone.star.mq.controller&#34;</span>, <span style="color:#a6d189">&#34;publish&#34;</span>);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>消息发布组件 <code>RmqPublish</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;p&gt; * 描述：消息发布组件  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;/p&gt;  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author hamhuo  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @version 1.0.0  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> */</span><span style="color:#8caaee;font-weight:bold">@Component</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">RmqPublish</span> {  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8caaee;font-weight:bold">@Resource</span>  
+</span></span><span style="display:flex;"><span>    Source source;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">publish</span>(SampleNotifyDTO dto) {  
+</span></span><span style="display:flex;"><span>        source.<span style="color:#8caaee">output</span>().<span style="color:#8caaee">send</span>(MessageBuilder.<span style="color:#8caaee">withPayload</span>(dto).<span style="color:#8caaee">build</span>());  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>这里通知DTO封装的是 websocket 的客户端id 和消息</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"></code></pre></div>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-9fd358a2c6b87bf8be30b498be988e29">4.3 - FastExcel报表组件</h1>
     <div class="lead">报表组件</div>
 	<p>提前封装好一些服务</p>
 <h4 id="快速导入">快速导入<a class="td-heading-self-link" href="#%e5%bf%ab%e9%80%9f%e5%af%bc%e5%85%a5" aria-label="Heading self-link"></a></h4>
@@ -4275,7 +4575,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-f1299715e9211356fdc2af2754d09890">4.3 - Gateway网关</h1>
+	<h1 id="pg-f1299715e9211356fdc2af2754d09890">4.4 - Gateway网关</h1>
     <div class="lead">网关是一个位于微服务架构前端的组件，它充当了所有微服务的入口</div>
 	<h4 id="什么是网关">什么是网关<a class="td-heading-self-link" href="#%e4%bb%80%e4%b9%88%e6%98%af%e7%bd%91%e5%85%b3" aria-label="Heading self-link"></a></h4>
 <meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>网关负责路由请求、负载均衡、安全认证、流量控制、监控和日志记录等任务。</p>
@@ -4535,7 +4835,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-6857812a3bba27f9dd966a2fc7c18397">4.4 - Intercepter拦截器</h1>
+	<h1 id="pg-6857812a3bba27f9dd966a2fc7c18397">4.5 - Intercepter拦截器</h1>
     <div class="lead">拦截器 Interceptor 在 Spring MVC 中的地位等同于 Servlet 规范中的过滤器 Filter，拦截的是处理器的执行，由于是全局行为，因此常用于做一些通用的功能，如请求日志打印、权限控制等。</div>
 	
 </div>
@@ -4552,7 +4852,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-c0333df9693e95d8b4a6758f9073b505">4.5 - JWT</h1>
+	<h1 id="pg-c0333df9693e95d8b4a6758f9073b505">4.6 - JWT</h1>
     
 	
 </div>
@@ -4569,25 +4869,8 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-ca7712bf275374a77e97a3daa3f2c97c">4.6 - Nacos配置中心</h1>
+	<h1 id="pg-ca7712bf275374a77e97a3daa3f2c97c">4.7 - Nacos配置中心</h1>
     <div class="lead">动态决策中心, 当然可以理解为分布式的配置中心</div>
-	
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-a5aa6e6b6b4e77005002ce06083cc293">4.7 - RocketMQ</h1>
-    <div class="lead">MQ的一种, 高并发常用</div>
 	
 </div>
 
@@ -4800,7 +5083,280 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-308ae1c4b0a5ebcbc311194a88517449">4.10 - 响应式编程Reactor库</h1>
+	<h1 id="pg-9689cbf2ee7dd31cf7eca75dca810419">4.10 - WebSocket</h1>
+    <div class="lead">HTTP只能单向向服务器请求, 如果要实现服务器通知, 就必须由客户端轮询, 压力非常大. 并且HTTP会携带无效信息, 延迟很高
+因此出现了WebSocket</div>
+	<p>如果需要定期给浏览器推送数据，例如股票行情，或者不定期给浏览器推送数据，例如在线聊天，基于HTTP协议实现这类需求，只能依靠浏览器的JavaScript定时轮询，效率很低且实时性不高。</p>
+<p>2009年出现的新技术<code>Websocket</code> 允许建立浏览器客户端和服务端之间的双向连接, 并且发送轻量级的数据模型, 服务端可以在需要时直接向客户端推送消息</p>
+<p>不同于传统的<code>Http</code> ,<code>Websocket</code>  允许建立通路, 可以直接发送信息而不需像HTTP一样创建连接上下文, 原理如下</p>
+<p>在建立TCP连接后, 附带几个请求头</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-http" data-lang="http"><span style="display:flex;"><span><span style="color:#8caaee">GET</span> <span style="color:#ef9f76">/chat</span> <span style="color:#ca9ee6">HTTP</span><span style="color:#99d1db;font-weight:bold">/</span><span style="color:#ef9f76">1.1</span>
+</span></span><span style="display:flex;"><span>Host<span style="color:#99d1db;font-weight:bold">:</span> www.example.com
+</span></span><span style="display:flex;"><span>Upgrade<span style="color:#99d1db;font-weight:bold">:</span> websocket
+</span></span><span style="display:flex;"><span>Connection<span style="color:#99d1db;font-weight:bold">:</span> Upgrade
+</span></span></code></pre></div><p>此后连接升级为长连接</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>HTTP/1.1 101 Switching Protocols
+</span></span><span style="display:flex;"><span>Upgrade: websocket
+</span></span><span style="display:flex;"><span>Connection: Upgrade
+</span></span></code></pre></div><p>收到成功响应后表示WebSocket“握手”成功，这样，代表WebSocket的这个TCP连接将不会被服务器关闭，而是一直保持，服务器可随时向浏览器推送消息，浏览器也可随时向服务器推送消息。双方推送的消息既可以是文本消息，也可以是二进制消息，一般来说，绝大部分应用程序会推送基于JSON的文本消息。</p>
+<h4 id="使用-websocket">使用 Websocket<a class="td-heading-self-link" href="#%e4%bd%bf%e7%94%a8-websocket" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>开始前阅读 <a href="/docs/advanced/">架构说明</a></p>
+<p>建立新模块 <code>sample-ws</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">&lt;!-- ws --&gt;</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-boot-starter-websocket<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>启动类</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * 描述：程序启动入口  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> *  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author hamhuo  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @version 1.0.0  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> */</span><span style="color:#8caaee;font-weight:bold">@SpringBootApplication</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableBinding</span>(Sink.<span style="color:#8caaee">class</span>)  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableDiscoveryClient</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">WsApplication</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) {  
+</span></span><span style="display:flex;"><span>        SpringApplication.<span style="color:#8caaee">run</span>(WsApplication.<span style="color:#8caaee">class</span>, args);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>实现服务端和浏览器的双向通信, 我们要写一个服务器</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@Component</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@ServerEndpoint</span>(<span style="color:#a6d189">&#34;/chat&#34;</span>)  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">ChatServer</span> {
+</span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * 保存连接对象, 连接池, 放用户session和key
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> */</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">private</span> <span style="color:#e78284">static</span> <span style="color:#e78284">final</span> ConcurrentHashMap<span style="color:#99d1db;font-weight:bold">&lt;</span>String, Session<span style="color:#99d1db;font-weight:bold">&gt;</span> SESSION_POOL <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> ConcurrentHashMap<span style="color:#99d1db;font-weight:bold">&lt;&gt;</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@OnOpen</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">onOpen</span>(Session session) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@OnMessage</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> String <span style="color:#8caaee">onMessage</span>(String text, Session session) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@OnClose</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">onClose</span>(Session session)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@OnError</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">onError</span>(Session session, Throwable throwable)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>解释一下</p>
+<ol>
+<li>
+<p>首先组件注解加上, Spring 会自动装载为组件</p>
+</li>
+<li>
+<p>关于 <code>@ServerEndpoint</code>
+WebSocket 是一种基于 TCP 的协议，它是持久化连接，通信过程中不会像 HTTP 请求那样每次都经过请求-响应的流程，因此不能直接通过传统的 Spring MVC 控制器方法来处理。</p>
+<p><code>@ServerEndpoint</code> 是 WebSocket 规范中的一种标注方式，用来标识一个 WebSocket 服务器端点。当客户端连接到这个端点时，会自动调用这个类中的相应方法。</p>
+<p>我们只需要知道服务器与 /server 绑定即可</p>
+</li>
+<li>
+<p>我们在server中定义了四个方法, 启动时调用, 消息时调用, 关闭时调用, 错误时调用</p>
+</li>
+<li>
+<p>我们创建一个链接池, 存放浏览器和服务器的长连接</p>
+</li>
+</ol>
+<p>这个端点注解依赖一个配置类</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250223215044977.png" alt="image.png"></p>
+<p>我们在 <code>ws.config</code> 下新建一个配置类 ,这是写死的, 不用理解</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @program: demo  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @description: 服务端点配置  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * @author: hamhuo  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> **/</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@Configuration</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableWebSocket</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">WebSocketConfig</span> {  
+</span></span><span style="display:flex;"><span>    <span style="color:#8caaee;font-weight:bold">@Bean</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> ServerEndpointExporter <span style="color:#8caaee">serverEndpoint</span>() {  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span> <span style="color:#ca9ee6">new</span> ServerEndpointExporter();  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>当浏览器首先试图建立与服务器的连接, 这里调用 <code>@OnOpen</code> 注解方法</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@OnOpen</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">onOpen</span>(Session session) <span style="color:#e78284">throws</span> IOException {  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//判断客户端对象是否存在  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//排除重复的连接对象  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">if</span> (SESSION_POOL.<span style="color:#8caaee">containsKey</span>(session.<span style="color:#8caaee">getQueryString</span>())) {  
+</span></span><span style="display:flex;"><span>        CloseReason reason <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> CloseReason(CloseReason.<span style="color:#8caaee">CloseCodes</span>.<span style="color:#8caaee">CANNOT_ACCEPT</span>, <span style="color:#a6d189">&#34;ID冲突，连接拒绝&#34;</span>);  
+</span></span><span style="display:flex;"><span>        session.<span style="color:#8caaee">getUserProperties</span>().<span style="color:#8caaee">put</span>(<span style="color:#a6d189">&#34;reason&#34;</span>, reason);  
+</span></span><span style="display:flex;"><span>        session.<span style="color:#8caaee">close</span>();  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">return</span>;  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//将客户端记录到Map中  </span>
+</span></span><span style="display:flex;"><span>    SESSION_POOL.<span style="color:#8caaee">put</span>(session.<span style="color:#8caaee">getQueryString</span>(), session);  
+</span></span><span style="display:flex;"><span>    System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;客户端（&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> session.<span style="color:#8caaee">getQueryString</span>() <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;）：开启连接&#34;</span>);  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>解释一下, 浏览器会传入一个客户端ID, 服务器根据ID来提供服务</p>
+<p>每个ID标识了长连接, 服务器根据ID提供服务</p>
+<ol>
+<li>传入连接后判断是否重复, 从连接池拿session里的key, 如果重复就拒绝连接</li>
+<li>没有重复, 将Session保存到连接池(Map)里</li>
+<li>控制套打印日志, 这里可以用slf4j</li>
+</ol>
+<blockquote>
+<p>注意:
+这里的<code>Session</code> 指的是长连接, 和 <code>HTTP Session</code> 不是一个东西</p></blockquote>
+<p>之后长连接建立, 可以双向监听信息, 一旦服务器或者浏览器有信息了就调用 <code>@OnMessage</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@OnMessage</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> String <span style="color:#8caaee">onMessage</span>(String text, Session session) <span style="color:#e78284">throws</span> IOException {  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//解析消息 =&gt; ID::消息内容  </span>
+</span></span><span style="display:flex;"><span>    String<span style="color:#99d1db;font-weight:bold">[]</span> msgArr <span style="color:#99d1db;font-weight:bold">=</span> text.<span style="color:#8caaee">split</span>(<span style="color:#a6d189">&#34;::&#34;</span>, 2);  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//群发消息 ID=all表示群发  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">if</span> (<span style="color:#a6d189">&#34;all&#34;</span>.<span style="color:#8caaee">equalsIgnoreCase</span>(msgArr<span style="color:#99d1db;font-weight:bold">[</span>0<span style="color:#99d1db;font-weight:bold">]</span>)) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">for</span> (Session one : SESSION_POOL.<span style="color:#8caaee">values</span>()) {  
+</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">//排除自己  </span>
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">if</span> (session <span style="color:#99d1db;font-weight:bold">==</span> one) {  
+</span></span><span style="display:flex;"><span>                <span style="color:#ca9ee6">continue</span>;  
+</span></span><span style="display:flex;"><span>            }  
+</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">//发送消息  </span>
+</span></span><span style="display:flex;"><span>            one.<span style="color:#8caaee">getBasicRemote</span>().<span style="color:#8caaee">sendText</span>(msgArr<span style="color:#99d1db;font-weight:bold">[</span>1<span style="color:#99d1db;font-weight:bold">]</span>);  
+</span></span><span style="display:flex;"><span>        }  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//指定发送人, 不是all的情况  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">else</span> {  
+</span></span><span style="display:flex;"><span>        Session target <span style="color:#99d1db;font-weight:bold">=</span> SESSION_POOL.<span style="color:#8caaee">get</span>(msgArr<span style="color:#99d1db;font-weight:bold">[</span>0<span style="color:#99d1db;font-weight:bold">]</span>);  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">if</span> (target <span style="color:#99d1db;font-weight:bold">!=</span> <span style="color:#ef9f76">null</span>) {  
+</span></span><span style="display:flex;"><span>            target.<span style="color:#8caaee">getBasicRemote</span>().<span style="color:#8caaee">sendText</span>(msgArr<span style="color:#99d1db;font-weight:bold">[</span>1<span style="color:#99d1db;font-weight:bold">]</span>);  
+</span></span><span style="display:flex;"><span>        }  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">return</span> session.<span style="color:#8caaee">getQueryString</span>() <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;:消息发送成功&#34;</span>;  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>消息发送的方式有两种, 点对点和群发</p>
+<p>点对点就找出目标Session, 服务器向Session写信息发送就行
+群发就需要遍历连接池的每一个Session, 全部写信息</p>
+<p>当然, 前提是排除发送者的Session</p>
+<p>关闭连接, 也就是浏览器离线需要执行线程池移除线程的操作, 调用 <code>@OnClose</code> 方法
+这里注意, webSocket并没有强制关闭连接的能力, 这是通知远程连接自主关闭, 服务器只负责监视是否关闭</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@OnClose</span>  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">onClose</span>(Session session) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//处理拒绝连接session关闭对象, 不从池子里移除  </span>
+</span></span><span style="display:flex;"><span>    Object obj <span style="color:#99d1db;font-weight:bold">=</span> session.<span style="color:#8caaee">getUserProperties</span>().<span style="color:#8caaee">get</span>(<span style="color:#a6d189">&#34;reason&#34;</span>);  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">if</span> (obj <span style="color:#ca9ee6">instanceof</span> CloseReason) {  
+</span></span><span style="display:flex;"><span>        CloseReason reason <span style="color:#99d1db;font-weight:bold">=</span> (CloseReason) obj;  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">if</span> (reason.<span style="color:#8caaee">getCloseCode</span>() <span style="color:#99d1db;font-weight:bold">==</span> CloseReason.<span style="color:#8caaee">CloseCodes</span>.<span style="color:#8caaee">CANNOT_ACCEPT</span>) {  
+</span></span><span style="display:flex;"><span>            System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;拒绝客户端（&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> session.<span style="color:#8caaee">getQueryString</span>() <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;）：关闭连接&#34;</span>);  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">return</span>;  
+</span></span><span style="display:flex;"><span>        }  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//将session对象从map中移除,正常关闭  </span>
+</span></span><span style="display:flex;"><span>    SESSION_POOL.<span style="color:#8caaee">remove</span>(session.<span style="color:#8caaee">getQueryString</span>());  
+</span></span><span style="display:flex;"><span>    System.<span style="color:#8caaee">out</span>.<span style="color:#8caaee">println</span>(<span style="color:#a6d189">&#34;客户端（&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> session.<span style="color:#8caaee">getQueryString</span>() <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;）：关闭连接&#34;</span>);  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>这是比较简单的应用不再考虑连接复用的问题</p></blockquote>
+<p>接下来写浏览器页面</p>
+<p>这里我们略过了~</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">&lt;!DOCTYPE html&gt;</span>  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">html</span> <span style="color:#8caaee">lang</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;en&#34;</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">head</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">meta</span> <span style="color:#8caaee">charset</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;UTF-8&#34;</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">title</span>&gt;聊天室客户端&lt;/<span style="color:#ca9ee6">title</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ca9ee6">head</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">body</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">h1</span>&gt;Chat Client&lt;/<span style="color:#ca9ee6">h1</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">div</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">input</span> <span style="color:#8caaee">id</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;clientId&#34;</span> <span style="color:#8caaee">placeholder</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;输入ID&#34;</span> <span style="color:#8caaee">value</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;1&#34;</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">input</span> <span style="color:#8caaee">onclick</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;init()&#34;</span> <span style="color:#8caaee">value</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;连接服务器&#34;</span> <span style="color:#8caaee">type</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;button&#34;</span>&gt;&lt;<span style="color:#ca9ee6">br</span>&gt;&lt;<span style="color:#ca9ee6">br</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">input</span> <span style="color:#8caaee">id</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;receiverId&#34;</span> <span style="color:#8caaee">placeholder</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;输入接收人ID&#34;</span> <span style="color:#8caaee">value</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;all&#34;</span>&gt;&lt;<span style="color:#ca9ee6">br</span>&gt;&lt;<span style="color:#ca9ee6">br</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">textarea</span> <span style="color:#8caaee">id</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;message&#34;</span> <span style="color:#8caaee">style</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;margin: 0; height: 197px; width: 362px;&#34;</span>  
+</span></span><span style="display:flex;"><span>              <span style="color:#8caaee">placeholder</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;发送消息内容&#34;</span>&gt;&lt;/<span style="color:#ca9ee6">textarea</span>&gt;&lt;<span style="color:#ca9ee6">br</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">input</span> <span style="color:#8caaee">onclick</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;send()&#34;</span> <span style="color:#8caaee">value</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;发送消息&#34;</span> <span style="color:#8caaee">type</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;button&#34;</span>&gt;  
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ca9ee6">input</span> <span style="color:#8caaee">onclick</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;closeConnect()&#34;</span> <span style="color:#8caaee">value</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;关闭连接&#34;</span> <span style="color:#8caaee">type</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;button&#34;</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ca9ee6">div</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">div</span> <span style="color:#8caaee">id</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;output&#34;</span>&gt;&lt;/<span style="color:#ca9ee6">div</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ca9ee6">script</span> <span style="color:#8caaee">type</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;text/javascript&#34;</span> <span style="color:#8caaee">language</span><span style="color:#99d1db;font-weight:bold">=</span><span style="color:#a6d189">&#34;JavaScript&#34;</span>&gt;  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//屏幕回显输出方法  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#e78284">function</span> writeToScreen(message) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#e78284">let</span> pre <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">document</span>.createElement(<span style="color:#a6d189">&#34;p&#34;</span>);  
+</span></span><span style="display:flex;"><span>        pre.style.wordWrap <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;break-word&#34;</span>;  
+</span></span><span style="display:flex;"><span>        pre.innerHTML <span style="color:#99d1db;font-weight:bold">=</span> message;  
+</span></span><span style="display:flex;"><span>        <span style="color:#99d1db">document</span>.getElementById(<span style="color:#a6d189">&#34;output&#34;</span>).appendChild(pre);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//初始化websocket  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#e78284">let</span> echo_websocket;  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">function</span> init() {  
+</span></span><span style="display:flex;"><span>        <span style="color:#e78284">let</span> clientId <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">document</span>.getElementById(<span style="color:#a6d189">&#34;clientId&#34;</span>).value;  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">/* 这里端口是写死的 */</span>        <span style="color:#e78284">let</span> wsUri <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#a6d189">&#34;ws://localhost:10800/chat?&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> clientId;  
+</span></span><span style="display:flex;"><span>        writeToScreen(<span style="color:#a6d189">&#34;连接到&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> wsUri);  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//1.创建WebSocket客户端对象  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>        echo_websocket <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#ca9ee6">new</span> WebSocket(wsUri);  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//2.开门握手完成回调  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>        echo_websocket.onopen <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span> (evt) {  
+</span></span><span style="display:flex;"><span>            console.log(evt);  
+</span></span><span style="display:flex;"><span>            writeToScreen(<span style="color:#a6d189">&#34;连接打开成功 !&#34;</span>);  
+</span></span><span style="display:flex;"><span>        };  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//3.监听服务端的消息  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>        echo_websocket.onmessage <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span> (evt) {  
+</span></span><span style="display:flex;"><span>            writeToScreen(<span style="color:#a6d189">&#34;接收服务端消息:&lt;br&gt; &#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> evt.data);  
+</span></span><span style="display:flex;"><span>        };  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//4.如果连接中断  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>        echo_websocket.onerror <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span> (evt) {  
+</span></span><span style="display:flex;"><span>            writeToScreen(<span style="color:#a6d189">&#39;&lt;span style=&#34;color: red;&#34;&gt;ERROR:&#39;</span><span style="color:#99d1db;font-weight:bold">+</span>evt.data<span style="color:#99d1db;font-weight:bold">+</span><span style="color:#a6d189">&#39;&lt;/span&gt;&#39;</span>);  
+</span></span><span style="display:flex;"><span>            <span style="color:#737994;font-style:italic">//关闭连接  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>            closeConnect();  
+</span></span><span style="display:flex;"><span>        };  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">//5.注册close事件  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>        echo_websocket.onclose <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#e78284">function</span>(evt){  
+</span></span><span style="display:flex;"><span>            writeToScreen(<span style="color:#a6d189">&#39;&lt;span style=&#34;color: green;&#34;&gt;INFO：关闭连接&lt;/span&gt; &#39;</span>);  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">if</span>(evt.reason){  
+</span></span><span style="display:flex;"><span>                writeToScreen  
+</span></span><span style="display:flex;"><span>                (<span style="color:#a6d189">`&lt;span style=&#34;color: red;&#34;&gt;错误信息：</span><span style="color:#a6d189">${</span>evt.reason<span style="color:#a6d189">}</span><span style="color:#a6d189">&lt;/span&gt; `</span>);  
+</span></span><span style="display:flex;"><span>            }  
+</span></span><span style="display:flex;"><span>        }  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//6.向服务发送消息  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#e78284">function</span> send() {  
+</span></span><span style="display:flex;"><span>        <span style="color:#e78284">let</span> message <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">document</span>.getElementById(<span style="color:#a6d189">&#34;message&#34;</span>).value;  
+</span></span><span style="display:flex;"><span>        <span style="color:#e78284">let</span> receiver <span style="color:#99d1db;font-weight:bold">=</span> <span style="color:#99d1db">document</span>.getElementById(<span style="color:#a6d189">&#34;receiverId&#34;</span>).value;  
+</span></span><span style="display:flex;"><span>        echo_websocket.send(receiver <span style="color:#99d1db;font-weight:bold">+</span> <span style="color:#a6d189">&#34;::&#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> message);  
+</span></span><span style="display:flex;"><span>        writeToScreen(<span style="color:#a6d189">&#34;发送消息: &#34;</span> <span style="color:#99d1db;font-weight:bold">+</span> message);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#737994;font-style:italic">//7.如果不需要通讯，那么关闭连接  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"></span>    <span style="color:#e78284">function</span> closeConnect() {  
+</span></span><span style="display:flex;"><span>        echo_websocket.close();  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ca9ee6">script</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ca9ee6">body</span>&gt;  
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ca9ee6">html</span>&gt;
+</span></span></code></pre></div><p>我们需要解释下构建/发送信息的代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>//6.向服务发送消息  
+</span></span><span style="display:flex;"><span>    function send() {  
+</span></span><span style="display:flex;"><span>        let message = document.getElementById(&#34;message&#34;).value;  
+</span></span><span style="display:flex;"><span>        let receiver = document.getElementById(&#34;receiverId&#34;).value;  
+</span></span><span style="display:flex;"><span>        echo_websocket.send(receiver + &#34;::&#34; + message);  
+</span></span><span style="display:flex;"><span>        writeToScreen(&#34;发送消息: &#34; + message);  
+</span></span><span style="display:flex;"><span>    } 
+</span></span></code></pre></div><p>这里拿到表单组件, 取值后通过 <code>::</code> 拼接为消息, 链接符之前为id, 之后为消息</p>
+<p>其中初始化的 <code>echo_websocket</code> 组件是dom库提供的 <code>echo_websocket = new WebSocket(wsUri);</code> , 除了IE其他浏览器都支持</p>
+<p>在前端打开三个浏览器页面, 作为三个客户端</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250223215339746.png" alt="image.png"></p>
+<p>注意id要不同</p>
+<p>后台运行服务器, 就可以开始监听了</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-308ae1c4b0a5ebcbc311194a88517449">4.11 - 响应式编程Reactor库</h1>
     
 	
 </div>
@@ -4817,7 +5373,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-22cd8a954af59004f35b2e8530004f5e">4.11 - 声明式服务</h1>
+	<h1 id="pg-22cd8a954af59004f35b2e8530004f5e">4.12 - 声明式服务</h1>
     
 	
 </div>

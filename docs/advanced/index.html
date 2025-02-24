@@ -22,51 +22,35 @@
 <title>海阔集</title>
 <meta name="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
-Redis 中间件 消息队列 什么是中间件? 为什么要用?
-维基百科这样说
-中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
-简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
-中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。
-几个容易混淆的概念
-二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分 业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。 总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件">
+Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
+wms-sample-mq 模块 pom.xml
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
 <meta property="og:url" content="https://hamhuo.xyz/docs/advanced/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="海阔集">
   <meta property="og:description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
-Redis 中间件 消息队列 什么是中间件? 为什么要用?
-维基百科这样说
-中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
-简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
-中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。
-几个容易混淆的概念
-二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分 业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。 总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件">
+Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
+wms-sample-mq 模块 pom.xml
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="海阔集">
   <meta itemprop="description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
-Redis 中间件 消息队列 什么是中间件? 为什么要用?
-维基百科这样说
-中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
-简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
-中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。
-几个容易混淆的概念
-二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分 业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。 总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件">
-  <meta itemprop="dateModified" content="2025-02-11T00:25:32+08:00">
-  <meta itemprop="wordCount" content="36">
+Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
+wms-sample-mq 模块 pom.xml
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
+  <meta itemprop="dateModified" content="2025-02-22T00:26:27+08:00">
+  <meta itemprop="wordCount" content="108">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="海阔集">
   <meta name="twitter:description" content="内容来源:
 沉默王二 GitHub 上开源的知识库《Java 进阶之路》 rabbitMQ JavaGuide 知乎-阿里大淘宝 Java进阶能力 Java作为一门编程语言, 需要和其他组件一起完成某个项目 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码
-Redis 中间件 消息队列 什么是中间件? 为什么要用?
-维基百科这样说
-中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。
-简单来说：中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。
-中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。
-几个容易混淆的概念
-二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分 业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。 总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件">
+Redis WebSocket FastExcel报表 Gateway网关(SpringCloudGateway) 中间件 消息队列 Nacos配置中心 Sential声明式服务 需要相关模块依赖, 如下是模块的实例
+wms-sample-mq 模块 pom.xml
+&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt; &lt;project xmlns=&#34;http://maven.apache.org/POM/4.0.0&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34; xsi:schemaLocation=&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;&gt; &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt; &lt;parent&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-java&lt;/artifactId&gt; &lt;version&gt;${revision}&lt;/version&gt; &lt;relativePath&gt;../pom.xml&lt;/relativePath&gt; &lt;/parent&gt; &lt;artifactId&gt;wms-sample&lt;/artifactId&gt; &lt;dependencies&gt; &lt;!-- spring mvc --&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- common --&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo&lt;/groupId&gt; &lt;artifactId&gt;wms-common&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;com.hamhuo.star&lt;/groupId&gt; &lt;artifactId&gt;wms-domain&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos discovery --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt; &lt;!-- alibaba nacos config --&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/project&gt; 启动类">
 <link rel="preload" href="/scss/main.min.023240d665d6ea36df214aa4d82691f4a70d71a02d1740f34f44227813c4b7d9.css" as="style" integrity="sha256-AjJA1mXW6jbfIUqk2CaR9KcNcaAtF0DzT0QieBPEt9k=" crossorigin="anonymous">
 <link href="/scss/main.min.023240d665d6ea36df214aa4d82691f4a70d71a02d1740f34f44227813c4b7d9.css" rel="stylesheet" integrity="sha256-AjJA1mXW6jbfIUqk2CaR9KcNcaAtF0DzT0QieBPEt9k=" crossorigin="anonymous">
 <script
@@ -158,7 +142,7 @@ Redis 中间件 消息队列 什么是中间件? 为什么要用?
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.57c97b0d4c4578c4d5841673c34c565e.json"
+    data-offline-search-index-json-src="/offline-search-index.0d725ceeecc9e39625c77f7c4edbc9af.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -182,7 +166,7 @@ Redis 中间件 消息队列 什么是中间件? 为什么要用?
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.57c97b0d4c4578c4d5841673c34c565e.json"
+    data-offline-search-index-json-src="/offline-search-index.0d725ceeecc9e39625c77f7c4edbc9af.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -328,8 +312,20 @@ Redis 中间件 消息队列 什么是中间件? 为什么要用?
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsadvanced-li">
   <a href="/docs/advanced/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-docsadvanced"><span class="td-sidebar-nav-active-item"></span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedfastdfse58886e5b883e5bc8fe5ad98e582a8-li">
-  <a href="/docs/advanced/fastdfs%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedfastdfse58886e5b883e5bc8fe5ad98e582a8"><span class="">FastDFS分布式存储</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsadvancedfastdfs-li">
+  <a href="/docs/advanced/fastdfs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsadvancedfastdfs"><span class=""></span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedfastdfsfastdfse58886e5b883e5bc8fe5ad98e582a8-li">
+  <a href="/docs/advanced/fastdfs/fastdfs%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedfastdfsfastdfse58886e5b883e5bc8fe5ad98e582a8"><span class="">FastDFS分布式存储</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsadvancedrocktmq-li">
+  <a href="/docs/advanced/rocktmq/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-docsadvancedrocktmq"><span class=""></span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedrocktmqrocketmqe6b688e681afe9989fe58897-li">
+  <a href="/docs/advanced/rocktmq/rocketmq%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedrocktmqrocketmqe6b688e681afe9989fe58897"><span class="">RocketMQ</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedfastexcele68aa5e8a1a8e7bb84e4bbb6-li">
   <a href="/docs/advanced/fastexcel%E6%8A%A5%E8%A1%A8%E7%BB%84%E4%BB%B6/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedfastexcele68aa5e8a1a8e7bb84e4bbb6"><span class="">FastExcel报表组件</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedgatewaye7bd91e585b3-li">
@@ -340,12 +336,12 @@ Redis 中间件 消息队列 什么是中间件? 为什么要用?
   <a href="/docs/advanced/jwt/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedjwt"><span class="">JWT</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancednacose9858de7bdaee4b8ade5bf83-li">
   <a href="/docs/advanced/nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancednacose9858de7bdaee4b8ade5bf83"><span class="">Nacos配置中心</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedrocketmqe6b688e681afe9989fe58897-li">
-  <a href="/docs/advanced/rocketmq%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedrocketmqe6b688e681afe9989fe58897"><span class="">RocketMQ</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedspringmvc-li">
   <a href="/docs/advanced/springmvc/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedspringmvc"><span class="">SpringMVC</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedtransmittablethreadlocalttl-li">
   <a href="/docs/advanced/transmittablethreadlocalttl/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedtransmittablethreadlocalttl"><span class="">TTL</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedwebsocket-li">
+  <a href="/docs/advanced/websocket/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedwebsocket"><span class="">WebSocket</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancedreactore5938de5ba94e5bc8fe7bc96e7a88be5ba93-li">
   <a href="/docs/advanced/reactor%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%BA%93/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-docsadvancedreactore5938de5ba94e5bc8fe7bc96e7a88be5ba93"><span class="">响应式编程Reactor库</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsadvancede5a3b0e6988ee5bc8fe69c8de58aa1-li">
@@ -378,7 +374,7 @@ Redis 中间件 消息队列 什么是中间件? 为什么要用?
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/docker/" data-taxonomy-term="docker"><span class="taxonomy-label">Docker</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gc/" data-taxonomy-term="gc"><span class="taxonomy-label">GC</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/internet/" data-taxonomy-term="internet"><span class="taxonomy-label">Internet</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/javaweb/" data-taxonomy-term="javaweb"><span class="taxonomy-label">JavaWeb</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/javaweb/" data-taxonomy-term="javaweb"><span class="taxonomy-label">JavaWeb</span><span class="taxonomy-count">3</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-taxonomy-term="java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="taxonomy-label">Java数据类型</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/jvm/" data-taxonomy-term="jvm"><span class="taxonomy-label">JVM</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/list/" data-taxonomy-term="list"><span class="taxonomy-label">List</span><span class="taxonomy-count">1</span></a></li>
@@ -404,7 +400,7 @@ Redis 中间件 消息队列 什么是中间件? 为什么要用?
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java基础能力</span><span class="taxonomy-count">39</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">8</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">9</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E7%AE%97%E6%B3%95/" data-taxonomy-term="%E7%AE%97%E6%B3%95"><span class="taxonomy-label">算法</span><span class="taxonomy-count">16</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B/" data-taxonomy-term="%E9%80%9A%E7%94%A8%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">通用能力</span><span class="taxonomy-count">6</span></a></li>
@@ -445,34 +441,86 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
 一名好的程序员不仅要知道去哪里import, 更要知道import什么组件, 甚至为组件贡献代码</p>
 <ul>
 <li>Redis</li>
+<li>WebSocket</li>
+<li>FastExcel报表</li>
+<li>Gateway网关(SpringCloudGateway)</li>
 <li>中间件
 <ul>
 <li>消息队列</li>
+<li>Nacos配置中心</li>
+<li>Sential声明式服务</li>
 </ul>
 </li>
 </ul>
-<p>什么是中间件? 为什么要用?</p>
-<p>维基百科这样说</p>
-<blockquote>
-<p>中间件（英语：Middleware），又译中间件、中介层，是一类提供系统软件和应用软件之间连接、便于软件各部件之间的沟通的软件，应用软件可以借助中间件在不同的技术架构之间共享信息与资源。中间件位于客户机服务器的操作系统之上，管理着计算资源和网络通信。</p></blockquote>
-<p>简单来说：<strong>中间件就是一类为应用软件服务的软件，应用软件是为用户服务的，用户不会接触或者使用到中间件。</strong></p>
-<p>中间件有 RPC 框架、消息队列、MQ 分布式组件、HTTP 服务器、任务调度框架、配置中心、数据库层的分库分表工具和数据迁移工具等等。</p>
-<p>几个容易混淆的概念</p>
-<ol>
-<li>二方/三方的工具不是中间件, 这些工具包是在各种开发场景中沉淀的一些工具类集合, 本质也是代码的一部分</li>
-<li>业务平台不是中间件，业务平台是从服务的视角抽象的能同时支撑多个业务，业务之间的信息能形成交互和增强的平台。</li>
-</ol>
-<p>总之, 中间件是系统软件和应用软件之间, 软件与各部件之间, 管理客户机与系统软件之间的计算资源和网络通信服务于用户但用户不可见的软件</p>
-
+<p>需要相关模块依赖, 如下是模块的实例</p>
+<p><code>wms-sample-mq</code> 模块
+<code>pom.xml</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;project</span> <span style="color:#8caaee">xmlns=</span><span style="color:#a6d189">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#8caaee">xmlns:xsi=</span><span style="color:#a6d189">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8caaee">xsi:schemaLocation=</span><span style="color:#a6d189">&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#ca9ee6">&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;modelVersion&gt;</span>4.0.0<span style="color:#ca9ee6">&lt;/modelVersion&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;parent&gt;</span>        <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.hamhuo.star<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-java<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;version&gt;</span>${revision}<span style="color:#ca9ee6">&lt;/version&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;relativePath&gt;</span>../pom.xml<span style="color:#ca9ee6">&lt;/relativePath&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;/parent&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-sample<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;dependencies&gt;</span>        <span style="color:#737994;font-style:italic">&lt;!-- spring mvc --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">&lt;!-- common --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.hamhuo<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-common<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.hamhuo.star<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>wms-domain<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">&lt;!-- alibaba nacos discovery --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.alibaba.cloud<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-cloud-starter-alibaba-nacos-discovery<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#737994;font-style:italic">&lt;!-- alibaba nacos config --&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;dependency&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;groupId&gt;</span>com.alibaba.cloud<span style="color:#ca9ee6">&lt;/groupId&gt;</span>  
+</span></span><span style="display:flex;"><span>            <span style="color:#ca9ee6">&lt;artifactId&gt;</span>spring-cloud-starter-alibaba-nacos-config<span style="color:#ca9ee6">&lt;/artifactId&gt;</span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#ca9ee6">&lt;/dependency&gt;</span>   
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">&lt;/dependencies&gt;</span>  
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">&lt;/project&gt;</span>
+</span></span></code></pre></div><p>启动类</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#737994;font-style:italic">/**  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;p&gt; 描述：模块程序启动入口  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> * &lt;/p&gt;  
+</span></span></span><span style="display:flex;"><span><span style="color:#737994;font-style:italic"> */</span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@SpringBootApplication</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableDiscoveryClient</span>  
+</span></span><span style="display:flex;"><span><span style="color:#8caaee;font-weight:bold">@EnableBinding</span>(Source.<span style="color:#8caaee">class</span>)  
+</span></span><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">class</span> <span style="color:#e5c890">MqApplication</span> {  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#e78284">public</span> <span style="color:#e78284">static</span> <span style="color:#e78284">void</span> <span style="color:#8caaee">main</span>(String<span style="color:#99d1db;font-weight:bold">[]</span> args) {  
+</span></span><span style="display:flex;"><span>        SpringApplication.<span style="color:#8caaee">run</span>(MqApplication.<span style="color:#8caaee">class</span>, args);  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
   <div class="section-index">
     
     
     <hr class="panel-line">
         <div class="entry">
                 <h5>
-                    <a href="/docs/advanced/fastdfs%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/">FastDFS分布式存储</a>
+                    <a href="/docs/advanced/fastdfs/"></a>
                 </h5>
-                <p>分布式存储中间件</p>
+                <p></p>
+            </div>
+        <div class="entry">
+                <h5>
+                    <a href="/docs/advanced/rocktmq/"></a>
+                </h5>
+                <p></p>
             </div>
         <div class="entry">
                 <h5>
@@ -506,12 +554,6 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
             </div>
         <div class="entry">
                 <h5>
-                    <a href="/docs/advanced/rocketmq%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">RocketMQ</a>
-                </h5>
-                <p>MQ的一种, 高并发常用</p>
-            </div>
-        <div class="entry">
-                <h5>
                     <a href="/docs/advanced/springmvc/">SpringMVC</a>
                 </h5>
                 <p>MVC 也就是 Model-View-Controller, 这种模式用于应用程序的分层开发</p>
@@ -521,6 +563,13 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
                     <a href="/docs/advanced/transmittablethreadlocalttl/">TTL</a>
                 </h5>
                 <p>基于 TransmittableThreadLocal (TTL) 自定义请求头拦截器，将Header 数据封装到线程变量中方便获取，减少用户信息数据库查询次数，同时验证当前用户有效期自动刷新有效期。</p>
+            </div>
+        <div class="entry">
+                <h5>
+                    <a href="/docs/advanced/websocket/">WebSocket</a>
+                </h5>
+                <p>HTTP只能单向向服务器请求, 如果要实现服务器通知, 就必须由客户端轮询, 压力非常大. 并且HTTP会携带无效信息, 延迟很高
+因此出现了WebSocket</p>
             </div>
         <div class="entry">
                 <h5>
@@ -536,7 +585,7 @@ Java作为一门编程语言, 需要和其他组件一起完成某个项目
             </div>
         </div>
 <div class="td-page-meta__lastmod">
-  Last modified February 11, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/3daa8dbe64844ddeab11c96a8fc71ec0b11f156e">Mysql (3daa8db)</a>
+  Last modified February 22, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/04b56704971411cc95f588d43f6765d4e64251c9">面渣 se (04b5670)</a>
 </div>
 </div>
 
