@@ -9,9 +9,16 @@
     <atom:link href="https://hamhuo.xyz/tags/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%BB%BA%E6%A8%A1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Intro</title>
-      <link>https://hamhuo.xyz/massey/sysanalysismodelling/w1/intro/</link>
+      <link>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/massey/sysanalysismodelling/w1/intro/</guid>
+      <guid>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro-2/</guid>
+      <description>&lt;p&gt;as is to be&lt;/p&gt;&#xA;&lt;p&gt;due to problems with requirements&lt;/p&gt;&#xA;&lt;p&gt;Small batches of requirements can be identified and implemented incrementally&#xA;like itrative&lt;/p&gt;&#xA;&lt;p&gt;avoid risk convert high level business requirements (from the system request) into detailed requirements that can be used as inputs for creating model&lt;/p&gt;&#xA;&lt;p&gt;high to low require&lt;/p&gt;&#xA;&lt;p&gt;what&amp;rsquo;s require&lt;/p&gt;&#xA;&lt;p&gt;detail&lt;/p&gt;&#xA;&lt;p&gt;fuctional user and do&#xA;non - system persisty like AES encrypt, can be test&lt;/p&gt;&#xA;&lt;p&gt;non&#xA;Look and feel requirements (fun, motivating, etc.) no subjective language&#xA;standers or guidlines pagelayout, color patterns, follow those and&#xA;reach some effact, can be tested&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intro</title>
+      <link>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro/</guid>
       <description>&lt;p&gt;System?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Archive Goals&lt;/li&gt;&#xA;&lt;li&gt;Add Value (MOST IMPORTANT!!!)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;how to add hours&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why we need model&lt;/p&gt;&#xA;&lt;p&gt;we need required that everybody understand&#xA;clear and no confusion&lt;/p&gt;&#xA;&lt;p&gt;data, interface,  performance&lt;/p&gt;&#xA;&lt;p&gt;and a solution focussed on solution&lt;/p&gt;&#xA;&lt;p&gt;What is SAD?&lt;/p&gt;&#xA;&lt;p&gt;ensure systems meets the need, somtimes customer doesn&amp;rsquo;t explained the need accurately&lt;/p&gt;&#xA;&lt;p&gt;ensure system quality&lt;/p&gt;&#xA;&lt;p&gt;Provided Value to organization&lt;/p&gt;&#xA;&lt;p&gt;goals:&#xA;translaes, conncts, conmmunicates&lt;/p&gt;&#xA;&lt;p&gt;bridges the gap between the users/organisation and the technological details&lt;/p&gt;</description>
     </item>
   </channel>

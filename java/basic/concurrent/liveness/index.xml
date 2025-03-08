@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Liveness on 海阔集</title>
+    <link>https://hamhuo.xyz/java/basic/concurrent/liveness/</link>
+    <description>Recent content in Liveness on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://hamhuo.xyz/java/basic/concurrent/liveness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deadlock</title>
+      <link>https://hamhuo.xyz/java/basic/concurrent/liveness/deadlock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/java/basic/concurrent/liveness/deadlock/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Deadlock&lt;/em&gt; describes a situation where two or more threads are blocked forever, waiting for each other.&lt;/p&gt;&#xA;&lt;p&gt;Alphonse and Gaston are friends, and great believers in courtesy. A strict rule of courtesy is that when you bow to a friend, you must remain bowed until your friend has a chance to return the bow. Unfortunately, this rule does not account for the possibility that two friends might bow to each other at the same time. This example application followed models this possibility:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

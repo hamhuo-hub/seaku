@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeepLeaning on 海阔集</title>
+    <link>https://hamhuo.xyz/categories/deepleaning/</link>
+    <description>Recent content in DeepLeaning on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://hamhuo.xyz/categories/deepleaning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neutral Network</title>
+      <link>https://hamhuo.xyz/graphicsai/neunet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/graphicsai/neunet/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;refer:&#xA;&lt;a href=&#34;http://neuralnetworksanddeeplearning.com/chap1.html&#34;&gt;Using neural nets to recognize handwritten digits&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;focus on explaining why things are done the way they are, and on building your neural networks intuition.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;overview&#34;&gt;OverView&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#overview&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;h6 id=&#34;recognize-handdigits&#34;&gt;recognize handdigits&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#recognize-handdigits&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h6&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt; we don&amp;rsquo;t usually appreciate how tough a problem our visual systems solve.&#xA; &#xA; write a computer program to recognize digits like those above&#xA; &#xA; try to make such rules precise will got tou confuse&lt;/p&gt;&#xA;&lt;h6 id=&#34;neural-networks&#34;&gt;Neural networks&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#neural-networks&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h6&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;The idea is to take a large number of handwritten digits&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

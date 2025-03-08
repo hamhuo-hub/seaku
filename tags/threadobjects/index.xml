@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ThreadObjects on 海阔集</title>
+    <link>https://hamhuo.xyz/tags/threadobjects/</link>
+    <description>Recent content in ThreadObjects on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://hamhuo.xyz/tags/threadobjects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Thread Objects</title>
+      <link>https://hamhuo.xyz/java/basic/concurrent/threadobjects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/java/basic/concurrent/threadobjects/</guid>
+      <description>&lt;p&gt;内容来源:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;沉默王二 GitHub 上开源的知识库《&lt;a href=&#34;https://github.com/itwanger/toBeBetterJavaer&#34;&gt;Java 进阶之路&lt;/a&gt;》&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://javaguide.cn/java/concurrent/&#34;&gt;JavaGuide&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/jEx-4XhNGOFdCo4Nou5tqg&#34;&gt;CLH锁 - Quner技术沙龙&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;操作系统 - 西电出版&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

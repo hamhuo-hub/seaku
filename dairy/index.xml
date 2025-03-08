@@ -36,11 +36,18 @@
       <description>&lt;p&gt;项目开始了&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;高兴 加入了天才噜噜噜的群&lt;/li&gt;&#xA;&lt;li&gt;高兴 redis缓存一致模型我一个人搞出来了&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>https://hamhuo.xyz/dairy/2%E6%9C%8821%E6%97%A5/</link>
+      <title>2月27日</title>
+      <link>https://hamhuo.xyz/dairy/2%E6%9C%8827%E6%97%A5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/dairy/2%E6%9C%8821%E6%97%A5/</guid>
-      <description></description>
+      <guid>https://hamhuo.xyz/dairy/2%E6%9C%8827%E6%97%A5/</guid>
+      <description>&lt;p&gt;尝试投递了第一批简历, 0面试&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;太着急了, 八股, 力扣没有准备充分, 但是这个不是主要原因&lt;/li&gt;&#xA;&lt;li&gt;主要原因是简历的问题, 拷打业务准备不充分&#xA;解决:&lt;/li&gt;&#xA;&lt;li&gt;10天冲刺计划&#xA;计划:&#xA;- 个人端口完成 2/28&#xA;- 简历完成 2/27&#xA;- 每日力扣 两题, 只做热门题 10天 两遍&#xA;- 面渣背诵加上热门50题 10天 两遍&#xA;- 小组模块完成 3天&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hamhuo.xyz/dairy/3%E6%9C%881%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/dairy/3%E6%9C%881%E6%97%A5/</guid>
+      <description>&lt;p&gt;完成了redis的分页和 redis + mysql 悲观锁的一致双写&#xA;今天通宵完成笔记和国际化模块的工作&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Oauth2+Spring Cloud Gateway的项目架构准备好&lt;/li&gt;&#xA;&lt;li&gt;完成鉴权模型的笔记, 流程图梳理完毕&lt;/li&gt;&#xA;&lt;li&gt;redis的八股, 花点钱买热门50八股开始背&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

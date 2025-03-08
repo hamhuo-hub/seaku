@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>海阔集</title>
+    <link>https://hamhuo.xyz/java/advanced/fastdfs/</link>
+    <description>Recent content on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://hamhuo.xyz/java/advanced/fastdfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FastDFS分布式存储</title>
+      <link>https://hamhuo.xyz/java/advanced/fastdfs/fastdfs%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/java/advanced/fastdfs/fastdfs%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/</guid>
+      <description>&lt;h4 id=&#34;为什么需要文件服务器&#34;&gt;为什么需要文件服务器?&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%9c%80%e8%a6%81%e6%96%87%e4%bb%b6%e6%9c%8d%e5%8a%a1%e5%99%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;浏览器请求可能会携带头像文件, 服务器处理后存储在本地磁盘&lt;/p&gt;&#xA;&lt;p&gt;但是假如还有一个服务需要操作订单&lt;/p&gt;&#xA;&lt;p&gt;那么就需要异步从存储头像拿头像&lt;/p&gt;&#xA;&lt;p&gt;也就是说用户信息业务崩溃后, 导致订单服务器也一并崩溃&lt;/p&gt;&#xA;&lt;p&gt;为了解耦合, 我们把文件存储到专门的服务器里, 保证系统稳定&lt;/p&gt;&#xA;&lt;p&gt;当用户在订单管理修改信息后, 还需要同步到用户信息服务器&lt;/p&gt;&#xA;&lt;p&gt;这需要传递两次, 还要保证一致性, 倒不如直接把服务器分离, 只传递文件地址&#xA;这样就可以减少服务间的传递, 而且也不需要传递大尺寸的文件, 只要传链接就可以&lt;/p&gt;&#xA;&lt;h4 id=&#34;使用&#34;&gt;使用&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e4%bd%bf%e7%94%a8&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;检查nacos配置&#xA;第三方服务&lt;/p&gt;&#xA;&lt;p&gt;下载地址是由nginx管理的, 所以还需要nginx配置&lt;/p&gt;&#xA;&lt;p&gt;注入fastdfs客户端&#xA;配置文件服务器url 也就是 nginx的IP地址&lt;/p&gt;&#xA;&lt;p&gt;上传文件&#xA;传入 MultipatFile file&#xA;首先提取后缀名, 左闭右开去掉点放到新的子串&#xA;直接调客户端上传即可&#xA;用户回显, 是否上传成功, 看有没有文件信息就可以&lt;/p&gt;&#xA;&lt;p&gt;下载&#xA;也就是响应文件, 创建响应实体内部放字节流&#xA;调客户端下载, 传入group组和文件id&#xA;下载完成的文件命名, 用时间就可以&#xA;定义好的名字回传道响应的响应头&lt;/p&gt;&#xA;&lt;p&gt;删除文件&#xA;还是组和文件id&#xA;调客户端删除&#xA;回调是int值, 匹配定义的预设输出传回即可&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
