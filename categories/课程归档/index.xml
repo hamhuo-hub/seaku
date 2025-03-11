@@ -22,32 +22,32 @@
       <description>&lt;p&gt;&lt;strong&gt;CPU 缓存是为了解决 CPU 处理速度和内存处理速度不对等的问题。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250205094918596.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;CPU Cache 的工作方式：&lt;/strong&gt; 先复制一份数据到 CPU Cache 中，当 CPU 需要用到的时候就可以直接从 CPU Cache 中读取数据，当运算完成后，再将运算得到的数据写回 Main Memory 中。但是，这样存在 &lt;strong&gt;内存缓存不一致性的问题&lt;/strong&gt; ！比如我执行一个 i++ 操作的话，如果两个线程同时执行的话，假设两个线程从 CPU Cache 中读取的 i=1，两个线程做了 i++ 运算完之后再写回 Main Memory 之后 i=2，而正确结果应该是 i=3。&lt;/p&gt;&#xA;&lt;p&gt;操作系统屏蔽了底层硬件的操作细节，将各种硬件资源虚拟化。于是，操作系统也就同样需要解决内存缓存不一致性问题。&lt;/p&gt;&#xA;&lt;p&gt;操作系统通过 &lt;strong&gt;内存模型（Memory Model）&lt;/strong&gt; 定义一系列规范来解决这个问题。无论是 Windows 系统，还是 Linux 系统，它们都有特定的内存模型。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Intro</title>
-      <link>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro-2/</link>
+      <title>Intro to  Systems Analysis and Modelling</title>
+      <link>https://hamhuo.xyz/school/159.225/week1_2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro-2/</guid>
-      <description>&lt;p&gt;as is to be&lt;/p&gt;&#xA;&lt;p&gt;due to problems with requirements&lt;/p&gt;&#xA;&lt;p&gt;Small batches of requirements can be identified and implemented incrementally&#xA;like itrative&lt;/p&gt;&#xA;&lt;p&gt;avoid risk convert high level business requirements (from the system request) into detailed requirements that can be used as inputs for creating model&lt;/p&gt;&#xA;&lt;p&gt;high to low require&lt;/p&gt;&#xA;&lt;p&gt;what&amp;rsquo;s require&lt;/p&gt;&#xA;&lt;p&gt;detail&lt;/p&gt;&#xA;&lt;p&gt;fuctional user and do&#xA;non - system persisty like AES encrypt, can be test&lt;/p&gt;&#xA;&lt;p&gt;non&#xA;Look and feel requirements (fun, motivating, etc.) no subjective language&#xA;standers or guidlines pagelayout, color patterns, follow those and&#xA;reach some effact, can be tested&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Intro</title>
-      <link>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro/</guid>
-      <description>&lt;p&gt;System?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Archive Goals&lt;/li&gt;&#xA;&lt;li&gt;Add Value (MOST IMPORTANT!!!)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;how to add hours&lt;/p&gt;&#xA;&lt;p&gt;That&amp;rsquo;s why we need model&lt;/p&gt;&#xA;&lt;p&gt;we need required that everybody understand&#xA;clear and no confusion&lt;/p&gt;&#xA;&lt;p&gt;data, interface,  performance&lt;/p&gt;&#xA;&lt;p&gt;and a solution focussed on solution&lt;/p&gt;&#xA;&lt;p&gt;What is SAD?&lt;/p&gt;&#xA;&lt;p&gt;ensure systems meets the need, somtimes customer doesn&amp;rsquo;t explained the need accurately&lt;/p&gt;&#xA;&lt;p&gt;ensure system quality&lt;/p&gt;&#xA;&lt;p&gt;Provided Value to organization&lt;/p&gt;&#xA;&lt;p&gt;goals:&#xA;translaes, conncts, conmmunicates&lt;/p&gt;&#xA;&lt;p&gt;bridges the gap between the users/organisation and the technological details&lt;/p&gt;</description>
+      <guid>https://hamhuo.xyz/school/159.225/week1_2/</guid>
+      <description>&lt;h4 id=&#34;what-is-system&#34;&gt;What is System&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#what-is-system&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;There are two jobs mainly for system&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;achieve goals&lt;/li&gt;&#xA;&lt;li&gt;MOST IMPORTANTLY add value to existing system&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;A system generally contain 2 character, user and developer. Developer can get value from user and user needs will accomplished from system&lt;/p&gt;&#xA;&lt;p&gt;For programmer build a system using code. before writing they need a plan.&lt;/p&gt;&#xA;&lt;h4 id=&#34;what-is-systems-analysis-and-modelling&#34;&gt;What is Systems Analysis and Modelling?&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#what-is-systems-analysis-and-modelling&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;Programmers need to know what to write.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Intro To Java</title>
-      <link>https://hamhuo.xyz/school/gamingprogramming/introduction/</link>
+      <link>https://hamhuo.xyz/school/159.261/back2java/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/gamingprogramming/introduction/</guid>
+      <guid>https://hamhuo.xyz/school/159.261/back2java/</guid>
       <description>&lt;p&gt;Quiz:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;One of the components of a computer is its CPU. What is a CPU and what role does it play in a computer?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Central process Unit, a component of computer,  the job of CPU is to excute programs&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Explain what is meant by an “asynchronous event.” Give some examples.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;event happen at unpredictable time.&#xA;when CPU needs data in disk, CPU will send signal to disk ask for preparing, disk has releative low speed compare to CPU, so data preparing as an unpredictable event can be seen as asynchronous event.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>SAD 系统分析与建模</title>
-      <link>https://hamhuo.xyz/school/sysanalysismodelling/</link>
+      <title>Requirements Gathering</title>
+      <link>https://hamhuo.xyz/school/159.225/week1_2/week12/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/sysanalysismodelling/</guid>
-      <description></description>
+      <guid>https://hamhuo.xyz/school/159.225/week1_2/week12/</guid>
+      <description>&lt;p&gt;The systems development process transforms the &lt;em&gt;&lt;strong&gt;existing (as is)&lt;/strong&gt;&lt;/em&gt; system into the &lt;em&gt;&lt;strong&gt;proposed (to be)&lt;/strong&gt;&lt;/em&gt; system.&lt;/p&gt;&#xA;&lt;p&gt;due to problems with requirements&lt;/p&gt;&#xA;&lt;p&gt;Small batches of requirements can be identified and implemented incrementally&#xA;like itrative&lt;/p&gt;&#xA;&lt;p&gt;avoid risk convert high level business requirements (from the system request) into detailed requirements that can be used as inputs for creating model&lt;/p&gt;&#xA;&lt;p&gt;high to low require&lt;/p&gt;&#xA;&lt;p&gt;what&amp;rsquo;s require&lt;/p&gt;&#xA;&lt;p&gt;detail&lt;/p&gt;&#xA;&lt;p&gt;fuctional user and do&#xA;non - system persisty like AES encrypt, can be test&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scenarios and Use Cases</title>
+      <link>https://hamhuo.xyz/school/159.225/week3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/159.225/week3/</guid>
+      <description>&lt;p&gt;General software followed model of SDLC (&lt;em&gt;&lt;strong&gt;Systems Development Life Cycle (SDLC)&lt;/strong&gt;&lt;/em&gt;) which we have introduced. We need find a formalized approach to implementing the SDLC.&lt;/p&gt;&#xA;&lt;p&gt;The approach or &lt;em&gt;&lt;strong&gt;&amp;lsquo;find a way&amp;rsquo;&lt;/strong&gt;&lt;/em&gt; called &lt;em&gt;&lt;strong&gt;methodology&lt;/strong&gt;&lt;/em&gt;&#xA;A methodology is a formalized approach to implementing the SDLC (i.e., it is a list of steps and deliverables).&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Some methodologies are formal standards used by government agencies, whereas others have been developed by consulting fi rms to sell to clients. Many organizations have internal methodologies that have been honed over the years, and they explain exactly how each phase of the SDLC is to be performed in that company.&lt;/p&gt;</description>
     </item>
     <item>
       <title>存储器的层次结构</title>
@@ -65,9 +65,9 @@
     </item>
     <item>
       <title>游戏编程 GamingProgramming 159.261</title>
-      <link>https://hamhuo.xyz/school/gamingprogramming/</link>
+      <link>https://hamhuo.xyz/school/159.261/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/gamingprogramming/</guid>
+      <guid>https://hamhuo.xyz/school/159.261/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In this course, we will explore a range of essential topics for implementing computer games including fundamental computer graphics, games software architecture and game physics systems. The course contains a significant practical computer lab component where students are guided through the games development process.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;3D is NOT included&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250224103344778.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>

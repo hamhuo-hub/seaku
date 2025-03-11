@@ -11,6 +11,8 @@
     <loc>https://hamhuo.xyz/java/advanced/rocktmq/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
+    <loc>https://hamhuo.xyz/school/159.225/</loc>
+  </url><url>
     <loc>https://hamhuo.xyz/leetcode/array/1.-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/leetcode/tree/101.-%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
@@ -49,6 +51,8 @@
   </url><url>
     <loc>https://hamhuo.xyz/dairy/2%E6%9C%8827%E6%97%A5/</loc>
   </url><url>
+    <loc>https://hamhuo.xyz/dairy/3%E6%9C%889%E6%97%A5/</loc>
+  </url><url>
     <loc>https://hamhuo.xyz/leetcode/floatingwindow/438.-%E6%89%BE%E5%88%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%89%80%E6%9C%89%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/leetcode/array/49.-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/</loc>
@@ -60,13 +64,15 @@
     <loc>https://hamhuo.xyz/leetcode/matrix/59.-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5-ii/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/simpleclassifynet/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/advanced/aop%E5%88%87%E9%9D%A2/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/aqs/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/synchronization/atomic/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/school/computerinternet/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
@@ -74,8 +80,10 @@
     <loc>https://hamhuo.xyz/school/opreationsystem/cpu%E9%AB%98%E9%80%9F%E7%BC%93%E5%AD%98/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/liveness/deadlock/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/runvsstart/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/docker/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
@@ -84,16 +92,15 @@
   </url><url>
     <loc>https://hamhuo.xyz/java/advanced/fastexcel%E6%8A%A5%E8%A1%A8%E7%BB%84%E4%BB%B6/</loc>
   </url><url>
+    <loc>https://hamhuo.xyz/school/159.261/finalassign/</loc>
+  </url><url>
     <loc>https://hamhuo.xyz/java/advanced/gateway%E7%BD%91%E5%85%B3/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/java/advanced/intercepter%E6%8B%A6%E6%88%AA%E5%99%A8/</loc>
   </url><url>
-    <loc>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro-2/</loc>
+    <loc>https://hamhuo.xyz/school/159.225/week1_2/</loc>
   </url><url>
-    <loc>https://hamhuo.xyz/school/sysanalysismodelling/w1/intro/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
-  </url><url>
-    <loc>https://hamhuo.xyz/school/gamingprogramming/introduction/</loc>
+    <loc>https://hamhuo.xyz/school/159.261/back2java/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/interview/javase/</loc>
     <lastmod>2025-02-24T11:32:31+08:00</lastmod>
@@ -121,12 +128,16 @@
   </url><url>
     <loc>https://hamhuo.xyz/java/advanced/jwt%E4%B8%8Esession/</loc>
   </url><url>
+    <loc>https://hamhuo.xyz/graphicsai/gradientdescent/</loc>
+  </url><url>
     <loc>https://hamhuo.xyz/java/basic/container/linkedlist/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/liveness/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/synchronization/memconsist/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/interview/mysql/</loc>
   </url><url>
@@ -152,17 +163,20 @@
     <loc>https://hamhuo.xyz/java/advanced/nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/neunet/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/advanced/oauth2%E8%AE%A4%E8%AF%81/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/synchronization/readwritelock/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/synchronization/reentrantlock%E9%87%8D%E5%85%A5%E9%94%81/</loc>
   </url><url>
+    <loc>https://hamhuo.xyz/school/159.225/week1_2/week12/</loc>
+  </url><url>
     <loc>https://hamhuo.xyz/java/advanced/rocktmq/rocketmq%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</loc>
   </url><url>
-    <loc>https://hamhuo.xyz/school/sysanalysismodelling/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <loc>https://hamhuo.xyz/school/159.225/week3/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/javaweb/servlet/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
@@ -171,10 +185,13 @@
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/synchronization/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/archofneunet/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/threadobjects/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/threadlocal/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
@@ -199,6 +216,7 @@
     <loc>https://hamhuo.xyz/java/advanced/%E5%A3%B0%E6%98%8E%E5%BC%8F%E6%9C%8D%E5%8A%A1/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/threadobjects/procthread/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/school/opreationsystem/%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84/</loc>
   </url><url>
@@ -222,8 +240,7 @@
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/designpatterns/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95/</loc>
   </url><url>
-    <loc>https://hamhuo.xyz/school/gamingprogramming/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <loc>https://hamhuo.xyz/school/159.261/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/leetcode/floatingwindow/</loc>
     <lastmod>2025-02-26T11:48:35+08:00</lastmod>
@@ -260,6 +277,7 @@
     <loc>https://hamhuo.xyz/dairy/3%E6%9C%881%E6%97%A5/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/interview/spring/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/basic/concurrent/condition%E7%AD%89%E5%BE%85%E9%80%9A%E7%9F%A5%E6%9D%A1%E4%BB%B6/</loc>
   </url><url>
@@ -270,41 +288,40 @@
     <loc>https://hamhuo.xyz/java/basic/container/heap/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/school/gamingprogramming/resources/</loc>
+    <loc>https://hamhuo.xyz/school/159.261/resources/</loc>
+  </url><url>
+    <loc>https://hamhuo.xyz/categories/ai/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/leetcode/</loc>
     <lastmod>2025-02-26T11:48:35+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
-  </url><url>
-    <loc>https://hamhuo.xyz/tags/deepleaning/</loc>
-  </url><url>
-    <loc>https://hamhuo.xyz/categories/deepleaning/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/java/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/gamesprogramming/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/tags/gaming/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/gc/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/internet/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/interview/</loc>
-    <lastmod>2025-02-24T11:32:31+08:00</lastmod>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/javaweb/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
   </url><url>
@@ -318,6 +335,10 @@
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/liveness/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
+  </url><url>
+    <loc>https://hamhuo.xyz/tags/machinelearning/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/mysql/</loc>
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
@@ -329,11 +350,13 @@
     <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/synchronized/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/threadobjects/</loc>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/</loc>
   </url><url>
@@ -350,7 +373,7 @@
     <loc>https://hamhuo.xyz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</loc>
   </url><url>
@@ -366,7 +389,7 @@
     <loc>https://hamhuo.xyz/tags/%E6%A0%91/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
+    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</loc>
     <lastmod>2025-02-26T11:48:35+08:00</lastmod>
@@ -377,9 +400,6 @@
   </url><url>
     <loc>https://hamhuo.xyz/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2025-02-26T11:48:35+08:00</lastmod>
-  </url><url>
-    <loc>https://hamhuo.xyz/tags/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E5%BB%BA%E6%A8%A1/</loc>
-    <lastmod>2025-03-03T04:12:40+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
   </url><url>
