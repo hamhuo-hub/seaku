@@ -140,7 +140,7 @@ Under instruction of Dr.Liu i had an opprtunrty start my very early academic exp
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.ca158dd6b9eb75478f84fcecacc12736.json"
+    data-offline-search-index-json-src="/offline-search-index.f5fd632a3037e3faca7ffa8208b08e25.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -314,13 +314,14 @@ The weight and bias auctually is improved by system it self and used a methedolo
 	<p>We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.</p>
 <p>To let network learn itself, we need some data. Like digits</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200233941.png" alt="image.png"></p>
-<p>Actually, Those digist from a so-called training data set called <em><strong>MNIST dataset</strong></em>
-which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.</p>
-<p>The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.</p>
-<p>OK, for convince let&rsquo;s simpfy the process to <img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200754080.png" alt="image.png"></p>
-<p>y is output, which is a number 0-9.  That&rsquo;s means y is a 10-dimensional vector.</p>
-<p>and x is input, we simpfy the entire input layer to one notation x. Let me explain that:</p>
-<p>x as a 28×28=784 dimensional vector, we define every pixel to a input neural and the vector represents the grey value for a single pixel in the image.</p>
+<p>Actually, these digits come from a well-known training dataset called the <strong>MNIST dataset</strong>, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.</p>
+<p>The MNIST data is divided into two parts: <strong>Training</strong> and <strong>Test</strong> datasets. We primarily use the training dataset to improve the model&rsquo;s accuracy and the test dataset to evaluate the model&rsquo;s performance.</p>
+<p>For simplicity, let&rsquo;s simplify the process. In linear algebra, we know that multiple values can define a &lsquo;dot&rsquo; in space. So, we transform the input layer into a vector (which we can think of as a dot), and then use a function to map it to the target value <strong>y</strong>.</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200754080.png" alt="image.png"></p>
+<p>In this case, <strong>y</strong> is the output, which ranges from 0 to 9. This means <strong>y</strong> is a 10-dimensional vector.</p>
+<p>As for <strong>x</strong>, we simplify the entire input layer into a single notation: <strong>x</strong>. Let me explain further:</p>
+<p><strong>x</strong> is a 28×28=784-dimensional vector. We define each pixel as an input neuron, and the vector represents the grayscale value of a single pixel in the image.</p>
+<p>So, in this process, we map the 784-dimensional vector (input) into a 10-dimensional vector (output).</p>
 
 </div>
 
