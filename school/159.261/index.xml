@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>游戏编程 GamingProgramming 159.261 on 海阔集</title>
+    <title>159.261 Gaming Programming on 海阔集</title>
     <link>https://hamhuo.xyz/school/159.261/</link>
-    <description>Recent content in 游戏编程 GamingProgramming 159.261 on 海阔集</description>
+    <description>Recent content in 159.261 Gaming Programming on 海阔集</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://hamhuo.xyz/school/159.261/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>finalassign</title>
-      <link>https://hamhuo.xyz/school/159.261/finalassign/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/159.261/finalassign/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Intro To Java</title>
-      <link>https://hamhuo.xyz/school/159.261/back2java/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/159.261/back2java/</guid>
-      <description>&lt;p&gt;Quiz:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;One of the components of a computer is its CPU. What is a CPU and what role does it play in a computer?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Central process Unit, a component of computer,  the job of CPU is to excute programs&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Explain what is meant by an “asynchronous event.” Give some examples.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;event happen at unpredictable time.&#xA;when CPU needs data in disk, CPU will send signal to disk ask for preparing, disk has releative low speed compare to CPU, so data preparing as an unpredictable event can be seen as asynchronous event.&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

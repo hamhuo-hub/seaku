@@ -8,11 +8,18 @@
     <language>en</language>
     <atom:link href="https://hamhuo.xyz/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>游戏编程 GamingProgramming 159.261</title>
+      <title>159.261 Gaming Programming</title>
       <link>https://hamhuo.xyz/school/159.261/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hamhuo.xyz/school/159.261/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In this course, we will explore a range of essential topics for implementing computer games including fundamental computer graphics, games software architecture and game physics systems. The course contains a significant practical computer lab component where students are guided through the games development process.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;3D is NOT included&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250224103344778.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Overview Java</title>
+      <link>https://hamhuo.xyz/school/159.261/week1_2_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/159.261/week1_2_3/</guid>
+      <description>&lt;p&gt;Quiz:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;One of the components of a computer is its CPU. What is a CPU and what role does it play in a computer?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Central process Unit, a component of computer,  the job of CPU is to excute programs&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Explain what is meant by an “asynchronous event.” Give some examples.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;event happen at unpredictable time.&#xA;when CPU needs data in disk, CPU will send signal to disk ask for preparing, disk has releative low speed compare to CPU, so data preparing as an unpredictable event can be seen as asynchronous event.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

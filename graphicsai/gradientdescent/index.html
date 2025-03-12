@@ -18,20 +18,37 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Learning with gradient descent | 海阔集</title>
-<meta name="description" content="集百川者, 成海阔">
+<meta name="description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+To let network learn itself, we need some data. Like digits
+Actually, Those digist from a so-called training data set called MNIST dataset which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.
+The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.">
 <meta property="og:url" content="https://hamhuo.xyz/graphicsai/gradientdescent/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Learning with gradient descent">
-  <meta property="og:description" content="集百川者, 成海阔">
+  <meta property="og:description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+To let network learn itself, we need some data. Like digits
+Actually, Those digist from a so-called training data set called MNIST dataset which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.
+The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="graphics&amp;ai">
+    <meta property="article:modified_time" content="2025-03-12T22:46:23+08:00">
+    <meta property="article:tag" content="MachineLearning">
 
   <meta itemprop="name" content="Learning with gradient descent">
-  <meta itemprop="description" content="集百川者, 成海阔">
+  <meta itemprop="description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+To let network learn itself, we need some data. Like digits
+Actually, Those digist from a so-called training data set called MNIST dataset which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.
+The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.">
+  <meta itemprop="dateModified" content="2025-03-12T22:46:23+08:00">
+  <meta itemprop="wordCount" content="147">
+  <meta itemprop="keywords" content="MachineLearning">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Learning with gradient descent">
-  <meta name="twitter:description" content="集百川者, 成海阔">
+  <meta name="twitter:description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+To let network learn itself, we need some data. Like digits
+Actually, Those digist from a so-called training data set called MNIST dataset which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.
+The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.">
 <link rel="preload" href="/scss/main.min.023240d665d6ea36df214aa4d82691f4a70d71a02d1740f34f44227813c4b7d9.css" as="style" integrity="sha256-AjJA1mXW6jbfIUqk2CaR9KcNcaAtF0DzT0QieBPEt9k=" crossorigin="anonymous">
 <link href="/scss/main.min.023240d665d6ea36df214aa4d82691f4a70d71a02d1740f34f44227813c4b7d9.css" rel="stylesheet" integrity="sha256-AjJA1mXW6jbfIUqk2CaR9KcNcaAtF0DzT0QieBPEt9k=" crossorigin="anonymous">
 <script
@@ -129,7 +146,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f4c296e4a277176d48d1a91e3309a1c6.json"
+    data-offline-search-index-json-src="/offline-search-index.ca158dd6b9eb75478f84fcecacc12736.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -153,7 +170,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f4c296e4a277176d48d1a91e3309a1c6.json"
+    data-offline-search-index-json-src="/offline-search-index.ca158dd6b9eb75478f84fcecacc12736.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -174,6 +191,8 @@
   <a href="/graphicsai/neunet/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaineunet"><span class="">Neutral Network</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaiarchofneunet-li">
   <a href="/graphicsai/archofneunet/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaiarchofneunet"><span class="">The architecture of neural networks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaireadme-li">
+  <a href="/graphicsai/readme/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaireadme"><span class=""></span></a>
 </li>
   </ul>
 </li>
@@ -197,8 +216,7 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gamesprogramming/" data-taxonomy-term="gamesprogramming"><span class="taxonomy-label">GamesProgramming</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gc/" data-taxonomy-term="gc"><span class="taxonomy-label">GC</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/internet/" data-taxonomy-term="internet"><span class="taxonomy-label">Internet</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/javaweb/" data-taxonomy-term="javaweb"><span class="taxonomy-label">JavaWeb</span><span class="taxonomy-count">3</span></a></li>
@@ -206,7 +224,7 @@
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/jvm/" data-taxonomy-term="jvm"><span class="taxonomy-label">JVM</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/list/" data-taxonomy-term="list"><span class="taxonomy-label">List</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/liveness/" data-taxonomy-term="liveness"><span class="taxonomy-label">Liveness</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span><span class="taxonomy-count">12</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/spring/" data-taxonomy-term="spring"><span class="taxonomy-label">Spring</span><span class="taxonomy-count">3</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/synchronized/" data-taxonomy-term="synchronized"><span class="taxonomy-label">Synchronized</span><span class="taxonomy-count">4</span></a></li>
@@ -237,12 +255,13 @@
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java基础能力</span><span class="taxonomy-count">44</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">13</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">5</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E7%AE%97%E6%B3%95/" data-taxonomy-term="%E7%AE%97%E6%B3%95"><span class="taxonomy-label">算法</span><span class="taxonomy-count">25</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E8%AF%BE%E7%A8%8B%E5%BD%92%E6%A1%A3/" data-taxonomy-term="%E8%AF%BE%E7%A8%8B%E5%BD%92%E6%A1%A3"><span class="taxonomy-label">课程归档</span><span class="taxonomy-count">11</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E8%AF%BE%E7%A8%8B%E5%BD%92%E6%A1%A3/" data-taxonomy-term="%E8%AF%BE%E7%A8%8B%E5%BD%92%E6%A1%A3"><span class="taxonomy-label">课程归档</span><span class="taxonomy-count">7</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E9%9D%A2%E8%AF%95/" data-taxonomy-term="%E9%9D%A2%E8%AF%95"><span class="taxonomy-label">面试</span><span class="taxonomy-count">4</span></a></li>
         </ul>
     </div>
@@ -266,10 +285,35 @@
 	<h1>Learning with gradient descent</h1>
 	
 	<header class="article-meta">
-		
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span></a></li>
+    </ul>
+</div>
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span></a></li>
+    </ul>
+</div>
+
   </header>
-	
-	
+	<p>We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.</p>
+<p>To let network learn itself, we need some data. Like digits</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200233941.png" alt="image.png"></p>
+<p>Actually, Those digist from a so-called training data set called <em><strong>MNIST dataset</strong></em>
+which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.</p>
+<p>The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.</p>
+<p>OK, for convince let&rsquo;s simpfy the process to <img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200754080.png" alt="image.png"></p>
+<p>y is output, which is a number 0-9.  That&rsquo;s means y is a 10-dimensional vector.</p>
+<p>and x is input, we simpfy the entire input layer to one notation x. Let me explain that:</p>
+<p>x as a 28×28=784 dimensional vector, we define every pixel to a input neural and the vector represents the grey value for a single pixel in the image.</p>
+
+	<div class="td-page-meta__lastmod">
+  Last modified March 12, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/9e500482737482b590e4633430f74fefeef1e1f2">update ai part (9e50048)</a>
+</div>
+
 </div>
 
 

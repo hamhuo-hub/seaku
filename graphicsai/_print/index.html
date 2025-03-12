@@ -140,7 +140,7 @@ Under instruction of Dr.Liu i had an opprtunrty start my very early academic exp
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f4c296e4a277176d48d1a91e3309a1c6.json"
+    data-offline-search-index-json-src="/offline-search-index.ca158dd6b9eb75478f84fcecacc12736.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -216,6 +216,14 @@ This is the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>5: <a href="#pg-d44b795454d5eab591882fea1f2920af"></a></li>
+
+
+    
+  
 
     </ul>
 
@@ -284,8 +292,8 @@ we had map as below</p>
 <p>for the first neural only digit 8 or 9 can be fired, which means neural 8 and 9 in old input layer had more weight to first neural in new output.</p>
 <p>same as other neurals
 but how to set actual value of biasi and weight?</p>
-<blockquote>
-<p>todo:</p></blockquote>
+<p>That&rsquo;s doesn&rsquo;t matter, Most important is you need to understand how a network is design and improve.
+The weight and bias auctually is improved by system it self and used a methedology called  <a href="/graphicsai/gradientdescent/">gradient descent</a></p>
 
 </div>
 
@@ -303,7 +311,17 @@ but how to set actual value of biasi and weight?</p>
     
 	<h1 id="pg-32bcf2e48ffc875b36f6b00765991f31">2 - Learning with gradient descent</h1>
     
-	
+	<p>We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.</p>
+<p>To let network learn itself, we need some data. Like digits</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200233941.png" alt="image.png"></p>
+<p>Actually, Those digist from a so-called training data set called <em><strong>MNIST dataset</strong></em>
+which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.</p>
+<p>The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.</p>
+<p>OK, for convince let&rsquo;s simpfy the process to <img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200754080.png" alt="image.png"></p>
+<p>y is output, which is a number 0-9.  That&rsquo;s means y is a 10-dimensional vector.</p>
+<p>and x is input, we simpfy the entire input layer to one notation x. Let me explain that:</p>
+<p>x as a 28×28=784 dimensional vector, we define every pixel to a input neural and the vector represents the grey value for a single pixel in the image.</p>
+
 </div>
 
 
@@ -470,6 +488,27 @@ The middle layer is called a <em>hidden layer</em> t really means nothing more 
 <p><a href="http://en.wikipedia.org/wiki/Recurrent_neural_network">recurrent neural networks</a> allow such loop, They&rsquo;re much closer in spirit to how our brains work than feedforward networks.</p></blockquote>
 <blockquote>
 <p><a href="/graphicsai/simpleclassifynet/">simpleclassifynet</a></p></blockquote>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d44b795454d5eab591882fea1f2920af">5 - </h1>
+    
+	<h1 id="ainote">AINote<a class="td-heading-self-link" href="#ainote" aria-label="Heading self-link"></a></h1>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>a remote repository of Massey</p>
+<p>Reference:</p>
+<p><a href="http://neuralnetworksanddeeplearning.com/chap1.html#learning_with_gradient_descent">http://neuralnetworksanddeeplearning.com/chap1.html#learning_with_gradient_descent</a></p>
 
 </div>
 

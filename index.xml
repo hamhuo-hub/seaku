@@ -253,13 +253,6 @@
       <description>&lt;p&gt;提前封装好一些服务&lt;/p&gt;&#xA;&lt;h4 id=&#34;快速导入&#34;&gt;快速导入&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#%e5%bf%ab%e9%80%9f%e5%af%bc%e5%85%a5&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;组件扫描&lt;/p&gt;&#xA;&lt;p&gt;写一个单元测试&#xA;导入excel客户端&#xA;生成excle&#xA;新建一个数组&#xA;调用导入功能&lt;/p&gt;&#xA;&lt;p&gt;解析&#xA;传入文件&lt;/p&gt;</description>
     </item>
     <item>
-      <title>finalassign</title>
-      <link>https://hamhuo.xyz/school/159.261/finalassign/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/159.261/finalassign/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Gateway网关</title>
       <link>https://hamhuo.xyz/java/advanced/gateway%E7%BD%91%E5%85%B3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -272,13 +265,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hamhuo.xyz/java/advanced/intercepter%E6%8B%A6%E6%88%AA%E5%99%A8/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>Intro To Java</title>
-      <link>https://hamhuo.xyz/school/159.261/back2java/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/159.261/back2java/</guid>
-      <description>&lt;p&gt;Quiz:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;One of the components of a computer is its CPU. What is a CPU and what role does it play in a computer?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Central process Unit, a component of computer,  the job of CPU is to excute programs&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Explain what is meant by an “asynchronous event.” Give some examples.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;event happen at unpredictable time.&#xA;when CPU needs data in disk, CPU will send signal to disk ask for preparing, disk has releative low speed compare to CPU, so data preparing as an unpredictable event can be seen as asynchronous event.&lt;/p&gt;</description>
     </item>
     <item>
       <title>JavaSE</title>
@@ -320,7 +306,7 @@
       <link>https://hamhuo.xyz/graphicsai/gradientdescent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hamhuo.xyz/graphicsai/gradientdescent/</guid>
-      <description></description>
+      <description>&lt;p&gt;We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.&lt;/p&gt;&#xA;&lt;p&gt;To let network learn itself, we need some data. Like digits&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200233941.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Actually, Those digist from a so-called training data set called &lt;em&gt;&lt;strong&gt;MNIST dataset&lt;/strong&gt;&lt;/em&gt;&#xA;which contains tens of thousands of scanned images of handwritten digits, together with their correct classifications.&lt;/p&gt;&#xA;&lt;p&gt;The MNIST data comes in two parts. Test and Training. we mainly use training for iproving accuracy and testing for evaluate our model.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LinkedList</title>
@@ -643,6 +629,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hamhuo.xyz/dairy/3%E6%9C%881%E6%97%A5/</guid>
       <description>&lt;p&gt;完成了redis的分页和 redis + mysql 悲观锁的一致双写&#xA;今天通宵完成笔记和国际化模块的工作&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Oauth2+Spring Cloud Gateway的项目架构准备好&lt;/li&gt;&#xA;&lt;li&gt;完成鉴权模型的笔记, 流程图梳理完毕&lt;/li&gt;&#xA;&lt;li&gt;redis的八股, 花点钱买热门50八股开始背&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hamhuo.xyz/dairy/visa2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/dairy/visa2/</guid>
+      <description>&lt;p&gt;尽快提早地申请&#xA;4月中旬, 梅西材料递交&#xA;7月 OR 2月, 无其他选项&lt;/p&gt;&#xA;&lt;h4 id=&#34;meeting-mainstream-普遍问题&#34;&gt;meeting mainstream: 普遍问题&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#meeting-mainstream-%e6%99%ae%e9%81%8d%e9%97%ae%e9%a2%98&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;翻译公司 ?&lt;/p&gt;&#xA;&lt;p&gt;1./2. 教务申请&#xA;3. 表格&#xA;4. 护照首页&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312091945510.png&#34; alt=&#34;Screenshot_20250312_091933_Zoom.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;护照首页&#xA;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312092108948.png&#34; alt=&#34;Screenshot_20250312_092045_Zoom.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;身份证&#xA;pdf格式&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312092127289.png&#34; alt=&#34;Screenshot_20250312_092115_Zoom.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;证件照jpg, 两寸免冠白底&lt;/p&gt;&#xA;&lt;p&gt;出生证明&lt;/p&gt;&#xA;&lt;p&gt;4月中做胸透, 学习计划12-24月可以先写中文&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312092326509.png&#34; alt=&#34;Screenshot_20250312_092244_Zoom.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;体检医院&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312092453206.png&#34; alt=&#34;Screenshot_20250312_092433_Zoom.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;无犯罪可以不提供&lt;/p&gt;&#xA;&lt;p&gt;关于成绩单的问题&lt;/p&gt;&#xA;&lt;p&gt;一年期签证, 一年学费&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://hamhuo.xyz/graphicsai/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/graphicsai/readme/</guid>
+      <description>&lt;h1 id=&#34;ainote&#34;&gt;AINote&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#ainote&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;a remote repository of Massey&lt;/p&gt;&#xA;&lt;p&gt;Reference:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://neuralnetworksanddeeplearning.com/chap1.html#learning_with_gradient_descent&#34;&gt;http://neuralnetworksanddeeplearning.com/chap1.html#learning_with_gradient_descent&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>

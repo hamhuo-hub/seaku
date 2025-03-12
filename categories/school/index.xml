@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>School on 海阔集</title>
+    <link>https://hamhuo.xyz/categories/school/</link>
+    <description>Recent content in School on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://hamhuo.xyz/categories/school/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>159.225 System Analysis and Modelling</title>
+      <link>https://hamhuo.xyz/school/159.225/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/159.225/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>159.261 Gaming Programming</title>
+      <link>https://hamhuo.xyz/school/159.261/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/159.261/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;In this course, we will explore a range of essential topics for implementing computer games including fundamental computer graphics, games software architecture and game physics systems. The course contains a significant practical computer lab component where students are guided through the games development process.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;3D is NOT included&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250224103344778.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Intro to  Systems Analysis and Modelling</title>
+      <link>https://hamhuo.xyz/school/159.225/week1_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/159.225/week1_2/</guid>
+      <description>&lt;h4 id=&#34;what-is-system&#34;&gt;What is System&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#what-is-system&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;There are two jobs mainly for system&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;achieve goals&lt;/li&gt;&#xA;&lt;li&gt;MOST IMPORTANTLY add value to existing system&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;A system generally contain 2 character, user and developer. Developer can get value from user and user needs will accomplished from system&lt;/p&gt;&#xA;&lt;p&gt;For programmer build a system using code. before writing they need a plan.&lt;/p&gt;&#xA;&lt;h4 id=&#34;what-is-systems-analysis-and-modelling&#34;&gt;What is Systems Analysis and Modelling?&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#what-is-systems-analysis-and-modelling&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&#xD;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&lt;p&gt;Programmers need to know what to write.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Overview Java</title>
+      <link>https://hamhuo.xyz/school/159.261/week1_2_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/159.261/week1_2_3/</guid>
+      <description>&lt;p&gt;Quiz:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;One of the components of a computer is its CPU. What is a CPU and what role does it play in a computer?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Central process Unit, a component of computer,  the job of CPU is to excute programs&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Explain what is meant by an “asynchronous event.” Give some examples.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;event happen at unpredictable time.&#xA;when CPU needs data in disk, CPU will send signal to disk ask for preparing, disk has releative low speed compare to CPU, so data preparing as an unpredictable event can be seen as asynchronous event.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Requirements Gathering</title>
+      <link>https://hamhuo.xyz/school/159.225/week1_2/week12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/school/159.225/week1_2/week12/</guid>
+      <description>&lt;p&gt;The systems development process transforms the &lt;em&gt;&lt;strong&gt;existing (as is)&lt;/strong&gt;&lt;/em&gt; system into the &lt;em&gt;&lt;strong&gt;proposed (to be)&lt;/strong&gt;&lt;/em&gt; system.&lt;/p&gt;&#xA;&lt;p&gt;due to problems with requirements&lt;/p&gt;&#xA;&lt;p&gt;Small batches of requirements can be identified and implemented incrementally&#xA;like itrative&lt;/p&gt;&#xA;&lt;p&gt;avoid risk convert high level business requirements (from the system request) into detailed requirements that can be used as inputs for creating model&lt;/p&gt;&#xA;&lt;p&gt;high to low require&lt;/p&gt;&#xA;&lt;p&gt;what&amp;rsquo;s require&lt;/p&gt;&#xA;&lt;p&gt;detail&lt;/p&gt;&#xA;&lt;p&gt;fuctional user and do&#xA;non - system persisty like AES encrypt, can be test&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
