@@ -18,37 +18,37 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Learning with gradient descent | 海阔集</title>
-<meta name="description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+<meta name="description" content=" our goal in training a neural network is to find weights and biases which minimize the quadratic cost function C(w,b)
+We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
 To let network learn itself, we need some data. Like digits
-Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.
-The MNIST data is divided into two parts: Training and Test datasets. We primarily use the training dataset to improve the model’s accuracy and the test dataset to evaluate the model’s performance.">
+Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.">
 <meta property="og:url" content="https://hamhuo.xyz/graphicsai/gradientdescent/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Learning with gradient descent">
-  <meta property="og:description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+  <meta property="og:description" content=" our goal in training a neural network is to find weights and biases which minimize the quadratic cost function C(w,b)
+We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
 To let network learn itself, we need some data. Like digits
-Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.
-The MNIST data is divided into two parts: Training and Test datasets. We primarily use the training dataset to improve the model’s accuracy and the test dataset to evaluate the model’s performance.">
+Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="graphics&amp;ai">
-    <meta property="article:modified_time" content="2025-03-12T22:46:23+08:00">
+    <meta property="article:modified_time" content="2025-03-13T01:16:38+08:00">
     <meta property="article:tag" content="MachineLearning">
 
   <meta itemprop="name" content="Learning with gradient descent">
-  <meta itemprop="description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+  <meta itemprop="description" content=" our goal in training a neural network is to find weights and biases which minimize the quadratic cost function C(w,b)
+We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
 To let network learn itself, we need some data. Like digits
-Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.
-The MNIST data is divided into two parts: Training and Test datasets. We primarily use the training dataset to improve the model’s accuracy and the test dataset to evaluate the model’s performance.">
-  <meta itemprop="dateModified" content="2025-03-12T22:46:23+08:00">
-  <meta itemprop="wordCount" content="218">
+Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.">
+  <meta itemprop="dateModified" content="2025-03-13T01:16:38+08:00">
+  <meta itemprop="wordCount" content="771">
   <meta itemprop="keywords" content="MachineLearning">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Learning with gradient descent">
-  <meta name="twitter:description" content="We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
+  <meta name="twitter:description" content=" our goal in training a neural network is to find weights and biases which minimize the quadratic cost function C(w,b)
+We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.
 To let network learn itself, we need some data. Like digits
-Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.
-The MNIST data is divided into two parts: Training and Test datasets. We primarily use the training dataset to improve the model’s accuracy and the test dataset to evaluate the model’s performance.">
+Actually, these digits come from a well-known training dataset called the MNIST dataset, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.">
 <link rel="preload" href="/scss/main.min.023240d665d6ea36df214aa4d82691f4a70d71a02d1740f34f44227813c4b7d9.css" as="style" integrity="sha256-AjJA1mXW6jbfIUqk2CaR9KcNcaAtF0DzT0QieBPEt9k=" crossorigin="anonymous">
 <link href="/scss/main.min.023240d665d6ea36df214aa4d82691f4a70d71a02d1740f34f44227813c4b7d9.css" rel="stylesheet" integrity="sha256-AjJA1mXW6jbfIUqk2CaR9KcNcaAtF0DzT0QieBPEt9k=" crossorigin="anonymous">
 <script
@@ -79,6 +79,9 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/interview/"><span>Interview</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/graphicsai/torch/"><span>Pytorch basics tutorials</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/school/"><span>课程归档</span></a>
@@ -146,7 +149,7 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f5fd632a3037e3faca7ffa8208b08e25.json"
+    data-offline-search-index-json-src="/offline-search-index.8c38df4b89312cec903a6ee2b331cb5f.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -170,7 +173,7 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f5fd632a3037e3faca7ffa8208b08e25.json"
+    data-offline-search-index-json-src="/offline-search-index.8c38df4b89312cec903a6ee2b331cb5f.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -193,6 +196,13 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
   <a href="/graphicsai/archofneunet/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaiarchofneunet"><span class="">The architecture of neural networks</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaireadme-li">
   <a href="/graphicsai/readme/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaireadme"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-graphicsaitorch-li">
+  <a href="/graphicsai/torch/" title="Pytorch" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-graphicsaitorch"><span class="">Pytorch basics tutorials</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaitorchstart-li">
+  <a href="/graphicsai/torch/start/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaitorchstart"><span class="">Quick Start</span></a>
+</li>
+  </ul>
 </li>
   </ul>
 </li>
@@ -224,7 +234,7 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/jvm/" data-taxonomy-term="jvm"><span class="taxonomy-label">JVM</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/list/" data-taxonomy-term="list"><span class="taxonomy-label">List</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/liveness/" data-taxonomy-term="liveness"><span class="taxonomy-label">Liveness</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">5</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span><span class="taxonomy-count">12</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/spring/" data-taxonomy-term="spring"><span class="taxonomy-label">Spring</span><span class="taxonomy-count">3</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/synchronized/" data-taxonomy-term="synchronized"><span class="taxonomy-label">Synchronized</span><span class="taxonomy-count">4</span></a></li>
@@ -255,7 +265,7 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">5</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java基础能力</span><span class="taxonomy-count">44</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">13</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">5</span></a></li>
@@ -299,7 +309,8 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
 </div>
 
   </header>
-	<p>We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.</p>
+	<p> <em><strong>our goal in training a neural network is to find weights and biases which minimize the quadratic cost function C(w,b)</strong></em></p>
+<p>We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.</p>
 <p>To let network learn itself, we need some data. Like digits</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200233941.png" alt="image.png"></p>
 <p>Actually, these digits come from a well-known training dataset called the <strong>MNIST dataset</strong>, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.</p>
@@ -310,9 +321,51 @@ The MNIST data is divided into two parts: Training and Test datasets. We primari
 <p>As for <strong>x</strong>, we simplify the entire input layer into a single notation: <strong>x</strong>. Let me explain further:</p>
 <p><strong>x</strong> is a 28×28=784-dimensional vector. We define each pixel as an input neuron, and the vector represents the grayscale value of a single pixel in the image.</p>
 <p>So, in this process, we map the 784-dimensional vector (input) into a 10-dimensional vector (output).</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313104456461.png" alt="image.png"></p>
+<p>turning a row vector into an ordinary (column) vector.</p>
+<p>Actially, we want a method lets us find weights and biases, so that the output from the network approximates y(x) for all training inputs x.</p>
+<p>To achieve that we introduce <em><strong>cost function</strong></em></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313104915863.png" alt="image.png"></p>
+<p>a simple explain here</p>
+<p>w denotes the collection of all weights in the network, b all the biases</p>
+<p>n is the total number of training inputs</p>
+<p>a is the vector of outputs from the network when x is input, and the sum is over all training inputs</p>
+<p>call C the <em>quadratic</em> cost function or <em>mean squared error</em> or just <em>MSE</em></p>
+<p>C(w,b) is non-negative and mainly we can considerd as our training algorithm has done a good job if it can find weights and biases so that C(w,b)≈0</p>
+<p>OK, why we not just simply let y(x) deduct a?</p>
+<p>The problem with that is that the number of images correctly classified is not a smooth function of the weights and biases in the network.</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313111308753.png" alt="image.png"></p>
+<p>we can barly get infomation from that, That makes it difficult to figure out how to change the weights and biases to get improved performance. If we instead use a smooth cost function like the quadratic cost it turns out to be easy to figure out how to make small changes in the weights and biases so as to get an improvement in the cost.</p>
+<p>C(v) v This could be any real-valued function of many variables, v=v1,v2,…v=v1,v2,….</p>
+<p> To minimize C(v) it helps to imagine C as a function of just two variables, which we&rsquo;ll call v1 and v2
+ 
+<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313111604981.png" alt="image.png"></p>
+<p>Fuction above is sample, the main idea is to find the minimize value However,  calculus doesn&rsquo;t work. beacuse we will have tons of variables in function far more than 2</p>
+<p>there is a beautiful analogy which suggests an algorithm which works pretty well.
+ 
+We could do this simulation simply by computing derivatives (and perhaps some second derivatives) of C - those derivatives would tell us everything we need to know about the local &ldquo;shape&rdquo; and this is nothing with physics we just trying to find where derivatives stop.</p>
+<p>let&rsquo;s think about what happens when we move the ball a small amount Δv1 in the v1 direction, and a small amount Δv2 in the v2 direction.</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112203030.png" alt="image.png"></p>
+<p>with liner alog let&rsquo;s try seprated changes in v to changes in C</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112405514.png" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112415788.png" alt="image.png"></p>
+<p>ΔC can be rewritten as</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112456114.png" alt="image.png"></p>
+<p>what&rsquo;s really exciting about the equation is that it lets us see how to choose ΔvΔv so as to make ΔC negative. do not forget we keep tracing down the shape</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112623339.png" alt="image.png"></p>
+<p>where η is a small, positive parameter，we called learning rate.</p>
+<p>we indicate position by</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313113000335.png" alt="image.png"></p>
+<p>which will show in graph like &ldquo;falling down&rdquo;</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313113154483.png" alt="image.png"></p>
+<p>But we have one problem here, we need to choose the learning rate to be small enough and approach good approximation. ==If we don&rsquo;t, we might end up with ΔC&gt;0. If we don&rsquo;t, we might end up with ΔC&gt;0.==  At the same time, we don&rsquo;t want η to be too small, since that will make the changes Δv tiny</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313114505482.png" alt="image.png"></p>
+<p>with speed 0.03 we used 2495 steps and output curve relativly smooth</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313114640863.png" alt="image.png"></p>
+<p>with speed 3 output curve is more abstract and reach a mini spot needs lucky</p>
 
 	<div class="td-page-meta__lastmod">
-  Last modified March 12, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/9e500482737482b590e4633430f74fefeef1e1f2">update ai part (9e50048)</a>
+  Last modified March 13, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/dbf7c5cf4006cc9d591487bf0bdc2b42b12cae7e">ai part finsihed (dbf7c5c)</a>
 </div>
 
 </div>

@@ -41,7 +41,7 @@ First, we’d like a way of breaking an image containing many digits into a sequ
 We’ll focus on writing a program to solve the second problem
 We do this because it turns out that the segmentation problem is not so difficult to solve, once you have a good way of classifying individual digits.">
   <meta itemprop="dateModified" content="2025-03-12T22:46:23+08:00">
-  <meta itemprop="wordCount" content="477">
+  <meta itemprop="wordCount" content="544">
   <meta itemprop="keywords" content="MachineLearning">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="A simple network to classify handwritten digits">
@@ -79,6 +79,9 @@ We do this because it turns out that the segmentation problem is not so difficul
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/interview/"><span>Interview</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/graphicsai/torch/"><span>Pytorch basics tutorials</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/school/"><span>课程归档</span></a>
@@ -146,7 +149,7 @@ We do this because it turns out that the segmentation problem is not so difficul
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f5fd632a3037e3faca7ffa8208b08e25.json"
+    data-offline-search-index-json-src="/offline-search-index.8c38df4b89312cec903a6ee2b331cb5f.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -170,7 +173,7 @@ We do this because it turns out that the segmentation problem is not so difficul
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f5fd632a3037e3faca7ffa8208b08e25.json"
+    data-offline-search-index-json-src="/offline-search-index.8c38df4b89312cec903a6ee2b331cb5f.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -193,6 +196,13 @@ We do this because it turns out that the segmentation problem is not so difficul
   <a href="/graphicsai/archofneunet/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaiarchofneunet"><span class="">The architecture of neural networks</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaireadme-li">
   <a href="/graphicsai/readme/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaireadme"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-graphicsaitorch-li">
+  <a href="/graphicsai/torch/" title="Pytorch" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-graphicsaitorch"><span class="">Pytorch basics tutorials</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaitorchstart-li">
+  <a href="/graphicsai/torch/start/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaitorchstart"><span class="">Quick Start</span></a>
+</li>
+  </ul>
 </li>
   </ul>
 </li>
@@ -235,7 +245,7 @@ We do this because it turns out that the segmentation problem is not so difficul
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/jvm/" data-taxonomy-term="jvm"><span class="taxonomy-label">JVM</span><span class="taxonomy-count">2</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/list/" data-taxonomy-term="list"><span class="taxonomy-label">List</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/liveness/" data-taxonomy-term="liveness"><span class="taxonomy-label">Liveness</span><span class="taxonomy-count">2</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">5</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/mysql/" data-taxonomy-term="mysql"><span class="taxonomy-label">MySQL</span><span class="taxonomy-count">12</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/spring/" data-taxonomy-term="spring"><span class="taxonomy-label">Spring</span><span class="taxonomy-count">3</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/synchronized/" data-taxonomy-term="synchronized"><span class="taxonomy-label">Synchronized</span><span class="taxonomy-count">4</span></a></li>
@@ -266,7 +276,7 @@ We do this because it turns out that the segmentation problem is not so difficul
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">5</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E5%9F%BA%E7%A1%80%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java基础能力</span><span class="taxonomy-count">44</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B/" data-taxonomy-term="java%E8%BF%9B%E9%98%B6%E8%83%BD%E5%8A%9B"><span class="taxonomy-label">Java进阶能力</span><span class="taxonomy-count">13</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">5</span></a></li>
@@ -339,14 +349,15 @@ detects whether or not an image like the following is present</p>
 <meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>There is a way of determining the bitwise representation of a digit by adding an extra layer to the three-layer network above. The extra layer converts the output from the previous layer into a binary representation, as illustrated in the figure below.</p>
 <p>Find a set of weights and biases for the new output layer. Assume that the first 3 layers of neurons are such that the correct output in the third layer (i.e., the old output layer) has activation at least 0.99, and incorrect outputs have activation less than 0.01</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250309154316925.png" alt="image.png"></p>
-<p>we had input layer which hold pixels in grayscale, through hidden layer, we get output from outputlayer, as said, output closer to 1 can indicate the number. now add new output layer which convert old output to 0 or 1.
+<p>we had input layer which hold pixels in grayscale, through hidden layer, we get output from output layer, as said, output closer to 1 can indicate the number. now add new output layer which convert old output to 0 or 1.
 we had map as below</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250309185657564.png" alt="image.png"></p>
-<p>for the first neural only digit 8 or 9 can be fired, which means neural 8 and 9 in old input layer had more weight to first neural in new output.</p>
-<p>same as other neurals
-but how to set actual value of biasi and weight?</p>
-<p>That&rsquo;s doesn&rsquo;t matter, Most important is you need to understand how a network is design and improve.
-The weight and bias auctually is improved by system it self and used a methedology called  <a href="/graphicsai/gradientdescent/">gradient descent</a></p>
+<p>For the first neuron, only digits 8 or 9 can be activated. This means that neurons 8 and 9 in the old input layer had a greater weight influence on the first neuron in the new output layer.</p>
+<p>The same principle applies to other neurons.<br>
+But how do we determine the actual values of the biases and weights?</p>
+<p>That doesn’t matter—we don’t need to manually design a set of weights or biases. Instead, we should understand that a node in the old output layer that is closer to 1 can be interpreted as having a positive influence. This influence is then mapped to the corresponding node in the new output layer.</p>
+<p>for example we have neurons 8 closer to 1. and we fire first node in new output layer</p>
+<p>The weights and biases are actually optimized by the system itself using a methodology called <a href="/graphicsai/gradientdescent/">gradient descent</a>.</p>
 
 	<div class="td-page-meta__lastmod">
   Last modified March 12, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/9e500482737482b590e4633430f74fefeef1e1f2">update ai part (9e50048)</a>

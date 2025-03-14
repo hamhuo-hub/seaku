@@ -75,6 +75,9 @@ Under instruction of Dr.Liu i had an opprtunrty start my very early academic exp
         <a class="nav-link" href="/interview/"><span>Interview</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/graphicsai/torch/"><span>Pytorch basics tutorials</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/school/"><span>课程归档</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
@@ -140,7 +143,7 @@ Under instruction of Dr.Liu i had an opprtunrty start my very early academic exp
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.f5fd632a3037e3faca7ffa8208b08e25.json"
+    data-offline-search-index-json-src="/offline-search-index.8c38df4b89312cec903a6ee2b331cb5f.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -224,6 +227,33 @@ This is the multi-page printable view of this section.
 
     
   
+    
+    
+	
+<li>6: <a href="#pg-5eadbe77d75e772bd85af73fd5d3ede9">Pytorch</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>6.1: <a href="#pg-c50f9bec0d0291a4d85a469b3d967a6a">Quick Start</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -286,14 +316,15 @@ detects whether or not an image like the following is present</p>
 <meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>There is a way of determining the bitwise representation of a digit by adding an extra layer to the three-layer network above. The extra layer converts the output from the previous layer into a binary representation, as illustrated in the figure below.</p>
 <p>Find a set of weights and biases for the new output layer. Assume that the first 3 layers of neurons are such that the correct output in the third layer (i.e., the old output layer) has activation at least 0.99, and incorrect outputs have activation less than 0.01</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250309154316925.png" alt="image.png"></p>
-<p>we had input layer which hold pixels in grayscale, through hidden layer, we get output from outputlayer, as said, output closer to 1 can indicate the number. now add new output layer which convert old output to 0 or 1.
+<p>we had input layer which hold pixels in grayscale, through hidden layer, we get output from output layer, as said, output closer to 1 can indicate the number. now add new output layer which convert old output to 0 or 1.
 we had map as below</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250309185657564.png" alt="image.png"></p>
-<p>for the first neural only digit 8 or 9 can be fired, which means neural 8 and 9 in old input layer had more weight to first neural in new output.</p>
-<p>same as other neurals
-but how to set actual value of biasi and weight?</p>
-<p>That&rsquo;s doesn&rsquo;t matter, Most important is you need to understand how a network is design and improve.
-The weight and bias auctually is improved by system it self and used a methedology called  <a href="/graphicsai/gradientdescent/">gradient descent</a></p>
+<p>For the first neuron, only digits 8 or 9 can be activated. This means that neurons 8 and 9 in the old input layer had a greater weight influence on the first neuron in the new output layer.</p>
+<p>The same principle applies to other neurons.<br>
+But how do we determine the actual values of the biases and weights?</p>
+<p>That doesn’t matter—we don’t need to manually design a set of weights or biases. Instead, we should understand that a node in the old output layer that is closer to 1 can be interpreted as having a positive influence. This influence is then mapped to the corresponding node in the new output layer.</p>
+<p>for example we have neurons 8 closer to 1. and we fire first node in new output layer</p>
+<p>The weights and biases are actually optimized by the system itself using a methodology called <a href="/graphicsai/gradientdescent/">gradient descent</a>.</p>
 
 </div>
 
@@ -311,7 +342,8 @@ The weight and bias auctually is improved by system it self and used a methedolo
     
 	<h1 id="pg-32bcf2e48ffc875b36f6b00765991f31">2 - Learning with gradient descent</h1>
     
-	<p>We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.</p>
+	<p> <em><strong>our goal in training a neural network is to find weights and biases which minimize the quadratic cost function C(w,b)</strong></em></p>
+<p>We already kown how neural network is functioned. an input layer and outputlayer and hidden layer.</p>
 <p>To let network learn itself, we need some data. Like digits</p>
 <p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250312200233941.png" alt="image.png"></p>
 <p>Actually, these digits come from a well-known training dataset called the <strong>MNIST dataset</strong>, which contains tens of thousands of scanned images of handwritten digits along with their correct classifications.</p>
@@ -322,6 +354,48 @@ The weight and bias auctually is improved by system it self and used a methedolo
 <p>As for <strong>x</strong>, we simplify the entire input layer into a single notation: <strong>x</strong>. Let me explain further:</p>
 <p><strong>x</strong> is a 28×28=784-dimensional vector. We define each pixel as an input neuron, and the vector represents the grayscale value of a single pixel in the image.</p>
 <p>So, in this process, we map the 784-dimensional vector (input) into a 10-dimensional vector (output).</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313104456461.png" alt="image.png"></p>
+<p>turning a row vector into an ordinary (column) vector.</p>
+<p>Actially, we want a method lets us find weights and biases, so that the output from the network approximates y(x) for all training inputs x.</p>
+<p>To achieve that we introduce <em><strong>cost function</strong></em></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313104915863.png" alt="image.png"></p>
+<p>a simple explain here</p>
+<p>w denotes the collection of all weights in the network, b all the biases</p>
+<p>n is the total number of training inputs</p>
+<p>a is the vector of outputs from the network when x is input, and the sum is over all training inputs</p>
+<p>call C the <em>quadratic</em> cost function or <em>mean squared error</em> or just <em>MSE</em></p>
+<p>C(w,b) is non-negative and mainly we can considerd as our training algorithm has done a good job if it can find weights and biases so that C(w,b)≈0</p>
+<p>OK, why we not just simply let y(x) deduct a?</p>
+<p>The problem with that is that the number of images correctly classified is not a smooth function of the weights and biases in the network.</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313111308753.png" alt="image.png"></p>
+<p>we can barly get infomation from that, That makes it difficult to figure out how to change the weights and biases to get improved performance. If we instead use a smooth cost function like the quadratic cost it turns out to be easy to figure out how to make small changes in the weights and biases so as to get an improvement in the cost.</p>
+<p>C(v) v This could be any real-valued function of many variables, v=v1,v2,…v=v1,v2,….</p>
+<p> To minimize C(v) it helps to imagine C as a function of just two variables, which we&rsquo;ll call v1 and v2
+ 
+<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313111604981.png" alt="image.png"></p>
+<p>Fuction above is sample, the main idea is to find the minimize value However,  calculus doesn&rsquo;t work. beacuse we will have tons of variables in function far more than 2</p>
+<p>there is a beautiful analogy which suggests an algorithm which works pretty well.
+ 
+We could do this simulation simply by computing derivatives (and perhaps some second derivatives) of C - those derivatives would tell us everything we need to know about the local &ldquo;shape&rdquo; and this is nothing with physics we just trying to find where derivatives stop.</p>
+<p>let&rsquo;s think about what happens when we move the ball a small amount Δv1 in the v1 direction, and a small amount Δv2 in the v2 direction.</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112203030.png" alt="image.png"></p>
+<p>with liner alog let&rsquo;s try seprated changes in v to changes in C</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112405514.png" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112415788.png" alt="image.png"></p>
+<p>ΔC can be rewritten as</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112456114.png" alt="image.png"></p>
+<p>what&rsquo;s really exciting about the equation is that it lets us see how to choose ΔvΔv so as to make ΔC negative. do not forget we keep tracing down the shape</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313112623339.png" alt="image.png"></p>
+<p>where η is a small, positive parameter，we called learning rate.</p>
+<p>we indicate position by</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313113000335.png" alt="image.png"></p>
+<p>which will show in graph like &ldquo;falling down&rdquo;</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313113154483.png" alt="image.png"></p>
+<p>But we have one problem here, we need to choose the learning rate to be small enough and approach good approximation. ==If we don&rsquo;t, we might end up with ΔC&gt;0. If we don&rsquo;t, we might end up with ΔC&gt;0.==  At the same time, we don&rsquo;t want η to be too small, since that will make the changes Δv tiny</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313114505482.png" alt="image.png"></p>
+<p>with speed 0.03 we used 2495 steps and output curve relativly smooth</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250313114640863.png" alt="image.png"></p>
+<p>with speed 3 output curve is more abstract and reach a mini spot needs lucky</p>
 
 </div>
 
@@ -342,10 +416,11 @@ The weight and bias auctually is improved by system it self and used a methedolo
 	<blockquote>
 <p>refer:
 <a href="http://neuralnetworksanddeeplearning.com/chap1.html">Using neural nets to recognize handwritten digits</a></p></blockquote>
-<p><em><strong>focus on explaining why things are done the way they are, and on building your neural networks intuition.</strong></em></p>
-<h4 id="overview">OverView<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h4>
-<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><h6 id="recognize-handdigits">recognize handdigits<a class="td-heading-self-link" href="#recognize-handdigits" aria-label="Heading self-link"></a></h6>
-<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p> we don&rsquo;t usually appreciate how tough a problem our visual systems solve.
+<p><em><strong>patience in the face of such frustration is the only way to truly understand and internalize a subject.</strong></em>  FIND YOUR PROJECT</p>
+<h4 id="overview">Overview<a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><h6 id="recognize-hand-digits">recognize hand digits<a class="td-heading-self-link" href="#recognize-hand-digits" aria-label="Heading self-link"></a></h6>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>Let&rsquo;s start from a basic task,  recognize those digits
+ we don&rsquo;t usually appreciate how tough a problem our visual systems solve.
  
  write a computer program to recognize digits like those above
  
@@ -514,6 +589,102 @@ The middle layer is called a <em>hidden layer</em> t really means nothing more 
 </div>
 
 
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5eadbe77d75e772bd85af73fd5d3ede9">6 - Pytorch</h1>
+    
+	<ul>
+<li>Pytorch basics tutorials:</li>
+</ul>
+<p>Learn the Basics — PyTorch Tutorials 2.6.0+cu124 documentation
+pytorch.org
+Most machine learning workflows involve working with data, creating models, optimizing model parameters, and saving the trained models.</p>
+<ul>
+<li>Training an image classifier using CNN</li>
+</ul>
+<p>Deep Learning with PyTorch: A 60 Minute Blitz — PyTorch Tutorials 2.6.0+cu124 documentation
+pytorch.org</p>
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-c50f9bec0d0291a4d85a469b3d967a6a">6.1 - Quick Start</h1>
+    <div class="lead">runs through the API for common tasks in machine learning</div>
+	<p>PyTorch is an open-source deep learning framework that’s known for its flexibility and ease-of-use.</p>
+<h5 id="python-grammer">Python Grammer<a class="td-heading-self-link" href="#python-grammer" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><blockquote>
+<p>understand that as a playground with instructure.
+define a function use <em><strong>def</strong></em> , function in python can return multiable values
+no need of type <em><strong>attribute</strong></em></p></blockquote>
+<p>In python list is reinitializable, and turple is fixed and unchangable</p>
+<div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#81c8be">import</span> <span style="color:#ef9f76">math</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ca9ee6">def</span> <span style="color:#8caaee">move</span>(x, y, step, angle<span style="color:#99d1db;font-weight:bold">=</span><span style="color:#ef9f76">0</span>):
+</span></span><span style="display:flex;"><span>    nx <span style="color:#99d1db;font-weight:bold">=</span> x <span style="color:#99d1db;font-weight:bold">+</span> step <span style="color:#99d1db;font-weight:bold">*</span> math<span style="color:#99d1db;font-weight:bold">.</span>cos(angle)
+</span></span><span style="display:flex;"><span>    ny <span style="color:#99d1db;font-weight:bold">=</span> y <span style="color:#99d1db;font-weight:bold">-</span> step <span style="color:#99d1db;font-weight:bold">*</span> math<span style="color:#99d1db;font-weight:bold">.</span>sin(angle)
+</span></span><span style="display:flex;"><span>    <span style="color:#ca9ee6">return</span> nx, ny
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#99d1db;font-weight:bold">&gt;&gt;&gt;</span> x, y <span style="color:#99d1db;font-weight:bold">=</span> move(<span style="color:#ef9f76">100</span>, <span style="color:#ef9f76">100</span>, <span style="color:#ef9f76">60</span>, math<span style="color:#99d1db;font-weight:bold">.</span>pi <span style="color:#99d1db;font-weight:bold">/</span> <span style="color:#ef9f76">6</span>)
+</span></span><span style="display:flex;"><span><span style="color:#99d1db;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#99d1db">print</span>(x, y)
+</span></span><span style="display:flex;"><span><span style="color:#ef9f76">151.96152422706632</span> <span style="color:#ef9f76">70.0</span>
+</span></span></code></pre></div><p>A huge improve is Python supports default para. In tons of value need to write value, we can ignore the fixed values and only trans uniqe ones.</p>
+<blockquote>
+<p>WARN:
+python 的默认参数是在方法外部传入的, 一定注意Python是引用传参, 默认参数必须指向不变对象！</p></blockquote>
+<p>Written in Python, it’s relatively easy for most machine learning developers to learn and use.</p>
+<p>For data, we have two primitives in toch</p>
+<p><em><strong>torch.utils.data.DataLoader</strong></em>
+<em><strong>torch.utils.data.Dataset</strong></em></p>
+<p>Dataset include a bunch of samples and corresponding lables.</p>
+<blockquote>
+<p>Note here In python <em><strong>map</strong></em> called <em><strong>dict</strong></em></p></blockquote>
+<p>DataLoad add Itrable ability</p>
+<p>we mainly use TorchVision package of  FashionMNIST dataset dataset.pytorch offer domain-specific libraryies.</p>
+<p>In this <code>Dataset</code> includes two arguments: <code>transform</code> and <code>target_transform</code> to modify the samples and labels respectively.</p>
+<h5 id="dataset--dataloaders">DataSet &amp; DataLoaders<a class="td-heading-self-link" href="#dataset--dataloaders" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><h5 id="tensors">Tensors<a class="td-heading-self-link" href="#tensors" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>Pytorch use an unique data type called <em><strong>Tensors</strong></em>, similar to a multidimensional array, used to store and caculate input and output of a model.
+a important feature is</p>
+<blockquote>
+<p>tensors can run on GPUs to accelerate computing.</p></blockquote>
+<h5 id="graphs">Graphs<a class="td-heading-self-link" href="#graphs" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" />
+</div>
+
+
+
+    
+	
+  
 
     
 	
