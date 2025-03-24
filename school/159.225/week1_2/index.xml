@@ -7,12 +7,5 @@
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://hamhuo.xyz/school/159.225/week1_2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Requirements Gathering</title>
-      <link>https://hamhuo.xyz/school/159.225/week1_2/week12/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/school/159.225/week1_2/week12/</guid>
-      <description>&lt;p&gt;The systems development process transforms the &lt;em&gt;&lt;strong&gt;existing (as is)&lt;/strong&gt;&lt;/em&gt; system into the &lt;em&gt;&lt;strong&gt;proposed (to be)&lt;/strong&gt;&lt;/em&gt; system.&lt;/p&gt;&#xA;&lt;p&gt;due to problems with requirements&lt;/p&gt;&#xA;&lt;p&gt;Small batches of requirements can be identified and implemented incrementally&#xA;like itrative&lt;/p&gt;&#xA;&lt;p&gt;avoid risk convert high level business requirements (from the system request) into detailed requirements that can be used as inputs for creating model&lt;/p&gt;&#xA;&lt;p&gt;high to low require&lt;/p&gt;&#xA;&lt;p&gt;what&amp;rsquo;s require&lt;/p&gt;&#xA;&lt;p&gt;detail&lt;/p&gt;&#xA;&lt;p&gt;fuctional user and do&#xA;non - system persisty like AES encrypt, can be test&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>
