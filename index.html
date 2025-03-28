@@ -143,38 +143,35 @@
         
 
 <div class="cyber-container">
+  <!-- 主标题 -->
   <div class="cyber-header">
-    <div class="cyber-glitch" data-text="">Seaku</div>
+    <div class="cyber-title">Seaku</div>
     <div class="cyber-subtitle">物质会探索所有路径</div>
   </div>
+  <!-- 按钮 -->
   <div class="cyber-buttons">
     <a href="https://github.com/hamhuo-hub" class="cyber-button">
-      <span class="cyber-button-text">GITHUB</span>
-      <span class="cyber-button-lights"></span>
+      <span class="button-text">GITHUB</span>
     </a>
     <a href="mailto:hamhuo@outlook.com" class="cyber-button purple">
-      <span class="cyber-button-text">EMAIL</span>
-      <span class="cyber-button-lights"></span>
+      <span class="button-text">EMAIL</span>
     </a>
   </div>
-  <div class="cyber-terminal">
-    <iframe 
-      src="https://github.com/users/hamhuo-hub/contributions" 
-      frameborder="0"
-      scrolling="no"
-      style="width:100%; height:300px;"
-      onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';">
-    </iframe>
+  <!-- GitHub数据卡片 -->
+  <div class="cyber-stats">
+    <!-- 基础统计 -->
+    <div class="stat-card">
+      <img src="https://github-readme-stats.vercel.app/api?username=hamhuo-hub&show_icons=true&theme=dark&bg_color=0a0a14&title_color=0ff0fc&text_color=ffffff&icon_color=ff00ff&hide_border=true" 
+           alt="GitHub Stats">
+    </div>
   </div>
 </div>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap');
-
 :root {
   --neon-blue: #0ff0fc;
   --neon-purple: #ff00ff;
   --dark-bg: #0a0a14;
-  --terminal-bg: #0a0a20;
+  --card-bg: rgba(10, 10, 30, 0.7);
 }
 
 body {
@@ -182,175 +179,107 @@ body {
   color: white;
   font-family: 'Rajdhani', sans-serif;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .cyber-container {
-  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(0, 255, 252, 0.1) 0%, transparent 30%),
-    radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 30%),
-    var(--dark-bg);
 }
 
+/* 标题样式 */
 .cyber-header {
   text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
+  margin-bottom: 2rem;
 }
 
-.cyber-glitch {
-  font-size: 3.5rem;
-  font-weight: 700;
+.cyber-title {
   font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
   color: var(--neon-blue);
-  text-transform: uppercase;
-  position: relative;
-  letter-spacing: 0.2em;
-}
-
-.cyber-glitch::before,
-.cyber-glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.cyber-glitch::before {
-  color: var(--neon-purple);
-  animation: glitch-effect 3s infinite;
-}
-
-.cyber-glitch::after {
-  color: var(--neon-blue);
-  animation: glitch-effect 2s infinite reverse;
+  text-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
 }
 
 .cyber-subtitle {
-  font-size: 1.8rem;
-  margin-top: 1rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-  letter-spacing: 0.1em;
 }
 
+/* 按钮样式 */
 .cyber-buttons {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .cyber-button {
-  position: relative;
-  padding: 1rem 2.5rem;
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  background: rgba(0, 0, 30, 0.5);
+  padding: 0.8rem 1.5rem;
+  background: var(--card-bg);
   border: 1px solid var(--neon-blue);
-  box-shadow: 0 0 10px rgba(0, 255, 252, 0.3);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
   transition: all 0.3s;
-  overflow: hidden;
 }
 
 .cyber-button.purple {
   border-color: var(--neon-purple);
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
 }
 
 .cyber-button:hover {
-  background: rgba(0, 0, 50, 0.7);
-  box-shadow: 0 0 20px rgba(0, 255, 252, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--neon-blue);
 }
 
 .cyber-button.purple:hover {
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+  box-shadow: 0 0 15px var(--neon-purple);
 }
 
-.cyber-button-text {
-  position: relative;
-  z-index: 2;
-}
-
-.cyber-button-lights {
-  position: absolute;
-  top: -10px;
-  left: 0;
+/* 数据卡片 */
+.cyber-stats {
   width: 100%;
-  height: 5px;
-  background: var(--neon-blue);
-  box-shadow: 0 0 10px var(--neon-blue);
-  animation: scanline 2s linear infinite;
-  opacity: 0.7;
+  display: grid;
+  gap: 1.5rem;
 }
 
-.cyber-button.purple .cyber-button-lights {
-  background: var(--neon-purple);
-  box-shadow: 0 0 10px var(--neon-purple);
-}
-
-.cyber-terminal {
-  width: 100%;
-  max-width: 800px;
-  background: var(--terminal-bg);
-  border: 1px solid rgba(0, 255, 252, 0.3);
-  box-shadow: 0 0 20px rgba(0, 255, 252, 0.1);
-  margin-top: 2rem;
-  border-radius: 4px;
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 255, 252, 0.2);
+  border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.3s;
 }
 
-/* Style the iframe content */
-.cyber-terminal iframe {
-  filter: invert(1) hue-rotate(180deg) contrast(0.8) brightness(1.2);
-  background: transparent !important;
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card img {
+  width: 100%;
+  height: auto;
   display: block;
-  border: none;
 }
 
-@keyframes glitch-effect {
-  0% { transform: translate(0); }
-  20% { transform: translate(-3px, 3px); }
-  40% { transform: translate(-3px, -3px); }
-  60% { transform: translate(3px, 3px); }
-  80% { transform: translate(3px, -3px); }
-  100% { transform: translate(0); }
-}
-
-@keyframes scanline {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(50px); }
-}
-
-@media (max-width: 768px) {
-  .cyber-glitch {
-    font-size: 2.5rem;
-  }
-  
-  .cyber-subtitle {
-    font-size: 1.4rem;
+/* 响应式 */
+@media (max-width: 600px) {
+  .cyber-title {
+    font-size: 2rem;
   }
   
   .cyber-buttons {
     flex-direction: column;
-    gap: 1rem;
+    width: 100%;
   }
   
-  .cyber-terminal {
-    margin: 1rem;
-    width: calc(100% - 2rem);
+  .cyber-button {
+    width: 100%;
+    text-align: center;
   }
 }
 </style>
