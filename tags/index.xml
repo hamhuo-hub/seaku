@@ -15,52 +15,10 @@
       <description></description>
     </item>
     <item>
-      <title>GC</title>
-      <link>https://hamhuo.xyz/tags/gc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/gc/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Internet</title>
       <link>https://hamhuo.xyz/tags/internet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hamhuo.xyz/tags/internet/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>JavaWeb</title>
-      <link>https://hamhuo.xyz/tags/javaweb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/javaweb/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Java数据类型</title>
-      <link>https://hamhuo.xyz/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>JVM</title>
-      <link>https://hamhuo.xyz/tags/jvm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/jvm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>List</title>
-      <link>https://hamhuo.xyz/tags/list/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/list/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Liveness</title>
-      <link>https://hamhuo.xyz/tags/liveness/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/liveness/</guid>
       <description></description>
     </item>
     <item>
@@ -71,83 +29,6 @@
       <description></description>
     </item>
     <item>
-      <title>MySQL</title>
-      <link>https://hamhuo.xyz/tags/mysql/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/mysql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Spring</title>
-      <link>https://hamhuo.xyz/tags/spring/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/spring/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Synchronized</title>
-      <link>https://hamhuo.xyz/tags/synchronized/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/synchronized/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ThreadObjects</title>
-      <link>https://hamhuo.xyz/tags/threadobjects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/threadobjects/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>中间件</title>
-      <link>https://hamhuo.xyz/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>分布式</title>
-      <link>https://hamhuo.xyz/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>分治</title>
-      <link>https://hamhuo.xyz/tags/%E5%88%86%E6%B2%BB/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E5%88%86%E6%B2%BB/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>切面编程</title>
-      <link>https://hamhuo.xyz/tags/%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>双指针</title>
-      <link>https://hamhuo.xyz/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>字符串</title>
-      <link>https://hamhuo.xyz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>并发编程</title>
-      <link>https://hamhuo.xyz/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>操作系统</title>
       <link>https://hamhuo.xyz/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -155,94 +36,10 @@
       <description></description>
     </item>
     <item>
-      <title>数组</title>
-      <link>https://hamhuo.xyz/tags/%E6%95%B0%E7%BB%84/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E6%95%B0%E7%BB%84/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>日志</title>
       <link>https://hamhuo.xyz/tags/%E6%97%A5%E5%BF%97/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hamhuo.xyz/tags/%E6%97%A5%E5%BF%97/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>树</title>
-      <link>https://hamhuo.xyz/tags/%E6%A0%91/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E6%A0%91/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>滑动窗口</title>
-      <link>https://hamhuo.xyz/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>矩阵</title>
-      <link>https://hamhuo.xyz/tags/%E7%9F%A9%E9%98%B5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E7%9F%A9%E9%98%B5/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>笔试</title>
-      <link>https://hamhuo.xyz/tags/%E7%AC%94%E8%AF%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E7%AC%94%E8%AF%95/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>设计模式</title>
-      <link>https://hamhuo.xyz/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>贪心</title>
-      <link>https://hamhuo.xyz/tags/%E8%B4%AA%E5%BF%83/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E8%B4%AA%E5%BF%83/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>递归</title>
-      <link>https://hamhuo.xyz/tags/%E9%80%92%E5%BD%92/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E9%80%92%E5%BD%92/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>通配符</title>
-      <link>https://hamhuo.xyz/tags/%E9%80%9A%E9%85%8D%E7%AC%A6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E9%80%9A%E9%85%8D%E7%AC%A6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>鉴权模型</title>
-      <link>https://hamhuo.xyz/tags/%E9%89%B4%E6%9D%83%E6%A8%A1%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E9%89%B4%E6%9D%83%E6%A8%A1%E5%9E%8B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>链表</title>
-      <link>https://hamhuo.xyz/tags/%E9%93%BE%E8%A1%A8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E9%93%BE%E8%A1%A8/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>面试</title>
-      <link>https://hamhuo.xyz/tags/%E9%9D%A2%E8%AF%95/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E9%9D%A2%E8%AF%95/</guid>
       <description></description>
     </item>
   </channel>
