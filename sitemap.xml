@@ -38,7 +38,7 @@
     <loc>https://hamhuo.xyz/school/159.225/week1_2/</loc>
     <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/codewar/isnarcissistic/</loc>
+    <loc>https://hamhuo.xyz/codewar/narcissisticnumber/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/gradientdescent/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
@@ -46,11 +46,12 @@
     <loc>https://hamhuo.xyz/graphicsai/neunet/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/codewar/numberfun/</loc>
-    <lastmod>2025-03-29T04:40:13+08:00</lastmod>
+    <loc>https://hamhuo.xyz/codewar/perfectsquares/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/school/159.261/week1_2_3/</loc>
     <lastmod>2025-03-24T12:28:37+08:00</lastmod>
+  </url><url>
+    <loc>https://hamhuo.xyz/codewar/validatepin/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/torch/start/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
@@ -76,13 +77,12 @@
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/</loc>
-    <lastmod>2025-03-29T04:40:13+08:00</lastmod>
+    <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/</loc>
     <lastmod>2025-03-29T05:00:17+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/codewar/</loc>
-    <lastmod>2025-03-29T04:40:13+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/school/</loc>
     <lastmod>2025-03-29T05:00:17+08:00</lastmod>
@@ -97,7 +97,6 @@
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/oj/</loc>
-    <lastmod>2025-03-29T04:40:13+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/torch/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
@@ -109,7 +108,7 @@
     <lastmod>2025-02-04T17:14:28+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/</loc>
-    <lastmod>2025-03-29T04:40:13+08:00</lastmod>
+    <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
