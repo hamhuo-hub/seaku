@@ -26,11 +26,14 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="codewar">
+    <meta property="article:modified_time" content="2025-04-03T00:58:50+08:00">
+    <meta property="article:tag" content="OJ">
 
   <meta itemprop="name" content="StringSplit">
   <meta itemprop="description" content="Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore (&#39;_&#39;).">
-  <meta itemprop="wordCount" content="126">
-  <meta itemprop="keywords" content="CodeWar">
+  <meta itemprop="dateModified" content="2025-04-03T00:58:50+08:00">
+  <meta itemprop="wordCount" content="137">
+  <meta itemprop="keywords" content="OJ">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="StringSplit">
   <meta name="twitter:description" content="Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore (&#39;_&#39;).">
@@ -128,7 +131,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.88d1ee723b8d75bca9a11014e6a4657e.json"
+    data-offline-search-index-json-src="/offline-search-index.7efdcceb2a2e5de52ec74cef639eab56.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -152,7 +155,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.88d1ee723b8d75bca9a11014e6a4657e.json"
+    data-offline-search-index-json-src="/offline-search-index.7efdcceb2a2e5de52ec74cef639eab56.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -173,6 +176,8 @@
   <a href="/codewar/perfectsquares/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarperfectsquares"><span class="">NumberFun</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarvalidatepin-li">
   <a href="/codewar/validatepin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarphonenumber-li">
+  <a href="/codewar/phonenumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-codewarstringsplit-li">
   <a href="/codewar/stringsplit/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="td-sidebar-nav-active-item">StringSplit</span></a>
 </li>
@@ -200,7 +205,7 @@
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">3</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">5</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">6</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         </ul>
     </div>
@@ -208,7 +213,7 @@
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">5</span></a></li>
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">5</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">6</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">8</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
         </ul>
@@ -233,7 +238,13 @@
 	<h1>StringSplit</h1>
 	<div class="lead">Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore (&rsquo;_&rsquo;).</div>
 	<header class="article-meta">
-		<div class="taxonomy taxonomy-terms-article taxo-categories">
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span></a></li>
+    </ul>
+</div>
+<div class="taxonomy taxonomy-terms-article taxo-categories">
   <h5 class="taxonomy-title">Categories:</h5>
   <ul class="taxonomy-terms">
     <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span></a></li>
@@ -241,7 +252,7 @@
 </div>
 
   </header>
-	<p>similar as [[GetMiddle]]</p>
+	<p>similar as <a href="/codewar/getmiddle/">GetMiddle</a></p>
 <p>Different part is This kata need return all numbers (included &lsquo;__&rsquo;)</p>
 <p>Add __ in front of loop</p>
 <div class="highlight"><pre tabindex="0" style="color:#c6d0f5;background-color:#303446;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#e78284">public</span> <span style="color:#e78284">static</span> String<span style="color:#99d1db;font-weight:bold">[]</span> <span style="color:#8caaee">solution</span>(String s) {  
@@ -275,8 +286,13 @@
 </span></span><span style="display:flex;"><span>            j<span style="color:#99d1db;font-weight:bold">++</span>;  
 </span></span><span style="display:flex;"><span>        }        <span style="color:#ca9ee6">return</span> result;  
 </span></span><span style="display:flex;"><span>    }}
-</span></span></code></pre></div>
-	
+</span></span></code></pre></div><blockquote>
+<p>NOTE!! <code>String.substring()</code> have complexity of O(n), be careful when use it!</p></blockquote>
+
+	<div class="td-page-meta__lastmod">
+  Last modified April 3, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/65a32fa116164848ae1b4b6133be723a667232fb">codewar (65a32fa)</a>
+</div>
+
 </div>
 
 
