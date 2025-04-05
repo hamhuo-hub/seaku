@@ -32,11 +32,13 @@
   </url><url>
     <loc>https://hamhuo.xyz/dairy/3%E6%9C%889%E6%97%A5/</loc>
   </url><url>
-    <loc>https://hamhuo.xyz/graphicsai/simpleclassifynet/</loc>
-    <lastmod>2025-03-14T11:49:06+08:00</lastmod>
-  </url><url>
     <loc>https://hamhuo.xyz/school/159.225/week4_5/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
+  </url><url>
+    <loc>https://hamhuo.xyz/graphicsai/diffusionmodel/</loc>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
+  </url><url>
+    <loc>https://hamhuo.xyz/codewar/findprime/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/getmiddle/</loc>
     <lastmod>2025-04-03T00:58:50+08:00</lastmod>
@@ -46,12 +48,6 @@
   </url><url>
     <loc>https://hamhuo.xyz/codewar/narcissisticnumber/</loc>
     <lastmod>2025-03-30T18:37:17+08:00</lastmod>
-  </url><url>
-    <loc>https://hamhuo.xyz/graphicsai/gradientdescent/</loc>
-    <lastmod>2025-03-14T11:49:06+08:00</lastmod>
-  </url><url>
-    <loc>https://hamhuo.xyz/graphicsai/neunet/</loc>
-    <lastmod>2025-03-14T11:49:06+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/perfectsquares/</loc>
     <lastmod>2025-03-30T18:37:17+08:00</lastmod>
@@ -65,17 +61,13 @@
     <loc>https://hamhuo.xyz/codewar/phonenumber/</loc>
     <lastmod>2025-04-03T00:58:50+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/graphicsai/torch/start/</loc>
-    <lastmod>2025-03-14T11:49:06+08:00</lastmod>
-  </url><url>
     <loc>https://hamhuo.xyz/school/159.225/week3/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
   </url><url>
+    <loc>https://hamhuo.xyz/codewar/spinwords/</loc>
+  </url><url>
     <loc>https://hamhuo.xyz/codewar/stringsplit/</loc>
     <lastmod>2025-04-03T00:58:50+08:00</lastmod>
-  </url><url>
-    <loc>https://hamhuo.xyz/graphicsai/archofneunet/</loc>
-    <lastmod>2025-03-12T00:04:55+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/dairy/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
@@ -85,16 +77,13 @@
     <loc>https://hamhuo.xyz/dairy/4%E6%9C%881%E6%97%A5/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/readme/</loc>
-    <lastmod>2025-03-12T22:46:23+08:00</lastmod>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/vae/</loc>
     <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/categories/ai/</loc>
-    <lastmod>2025-03-14T11:49:06+08:00</lastmod>
-  </url><url>
     <loc>https://hamhuo.xyz/categories/</loc>
-    <lastmod>2025-04-03T00:58:50+08:00</lastmod>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/</loc>
     <lastmod>2025-03-29T05:00:17+08:00</lastmod>
@@ -105,20 +94,20 @@
     <loc>https://hamhuo.xyz/school/</loc>
     <lastmod>2025-03-29T05:00:17+08:00</lastmod>
   </url><url>
+    <loc>https://hamhuo.xyz/tags/difussion/</loc>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
+  </url><url>
     <loc>https://hamhuo.xyz/tags/gaming/</loc>
     <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/</loc>
-    <lastmod>2025-03-08T12:51:48+08:00</lastmod>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/tags/machinelearning/</loc>
-    <lastmod>2025-03-14T11:49:06+08:00</lastmod>
+    <loc>https://hamhuo.xyz/categories/machinelearning/</loc>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/oj/</loc>
     <lastmod>2025-04-03T00:58:50+08:00</lastmod>
-  </url><url>
-    <loc>https://hamhuo.xyz/graphicsai/torch/</loc>
-    <lastmod>2025-03-14T11:49:06+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/school/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
@@ -127,7 +116,7 @@
     <lastmod>2025-02-04T17:14:28+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/</loc>
-    <lastmod>2025-04-03T00:58:50+08:00</lastmod>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>

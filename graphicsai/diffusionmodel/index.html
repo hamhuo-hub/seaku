@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="alternate" type="text/html" href="https://hamhuo.xyz/school/159.261/week4_5/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://hamhuo.xyz/school/159.261/week4_5/index.xml">
 <meta name="robots" content="index, follow">
 
 
@@ -19,22 +17,70 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>海阔集</title>
-<meta name="description" content="159.261 Gaming Programming">
-<meta property="og:url" content="https://hamhuo.xyz/school/159.261/week4_5/">
+<title>DiffusionModel | 海阔集</title>
+<meta name="description" content="DDPM Denoising Diffusion Probality Model
+高斯采样, denoise n次, 产生图片
+同一个denosie反复使用, 但是输入噪声的强度不同, 设计一个强度输入
+model 内部是预测噪声, 之后减去噪声
+为什么不直接输出呢? 产生噪声更简单, 分布简单好训练
+但是噪声预测怎么训练? 没有pairdata啊
+那就自己加噪音 - Forward Process
+数据集 LAION IMAGENET, 中有文字和图片的对应
+Text -to-imagestable diffusion三大组件
+TextEncoder -&gt; vector 噪音 -&gt; Generation Model -&gt; 中间产物(图片的压缩版本) 压缩图片 -&gt; decoder -&gt; 图片
+分开训练后组合
+Text encodertext-encoder对图像结果影响很大 FID 越小越好, CLIP 越大越好, a为text-encoder b为predict-model大小">
+<meta property="og:url" content="https://hamhuo.xyz/graphicsai/diffusionmodel/">
   <meta property="og:site_name" content="海阔集">
-  <meta property="og:title" content="海阔集">
-  <meta property="og:description" content="159.261 Gaming Programming">
+  <meta property="og:title" content="DiffusionModel">
+  <meta property="og:description" content="DDPM Denoising Diffusion Probality Model
+高斯采样, denoise n次, 产生图片
+同一个denosie反复使用, 但是输入噪声的强度不同, 设计一个强度输入
+model 内部是预测噪声, 之后减去噪声
+为什么不直接输出呢? 产生噪声更简单, 分布简单好训练
+但是噪声预测怎么训练? 没有pairdata啊
+那就自己加噪音 - Forward Process
+数据集 LAION IMAGENET, 中有文字和图片的对应
+Text -to-imagestable diffusion三大组件
+TextEncoder -&gt; vector 噪音 -&gt; Generation Model -&gt; 中间产物(图片的压缩版本) 压缩图片 -&gt; decoder -&gt; 图片
+分开训练后组合
+Text encodertext-encoder对图像结果影响很大 FID 越小越好, CLIP 越大越好, a为text-encoder b为predict-model大小">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="graphics&amp;ai">
+    <meta property="article:modified_time" content="2025-04-03T16:28:52+08:00">
+    <meta property="article:tag" content="Difussion">
 
-  <meta itemprop="name" content="海阔集">
-  <meta itemprop="description" content="159.261 Gaming Programming">
-  <meta itemprop="dateModified" content="2025-03-28T11:44:57+08:00">
-  <meta itemprop="keywords" content="Gaming">
+  <meta itemprop="name" content="DiffusionModel">
+  <meta itemprop="description" content="DDPM Denoising Diffusion Probality Model
+高斯采样, denoise n次, 产生图片
+同一个denosie反复使用, 但是输入噪声的强度不同, 设计一个强度输入
+model 内部是预测噪声, 之后减去噪声
+为什么不直接输出呢? 产生噪声更简单, 分布简单好训练
+但是噪声预测怎么训练? 没有pairdata啊
+那就自己加噪音 - Forward Process
+数据集 LAION IMAGENET, 中有文字和图片的对应
+Text -to-imagestable diffusion三大组件
+TextEncoder -&gt; vector 噪音 -&gt; Generation Model -&gt; 中间产物(图片的压缩版本) 压缩图片 -&gt; decoder -&gt; 图片
+分开训练后组合
+Text encodertext-encoder对图像结果影响很大 FID 越小越好, CLIP 越大越好, a为text-encoder b为predict-model大小">
+  <meta itemprop="dateModified" content="2025-04-03T16:28:52+08:00">
+  <meta itemprop="wordCount" content="71">
+  <meta itemprop="keywords" content="Difussion">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="海阔集">
-  <meta name="twitter:description" content="159.261 Gaming Programming">
+  <meta name="twitter:title" content="DiffusionModel">
+  <meta name="twitter:description" content="DDPM Denoising Diffusion Probality Model
+高斯采样, denoise n次, 产生图片
+同一个denosie反复使用, 但是输入噪声的强度不同, 设计一个强度输入
+model 内部是预测噪声, 之后减去噪声
+为什么不直接输出呢? 产生噪声更简单, 分布简单好训练
+但是噪声预测怎么训练? 没有pairdata啊
+那就自己加噪音 - Forward Process
+数据集 LAION IMAGENET, 中有文字和图片的对应
+Text -to-imagestable diffusion三大组件
+TextEncoder -&gt; vector 噪音 -&gt; Generation Model -&gt; 中间产物(图片的压缩版本) 压缩图片 -&gt; decoder -&gt; 图片
+分开训练后组合
+Text encodertext-encoder对图像结果影响很大 FID 越小越好, CLIP 越大越好, a为text-encoder b为predict-model大小">
 <link rel="preload" href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" as="style" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <link href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" rel="stylesheet" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <script
@@ -47,7 +93,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll" data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row">
@@ -58,10 +104,10 @@
         <a class="nav-link" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/school/"><span>Course</span></a>
+        <a class="nav-link" href="/school/"><span>Course</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link active" href="/graphicsai/"><span>Graphics and AI</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -160,31 +206,15 @@
   </form>
   <nav class="td-sidebar-nav collapse" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
-      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-school-li">
-  <a href="/school/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-school"><span class="">Course</span></a>
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-graphicsai-li">
+  <a href="/graphicsai/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-graphicsai"><span class="">Graphics and AI</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-school159225-li">
-  <a href="/school/159.225/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159225"><span class="">159.225 System Analysis and Modelling</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-school159225assignment-li">
-  <a href="/school/159.225/assignment/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159225assignment"><span class="">159.225 Assignment</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-school159225week4_5-li">
-  <a href="/school/159.225/week4_5/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159225week4_5"><span class="">Business Process Modelling with Activity Diagrams and Business Process Model and Notation (BPMN)</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-school159225week1_2-li">
-  <a href="/school/159.225/week1_2/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159225week1_2"><span class="">Intro to  Systems Analysis and Modelling</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-school159225week3-li">
-  <a href="/school/159.225/week3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159225week3"><span class="">Scenarios and Use Cases</span></a>
-</li>
-  </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-school159261-li">
-  <a href="/school/159.261/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159261"><span class="">159.261 Gaming Programming</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-school159261week4_5-li">
-  <a href="/school/159.261/week4_5/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section" id="m-school159261week4_5"><span class="td-sidebar-nav-active-item"></span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-school159261week1_2_3-li">
-  <a href="/school/159.261/week1_2_3/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159261week1_2_3"><span class="">Overview Java</span></a>
-</li>
-  </ul>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-graphicsaidiffusionmodel-li">
+  <a href="/graphicsai/diffusionmodel/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-graphicsaidiffusionmodel"><span class="td-sidebar-nav-active-item">DiffusionModel</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaireadme-li">
+  <a href="/graphicsai/readme/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaireadme"><span class=""></span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaivae-li">
+  <a href="/graphicsai/vae/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaivae"><span class=""></span></a>
 </li>
   </ul>
 </li>
@@ -195,16 +225,27 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a href="https://github.com/hamhuo-hub/seaku/tree/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cschool%5c159.261%5cweek4_5%5c_index.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
-  <a href="https://github.com/hamhuo-hub/seaku/edit/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cschool%5c159.261%5cweek4_5%5c_index.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
-  <a href="https://github.com/hamhuo-hub/seaku/new/main/C:/Users/HuoZihang/Documents/GitHub/seaku-src/content/en/school/159.261/week4_5?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
-  <a href="https://github.com/hamhuo-hub/seaku/issues/new?title=" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+<a href="https://github.com/hamhuo-hub/seaku/tree/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cgraphics&amp;AI%5cDiffusionModel.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/hamhuo-hub/seaku/edit/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cgraphics&amp;AI%5cDiffusionModel.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/hamhuo-hub/seaku/new/main/C:/Users/HuoZihang/Documents/GitHub/seaku-src/content/en/graphics&amp;AI?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+  <a href="https://github.com/hamhuo-hub/seaku/issues/new?title=DiffusionModel" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
   <a href="https://github.com/hamhuo-hub/seaku/issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
-  <a id="print" href="/school/159.261/week4_5/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
+  <a id="print" href="/graphicsai/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
@@ -233,41 +274,74 @@
             <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="/school/">Course</a></li>
-  <li class="breadcrumb-item">
-    <a href="/school/159.261/">159.261 Gaming Programming</a></li>
+    <a href="/graphicsai/">Graphics and AI</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    </li>
+    DiffusionModel</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1></h1>
-  <div class="lead">159.261 Gaming Programming</div>
+	<h1>DiffusionModel</h1>
+	
 	<header class="article-meta">
 		<div class="taxonomy taxonomy-terms-article taxo-tags">
   <h5 class="taxonomy-title">Tags:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span></a></li>
+    <li><a class="taxonomy-term" href="https://hamhuo.xyz/tags/difussion/" data-taxonomy-term="difussion"><span class="taxonomy-label">Difussion</span></a></li>
     </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
   <h5 class="taxonomy-title">Categories:</h5>
   <ul class="taxonomy-terms">
-    <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span></a></li>
+    <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span></a></li>
     </ul>
 </div>
 
   </header>
-	
-  <div class="section-index">
-    
-    
-    </div>
-<div class="td-page-meta__lastmod">
-  Last modified March 28, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/4681a0956ec9bfe5ed73858065013f338ab00784">simplify note (4681a09)</a>
+	<blockquote>
+<p>DDPM Denoising Diffusion Probality Model</p></blockquote>
+<p>高斯采样, denoise n次, 产生图片</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403121847531.png" alt="image.png"></p>
+<p>同一个denosie反复使用, 但是输入噪声的强度不同, 设计一个强度输入</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403122118463.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403122134092.png" alt=""></p>
+<p>model 内部是预测噪声, 之后减去噪声</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403122251711.png" alt="image.png"></p>
+<p>为什么不直接输出呢? 产生噪声更简单, 分布简单好训练</p>
+<p>但是噪声预测怎么训练? 没有pairdata啊</p>
+<p>那就自己加噪音 - Forward Process</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403122518342.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403122601727.png" alt="image.png"></p>
+<p>数据集 LAION IMAGENET, 中有文字和图片的对应</p>
+<h5 id="text--to-image">Text -to-image<a class="td-heading-self-link" href="#text--to-image" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403122946323.png" alt="image.png"></p>
+<h4 id="stable-diffusion">stable diffusion<a class="td-heading-self-link" href="#stable-diffusion" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>三大组件</p>
+<p>TextEncoder -&gt; vector
+噪音 -&gt; Generation Model -&gt; 中间产物(图片的压缩版本)
+压缩图片 -&gt; decoder -&gt; 图片</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403123244144.png" alt="image.png"></p>
+<p>分开训练后组合</p>
+<h5 id="text-encoder">Text encoder<a class="td-heading-self-link" href="#text-encoder" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>text-encoder对图像结果影响很大 FID 越小越好, CLIP 越大越好, a为text-encoder b为predict-model大小</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403124134783.png" alt="image.png"></p>
+<p>FID:
+CLIP: 分别对文子和图片求向量, 越近越好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403124236147.png" alt="image.png"></p>
+<h5 id="decoder">Decoder<a class="td-heading-self-link" href="#decoder" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>训练资料
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403124420578.png" alt="image.png"></p>
+<p>但是输入的是 Latent Representation? 那怎么输入?</p>
+<p>用VAE/AE 就行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250403124454122.png" alt="image.png"></p>
+<h5 id="generation-model">Generation Model<a class="td-heading-self-link" href="#generation-model" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" />
+	<div class="td-page-meta__lastmod">
+  Last modified April 3, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/6a30070048c27b7da593b2942e0360b35759001d">ml (6a30070)</a>
 </div>
+
 </div>
+
 
           </main>
         </div>
