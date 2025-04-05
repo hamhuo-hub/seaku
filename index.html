@@ -20,21 +20,21 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>海阔集</title>
-<meta name="description" content="Seaku 物质会探索所有路径 GITHUB EMAIL">
+<meta name="description" content="&lt;!DOCTYPE html&gt; Seaku">
 <meta property="og:url" content="https://hamhuo.xyz/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="海阔知识库">
-  <meta property="og:description" content="Seaku 物质会探索所有路径 GITHUB EMAIL">
+  <meta property="og:description" content="&lt;!DOCTYPE html&gt; Seaku">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="海阔知识库">
-  <meta itemprop="description" content="Seaku 物质会探索所有路径 GITHUB EMAIL">
+  <meta itemprop="description" content="&lt;!DOCTYPE html&gt; Seaku">
   <meta itemprop="dateModified" content="2025-03-29T05:32:30+08:00">
-  <meta itemprop="wordCount" content="4">
+  <meta itemprop="wordCount" content="5">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="海阔知识库">
-  <meta name="twitter:description" content="Seaku 物质会探索所有路径 GITHUB EMAIL">
+  <meta name="twitter:description" content="&lt;!DOCTYPE html&gt; Seaku">
 <link rel="preload" href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" as="style" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <link href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" rel="stylesheet" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <script
@@ -126,7 +126,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.8fdbea9b1a74ec493f4c3efe6dc20777.json"
+    data-offline-search-index-json-src="/offline-search-index.b2a0dbacedebfe619c658981d6f2b48b.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -139,147 +139,164 @@
       <main role="main" class="td-main">
         
 
-<div class="cyber-container">
-  <!-- 主标题 -->
-  <div class="cyber-header">
-    <div class="cyber-title">Seaku</div>
-    <div class="cyber-subtitle">物质会探索所有路径</div>
-  </div>
-  <!-- 按钮 -->
-  <div class="cyber-buttons">
-    <a href="https://github.com/hamhuo-hub" class="cyber-button">
-      <span class="button-text">GITHUB</span>
-    </a>
-    <a href="mailto:hamhuo@outlook.com" class="cyber-button purple">
-      <span class="button-text">EMAIL</span>
-    </a>
-  </div>
-  <!-- GitHub数据卡片 -->
-  <div class="cyber-stats">
-    <!-- 基础统计 -->
-    <div class="stat-card">
-      <img src="https://github-readme-stats.vercel.app/api?username=hamhuo-hub&show_icons=true&theme=dark&bg_color=0a0a14&title_color=0ff0fc&text_color=ffffff&icon_color=ff00ff&hide_border=true" 
-           alt="GitHub Stats">
-    </div>
-  </div>
-</div>
-<style>
-:root {
-  --neon-blue: #0ff0fc;
-  --neon-purple: #ff00ff;
-  --dark-bg: #0a0a14;
-  --card-bg: rgba(10, 10, 30, 0.7);
-}
-
-body {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seaku</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-blue: #0ff0fc;
+      --holo-glow: rgba(0, 255, 252, 0.3);
+      --dark-bg: #0a0a14;
+    }
+<pre><code>body {
+  margin: 0;
   background: var(--dark-bg);
   color: white;
   font-family: 'Rajdhani', sans-serif;
-  margin: 0;
   min-height: 100vh;
-}
-
-.cyber-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
-/* 标题样式 */
+#particle-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .cyber-header {
   text-align: center;
-  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .cyber-title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--neon-blue);
-  text-shadow: 0 0 10px rgba(0, 255, 252, 0.5);
+  text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
   letter-spacing: 0.1em;
-  margin-bottom: 0.5rem;
+  animation: flicker 4s infinite;
+  position: relative;
+}
+
+.cyber-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: scanline 2s linear infinite;
 }
 
 .cyber-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 5px var(--holo-glow);
+  margin-top: 1rem;
 }
 
-/* 按钮样式 */
-.cyber-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.7; }
 }
 
-.cyber-button {
-  padding: 0.8rem 1.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--neon-blue);
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s;
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
 
-.cyber-button.purple {
-  border-color: var(--neon-purple);
-}
-
-.cyber-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px var(--neon-blue);
-}
-
-.cyber-button.purple:hover {
-  box-shadow: 0 0 15px var(--neon-purple);
-}
-
-/* 数据卡片 */
-.cyber-stats {
-  width: 100%;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.stat-card {
-  background: var(--card-bg);
-  border: 1px solid rgba(0, 255, 252, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-}
-
-.stat-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* 响应式 */
 @media (max-width: 600px) {
   .cyber-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
-  
-  .cyber-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .cyber-button {
-    width: 100%;
-    text-align: center;
+  .cyber-subtitle {
+    font-size: 1.2rem;
   }
 }
-</style>
+</code></pre>
+<p></style></p>
+</head>
+<body>
+  <div class="cyber-header">
+    <div class="cyber-title" id="holo-title">
+    <br><br>Seaku</div>
+    <div class="cyber-subtitle">物质会探索所有路径</div>
+  </div>
+<p><canvas id="particle-bg"></canvas></p>
+  <script>
+    // Particle Background
+    const canvas = document.getElementById('particle-bg');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const particleCount = 50;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 0.5 - 0.25;
+        this.speedY = Math.random() * 0.5 - 0.25;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+
+      draw() {
+        ctx.fillStyle = 'rgba(0, 255, 252, 0.5)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    initParticles();
+    animateParticles();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
+
 
 
       </main>
