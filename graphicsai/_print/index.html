@@ -158,7 +158,7 @@ we only need the best function, use it to predicted new image, we called testing
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.d3760970c4674ab4ca18b50d2c484ab0.json"
+    data-offline-search-index-json-src="/offline-search-index.8fdbea9b1a74ec493f4c3efe6dc20777.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -221,7 +221,15 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>3: <a href="#pg-df192624770c0d325fbe1f04e6e5c4e9"></a></li>
+<li>3: <a href="#pg-3d8e4a13b3120c367cc4ea67b38ebe98"></a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-df192624770c0d325fbe1f04e6e5c4e9"></a></li>
 
 
     
@@ -361,7 +369,61 @@ CLIP: 分别对文子和图片求向量, 越近越好</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-df192624770c0d325fbe1f04e6e5c4e9">3 - </h1>
+	<h1 id="pg-3d8e4a13b3120c367cc4ea67b38ebe98">3 - </h1>
+    
+	<h4 id="introduce">Introduce<a class="td-heading-self-link" href="#introduce" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>Input and output not same length</p>
+<p>decided by model itself which is called <code>Seq2Seq</code> Model</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405211059372.png" alt="image.png"></p>
+<h5 id="seq2seq-model-structure">Seq2Seq Model structure<a class="td-heading-self-link" href="#seq2seq-model-structure" aria-label="Heading self-link"></a></h5>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>Encoder and Decoder</p>
+<blockquote>
+<p>Transformer is a enhanced S2S model</p></blockquote>
+<h6 id="encoder">Encoder<a class="td-heading-self-link" href="#encoder" aria-label="Heading self-link"></a></h6>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405213147511.png" alt="image.png"></p>
+<h6 id="encoder-in-transformer">Encoder in Transformer<a class="td-heading-self-link" href="#encoder-in-transformer" aria-label="Heading self-link"></a></h6>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405213243811.png" alt="image.png"></p>
+<p>Not a layer, is multi-layer</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405213321611.png" alt="image.png"></p>
+<h4 id="decoder">Decoder<a class="td-heading-self-link" href="#decoder" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>called Autoregressive</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405214027633.png" alt="image.png"></p>
+<p>Introduce one of two decoder - Autoregressive decoder</p>
+<p>Decoder is generate result</p>
+<p>there has a way make seq as input</p>
+<p>result will contain a dictionary, with soft-max find MOST value(Classification)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405214601650.png" alt="image.png"></p>
+<p>next character will based on current character</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405214734170.png" alt="image.png"></p>
+<p>What if Error propagation?</p>
+<p>How model decide output length?</p>
+<p>we need a special input &lsquo;stop&rsquo;</p>
+<h6 id="nat">NAT<a class="td-heading-self-link" href="#nat" aria-label="Heading self-link"></a></h6>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p>result is not generate one and another</p>
+<p>result have same length as BEGIN</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405220030642.png" alt="image.png"></p>
+<p>for example, In voice recognition, slow speed though add more BEGIN</p>
+<p>While NAT is usually worse than AT</p>
+<h4 id="puttogether">PUTTOGETHER<a class="td-heading-self-link" href="#puttogether" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405220625100.png" alt="image.png"></p>
+<h6 id="cross-attention">CROSS-ATTENTION<a class="td-heading-self-link" href="#cross-attention" aria-label="Heading self-link"></a></h6>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" /><p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250405220945211.png" alt="image.png"></p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-df192624770c0d325fbe1f04e6e5c4e9">4 - </h1>
     
 	
 </div>
