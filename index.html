@@ -20,21 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>海阔集</title>
-<meta name="description" content="&lt;!DOCTYPE html&gt; Seaku">
+<meta name="description" content="集百川者, 成海阔">
 <meta property="og:url" content="https://hamhuo.xyz/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="海阔知识库">
-  <meta property="og:description" content="&lt;!DOCTYPE html&gt; Seaku">
+  <meta property="og:description" content="集百川者, 成海阔">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="海阔知识库">
-  <meta itemprop="description" content="&lt;!DOCTYPE html&gt; Seaku">
-  <meta itemprop="dateModified" content="2025-03-29T05:32:30+08:00">
-  <meta itemprop="wordCount" content="5">
+  <meta itemprop="description" content="集百川者, 成海阔">
+  <meta itemprop="dateModified" content="2025-04-05T22:46:23+08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="海阔知识库">
-  <meta name="twitter:description" content="&lt;!DOCTYPE html&gt; Seaku">
+  <meta name="twitter:description" content="集百川者, 成海阔">
 <link rel="preload" href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" as="style" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <link href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" rel="stylesheet" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <script
@@ -126,7 +125,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.b2a0dbacedebfe619c658981d6f2b48b.json"
+    data-offline-search-index-json-src="/offline-search-index.e12a25f365a9aa8d1883e22c75defee3.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -138,165 +137,6 @@
     <div class="container-fluid td-default td-outer">
       <main role="main" class="td-main">
         
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Seaku</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --neon-blue: #0ff0fc;
-      --holo-glow: rgba(0, 255, 252, 0.3);
-      --dark-bg: #0a0a14;
-    }
-<pre><code>body {
-  margin: 0;
-  background: var(--dark-bg);
-  color: white;
-  font-family: 'Rajdhani', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-
-#particle-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.cyber-header {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.cyber-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 4rem;
-  color: var(--neon-blue);
-  text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
-  letter-spacing: 0.1em;
-  animation: flicker 4s infinite;
-  position: relative;
-}
-
-.cyber-title::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(transparent, rgba(255, 255, 255, 0.1), transparent);
-  animation: scanline 2s linear infinite;
-}
-
-.cyber-subtitle {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 5px var(--holo-glow);
-  margin-top: 1rem;
-}
-
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 24%, 55% { opacity: 0.7; }
-}
-
-@keyframes scanline {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
-}
-
-@media (max-width: 600px) {
-  .cyber-title {
-    font-size: 2.5rem;
-  }
-  .cyber-subtitle {
-    font-size: 1.2rem;
-  }
-}
-</code></pre>
-<p></style></p>
-</head>
-<body>
-  <div class="cyber-header">
-    <div class="cyber-title" id="holo-title">
-    <br><br>Seaku</div>
-    <div class="cyber-subtitle">物质会探索所有路径</div>
-  </div>
-<p><canvas id="particle-bg"></canvas></p>
-  <script>
-    // Particle Background
-    const canvas = document.getElementById('particle-bg');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const particles = [];
-    const particleCount = 50;
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
-      }
-
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-      }
-
-      draw() {
-        ctx.fillStyle = 'rgba(0, 255, 252, 0.5)';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    function initParticles() {
-      for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-      }
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => {
-        p.update();
-        p.draw();
-      });
-      requestAnimationFrame(animateParticles);
-    }
-
-    initParticles();
-    animateParticles();
-
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
-  </script>
-</body>
-</html>
-
 
 
       </main>

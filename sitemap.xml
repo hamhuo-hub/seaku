@@ -39,37 +39,33 @@
     <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/findprime/</loc>
-    <lastmod>2025-04-05T11:37:56+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/getmiddle/</loc>
-    <lastmod>2025-04-03T00:58:50+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/school/159.225/week1_2/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/narcissisticnumber/</loc>
-    <lastmod>2025-03-30T18:37:17+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/codewar/perfectsquares/</loc>
-    <lastmod>2025-03-30T18:37:17+08:00</lastmod>
+    <loc>https://hamhuo.xyz/codewar/numberfun/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/school/159.261/week1_2_3/</loc>
     <lastmod>2025-03-24T12:28:37+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/validatepin/</loc>
-    <lastmod>2025-04-03T00:58:50+08:00</lastmod>
+  </url><url>
+    <loc>https://hamhuo.xyz/codewar/palindromes/</loc>
+  </url><url>
+    <loc>https://hamhuo.xyz/codewar/pangramchecker/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/phonenumber/</loc>
-    <lastmod>2025-04-03T00:58:50+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/school/159.225/week3/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/spinwords/</loc>
-    <lastmod>2025-04-05T11:37:56+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/stringsplit/</loc>
-    <lastmod>2025-04-03T00:58:50+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/dairy/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
@@ -88,13 +84,11 @@
     <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/</loc>
-    <lastmod>2025-04-05T11:37:56+08:00</lastmod>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/</loc>
-    <lastmod>2025-03-29T05:00:17+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/codewar/</loc>
-    <lastmod>2025-04-05T11:37:56+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/school/</loc>
     <lastmod>2025-03-29T05:00:17+08:00</lastmod>
@@ -112,7 +106,6 @@
     <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/oj/</loc>
-    <lastmod>2025-04-05T11:37:56+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/school/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
@@ -121,7 +114,7 @@
     <lastmod>2025-02-04T17:14:28+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/</loc>
-    <lastmod>2025-04-05T11:37:56+08:00</lastmod>
+    <lastmod>2025-04-03T16:28:52+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
@@ -130,6 +123,6 @@
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/</loc>
-    <lastmod>2025-03-29T05:32:30+08:00</lastmod>
+    <lastmod>2025-04-05T22:46:23+08:00</lastmod>
   </url>
 </urlset>
