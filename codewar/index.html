@@ -20,24 +20,20 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Code War | 海阔集</title>
-<meta name="description" content="单元测试示例: TDD example private static final Logger logger = Logger.getLogger(&#34;&#34;); private static void logInfo(Description description, String status, long nanos) { String testName = description.getMethodName(); logger.info(String.format(“Test %s %s, spent %d microseconds”, testName, status, TimeUnit.NANOSECONDS.toMicros(nanos))); }
-@Rule public Stopwatch stopwatch = new Stopwatch() { @Override protected void succeeded(long nanos, Description description) { logInfo(description, “succeeded”, nanos); } @Override protected void failed(long nanos, Throwable e, Description description) { logInfo(description, “failed”, nanos); } @Override protected void skipped(long nanos, AssumptionViolatedException e, Description description) { logInfo(description, “skipped”, nanos); } @Override protected void finished(long nanos, Description description) { logInfo(description, “finished”, nanos); } };">
+<meta name="description" content="集百川者, 成海阔">
 <meta property="og:url" content="https://hamhuo.xyz/codewar/">
   <meta property="og:site_name" content="海阔集">
   <meta property="og:title" content="Code War">
-  <meta property="og:description" content="单元测试示例: TDD example private static final Logger logger = Logger.getLogger(&#34;&#34;); private static void logInfo(Description description, String status, long nanos) { String testName = description.getMethodName(); logger.info(String.format(“Test %s %s, spent %d microseconds”, testName, status, TimeUnit.NANOSECONDS.toMicros(nanos))); }
-@Rule public Stopwatch stopwatch = new Stopwatch() { @Override protected void succeeded(long nanos, Description description) { logInfo(description, “succeeded”, nanos); } @Override protected void failed(long nanos, Throwable e, Description description) { logInfo(description, “failed”, nanos); } @Override protected void skipped(long nanos, AssumptionViolatedException e, Description description) { logInfo(description, “skipped”, nanos); } @Override protected void finished(long nanos, Description description) { logInfo(description, “finished”, nanos); } };">
+  <meta property="og:description" content="集百川者, 成海阔">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Code War">
-  <meta itemprop="description" content="单元测试示例: TDD example private static final Logger logger = Logger.getLogger(&#34;&#34;); private static void logInfo(Description description, String status, long nanos) { String testName = description.getMethodName(); logger.info(String.format(“Test %s %s, spent %d microseconds”, testName, status, TimeUnit.NANOSECONDS.toMicros(nanos))); }
-@Rule public Stopwatch stopwatch = new Stopwatch() { @Override protected void succeeded(long nanos, Description description) { logInfo(description, “succeeded”, nanos); } @Override protected void failed(long nanos, Throwable e, Description description) { logInfo(description, “failed”, nanos); } @Override protected void skipped(long nanos, AssumptionViolatedException e, Description description) { logInfo(description, “skipped”, nanos); } @Override protected void finished(long nanos, Description description) { logInfo(description, “finished”, nanos); } };">
-  <meta itemprop="wordCount" content="95">
+  <meta itemprop="description" content="集百川者, 成海阔">
+  <meta itemprop="dateModified" content="2025-04-07T23:51:50+08:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Code War">
-  <meta name="twitter:description" content="单元测试示例: TDD example private static final Logger logger = Logger.getLogger(&#34;&#34;); private static void logInfo(Description description, String status, long nanos) { String testName = description.getMethodName(); logger.info(String.format(“Test %s %s, spent %d microseconds”, testName, status, TimeUnit.NANOSECONDS.toMicros(nanos))); }
-@Rule public Stopwatch stopwatch = new Stopwatch() { @Override protected void succeeded(long nanos, Description description) { logInfo(description, “succeeded”, nanos); } @Override protected void failed(long nanos, Throwable e, Description description) { logInfo(description, “failed”, nanos); } @Override protected void skipped(long nanos, AssumptionViolatedException e, Description description) { logInfo(description, “skipped”, nanos); } @Override protected void finished(long nanos, Description description) { logInfo(description, “finished”, nanos); } };">
+  <meta name="twitter:description" content="集百川者, 成海阔">
 <link rel="preload" href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" as="style" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <link href="/scss/main.min.6c18e25eadfb13d8abc6b872960e12aab94122cfeded66e3b312c962ee366f20.css" rel="stylesheet" integrity="sha256-bBjiXq37E9irxrhylg4SqrlBIs/t7WbjsxLJYu42byA=" crossorigin="anonymous">
 <script
@@ -62,6 +58,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/school/"><span>Course</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/deepml/"><span>DeepML</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
@@ -129,7 +128,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.e12a25f365a9aa8d1883e22c75defee3.json"
+    data-offline-search-index-json-src="/offline-search-index.fca07776181d20457ca4296b5346c654.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -153,7 +152,7 @@
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.e12a25f365a9aa8d1883e22c75defee3.json"
+    data-offline-search-index-json-src="/offline-search-index.fca07776181d20457ca4296b5346c654.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -176,8 +175,6 @@
   <a href="/codewar/numberfun/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarvalidatepin-li">
   <a href="/codewar/validatepin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarpalindromes-li">
-  <a href="/codewar/palindromes/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarpalindromes"><span class="">PalindRomes</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarpangramchecker-li">
   <a href="/codewar/pangramchecker/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarphonenumber-li">
@@ -218,7 +215,8 @@
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">10</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/deepml/" data-taxonomy-term="deepml"><span class="taxonomy-label">DeepML</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/machinelearning/" data-taxonomy-term="machinelearning"><span class="taxonomy-label">MachineLearning</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">8</span></a></li>
         <li><a class="taxonomy-term" href="https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">1</span></a></li>
@@ -244,222 +242,7 @@
 	<header class="article-meta">
 		
   </header>
-	<div class="cyber-container">
-  <div class="cyber-header">
-    <div class="cyber-subtitle">单元测试示例: TDD example</div>
-  </div>
-  <!-- 代码展示 -->
-  <div class="cyber-code">
-    <pre><code class="language-java">private static final Logger logger = Logger.getLogger("");
-<p>private static void logInfo(Description description, String status, long nanos) {
-String testName = description.getMethodName();
-logger.info(String.format(&ldquo;Test %s %s, spent %d microseconds&rdquo;,
-testName, status, TimeUnit.NANOSECONDS.toMicros(nanos)));
-}</p>
-<p>@Rule
-public Stopwatch stopwatch = new Stopwatch() {
-@Override
-protected void succeeded(long nanos, Description description) {
-logInfo(description, &ldquo;succeeded&rdquo;, nanos);
-}
-@Override
-protected void failed(long nanos, Throwable e, Description description) {
-logInfo(description, &ldquo;failed&rdquo;, nanos);
-}
-@Override
-protected void skipped(long nanos, AssumptionViolatedException e, Description description) {
-logInfo(description, &ldquo;skipped&rdquo;, nanos);
-}
-@Override
-protected void finished(long nanos, Description description) {
-logInfo(description, &ldquo;finished&rdquo;, nanos);
-}
-};</p>
-<p></code></pre></p>
-  </div>
-</div>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap');
-
-:root {
-  --neon-blue: #0ff0fc;
-  --neon-purple: #ff00ff;
-  --dark-bg: #0a0a14;
-  --code-bg: #0a0a20;
-}
-
-body {
-  background: var(--dark-bg);
-  color: white;
-  font-family: 'Rajdhani', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.cyber-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(0, 255, 252, 0.1) 0%, transparent 30%),
-    radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 30%),
-    var(--dark-bg);
-}
-
-.cyber-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.cyber-glitch {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-family: 'Orbitron', sans-serif;
-  color: var(--neon-blue);
-  position: relative;
-  letter-spacing: 0.2em;
-  animation: glitch-effect 3s infinite;
-}
-
-.cyber-subtitle {
-  font-size: 1.8rem;
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-}
-
-.cyber-code {
-  width: 80%;
-  max-width: 800px;
-  margin: 2rem auto;
-  background: var(--code-bg);
-  border: 1px solid var(--neon-blue);
-  box-shadow: 0 0 20px rgba(0, 255, 252, 0.2);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-pre {
-  margin: 0;
-  padding: 1.5rem;
-  overflow-x: auto;
-}
-
-code {
-  font-family: 'Courier New', monospace;
-  color: #abb2bf;
-  line-height: 1.6;
-}
-
-.language-java {
-  color: #e06c75;
-}
-
-.language-java .keyword {
-  color: #c678dd;
-}
-
-.language-java .string {
-  color: #98c379;
-}
-
-.language-java .annotation {
-  color: #d19a66;
-}
-
-.cyber-buttons {
-  display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.cyber-button {
-  position: relative;
-  padding: 1rem 2.5rem;
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  background: rgba(0, 0, 30, 0.5);
-  border: 1px solid var(--neon-blue);
-  box-shadow: 0 0 10px rgba(0, 255, 252, 0.3);
-  transition: all 0.3s;
-}
-
-.cyber-button.purple {
-  border-color: var(--neon-purple);
-  box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
-}
-
-.cyber-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(0, 255, 252, 0.6);
-}
-
-.cyber-button.purple:hover {
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
-}
-
-@keyframes glitch-effect {
-  0% { text-shadow: 0.05em 0 0 #ff00ff, -0.05em -0.025em 0 #00ffff; }
-  14% { text-shadow: 0.05em 0 0 #ff00ff, -0.05em -0.025em 0 #00ffff; }
-  15% { text-shadow: -0.05em -0.025em 0 #ff00ff, 0.025em 0.025em 0 #00ffff; }
-  49% { text-shadow: -0.05em -0.025em 0 #ff00ff, 0.025em 0.025em 0 #00ffff; }
-  50% { text-shadow: 0.025em 0.05em 0 #ff00ff, 0.05em 0 0 #00ffff; }
-  99% { text-shadow: 0.025em 0.05em 0 #ff00ff, 0.05em 0 0 #00ffff; }
-  100% { text-shadow: -0.025em 0 0 #ff00ff, -0.025em -0.025em 0 #00ffff; }
-}
-
-@media (max-width: 768px) {
-  .cyber-glitch {
-    font-size: 2rem;
-  }
-  
-  .cyber-subtitle {
-    font-size: 1.2rem;
-  }
-  
-  .cyber-code {
-    width: 95%;
-  }
-  
-  .cyber-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-</style>
-<script>
-document.querySelectorAll('.cyber-button').forEach(button => {
-  button.addEventListener('click', function() {
-    const glow = document.createElement('div');
-    glow.style.position = 'absolute';
-    glow.style.width = '100%';
-    glow.style.height = '100%';
-    glow.style.background = this.classList.contains('purple') 
-      ? 'radial-gradient(circle, rgba(255,0,255,0.8) 0%, transparent 70%)' 
-      : 'radial-gradient(circle, rgba(0,255,252,0.8) 0%, transparent 70%)';
-    glow.style.top = '0';
-    glow.style.left = '0';
-    glow.style.opacity = '0';
-    glow.style.transition = 'opacity 0.3s';
-    this.appendChild(glow);
-    
-    setTimeout(() => {
-      glow.style.opacity = '1';
-      setTimeout(() => {
-        glow.style.opacity = '0';
-        setTimeout(() => {
-          glow.remove();
-        }, 300);
-      }, 300);
-    }, 10);
-  });
-});
-</script>
+	
   <div class="section-index">
     
     
@@ -496,12 +279,6 @@ document.querySelectorAll('.cyber-button').forEach(button => {
             </div>
         <div class="entry">
                 <h5>
-                    <a href="/codewar/palindromes/">PalindRomes</a>
-                </h5>
-                <p></p>
-            </div>
-        <div class="entry">
-                <h5>
                     <a href="/codewar/pangramchecker/">PangramChecker</a>
                 </h5>
                 <p>A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence &ldquo;The quick brown fox jumps over the lazy dog&rdquo; is a pangram, because it uses the letters A-Z at least once (case is irrelevant).Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation</p>
@@ -525,6 +302,9 @@ document.querySelectorAll('.cyber-button').forEach(button => {
                 <p>Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore (&rsquo;_&rsquo;).</p>
             </div>
         </div>
+<div class="td-page-meta__lastmod">
+  Last modified April 7, 2025: <a href="https://github.com/hamhuo-hub/seaku/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
+</div>
 </div>
 
           </main>
