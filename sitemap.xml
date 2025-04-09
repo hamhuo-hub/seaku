@@ -35,8 +35,8 @@
     <loc>https://hamhuo.xyz/school/159.225/week4_5/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
   </url><url>
-    <loc>https://hamhuo.xyz/graphicsai/diffusionmodel/</loc>
-    <lastmod>2025-04-07T23:51:50+08:00</lastmod>
+    <loc>https://hamhuo.xyz/graphicsai/diffusion-model/</loc>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/findprime/</loc>
     <lastmod>2025-04-07T23:51:50+08:00</lastmod>
@@ -49,6 +49,9 @@
   </url><url>
     <loc>https://hamhuo.xyz/codewar/narcissisticnumber/</loc>
     <lastmod>2025-04-07T23:51:50+08:00</lastmod>
+  </url><url>
+    <loc>https://hamhuo.xyz/graphicsai/maximum-likelihood-estimation/</loc>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/numberfun/</loc>
     <lastmod>2025-04-07T23:51:50+08:00</lastmod>
@@ -82,19 +85,19 @@
   </url><url>
     <loc>https://hamhuo.xyz/dairy/3%E6%9C%881%E6%97%A5/</loc>
   </url><url>
-    <loc>https://hamhuo.xyz/dairy/4%E6%9C%881%E6%97%A5/</loc>
+    <loc>https://hamhuo.xyz/dairy/4%E6%9C%889%E6%97%A5/</loc>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/readme/</loc>
     <lastmod>2025-04-07T23:51:50+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/transformer/</loc>
-    <lastmod>2025-04-05T22:23:19+08:00</lastmod>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/vae/</loc>
     <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/</loc>
-    <lastmod>2025-04-08T10:56:20+08:00</lastmod>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/codewar/</loc>
     <lastmod>2025-04-08T10:56:20+08:00</lastmod>
@@ -112,16 +115,16 @@
     <lastmod>2025-04-08T10:56:20+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/difussion/</loc>
-    <lastmod>2025-04-07T23:51:50+08:00</lastmod>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/gaming/</loc>
     <lastmod>2025-03-28T11:44:57+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/graphicsai/</loc>
-    <lastmod>2025-04-08T10:56:20+08:00</lastmod>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/machinelearning/</loc>
-    <lastmod>2025-04-07T23:51:50+08:00</lastmod>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/oj/</loc>
     <lastmod>2025-04-08T10:56:20+08:00</lastmod>
@@ -133,9 +136,10 @@
     <lastmod>2025-02-04T17:14:28+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/osstuff/</loc>
+    <lastmod>2025-04-09T11:43:42+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/tags/</loc>
-    <lastmod>2025-04-08T10:56:20+08:00</lastmod>
+    <lastmod>2025-04-09T18:39:00+08:00</lastmod>
   </url><url>
     <loc>https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2025-03-14T11:49:06+08:00</lastmod>
