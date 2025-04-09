@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 海阔集</title>
+    <link>https://hamhuo.xyz/categories/</link>
+    <description>Recent content in Categories on 海阔集</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://hamhuo.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CodeWar</title>
+      <link>https://hamhuo.xyz/categories/codewar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/categories/codewar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DeepML</title>
+      <link>https://hamhuo.xyz/categories/deepml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/categories/deepml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MachineLearning</title>
+      <link>https://hamhuo.xyz/categories/machinelearning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/categories/machinelearning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>School</title>
+      <link>https://hamhuo.xyz/categories/school/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/categories/school/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>日志</title>
+      <link>https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hamhuo.xyz/categories/%E6%97%A5%E5%BF%97/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
