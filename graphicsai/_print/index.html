@@ -36,7 +36,7 @@ Under instruction of Dr.Liu i had an opprtunrty start my very early academic exp
   <meta itemprop="description" content="Massey University Dr. Juncheng Liu
 Under instruction of Dr.Liu i had an opprtunrty start my very early academic exploration.
 3/6 实验室, 学术准备前的入门工作">
-  <meta itemprop="dateModified" content="2025-04-03T16:28:52+08:00">
+  <meta itemprop="dateModified" content="2025-04-08T10:56:20+08:00">
   <meta itemprop="wordCount" content="22">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Graphics and AI">
@@ -73,6 +73,9 @@ Under instruction of Dr.Liu i had an opprtunrty start my very early academic exp
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="/graphicsai/"><span>Graphics and AI</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/osstuff/"><span>Stuff</span></a>
       </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -137,7 +140,7 @@ Under instruction of Dr.Liu i had an opprtunrty start my very early academic exp
     aria-label="Search this site…"
     autocomplete="off"
     
-    data-offline-search-index-json-src="/offline-search-index.fca07776181d20457ca4296b5346c654.json"
+    data-offline-search-index-json-src="/offline-search-index.9fd7df21c007dd3a6e7471d1efaab5e8.json"
     data-offline-search-base-href="/"
     data-offline-search-max-results="10"
   >
@@ -514,6 +517,71 @@ CLIP: 分别对文子和图片求向量, 越近越好</p>
 </html>
 <blockquote>
 <p>WIP</p></blockquote>
+<p>Diffusion Models? is a type of <em><strong>Generative model</strong></em>. Like GAN(depreted), VAE.</p>
+<blockquote>
+<p>A generative model is <strong>a machine learning model designed to create new data that is similar to its training data</strong>.
+<a href="https://www.ibm.com/think/topics/generative-model#:~:text=A%20generative%20model%20is%20a,response%20to%20new%20input%20data.">What is a generative model?</a></p></blockquote>
+<p>diffusion model use a special method to learn features and generate data - adding noise and learn from noise.</p>
+<blockquote>
+<p>diffusion steps is to slowly add <em><strong>random noise</strong></em> and then learn to <em><strong>reverse</strong></em> the diffusion process to construct desired data samples from <em><strong>noise</strong></em>
+<a href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/">What are Diffusion Models?</a></p></blockquote>
+<blockquote>
+<p>If a model total unrecognize, how to learn from it?</p></blockquote>
+<h4 id="forward-diffusion-process">Forward Diffusion process<a class="td-heading-self-link" href="#forward-diffusion-process" aria-label="Heading self-link"></a></h4>
+<meta name="baidu-site-verification" content="codeva-23xblvQ4Jb" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知行合一</title>
+    <link href="https://example.com/path/to/your/bootstrap.css" rel="stylesheet"> 
+    <style>
+        .transparent-navbar {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .hero-image-section img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar td-navbar js-navbar-scroll transparent-navbar" data-bs-theme="dark">
+    
+</nav>
+
+
+<main>
+    
+    <div class="hero-image-section" style="text-align: center;">
+        <img src="https://alicdn.com/wanx/1265207546855794/text_to_image_lite_v2/5b14b9b24237472e9fa8ea4292afe180_0.png?x-oss-process=image/watermark,image_aW1nL3dhdGVyMjAyNDExMjkwLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxtX2ZpeGVkLHdfMzAzLGhfNTI=,t_80,g_se,x_10,y_10/format,webp"
+             alt="知行合一">
+    </div>
+</main>
+
+<script src="https://example.com/path/to/your/bootstrap.js"></script>
+</body>
+</html>
+<p>Assuming we have set of images of cat(<em><strong>real data distribution</strong></em>), Given a data point sampled from a real data distribution randomly</p>
+<blockquote>
+<p>In probability theory and statistics, a <strong>Markov chain</strong> or <strong>Markov process</strong> is a <a href="https://en.wikipedia.org/wiki/Stochastic_process" title="Stochastic process">stochastic process</a> describing a <a href="https://en.wikipedia.org/wiki/Sequence" title="Sequence">sequence</a> of possible events in which the <a href="https://en.wikipedia.org/wiki/Probability" title="Probability">probability</a> of each event depends only on the state attained in the previous event.
+<a href="https://en.wikipedia.org/wiki/Markov_chain">Markov chain proces</a></p></blockquote>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/Snipaste_2025-04-09_11-24-08.png" alt="Snipaste_2025-04-09_11-24-08.png"></p>
+<p>Then define a <em><strong>Markov chain process</strong></em> called <em><strong>Forward Diffusion Process</strong></em> which can add small amount of <em><strong>Gaussian noise</strong></em> to the image we sampled. Repate T times producing a sequence of noisy samples X1-Xt form real data set</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250409114147604.png" alt="Snipaste_2025-04-09_10-52-44.png"></p>
+<blockquote>
+<p>In real world signal, Gaussian noise models (some, but not all) actual physical scenarios quite well. In various ways sample data have noise more or less, This is a side effect of the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a></p>
+<p>In deep learning, Gaussian noise is often added to the input data during training to improve the robustness and generalization ability of the model. This is known as <em><strong>data augmentation</strong></em></p>
+<p><em>By adding noise to the input data, the model is forced to learn features that are robust to small variations in the input, which can help it perform better on new, unseen data.</em></p>
+<p>Model can learn from sample noise and ignore them, if model only seen &lsquo;clean data&rsquo;  model can be interrupted by noise samples.
+<a href="https://www.reddit.com/r/DSP/comments/dzdt16/what_does_it_mean_to_add_gaussian_noise_to_a/">Why Gaussian noise apart form other noise?</a>
+<a href="https://medium.com/@amit25173/what-is-gaussian-noise-and-why-its-useful-b3c50dd14628#:~:text=Adding%20Gaussian%20noise%20during%20training,patterns%20%E2%80%94%20it%20learns%20to%20generalize.">Gaussian noise is useful</a></p></blockquote>
+<p>The step size is controlled by variance schedule</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250409114218609.png" alt="Snipaste_2025-04-09_11-26-00.png"></p>
 
 </div>
 
