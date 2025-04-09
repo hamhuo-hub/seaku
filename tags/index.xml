@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 海阔集</title>
-    <link>https://hamhuo.xyz/tags/</link>
-    <description>Recent content in Tags on 海阔集</description>
+    <title>Tags on Goldydocs</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Goldydocs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://hamhuo.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Difussion</title>
-      <link>https://hamhuo.xyz/tags/difussion/</link>
+      <link>http://localhost:1313/tags/difussion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/difussion/</guid>
+      <guid>http://localhost:1313/tags/difussion/</guid>
       <description></description>
     </item>
     <item>
       <title>Gaming</title>
-      <link>https://hamhuo.xyz/tags/gaming/</link>
+      <link>http://localhost:1313/tags/gaming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/gaming/</guid>
+      <guid>http://localhost:1313/tags/gaming/</guid>
       <description></description>
     </item>
     <item>
       <title>OJ</title>
-      <link>https://hamhuo.xyz/tags/oj/</link>
+      <link>http://localhost:1313/tags/oj/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/oj/</guid>
+      <guid>http://localhost:1313/tags/oj/</guid>
       <description></description>
     </item>
     <item>
       <title>日志</title>
-      <link>https://hamhuo.xyz/tags/%E6%97%A5%E5%BF%97/</link>
+      <link>http://localhost:1313/tags/%E6%97%A5%E5%BF%97/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/tags/%E6%97%A5%E5%BF%97/</guid>
+      <guid>http://localhost:1313/tags/%E6%97%A5%E5%BF%97/</guid>
       <description></description>
     </item>
   </channel>

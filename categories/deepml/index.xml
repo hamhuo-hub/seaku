@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DeepML on 海阔集</title>
-    <link>https://hamhuo.xyz/categories/deepml/</link>
-    <description>Recent content in DeepML on 海阔集</description>
+    <title>DeepML on Goldydocs</title>
+    <link>http://localhost:1313/categories/deepml/</link>
+    <description>Recent content in DeepML on Goldydocs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="https://hamhuo.xyz/categories/deepml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/deepml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>reshape_matrix</title>
-      <link>https://hamhuo.xyz/deepml/reshape_matrix/</link>
+      <link>http://localhost:1313/deepml/reshape_matrix/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://hamhuo.xyz/deepml/reshape_matrix/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;np.array()&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;introduce-nparray&#34;&gt;Introduce &lt;code&gt;np.array()&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#introduce-nparray&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;meta name=&#34;baidu-site-verification&#34; content=&#34;codeva-23xblvQ4Jb&#34; /&gt;&#xA;&lt;!DOCTYPE html&gt;&#xA;&lt;html lang=&#34;en&#34;&gt;&#xA;&lt;head&gt;&#xA;    &lt;meta charset=&#34;UTF-8&#34;&gt;&#xA;    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;&#xA;    &lt;title&gt;知行合一&lt;/title&gt;&#xA;    &lt;link href=&#34;https://example.com/path/to/your/bootstrap.css&#34; rel=&#34;stylesheet&#34;&gt; &#xA;    &lt;style&gt;&#xA;        .transparent-navbar {&#xA;            background-color: rgba(0, 0, 0, 0);&#xA;        }&#xA;&#xA;        .hero-image-section img {&#xA;            width: 80%;&#xA;            max-width: 600px;&#xA;            margin-top: 50px;&#xA;        }&#xA;    &lt;/style&gt;&#xA;&lt;/head&gt;&#xA;&lt;body&gt;&#xA;&#xA;&lt;nav class=&#34;navbar td-navbar js-navbar-scroll transparent-navbar&#34; data-bs-theme=&#34;dark&#34;&gt;&#xA;    &#xA;&lt;/nav&gt;&#xA;&#xA;&#xA;&lt;main&gt;&#xA;    &#xA;    &lt;div class=&#34;hero-image-section&#34; style=&#34;text-align: center;&#34;&gt;&#xA;        &lt;img src=&#34;https://alicdn.com/wanx/1265207546855794/text_to_image_lite_v2/5b14b9b24237472e9fa8ea4292afe180_0.png?x-oss-process=image/watermark,image_aW1nL3dhdGVyMjAyNDExMjkwLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSxtX2ZpeGVkLHdfMzAzLGhfNTI=,t_80,g_se,x_10,y_10/format,webp&#34;&#xA;             alt=&#34;知行合一&#34;&gt;&#xA;    &lt;/div&gt;&#xA;&lt;/main&gt;&#xA;&#xA;&lt;script src=&#34;https://example.com/path/to/your/bootstrap.js&#34;&gt;&lt;/script&gt;&#xA;&lt;/body&gt;&#xA;&lt;/html&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/993984/what-are-the-advantages-of-numpy-over-regular-python-lists&#34;&gt;difference between &lt;code&gt;list&lt;/code&gt; in python and &lt;code&gt;np.array()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;NumPy&amp;rsquo;s arrays are more compact than Python lists &amp;ndash; a list of lists as you describe, in Python, would take at least 20 MB or so, while a NumPy 3D array with single-precision floats in the cells would fit in 4 MB. Access in reading and writing items is also faster with NumPy.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/deepml/reshape_matrix/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;np.array()&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;introduce-nparray&#34;&gt;Introduce &lt;code&gt;np.array()&lt;/code&gt;&lt;a class=&#34;td-heading-self-link&#34; href=&#34;#introduce-nparray&#34; aria-label=&#34;Heading self-link&#34;&gt;&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/993984/what-are-the-advantages-of-numpy-over-regular-python-lists&#34;&gt;difference between &lt;code&gt;list&lt;/code&gt; in python and &lt;code&gt;np.array()&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;NumPy&amp;rsquo;s arrays are more compact than Python lists &amp;ndash; a list of lists as you describe, in Python, would take at least 20 MB or so, while a NumPy 3D array with single-precision floats in the cells would fit in 4 MB. Access in reading and writing items is also faster with NumPy.&lt;/p&gt;&#xA;&lt;p&gt;NumPy is not just more efficient; it is also more convenient. You get a lot of vector and matrix operations for free, which sometimes allow one to avoid unnecessary work. And they are also efficiently implemented.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
