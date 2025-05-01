@@ -2,10 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scenarios and Use Cases on Hamhuo</title>
-    <link>http://localhost:1313/school/159.225/week3/</link>
+    <link>https://example.docsy.dev/school/159.225/week3/</link>
     <description>Recent content in Scenarios and Use Cases on Hamhuo</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/school/159.225/week3/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.docsy.dev/school/159.225/week3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lab3</title>
+      <link>https://example.docsy.dev/school/159.225/week3/lab3/lab3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/school/159.225/week3/lab3/lab3/</guid>
+      <description>&lt;p&gt;Use-case Description&lt;/p&gt;&#xA;&lt;p&gt;A user-side function model.&#xA;not sequense model&lt;/p&gt;&#xA;&lt;p&gt;Do not internal system components into user-side model. It&amp;rsquo;s no useful to users&lt;/p&gt;&#xA;&lt;p&gt;an use action is connected with a straight line&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
