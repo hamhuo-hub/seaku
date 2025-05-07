@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ML on Hamhuo</title>
+    <link>https://example.docsy.dev/categories/ml/</link>
+    <description>Recent content in ML on Hamhuo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://example.docsy.dev/categories/ml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DINOv2</title>
+      <link>https://example.docsy.dev/graphicsai/dinov2-draft/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/graphicsai/dinov2-draft/</guid>
+      <description>&lt;p&gt;目錄&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;ViT&lt;/li&gt;&#xA;&lt;li&gt;DINO&lt;/li&gt;&#xA;&lt;li&gt;DINOv2&#xA;3.1 論文與原理&#xA;3.2 代碼簡單分析&lt;/li&gt;&#xA;&lt;li&gt;sd-DINO&#xA;4.1 論文與原理&#xA;4.2. 代碼簡單分析&lt;/li&gt;&#xA;&lt;li&gt;總結&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h4 id=&#34;vit&#34;&gt;ViT&lt;/h4&gt;&#xA;&lt;p&gt;*&lt;code&gt;Transformer&lt;/code&gt; 在圖像上的拓展&#xA;&lt;a href=&#34;https://arxiv.org/abs/2010.11929&#34;&gt;An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;===A neural network architecture that&amp;rsquo;s revolutionized natural language processing (NLP) and is now being used in various other fields like computer vision and audio generation==.&#xA;&amp;ndash;&lt;em&gt;wikipedia&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140282.png&#34; alt=&#34;Pasted image 20250505163912&#34;&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;經典的Transformer&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Transformer分爲兩部分，左側編碼層用於將數據（Token）投影到向量空間，其中相似的數據會投影到相似的向量。右側用於生成任務（GPT預測下一個詞）我們主要關注左側的編碼部分&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140283.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;經典Transformer中的示例，語義特徵相似的圖片方向相似（不是ViT）&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140284.png&#34; alt=&#34;Pasted image 20250505165805&#34;&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;嵌入可視化 左側是不同的交通標誌（如 STOP、ALTO、禁止進入、右轉等），每個圖像被編碼成一組特徵向量，- STOP 與 ALTO（西語“停止”）以及禁止進入標誌聚集在一起，右轉標誌則落在另一個明顯不同的區域。&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

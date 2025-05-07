@@ -1,9 +1,9 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -17,51 +17,28 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Hamhuo</title>
-<meta name="description" content="目錄
-ViT DINO DINOv2 3.1 論文與原理 3.2 代碼簡單分析 sd-DINO 4.1 論文與原理 4.2. 代碼簡單分析 總結 ViT *Transformer 在圖像上的拓展
-===A neural network architecture that’s revolutionized natural language processing (NLP) and is now being used in various other fields like computer vision and audio generation==. –wikipedia
-經典的Transformer
-Transformer分爲兩部分，左側編碼層用於將數據（Token）投影到向量空間，其中相似的數據會投影到相似的向量。右側用於生成任務（GPT預測下一個詞）我們主要關注左側的編碼部分
-經典Transformer中的示例，語義特徵相似的圖片方向相似（不是ViT）
-嵌入可視化 左側是不同的交通標誌（如 STOP、ALTO、禁止進入、右轉等），每個圖像被編碼成一組特徵向量，- STOP 與 ALTO（西語“停止”）以及禁止進入標誌聚集在一起，右轉標誌則落在另一個明顯不同的區域。
-Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，ViT 是基於自注意力的架構 （Self-attention-based architectures）。">
-<meta property="og:url" content="http://localhost:1313/graphicsai/dinov2-draft/">
+<title>DINOv2 | Hamhuo</title>
+<meta name="description" content="基於ViT生成穩定通用視覺特徵的大規模訓練方法">
+<meta property="og:url" content="https://example.docsy.dev/graphicsai/dinov2-draft/">
   <meta property="og:site_name" content="Hamhuo">
-  <meta property="og:title" content="Hamhuo">
-  <meta property="og:description" content="目錄
-ViT DINO DINOv2 3.1 論文與原理 3.2 代碼簡單分析 sd-DINO 4.1 論文與原理 4.2. 代碼簡單分析 總結 ViT *Transformer 在圖像上的拓展
-===A neural network architecture that’s revolutionized natural language processing (NLP) and is now being used in various other fields like computer vision and audio generation==. –wikipedia
-經典的Transformer
-Transformer分爲兩部分，左側編碼層用於將數據（Token）投影到向量空間，其中相似的數據會投影到相似的向量。右側用於生成任務（GPT預測下一個詞）我們主要關注左側的編碼部分
-經典Transformer中的示例，語義特徵相似的圖片方向相似（不是ViT）
-嵌入可視化 左側是不同的交通標誌（如 STOP、ALTO、禁止進入、右轉等），每個圖像被編碼成一組特徵向量，- STOP 與 ALTO（西語“停止”）以及禁止進入標誌聚集在一起，右轉標誌則落在另一個明顯不同的區域。
-Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，ViT 是基於自注意力的架構 （Self-attention-based architectures）。">
+  <meta property="og:title" content="DINOv2">
+  <meta property="og:description" content="基於ViT生成穩定通用視覺特徵的大規模訓練方法">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="graphics&amp;ai">
+    <meta property="article:modified_time" content="2025-05-07T08:12:49+08:00">
+    <meta property="article:tag" content="ML">
 
-  <meta itemprop="name" content="Hamhuo">
-  <meta itemprop="description" content="目錄
-ViT DINO DINOv2 3.1 論文與原理 3.2 代碼簡單分析 sd-DINO 4.1 論文與原理 4.2. 代碼簡單分析 總結 ViT *Transformer 在圖像上的拓展
-===A neural network architecture that’s revolutionized natural language processing (NLP) and is now being used in various other fields like computer vision and audio generation==. –wikipedia
-經典的Transformer
-Transformer分爲兩部分，左側編碼層用於將數據（Token）投影到向量空間，其中相似的數據會投影到相似的向量。右側用於生成任務（GPT預測下一個詞）我們主要關注左側的編碼部分
-經典Transformer中的示例，語義特徵相似的圖片方向相似（不是ViT）
-嵌入可視化 左側是不同的交通標誌（如 STOP、ALTO、禁止進入、右轉等），每個圖像被編碼成一組特徵向量，- STOP 與 ALTO（西語“停止”）以及禁止進入標誌聚集在一起，右轉標誌則落在另一個明顯不同的區域。
-Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，ViT 是基於自注意力的架構 （Self-attention-based architectures）。">
-  <meta itemprop="wordCount" content="315">
+  <meta itemprop="name" content="DINOv2">
+  <meta itemprop="description" content="基於ViT生成穩定通用視覺特徵的大規模訓練方法">
+  <meta itemprop="dateModified" content="2025-05-07T08:12:49+08:00">
+  <meta itemprop="wordCount" content="855">
+  <meta itemprop="keywords" content="ML">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hamhuo">
-  <meta name="twitter:description" content="目錄
-ViT DINO DINOv2 3.1 論文與原理 3.2 代碼簡單分析 sd-DINO 4.1 論文與原理 4.2. 代碼簡單分析 總結 ViT *Transformer 在圖像上的拓展
-===A neural network architecture that’s revolutionized natural language processing (NLP) and is now being used in various other fields like computer vision and audio generation==. –wikipedia
-經典的Transformer
-Transformer分爲兩部分，左側編碼層用於將數據（Token）投影到向量空間，其中相似的數據會投影到相似的向量。右側用於生成任務（GPT預測下一個詞）我們主要關注左側的編碼部分
-經典Transformer中的示例，語義特徵相似的圖片方向相似（不是ViT）
-嵌入可視化 左側是不同的交通標誌（如 STOP、ALTO、禁止進入、右轉等），每個圖像被編碼成一組特徵向量，- STOP 與 ALTO（西語“停止”）以及禁止進入標誌聚集在一起，右轉標誌則落在另一個明顯不同的區域。
-Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，ViT 是基於自注意力的架構 （Self-attention-based architectures）。">
-<link href="/scss/main.css" rel="stylesheet">
+  <meta name="twitter:title" content="DINOv2">
+  <meta name="twitter:description" content="基於ViT生成穩定通用視覺特徵的大規模訓練方法">
+<link rel="preload" href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" as="style" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
+<link href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" rel="stylesheet" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -116,10 +93,10 @@ Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，Vi
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-graphicsai-li">
   <a href="/graphicsai/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-graphicsai"><span class="">Graphics and AI</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaidinov2-src-li">
-  <a href="/graphicsai/dinov2-src/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaidinov2-src"><span class="">DINOv2</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-graphicsaidinov2-draft-li">
-  <a href="/graphicsai/dinov2-draft/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-graphicsaidinov2-draft"><span class="td-sidebar-nav-active-item"></span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-graphicsaidinov2-draft-li">
+  <a href="/graphicsai/dinov2-draft/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-graphicsaidinov2-draft"><span class="td-sidebar-nav-active-item">DINOv2</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaidinov2-src-li">
+  <a href="/graphicsai/dinov2-src/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaidinov2-src"><span class=""></span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaireadme-li">
   <a href="/graphicsai/readme/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-graphicsaireadme"><span class=""></span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-graphicsaiselfattention-li">
@@ -137,7 +114,7 @@ Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，Vi
 <a href="https://github.com/google/docsy-example/tree/main/content/en/graphics&amp;AI/DINOv2-draft.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
   <a href="https://github.com/google/docsy-example/edit/main/content/en/graphics&amp;AI/DINOv2-draft.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
   <a href="https://github.com/google/docsy-example/new/main/content/en/graphics&amp;AI?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
-  <a href="https://github.com/google/docsy-example/issues/new?title=" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
+  <a href="https://github.com/google/docsy-example/issues/new?title=DINOv2" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
   <a href="https://github.com/google/docsy/issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
   <a id="print" href="/graphicsai/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
@@ -158,19 +135,19 @@ Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，Vi
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">4</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">4</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
       <h5 class="taxonomy-title">Categories</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/ai/" data-taxonomy-term="ai"><span class="taxonomy-label">AI</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">11</span></a></li>
-        <li><a class="taxonomy-term" href="http://localhost:1313/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">11</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
         </ul>
     </div>
   
@@ -185,15 +162,27 @@ Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，Vi
   <li class="breadcrumb-item">
     <a href="/graphicsai/">Graphics and AI</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    </li>
+    DINOv2</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1></h1>
-	
+	<h1>DINOv2</h1>
+	<div class="lead">基於ViT生成穩定通用視覺特徵的大規模訓練方法</div>
 	<header class="article-meta">
-		
+		<div class="taxonomy taxonomy-terms-article taxo-tags">
+  <h5 class="taxonomy-title">Tags:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span></a></li>
+    </ul>
+</div>
+<div class="taxonomy taxonomy-terms-article taxo-categories">
+  <h5 class="taxonomy-title">Categories:</h5>
+  <ul class="taxonomy-terms">
+    <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span></a></li>
+    </ul>
+</div>
+
   </header>
 	<p>目錄</p>
 <ol>
@@ -208,43 +197,47 @@ Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，Vi
 <li>總結</li>
 </ol>
 <h4 id="vit">ViT</h4>
-<p>*<code>Transformer</code> 在圖像上的拓展</p>
+<p>*<code>Transformer</code> 在圖像上的拓展
+<a href="https://arxiv.org/abs/2010.11929">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></p>
 <blockquote>
 <p>===A neural network architecture that&rsquo;s revolutionized natural language processing (NLP) and is now being used in various other fields like computer vision and audio generation==.
 &ndash;<em>wikipedia</em></p></blockquote>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637299.png" alt="Pasted image 20250505163912"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140282.png" alt="Pasted image 20250505163912"></p>
 <blockquote>
 <p><em>經典的Transformer</em></p></blockquote>
 <p>Transformer分爲兩部分，左側編碼層用於將數據（Token）投影到向量空間，其中相似的數據會投影到相似的向量。右側用於生成任務（GPT預測下一個詞）我們主要關注左側的編碼部分</p>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637298.png" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140283.png" alt="image.png"></p>
 <blockquote>
 <p><em>經典Transformer中的示例，語義特徵相似的圖片方向相似（不是ViT）</em></p></blockquote>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637300.png" alt="Pasted image 20250505165805"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140284.png" alt="Pasted image 20250505165805"></p>
 <blockquote>
 <p><em>嵌入可視化 左側是不同的交通標誌（如 STOP、ALTO、禁止進入、右轉等），每個圖像被編碼成一組特徵向量，- STOP 與 ALTO（西語“停止”）以及禁止進入標誌聚集在一起，右轉標誌則落在另一個明顯不同的區域。</em></p></blockquote>
 <p>Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 <code>CNN</code>，<code>ViT</code> 是基於自注意力的架構 （Self-attention-based architectures）。</p>
 <blockquote>
-<p>Vision Transformer（ViT）結構上與自然語言處理中的 Transformer 類似，其核心是將圖像切分為固定大小的 patch，嵌入為向量後加入位置編碼，經過多層 Transformer 模塊進行特徵建模。ViT 將圖像轉換為高維特徵空間中的一組表示，使得這些特徵在該空間中具有結構化或可分性，便於後續分類等下游任務。這些高維特徵不直接對應語義單元，而是作為模型輸出語義預測的中間表徵。
-&ndash; <a href="https://arxiv.org/abs/2010.11929">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></p></blockquote>
+<p>Vision Transformer（ViT）結構上與自然語言處理中的 Transformer 類似，其核心是將圖像切分為固定大小的 patch，嵌入為向量後加入位置編碼，經過多層 Transformer 模塊進行特徵建模。ViT 將圖像轉換為高維特徵空間中的一組表示，使得這些特徵在該空間中具有結構化或可分性，便於後續分類等下游任務。這些高維特徵不直接對應語義單元，而是作為模型輸出語義預測的中間表徵。</p></blockquote>
 <p>NLP中的Token是通過拆分句子爲詞組得到的，在圖像中這是由圖像補丁(Patch)得到的</p>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637301.png" alt="Pasted image 20250505171606"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140285.png" alt="Pasted image 20250505171606"></p>
 <blockquote>
 <p><em>一張圖片</em></p></blockquote>
 <p>輸入的圖像是由三個顏色通道RGB，以及寬和高組成。將一張圖片拆成大小相同的小塊就可以作爲Token輸入到編碼器中。編碼器會對每個patch生成嵌入（Embedding）由於拆分圖像時會失去位置信息，所以在施加注意力前（Attention）需要加上位置向量</p>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637303.png" alt="Pasted image 20250505172028"></p>
+<blockquote>
+<p>在 Vision Transformer (ViT) 中，位置編碼採用可學習的位置嵌入（learnable positional embeddings），為每個圖像 patch 和 CLS Token 分配一個獨特的向量，表示其在圖像中的空間位置。ViT 的可學習嵌入能通過訓練適應圖像的 2D 空間結構，提供靈活的位置信息。這些嵌入與 patch 特徵一起輸入 Transformer，幫助注意力機制捕捉 patch 之間的空間關係。CLS Token 作為一個特殊的標記，利用位置嵌入的上下文，通過多層注意力機制聚合所有 patch 的特徵，生成用於下游任務（如分類）的全局表示</p></blockquote>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140286.png" alt="Pasted image 20250505172028"></p>
 <blockquote>
 <p>ViT 架構</p></blockquote>
-<p>Embedding 經過多個Transformer layer層後（基本上是許多注意力層，前向層交替）後經過歸一化得到高維特徵</p>
+<p>Embedding 經過多個Transformer layer層後（基本上是許多注意力層，前向層交替）後經過歸一化得到高維特徵。</p>
 <blockquote>
-<p>許多細節此處忽略，比如Position Embedding其實是可學習的向量充當全局特徵提取器，比如學習不同patch之間輸入距離的函數，殘差和跳躍鏈接。這些內容和主題相差甚遠此處忽略
+<p>許多細節此處忽略，，比如學習不同patch之間輸入距離的函數，殘差和跳躍鏈接。這些內容和主題相差甚遠此處忽略
 <a href="https://www.youtube.com/watch?v=j3VNqtJUoz0&amp;t=3s">ViT Video on Youtube</a></p></blockquote>
+<p>在加上分類頭後（MLP頭爲例）可以輸出類別</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140287.png" alt="Pasted image 20250506161954"></p>
 <h4 id="dino">DINO</h4>
-<p><em>一種新的基於 ViT自監督學習方法</em>
+<p><em>一種新的基於 ViT自監督訓練方法</em>
 <a href="https://arxiv.org/abs/2104.14294">Emerging Properties in Self-Supervised Vision Transformers</a></p>
 <p>DINO模型實際上只是對ViT的一個包裝，實現了自蒸餾（知識蒸餾的一種）</p>
 <h5 id="知識蒸餾knowladge-distillation">知識蒸餾（Knowladge distillation）</h5>
 <p>先說知識蒸餾，知識蒸餾的目的是爲了壓縮模型，節省計算資源。也就是訓練一個小型模型來模擬大型模型的輸出，兩個模型從架構到參數都有細微區別。</p>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637304.png" alt="Pasted image 20250505200956"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140288.png" alt="Pasted image 20250505200956"></p>
 <blockquote>
 <p>簡單的教師學生蒸餾模型</p></blockquote>
 <blockquote>
@@ -256,9 +249,9 @@ Vision Transformer 是 Transformer 對圖像數據的拓展。相較與 CNN，Vi
 訓練一個學生網絡 gθs​​ 去模仿一個教師網絡 gθt​​ 的輸出。
 $$
 其中s是學生參數，t是教師參數
-對於輸入的圖像x，pt和ps分別是教師和學生網絡在高維空間的概率分佈（softmax）<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637305.png" alt="Pasted image 20250505204354">
+對於輸入的圖像x，pt和ps分別是教師和學生網絡在高維空間的概率分佈（softmax）<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140289.png" alt="Pasted image 20250505204354">
 其中T是softmax的溫度，控制平滑程度的
-對於已經給定的教師t，使用 <strong>損失函數</strong>（交叉熵），最小化交叉熵來訓練學生網絡的參數s，儘量是學生的輸出分佈和教師一致<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637306.png" alt="Pasted image 20250505204830"><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637307.png" alt="Pasted image 20250505204913"></p>
+對於已經給定的教師t，使用 <strong>損失函數</strong>（交叉熵），最小化交叉熵來訓練學生網絡的參數s，儘量是學生的輸出分佈和教師一致<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140290.png" alt="Pasted image 20250505204830"><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140291.png" alt="Pasted image 20250505204913"></p>
 <p>但我們希望無需任何標籤實現自監督學習，這就是DINO的目的</p>
 <blockquote>
 <p>DINO 英文來自於 Self-==DI==stillation with ==NO== lable</p></blockquote>
@@ -266,21 +259,22 @@ $$
 <ul>
 <li>
 <p>給一張圖片進行兩種不同的數據增強（<code>augment</code>）稱全局裁剪和局部裁剪
-<em>从给定图像生成一个由不同视图组成的集合 V。该集合包含两个全局视图 x1g 和 x2g 以及几个分辨率较低的局部视图（一般8個）。所有裁剪图像都经过学生模型，而只有全局视图经过老师模型</em><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637308.png" alt="Pasted image 20250505195446"></p>
-<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637309.png" alt="Pasted image 20250505210216"></p>
+<em>从给定图像生成一个由不同视图组成的集合 V。该集合包含两个全局视图 (globe crop)x1g 和 x2g 以及几个分辨率较低的局部视图(local crop)（一般8個）。所有裁剪图像都经过学生模型，而只有全局视图经过老师模型</em><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140292.png" alt="Pasted image 20250505195446"></p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140293.png" alt="Pasted image 20250505210216"></p>
 </li>
 <li>
 <p>用<strong>student</strong>網絡來學習，並用<strong>teacher</strong>網絡產生教學信號
 <em>不需要標籤，學習的目的是讓 student 的輸出在不同增強下與 teacher 對齊</em>
 <em>和知識蒸餾不同的是，這裏教師隨學生一起訓練, 在訓練時動態構建， teacher可以看做是學生的一個副本。</em>
 輸入的局部和全局裁剪經過兩個網絡以及softmax後輸出概率分佈（共65532個類）比較教師和學生的輸出，其中教師在輸出softmax概率前會做中心化，教師的輸出叫教學信號。這裏的輸出可以類比latent space，圖像特徵潛空間
-<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637310.png" alt="Pasted image 20250505195513">
-由於輸入是局部和全局的裁剪，我們訓練目標是找到==局部到全局==的對應或者說讓模型知道所有的圖片都一樣並找出其相同部分，我們鼓勵局部到全局的對應。和知識蒸餾類似我們使用修改過的交叉熵損失函數求最小值（隨機梯度下降）<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637311.png" alt="Pasted image 20250505210352">
-其實，對於教師網絡和學生網絡同時做梯度下降求最小值沒有任何意義。我們的目標是讓學生模仿教師，而不是互相調整所以這裏使用參數sg阻止梯度更新轉而使用 EMA 指數平均線/動量平均值（股票的K線）來更新教師網絡。根據學生的過去迭代來動態構建教師網絡
+<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140294.png" alt="Pasted image 20250505195513">
+由於輸入是局部和全局的裁剪，我們訓練目標是找到==局部到全局==的對應或者說讓模型知道那些的圖片一樣那些不一樣（<em>判別式方法：通常指直接建模條件概率 𝑃 ( 𝑦 ∣ 𝑥 ) ，即給定輸入 𝑥 x，預測輸出 𝑦 的概率。這裏是給定圖像 𝑥 ，預測其增強版本的特徵或偽標籤分佈。</em>）
+我們鼓勵局部到全局的對應。和知識蒸餾類似我們使用修改過的交叉熵損失函數求最小值（隨機梯度下降）从给定图像生成一个由不同视图组成的集合 V。该集合包含两个全局视图和局部試圖 <img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140295.png" alt="Pasted image 20250505210352">
+其實，對於教師網絡和學生網絡同時做梯度下降求最小值沒有任何意義。我們的目標是讓學生模仿教師，而不是互相調整所以這裏使用參數sg阻止梯度更新轉而使用 EMA 指數平均線/動量平均值（股票的K線）來更新網絡。根據學生的過去迭代來動態構建教師網絡
 在每個梯度更新中，只有學生 student 是唯一需要學習的網絡，教師只是學生的指數移動平均線（副本）
-<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250506082637312.png" alt="Pasted image 20250506075202">
-指數移動平均（Exponential Moving Average, EMA）公式，目的是用來更新教師網絡（teacher network）** 的參數 θt​，讓它平滑地追蹤學生網絡（student network）的參數 θs，其中lamda是溫度，用於控制學生參數佔比也就是教師更新參數的平滑程度，默認0.992
-因此經過 EMA, ​中心化，阻止教師的梯度更新後教師可以認爲是學生的一個更穩定的版本（正則化）這樣，教師網絡就能領先與學生網絡並產生教學信號引導學生訓練。</p>
+<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140296.png" alt="Pasted image 20250506075202">
+指數移動平均（Exponential Moving Average, EMA）公式，目的是用來更新教師網絡（teacher network） 的參數 θt​，讓它平滑地追蹤學生網絡（student network）的參數 θs，其 中lamda是溫度，用於控制學生參數佔比也就是教師更新參數的平滑程度，默認0.992
+因此經過 EMA, ​中心化，阻止教師的梯度加上學生的參數後教師可以認爲是==學生的一個更穩定的版本==（正則化）這樣，教師網絡就能領先與學生網絡並產生教學信號引導學生訓練。<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140297.png" alt="Pasted image 20250506163246"></p>
 </li>
 </ul>
 <p>核心算法（僞代碼）</p>
@@ -298,12 +292,206 @@ $$
 </span></span><span style="display:flex;"><span>    <span style="color:#000">update</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">gs</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic"># 使用 SGD 更新 student 參數</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># Momentum 更新 teacher 參數（無反向傳播）</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#000">gt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">l</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">gt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">l</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">gs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">params</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">gt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">l</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">gt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">params</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">l</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">gs</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">params</span> <span style="color:#8f5902;font-style:italic">#學生佔比很低 0.008</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 更新中心向量（用於 teacher 輸出的穩定化與對齊）</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000">C</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">m</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">C</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">m</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">cat</span><span style="color:#000;font-weight:bold">([</span><span style="color:#000">t1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">t2</span><span style="color:#000;font-weight:bold">])</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">mean</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dim</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">)</span>
-</span></span></code></pre></div><h4 id="dinov2">DINOv2</h4>
-
+</span></span></code></pre></div><p>總而言之，DINO本質上是對ViT進行的封裝，核心架構依舊是ViT但利用共蒸餾改進了訓練方法。DINO關注的是如何訓練ViT，本質是一種訓練方法</p>
+<h4 id="dinov2">DINOv2</h4>
+<p><em>基於ViT的大規模預訓練圖像特徵生成基礎模型</em>
+<a href="https://arxiv.org/abs/2304.07193">Learning Robust Visual Features without Supervision</a></p>
+<blockquote>
+<p>自然语言处理领域近期在海量数据模型预训练方面取得的突破，为计算机视觉领域类似的基础模型开辟了道路。这些模型可以生成通用的视觉特征（即无需微调即可跨图像分布和任务发挥作用的特征），从而大大简化图像在任何系统中的使用。</p></blockquote>
+<p>NLP在擴大訓練規模後可以得到高質量穩定的特徵，DINOv2希望通過類似的思路可以的到高==質量的圖像特徵==。
+DINOv2 在DINO的基礎上擴大了訓練規模，其大多数技术贡献旨在加速和稳定大规模训练。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140298.png" alt="Pasted image 20250506163036"></p>
+<blockquote>
+<p><em>擴大訓練規模的效果</em></p></blockquote>
+<p>DINOv2爲了擴大與穩定訓練規模做了以下改進</p>
+<ul>
+<li>
+<p>精選數據集（automatic pipeline）
+對於生成通用視覺特徵的目標，自監督學習在小型精選數據集上取得了進展，但當使用大量非精選的數據訓練時出現了特徵質量下降。这是因为缺乏对数据质量和多样性的控制，而这两者对于生成良好的特征至关重要。
+爲此數據處理會自動精選圖像。来自精选和非精选数据源的图像首先被映射到嵌入向量。然后，非精选图像会进行去重，再与精选图像进行匹配。最终的组合通过自监督检索系统扩充了初始数据集。<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140299.png" alt="Pasted image 20250506170602"></p>
+<p>數據庫：首先，我们从公开的爬取网页数据存储库中收集了原始的、未经过滤的图片数据集。進行去重（PCA哈希去重、NSFW 过滤以及可识别人脸模糊处理）。收集到的所有圖像會作爲未精選數據集。和精選的數據集（Imagenet，google）一同進入embedding編碼環節</p>
+<p>編碼：使用在 ImageNet-22k 上预训练的自监督 ViT-H/16 网络计算图像嵌入，并使用==余弦相 似度==作为图像之间的距离度量。計算相似度是爲了刪除相似圖片。（Deduplication）
+由於我們並不清楚蒐集來的數據內容是什麼，如果含大量貓的圖片那麼模型可能只會得到貓的 特徵（<em>數據偏奇/泛化不足</em>）</p>
+<p>使用聚類可以有效解決，我们对未整理的数据执行 ==K 均值聚类==，分爲若干個語義相近的群。<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140300.png" alt="Pasted image 20250506171035">
+假設你有一批查詢圖片（想找與它們類似的圖片），對於每張查詢圖片，去整個資料庫中找「最接近的 N 張圖」，N 通常設為 4。
+如果 N 設太大，檢索的圖片會出現「同一張圖片被多個查詢圖片檢索到」，造成重複，這種情況稱為==<strong>碰撞</strong>（collision）==。檢索後的圖片會合查詢圖片一起組合爲精選數據集<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140301.png" alt="Pasted image 20250506170717"></p>
+</li>
+<li>
+<p>組合DINO 损失和 iBOT 损失（iBOT負責遮罩，patch級別的圖像特徵損失。 DINO負責整體圖像的特徵損失）</p>
+</li>
+<li>
+<p>并以 SwAV 做中心化（Centering）。添加了一个正则化项来扩展特征（KoLeo 損失：正則化 CLS 標記，增強表示多樣性）</p>
+</li>
+</ul>
+<p>==最後兩項很複雜，我看不懂。這裏跳過==</p>
+<h5 id="代碼部分dinov2dino">代碼部分（DINOv2/DINO）</h5>
+<blockquote>
+<p>DINO的倉庫更新到DINOv2了，所以在這裏一起講
+<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140302.png" alt="Pasted image 20250506202955">
+<em>原始的 DINO倉庫，第一行建議重定向到 DINOv2</em></p></blockquote>
+<p>以下是位於 <code>train.py</code> 的訓練主循環（精簡版）</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># DINOv2 訓練主循環：通過學生-教師架構進行自監督學習</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"># 目標：讓學生模型學習教師模型的圖像表示，無需標籤</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">data</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000">metric_logger</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">log_every</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data_loader</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;Training&#34;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">max_iter</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">start_iter</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 從資料載入器獲取預處理的圖像批次（包含全局和局部裁剪）</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">current_batch_size</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">data</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;collated_global_crops&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">shape</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#0000cf;font-weight:bold">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 動態調整學習率和教師模型參數（如動量和溫度）</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">lr</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">lr_schedule</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">iteration</span><span style="color:#000;font-weight:bold">]</span>                <span style="color:#8f5902;font-style:italic"># 學習率</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">mom</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">momentum_schedule</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">iteration</span><span style="color:#000;font-weight:bold">]</span>         <span style="color:#8f5902;font-style:italic"># 教師模型的動量</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">teacher_temp</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">teacher_temp_schedule</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">iteration</span><span style="color:#000;font-weight:bold">]</span>  <span style="color:#8f5902;font-style:italic"># 教師模型的softmax溫度</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 前向傳播：學生模型和教師模型處理圖像，計算損失</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 損失包括 DINO 對比損失（匹配學生-教師輸出）和 iBOT 遮罩重建損失</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">loss_dict</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">model</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">forward_backward</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">data</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">teacher_temp</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">teacher_temp</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 更新學生模型參數，根據損失調整權重</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">optimizer</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">step</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 使用指數移動平均 (EMA) 更新教師模型，使其平滑跟隨學生模型</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">model</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">update_teacher</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">mom</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 處理損失值（例如平均化），用於監控訓練進度</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># loss_dict_reduced = {k: v.item() / distributed.get_global_size() for k, v in loss_dict.items()}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 迭代計數器加 1，進入下一次迭代</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">iteration</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#0000cf;font-weight:bold">1</span>
+</span></span></code></pre></div><p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140296.png" alt="Pasted image 20250506075202">
+其中的前項和損失計算代碼如下（精簡）</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">forward_backward</span><span style="color:#000;font-weight:bold">(</span><span style="color:#3465a4">self</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">images</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">teacher_temp</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 提取全局裁剪（global crops）和局部裁剪（local crops）圖像</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">global_crops</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">images</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;collated_global_crops&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cuda</span><span style="color:#000;font-weight:bold">()</span>  <span style="color:#8f5902;font-style:italic"># 兩張大視圖，全局</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">local_crops</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">images</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;collated_local_crops&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cuda</span><span style="color:#000;font-weight:bold">()</span>   <span style="color:#8f5902;font-style:italic"># 多張小視圖，局部</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">masks</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">images</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;collated_masks&#34;</span><span style="color:#000;font-weight:bold">]</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cuda</span><span style="color:#000;font-weight:bold">()</span>               <span style="color:#8f5902;font-style:italic"># 遮罩，用於 iBOT 損失</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 教師模型前向傳播（無梯度）：處理全局裁剪，生成參考輸出</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">torch</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">no_grad</span><span style="color:#000;font-weight:bold">():</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">teacher_output</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">teacher</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">backbone</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">global_crops</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">is_training</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">teacher_cls_tokens</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">teacher_output</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;x_norm_clstoken&#34;</span><span style="color:#000;font-weight:bold">]</span>  <span style="color:#8f5902;font-style:italic"># CLS 標記，用於 DINO 損失。可以看作全局特徵提取器</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">teacher_patch_tokens</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">teacher_output</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;x_norm_patchtokens&#34;</span><span style="color:#000;font-weight:bold">]</span>  <span style="color:#8f5902;font-style:italic"># Patch 標記，用於 iBOT 損失</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8f5902;font-style:italic"># 對教師輸出應用 中心化和softmax概率，準備損失計算</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">teacher_cls_tokens</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">dino_loss</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">softmax_center_teacher</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">teacher_cls_tokens</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">teacher_temp</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">teacher_patch_tokens</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ibot_patch_loss</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">softmax_center_teacher</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">teacher_patch_tokens</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">teacher_temp</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 學生模型前向傳播：處理全局和局部裁剪，生成預測</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">student_output</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">student</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">backbone</span><span style="color:#000;font-weight:bold">([</span><span style="color:#000">global_crops</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">local_crops</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000">masks</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000;font-weight:bold">[</span><span style="color:#000">masks</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#204a87;font-weight:bold">None</span><span style="color:#000;font-weight:bold">],</span> <span style="color:#000">is_training</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">student_global_cls</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">student_output</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">][</span><span style="color:#4e9a06">&#34;x_norm_clstoken&#34;</span><span style="color:#000;font-weight:bold">]</span>  <span style="color:#8f5902;font-style:italic"># 全局裁剪的 CLS 標記</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">student_local_cls</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">student_output</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">][</span><span style="color:#4e9a06">&#34;x_norm_clstoken&#34;</span><span style="color:#000;font-weight:bold">]</span>   <span style="color:#8f5902;font-style:italic"># 局部裁剪的 CLS 標記</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">student_patch_tokens</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">student_output</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">][</span><span style="color:#4e9a06">&#34;x_norm_patchtokens&#34;</span><span style="color:#000;font-weight:bold">]</span>  <span style="color:#8f5902;font-style:italic"># 全局裁剪的 Patch 標記</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 初始化損失字典和累積器</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">loss_dict</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">{}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">total_loss</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#0000cf;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 計算 DINO 損失：讓學生模型的 CLS 標記匹配教師模型的 CLS 標記</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">do_dino</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">dino_loss</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">dino_loss</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">student_global_cls</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">teacher_cls_tokens</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic"># 全局裁剪損失</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">local_crops</span> <span style="color:#204a87;font-weight:bold">is</span> <span style="color:#204a87;font-weight:bold">not</span> <span style="color:#204a87;font-weight:bold">None</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">dino_loss</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">dino_loss</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">student_local_cls</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">teacher_cls_tokens</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic"># 局部裁剪損失</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">loss_dict</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;dino_loss&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">dino_loss</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">total_loss</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">dino_loss_weight</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">dino_loss</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 計算 iBOT 損失：讓學生模型重建被遮罩的 patch 標記</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">do_ibot</span><span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">ibot_loss</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ibot_patch_loss</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">student_patch_tokens</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">teacher_patch_tokens</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">masks</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">loss_dict</span><span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;ibot_loss&#34;</span><span style="color:#000;font-weight:bold">]</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ibot_loss</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">total_loss</span> <span style="color:#ce5c00;font-weight:bold">+=</span> <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">ibot_loss_weight</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">ibot_loss</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8f5902;font-style:italic"># 反向傳播：根據總損失更新學生模型參數</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#3465a4">self</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">backprop_loss</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">total_loss</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">loss_dict</span>
+</span></span></code></pre></div><h4 id="sd-dino">SD-DINO</h4>
+<p><em><strong>”一個畫龍點睛，一個精雕細琢 “</strong></em>
+<a href="https://arxiv.org/abs/2305.15347">A Tale of Two Features: Stable Diffusion Complements DINO for Zero-Shot Semantic Correspondence</a></p>
+<h5 id="stable-diffusion穩定擴散模型sd">stable-diffusion（穩定擴散模型/SD）</h5>
+<blockquote>
+<p>SD通過在潛在空間（latent space）中進行擴散過程，能高效生成高質量圖像。與傳統擴散模型直接操作像素空間不同，Stable Diffusion 先將圖像壓縮到低維潛在表示，然後在潛在空間中進行去噪，從而降低計算成本並保持生成質量。</p></blockquote>
+<ul>
+<li><strong>擴散過程</strong>：
+<ul>
+<li>訓練階段：模型從真實圖像開始，逐步添加高斯噪聲，生成一系列越來越噪聲的版本（前向過程）。</li>
+<li>生成階段：模型從純噪聲開始，通過學習到的去噪網絡（通常是 U-Net 架構）逐步還原圖像（反向過程）。</li>
+</ul>
+</li>
+<li><strong>潛在空間</strong>：
+<ul>
+<li>使用預訓練的自動編碼器（Autoencoder）將圖像壓縮到潛在空間，減少計算量。</li>
+<li>去噪過程在潛在空間進行，最後解碼回像素空間，生成高解析度圖像。</li>
+</ul>
+</li>
+<li><strong>條件生成</strong>：
+<ul>
+<li>Stable Diffusion 支援條件輸入（如文字描述、圖像提示），通過交叉注意力（Cross-Attention）機制將文字或圖像信息融入生成過程，實現“文生圖”或“圖生圖”。</li>
+</ul>
+</li>
+</ul>
+<p>文本-圖像的生成模型（下文代指SD）有效地将文本提示与图像中的内容联系起来，因此它们应该能够理解图像中包含的内容。並且可以生成特定场景并对对象的布局和位置有一定程度的控制 ，所以它们应该能够定位对象並能夠實現語義分割</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140304.png" alt="Pasted image 20250506211934"></p>
+<blockquote>
+<p><em>語義分割</em>，<em>不同顏色代表不同部分</em></p></blockquote>
+<p>SD-DINO 將SD特徵和DINO特徵簡單組合，通过语义对应关系（一项经典的视觉任务，旨在连接两幅或多幅图像中的相似像素）来研究稳定扩散 (SD) 特征。得到結論：SD 特征与现有的表示学习特征（例如最近发布的 DINOv2）相比具有非常不同的特性：DINOv2 提供稀疏但准确的匹配，而 SD 特征提供高质量的空间信息，但有时==语义匹配==不准确。</p>
+<p><img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140305.png" alt="Pasted image 20250506213326"></p>
+<blockquote>
+<p><em>DINO和SD特徵的權重圖</em>，最左側的身體部位連續且噪點很少，但是位置不對（==高質量的空間信息==）。最有側雖然位置精確但是噪點很多不連續（==稀疏但準確的匹配==）。</p></blockquote>
+<h5 id="特徵檢測和特徵匹配">特徵檢測和特徵匹配</h5>
+<p>稠密</p>
+<blockquote>
+<p>计算一幅图像的一个小窗口函数，窗口内的像素与另一幅图像中具有同样的潜在对应特征的大小窗函数的像素之间的相关值，具有最大相关性的小窗口区域就是对应区域</p></blockquote>
+<p>簡單說就是像素與像素之間的對應
+<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140306.png" alt="Pasted image 20250506161051"></p>
+<p>稀疏</p>
+<blockquote>
+<p>基于特征（点、线）的匹配称作稀疏匹配。<br>
+在立体图像对中识别兴趣点而后在两幅图像中匹配相对应的点。</p></blockquote>
+<p>簡單說就是基於較大部分（部位）的匹配，不再關注具體的像素值
+<img src="https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250507002140307.png" alt="Pasted image 20250506161406"></p>
+<h4 id="代碼部分精簡">代碼部分（精簡）</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">def</span> <span style="color:#000">compute_pair_feature</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">files</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">category</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">dist</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;cos&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">img_size</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">840</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#4e9a06">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    為一對圖像提取 DINOv2 和 Stable Diffusion 特徵，用於語義對應任務。
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    返回特徵描述，支援 SD（全局語義）和 DINOv2（局部精確）的融合。
+</span></span></span><span style="display:flex;"><span><span style="color:#4e9a06">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">device</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#39;cuda&#39;</span> <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">torch</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cuda</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">is_available</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#204a87;font-weight:bold">else</span> <span style="color:#4e9a06">&#39;cpu&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">extractor</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">ViTExtractor</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;dinov2_vitb14&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">stride</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">14</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">device</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">device</span><span style="color:#000;font-weight:bold">)</span>  <span style="color:#8f5902;font-style:italic"># 初始化 DINOv2 模型</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000">result</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">for</span> <span style="color:#000">pair_idx</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#204a87">range</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87">len</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">files</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">//</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">):</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8f5902;font-style:italic"># 載入並預處理圖像對</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">img1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Image</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">files</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">pair_idx</span><span style="color:#000;font-weight:bold">])</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">convert</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;RGB&#39;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">img2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">Image</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">open</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">files</span><span style="color:#000;font-weight:bold">[</span><span style="color:#0000cf;font-weight:bold">2</span> <span style="color:#ce5c00;font-weight:bold">*</span> <span style="color:#000">pair_idx</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">])</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">convert</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;RGB&#39;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">img1</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">resize</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">img1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">img_size</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">resize</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">to_pil</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">img2</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">resize</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">img2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">img_size</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">resize</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">to_pil</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">with</span> <span style="color:#000">torch</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">no_grad</span><span style="color:#000;font-weight:bold">():</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8f5902;font-style:italic"># 提取 Stable Diffusion 特徵（全局語義）</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img1_sd</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">process_features</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">img1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">category</span><span style="color:#000;font-weight:bold">[</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">])</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img2_sd</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">process_features</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">model</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">img2</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">category</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#000">category</span><span style="color:#000;font-weight:bold">[</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">])</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8f5902;font-style:italic"># 提取 DINOv2 特徵（局部結構）</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img1_batch</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">extractor</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">preprocess_pil</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">img1</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img1_dino</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">extractor</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">extract_descriptors</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">img1_batch</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">to</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">device</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">layer</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">11</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">facet</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;token&#39;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img2_batch</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">extractor</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">preprocess_pil</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">img2</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img2_dino</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">extractor</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">extract_descriptors</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">img2_batch</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">to</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">device</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">layer</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#0000cf;font-weight:bold">11</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">facet</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#39;token&#39;</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8f5902;font-style:italic"># 融合 SD 和 DINOv2 特徵，增強語義對應</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img1_desc</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">torch</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cat</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">img1_sd</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">img1_dino</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">dim</span><span style="color:#ce5c00;font-weight:bold">=-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000">img2_desc</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">torch</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cat</span><span style="color:#000;font-weight:bold">((</span><span style="color:#000">img2_sd</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">img2_dino</span><span style="color:#000;font-weight:bold">),</span> <span style="color:#000">dim</span><span style="color:#ce5c00;font-weight:bold">=-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#8f5902;font-style:italic"># 正規化特徵，準備相似性計算</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">if</span> <span style="color:#000">dist</span> <span style="color:#204a87;font-weight:bold">in</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#39;l1&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#4e9a06">&#39;l2&#39;</span><span style="color:#000;font-weight:bold">]:</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#000">img1_desc</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">img1_desc</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">img1_desc</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">norm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dim</span><span style="color:#ce5c00;font-weight:bold">=-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keepdim</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#000">img2_desc</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">img2_desc</span> <span style="color:#ce5c00;font-weight:bold">/</span> <span style="color:#000">img2_desc</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">norm</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dim</span><span style="color:#ce5c00;font-weight:bold">=-</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">keepdim</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#204a87;font-weight:bold">True</span><span style="color:#000;font-weight:bold">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8f5902;font-style:italic"># 儲存特徵描述，供語義對應使用</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">result</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">append</span><span style="color:#000;font-weight:bold">([</span><span style="color:#000">img1_desc</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cpu</span><span style="color:#000;font-weight:bold">(),</span> <span style="color:#000">img2_desc</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#000">cpu</span><span style="color:#000;font-weight:bold">()])</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">return</span> <span style="color:#000">result</span>
+</span></span></code></pre></div>
 	<style>
   .feedback--answer {
     display: inline-block;
@@ -360,6 +548,9 @@ $$
   });
 </script>
 <br />
+<div class="td-page-meta__lastmod">
+  Last modified May 7, 2025: <a href="https://github.com/google/docsy-example/commit/e939df84bfd988bf0001fa12c36fb032afd124bc">5/6 (e939df8)</a>
+</div>
 
 </div>
 
@@ -426,8 +617,8 @@ $$
 </footer>
 
     </div>
-    <script src="/js/main.js"></script>
-<script defer src="/js/click-to-copy.js" crossorigin="anonymous"></script>
+    <script src="/js/main.min.d8fd71c60234beffac13dd75ea2a5ce1133a205f46fc7501ba538f3910c313ff.js" integrity="sha256-2P1xxgI0vv&#43;sE9116ipc4RM6IF9G/HUBulOPORDDE/8=" crossorigin="anonymous"></script>
+<script defer src="/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
 <script src='/js/tabpane-persist.js'></script>
 
   </body>
