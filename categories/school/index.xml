@@ -15,13 +15,6 @@
       <description></description>
     </item>
     <item>
-      <title></title>
-      <link>https://example.docsy.dev/school/159.261/week4_5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.docsy.dev/school/159.261/week4_5/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>159.225 Assignment1</title>
       <link>https://example.docsy.dev/school/159.225/assignment/assignment1/4.14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -69,13 +62,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.docsy.dev/school/159.225/week3/lab3/lab3/</guid>
       <description>&lt;p&gt;Use-case Description&lt;/p&gt;&#xA;&lt;p&gt;A user-side function model.&#xA;not sequense model&lt;/p&gt;&#xA;&lt;p&gt;Do not internal system components into user-side model. It&amp;rsquo;s no useful to users&lt;/p&gt;&#xA;&lt;p&gt;an use action is connected with a straight line&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Overview Java</title>
-      <link>https://example.docsy.dev/school/159.261/week1_2_3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.docsy.dev/school/159.261/week1_2_3/</guid>
-      <description>&lt;p&gt;Quiz:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;One of the components of a computer is its CPU. What is a CPU and what role does it play in a computer?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Central process Unit, a component of computer,  the job of CPU is to excute programs&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Explain what is meant by an “asynchronous event.” Give some examples.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;event happen at unpredictable time.&#xA;when CPU needs data in disk, CPU will send signal to disk ask for preparing, disk has releative low speed compare to CPU, so data preparing as an unpredictable event can be seen as asynchronous event.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Scenarios and Use Cases</title>
