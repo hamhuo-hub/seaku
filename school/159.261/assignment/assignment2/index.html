@@ -18,22 +18,117 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Rythem game | Hamhuo</title>
-<meta name="description" content="Hamhuo">
+<meta name="description" content="5/8 写了定时器，输入BPM可以控制实体移动 需要完善逻辑，尽可能改成以节拍控制，根据不同节拍数控制实体动作
+需求，攻击模式设计。继承enemie类重写移动策略
+以节拍为单位，共两种策略-移动与攻击（初步设定攻击时静止） 移动目标是靠近玩家，攻击无目标，但是攻击频率固定。
+问题：玩家在快速击键时会快速移动（floating）忽略节拍 – 缺少移动计数，增加一个移动计数
+目前的设计是以帧为单位更新的，所有输入在一帧内计算。为了保证绘图时按照帧为单位，游戏中按照节拍为单位，需要限制更新。 所有需要计算的变量在节拍开始时初始化完毕，无论该节拍内存在几帧，节拍时间固定。也就是说绘图只是两个节拍状态之间的过度，变量在节拍之间的修改会被忽略（冻结）
+5/10 梳理游戏流程： 我们已经有一个基础的游戏引擎类，该类有如下方法
+数学方法 绘图方法 资源加载 接口 监听 该类是最底层的游戏引擎，继承该类只需要重写绘制逻辑即可。其中的 paintCompoent()方法可视为绘制那些对象？ update() 可视为怎样绘制对象？
+游戏引擎是一个接口/抽象类，其目的是要求游戏主类继承游戏引擎并重写其中绘制方法（需要绘制那些对象/如何绘制），因此我们需要创建一个游戏主类来协调所有游戏的对象 GameController 该对象继承引擎，因此可视为引擎的实现类
+游戏主类/游戏控制器的职责如下
+新建所有对象 控制协调所有对象 调用对象的更新方法 负责资源的加载 在讲游戏引擎如何使用之前，先来说游戏中的所有对象有什么属性和方法 首先敌人类
+敌人在游戏中的作用是，随节拍移动并接近玩家，攻击玩家。目标是杀死玩家。因此敌人类需要
+一个全局的节拍器来控制移动时机。这个节拍器需要==保证全局单例==。
+当前坐标来计算路径。
+血量
+攻击力
+动画/绘制方式
+声音/打击反馈
+前三个没什么可说的，主要是动画和声音。因为所有实现类都有自己的音效和动画。所以需要写一个抽象方法来实现多态
+动画和音效方法的逻辑如下
+游戏主类调用地图类更新 地图类调用所有实体的新建/更新逻辑 敌人根据当前状态调用相应绘图逻辑 控制器和地图一会再说，先来说敌人类的更新方法
+判断敌人当前状态 执行对应的动画/声音（哈希表）（更新策略） 与其他类的交互/生命周期等在地图处理，以节拍为更新信号。最后在控制器绘制 我们尝试创建一只史莱姆 Slime 首先继承 Enemy 为了绘制动画，我们需要数组来存储动画帧
+所有资源的加载都应该在控制器进行，所以
+写了史莱姆的攻击动画 问题：Enemy（敌人）类的代码冗余，史莱姆或者其他实体继承敌人类后应该只重写攻击方式和动画，其他直接复用敌人类代码。需要修改敌人类和史莱姆的攻击方法 目前的敌人类逻辑是： 敌人类初始化： 敌人状态： 敌人实体在与玩家交互时会在上述6种状态间切换。所有敌人实体目前均只有这6种状态。
+敌人状态会与敌人动画绑定，根据不同的状态来调用不同的sprite，使用哈希表来做状态绑定。所有敌人实体都需要这个属性，写到父类里面做多态
+我们不希望所有子类共享一个哈希表，所以在子类重写一个哈希表覆盖">
 <meta property="og:url" content="https://example.docsy.dev/school/159.261/assignment/assignment2/">
   <meta property="og:site_name" content="Hamhuo">
   <meta property="og:title" content="Rythem game">
-  <meta property="og:description" content="Hamhuo">
+  <meta property="og:description" content="5/8 写了定时器，输入BPM可以控制实体移动 需要完善逻辑，尽可能改成以节拍控制，根据不同节拍数控制实体动作
+需求，攻击模式设计。继承enemie类重写移动策略
+以节拍为单位，共两种策略-移动与攻击（初步设定攻击时静止） 移动目标是靠近玩家，攻击无目标，但是攻击频率固定。
+问题：玩家在快速击键时会快速移动（floating）忽略节拍 – 缺少移动计数，增加一个移动计数
+目前的设计是以帧为单位更新的，所有输入在一帧内计算。为了保证绘图时按照帧为单位，游戏中按照节拍为单位，需要限制更新。 所有需要计算的变量在节拍开始时初始化完毕，无论该节拍内存在几帧，节拍时间固定。也就是说绘图只是两个节拍状态之间的过度，变量在节拍之间的修改会被忽略（冻结）
+5/10 梳理游戏流程： 我们已经有一个基础的游戏引擎类，该类有如下方法
+数学方法 绘图方法 资源加载 接口 监听 该类是最底层的游戏引擎，继承该类只需要重写绘制逻辑即可。其中的 paintCompoent()方法可视为绘制那些对象？ update() 可视为怎样绘制对象？
+游戏引擎是一个接口/抽象类，其目的是要求游戏主类继承游戏引擎并重写其中绘制方法（需要绘制那些对象/如何绘制），因此我们需要创建一个游戏主类来协调所有游戏的对象 GameController 该对象继承引擎，因此可视为引擎的实现类
+游戏主类/游戏控制器的职责如下
+新建所有对象 控制协调所有对象 调用对象的更新方法 负责资源的加载 在讲游戏引擎如何使用之前，先来说游戏中的所有对象有什么属性和方法 首先敌人类
+敌人在游戏中的作用是，随节拍移动并接近玩家，攻击玩家。目标是杀死玩家。因此敌人类需要
+一个全局的节拍器来控制移动时机。这个节拍器需要==保证全局单例==。
+当前坐标来计算路径。
+血量
+攻击力
+动画/绘制方式
+声音/打击反馈
+前三个没什么可说的，主要是动画和声音。因为所有实现类都有自己的音效和动画。所以需要写一个抽象方法来实现多态
+动画和音效方法的逻辑如下
+游戏主类调用地图类更新 地图类调用所有实体的新建/更新逻辑 敌人根据当前状态调用相应绘图逻辑 控制器和地图一会再说，先来说敌人类的更新方法
+判断敌人当前状态 执行对应的动画/声音（哈希表）（更新策略） 与其他类的交互/生命周期等在地图处理，以节拍为更新信号。最后在控制器绘制 我们尝试创建一只史莱姆 Slime 首先继承 Enemy 为了绘制动画，我们需要数组来存储动画帧
+所有资源的加载都应该在控制器进行，所以
+写了史莱姆的攻击动画 问题：Enemy（敌人）类的代码冗余，史莱姆或者其他实体继承敌人类后应该只重写攻击方式和动画，其他直接复用敌人类代码。需要修改敌人类和史莱姆的攻击方法 目前的敌人类逻辑是： 敌人类初始化： 敌人状态： 敌人实体在与玩家交互时会在上述6种状态间切换。所有敌人实体目前均只有这6种状态。
+敌人状态会与敌人动画绑定，根据不同的状态来调用不同的sprite，使用哈希表来做状态绑定。所有敌人实体都需要这个属性，写到父类里面做多态
+我们不希望所有子类共享一个哈希表，所以在子类重写一个哈希表覆盖">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="school">
-    <meta property="article:modified_time" content="2025-04-19T10:35:00+08:00">
 
   <meta itemprop="name" content="Rythem game">
-  <meta itemprop="description" content="Hamhuo">
-  <meta itemprop="dateModified" content="2025-04-19T10:35:00+08:00">
+  <meta itemprop="description" content="5/8 写了定时器，输入BPM可以控制实体移动 需要完善逻辑，尽可能改成以节拍控制，根据不同节拍数控制实体动作
+需求，攻击模式设计。继承enemie类重写移动策略
+以节拍为单位，共两种策略-移动与攻击（初步设定攻击时静止） 移动目标是靠近玩家，攻击无目标，但是攻击频率固定。
+问题：玩家在快速击键时会快速移动（floating）忽略节拍 – 缺少移动计数，增加一个移动计数
+目前的设计是以帧为单位更新的，所有输入在一帧内计算。为了保证绘图时按照帧为单位，游戏中按照节拍为单位，需要限制更新。 所有需要计算的变量在节拍开始时初始化完毕，无论该节拍内存在几帧，节拍时间固定。也就是说绘图只是两个节拍状态之间的过度，变量在节拍之间的修改会被忽略（冻结）
+5/10 梳理游戏流程： 我们已经有一个基础的游戏引擎类，该类有如下方法
+数学方法 绘图方法 资源加载 接口 监听 该类是最底层的游戏引擎，继承该类只需要重写绘制逻辑即可。其中的 paintCompoent()方法可视为绘制那些对象？ update() 可视为怎样绘制对象？
+游戏引擎是一个接口/抽象类，其目的是要求游戏主类继承游戏引擎并重写其中绘制方法（需要绘制那些对象/如何绘制），因此我们需要创建一个游戏主类来协调所有游戏的对象 GameController 该对象继承引擎，因此可视为引擎的实现类
+游戏主类/游戏控制器的职责如下
+新建所有对象 控制协调所有对象 调用对象的更新方法 负责资源的加载 在讲游戏引擎如何使用之前，先来说游戏中的所有对象有什么属性和方法 首先敌人类
+敌人在游戏中的作用是，随节拍移动并接近玩家，攻击玩家。目标是杀死玩家。因此敌人类需要
+一个全局的节拍器来控制移动时机。这个节拍器需要==保证全局单例==。
+当前坐标来计算路径。
+血量
+攻击力
+动画/绘制方式
+声音/打击反馈
+前三个没什么可说的，主要是动画和声音。因为所有实现类都有自己的音效和动画。所以需要写一个抽象方法来实现多态
+动画和音效方法的逻辑如下
+游戏主类调用地图类更新 地图类调用所有实体的新建/更新逻辑 敌人根据当前状态调用相应绘图逻辑 控制器和地图一会再说，先来说敌人类的更新方法
+判断敌人当前状态 执行对应的动画/声音（哈希表）（更新策略） 与其他类的交互/生命周期等在地图处理，以节拍为更新信号。最后在控制器绘制 我们尝试创建一只史莱姆 Slime 首先继承 Enemy 为了绘制动画，我们需要数组来存储动画帧
+所有资源的加载都应该在控制器进行，所以
+写了史莱姆的攻击动画 问题：Enemy（敌人）类的代码冗余，史莱姆或者其他实体继承敌人类后应该只重写攻击方式和动画，其他直接复用敌人类代码。需要修改敌人类和史莱姆的攻击方法 目前的敌人类逻辑是： 敌人类初始化： 敌人状态： 敌人实体在与玩家交互时会在上述6种状态间切换。所有敌人实体目前均只有这6种状态。
+敌人状态会与敌人动画绑定，根据不同的状态来调用不同的sprite，使用哈希表来做状态绑定。所有敌人实体都需要这个属性，写到父类里面做多态
+我们不希望所有子类共享一个哈希表，所以在子类重写一个哈希表覆盖">
+  <meta itemprop="wordCount" content="63">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Rythem game">
-  <meta name="twitter:description" content="Hamhuo">
+  <meta name="twitter:description" content="5/8 写了定时器，输入BPM可以控制实体移动 需要完善逻辑，尽可能改成以节拍控制，根据不同节拍数控制实体动作
+需求，攻击模式设计。继承enemie类重写移动策略
+以节拍为单位，共两种策略-移动与攻击（初步设定攻击时静止） 移动目标是靠近玩家，攻击无目标，但是攻击频率固定。
+问题：玩家在快速击键时会快速移动（floating）忽略节拍 – 缺少移动计数，增加一个移动计数
+目前的设计是以帧为单位更新的，所有输入在一帧内计算。为了保证绘图时按照帧为单位，游戏中按照节拍为单位，需要限制更新。 所有需要计算的变量在节拍开始时初始化完毕，无论该节拍内存在几帧，节拍时间固定。也就是说绘图只是两个节拍状态之间的过度，变量在节拍之间的修改会被忽略（冻结）
+5/10 梳理游戏流程： 我们已经有一个基础的游戏引擎类，该类有如下方法
+数学方法 绘图方法 资源加载 接口 监听 该类是最底层的游戏引擎，继承该类只需要重写绘制逻辑即可。其中的 paintCompoent()方法可视为绘制那些对象？ update() 可视为怎样绘制对象？
+游戏引擎是一个接口/抽象类，其目的是要求游戏主类继承游戏引擎并重写其中绘制方法（需要绘制那些对象/如何绘制），因此我们需要创建一个游戏主类来协调所有游戏的对象 GameController 该对象继承引擎，因此可视为引擎的实现类
+游戏主类/游戏控制器的职责如下
+新建所有对象 控制协调所有对象 调用对象的更新方法 负责资源的加载 在讲游戏引擎如何使用之前，先来说游戏中的所有对象有什么属性和方法 首先敌人类
+敌人在游戏中的作用是，随节拍移动并接近玩家，攻击玩家。目标是杀死玩家。因此敌人类需要
+一个全局的节拍器来控制移动时机。这个节拍器需要==保证全局单例==。
+当前坐标来计算路径。
+血量
+攻击力
+动画/绘制方式
+声音/打击反馈
+前三个没什么可说的，主要是动画和声音。因为所有实现类都有自己的音效和动画。所以需要写一个抽象方法来实现多态
+动画和音效方法的逻辑如下
+游戏主类调用地图类更新 地图类调用所有实体的新建/更新逻辑 敌人根据当前状态调用相应绘图逻辑 控制器和地图一会再说，先来说敌人类的更新方法
+判断敌人当前状态 执行对应的动画/声音（哈希表）（更新策略） 与其他类的交互/生命周期等在地图处理，以节拍为更新信号。最后在控制器绘制 我们尝试创建一只史莱姆 Slime 首先继承 Enemy 为了绘制动画，我们需要数组来存储动画帧
+所有资源的加载都应该在控制器进行，所以
+写了史莱姆的攻击动画 问题：Enemy（敌人）类的代码冗余，史莱姆或者其他实体继承敌人类后应该只重写攻击方式和动画，其他直接复用敌人类代码。需要修改敌人类和史莱姆的攻击方法 目前的敌人类逻辑是： 敌人类初始化： 敌人状态： 敌人实体在与玩家交互时会在上述6种状态间切换。所有敌人实体目前均只有这6种状态。
+敌人状态会与敌人动画绑定，根据不同的状态来调用不同的sprite，使用哈希表来做状态绑定。所有敌人实体都需要这个属性，写到父类里面做多态
+我们不希望所有子类共享一个哈希表，所以在子类重写一个哈希表覆盖">
 <link rel="preload" href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" as="style" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
 <link href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" rel="stylesheet" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
 <script
@@ -53,10 +148,10 @@
         <a class="nav-link" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/school/"><span>Course</span></a>
+        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link active" href="/school/"><span>MasseyCourse</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/note_myself/"><span>NoteSelf</span></a>
@@ -88,7 +183,7 @@
   <nav class="td-sidebar-nav collapse" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-school-li">
-  <a href="/school/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-school"><span class="">Course</span></a>
+  <a href="/school/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-school"><span class="">MasseyCourse</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-school159225-li">
   <a href="/school/159.225/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section" id="m-school159225"><span class="">159.225 System Analysis and Modelling</span></a>
@@ -142,16 +237,27 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
-<a href="https://github.com/google/docsy-example/tree/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cschool%5c159.261%5cAssignment%5cAssignment2.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
-  <a href="https://github.com/google/docsy-example/edit/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cschool%5c159.261%5cAssignment%5cAssignment2.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
-  <a href="https://github.com/google/docsy-example/new/main/C:/Users/HuoZihang/Documents/GitHub/seaku-src/content/en/school/159.261/Assignment?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
+<a href="https://github.com/google/docsy-example/tree/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cschool%5c159.261%5cassignment%5cassignment2.md" class="td-page-meta--view td-page-meta__view" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines fa-fw"></i> View page source</a>
+  <a href="https://github.com/google/docsy-example/edit/main/C:%5cUsers%5cHuoZihang%5cDocuments%5cGitHub%5cseaku-src%5ccontent%5cen%5cschool%5c159.261%5cassignment%5cassignment2.md" class="td-page-meta--edit td-page-meta__edit" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Edit this page</a>
+  <a href="https://github.com/google/docsy-example/new/main/C:/Users/HuoZihang/Documents/GitHub/seaku-src/content/en/school/159.261/assignment?filename=change-me.md&amp;value=---%0Atitle%3A&#43;%22Long&#43;Page&#43;Title%22%0AlinkTitle%3A&#43;%22Short&#43;Nav&#43;Title%22%0Aweight%3A&#43;100%0Adescription%3A&#43;%3E-%0A&#43;&#43;&#43;&#43;&#43;Page&#43;description&#43;for&#43;heading&#43;and&#43;indexes.%0A---%0A%0A%23%23&#43;Heading%0A%0AEdit&#43;this&#43;template&#43;to&#43;create&#43;your&#43;new&#43;page.%0A%0A%2A&#43;Give&#43;it&#43;a&#43;good&#43;name%2C&#43;ending&#43;in&#43;%60.md%60&#43;-&#43;e.g.&#43;%60getting-started.md%60%0A%2A&#43;Edit&#43;the&#43;%22front&#43;matter%22&#43;section&#43;at&#43;the&#43;top&#43;of&#43;the&#43;page&#43;%28weight&#43;controls&#43;how&#43;its&#43;ordered&#43;amongst&#43;other&#43;pages&#43;in&#43;the&#43;same&#43;directory%3B&#43;lowest&#43;number&#43;first%29.%0A%2A&#43;Add&#43;a&#43;good&#43;commit&#43;message&#43;at&#43;the&#43;bottom&#43;of&#43;the&#43;page&#43;%28%3C80&#43;characters%3B&#43;use&#43;the&#43;extended&#43;description&#43;field&#43;for&#43;more&#43;detail%29.%0A%2A&#43;Create&#43;a&#43;new&#43;branch&#43;so&#43;you&#43;can&#43;preview&#43;your&#43;new&#43;file&#43;and&#43;request&#43;a&#43;review&#43;via&#43;Pull&#43;Request.%0A" class="td-page-meta--child td-page-meta__child" target="_blank" rel="noopener"><i class="fa-solid fa-pen-to-square fa-fw"></i> Create child page</a>
   <a href="https://github.com/google/docsy-example/issues/new?title=Rythem%20game" class="td-page-meta--issue td-page-meta__issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create documentation issue</a>
   <a href="https://github.com/google/docsy/issues/new" class="td-page-meta--project td-page-meta__project-issue" target="_blank" rel="noopener"><i class="fa-solid fa-list-check fa-fw"></i> Create project issue</a>
   <a id="print" href="/school/159.261/_print/"><i class="fa-solid fa-print fa-fw"></i> Print entire section</a>
 
 </div>
 
-            
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
@@ -180,7 +286,7 @@
             <nav aria-label="breadcrumb" class="td-breadcrumbs">
   <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="/school/">Course</a></li>
+    <a href="/school/">MasseyCourse</a></li>
   <li class="breadcrumb-item">
     <a href="/school/159.261/">159.261 Gaming Programming</a></li>
   <li class="breadcrumb-item active" aria-current="page">
@@ -194,7 +300,92 @@
 	<header class="article-meta">
 		
   </header>
-	
+	<h4 id="58">5/8</h4>
+<p>写了定时器，输入BPM可以控制实体移动
+需要完善逻辑，尽可能改成以节拍控制，根据不同节拍数控制实体动作</p>
+<p>需求，攻击模式设计。继承enemie类重写移动策略</p>
+<p>以节拍为单位，共两种策略-移动与攻击（初步设定攻击时静止）
+移动目标是靠近玩家，攻击无目标，但是攻击频率固定。</p>
+<p>问题：玩家在快速击键时会快速移动（floating）忽略节拍 &ndash; 缺少移动计数，增加一个移动计数</p>
+<p>目前的设计是以帧为单位更新的，所有输入在一帧内计算。为了保证绘图时按照帧为单位，游戏中按照节拍为单位，需要限制更新。
+所有需要计算的变量在节拍开始时初始化完毕，无论该节拍内存在几帧，节拍时间固定。也就是说绘图只是两个节拍状态之间的过度，变量在节拍之间的修改会被忽略（冻结）</p>
+<h4 id="510">5/10</h4>
+<p>梳理游戏流程：
+我们已经有一个基础的游戏引擎类，该类有如下方法</p>
+<p>数学方法
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150432521.png" alt="image.png"></p>
+<p>绘图方法
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150506105.png" alt="image.png"></p>
+<p>资源加载
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150618208.png" alt="image.png"></p>
+<p>接口
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150712674.png" alt="image.png"></p>
+<p>监听
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150738414.png" alt="image.png"></p>
+<p>该类是最底层的游戏引擎，继承该类只需要重写绘制逻辑即可。其中的  <br>
+<code>paintCompoent()</code>方法可视为绘制那些对象？
+<code>update()</code> 可视为怎样绘制对象？</p>
+<p>游戏引擎是一个接口/抽象类，其目的是要求游戏主类继承游戏引擎并重写其中绘制方法（需要绘制那些对象/如何绘制），因此我们需要创建一个游戏主类来协调所有游戏的对象 <code>GameController</code> 该对象继承引擎，因此可视为引擎的实现类</p>
+<p>游戏主类/游戏控制器的职责如下</p>
+<ul>
+<li>新建所有对象</li>
+<li>控制协调所有对象</li>
+<li>调用对象的更新方法</li>
+<li>负责资源的加载</li>
+</ul>
+<p>在讲游戏引擎如何使用之前，先来说游戏中的所有对象有什么属性和方法
+首先敌人类</p>
+<p>敌人在游戏中的作用是，随节拍移动并接近玩家，攻击玩家。目标是杀死玩家。因此敌人类需要</p>
+<ul>
+<li>
+<p>一个全局的节拍器来控制移动时机。这个节拍器需要==保证全局单例==。</p>
+</li>
+<li>
+<p>当前坐标来计算路径。</p>
+</li>
+<li>
+<p>血量</p>
+</li>
+<li>
+<p>攻击力</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510153820369.png" alt="image.png"></p>
+</li>
+<li>
+<p>动画/绘制方式</p>
+</li>
+<li>
+<p>声音/打击反馈</p>
+</li>
+</ul>
+<p>前三个没什么可说的，主要是动画和声音。因为所有实现类都有自己的音效和动画。所以需要写一个抽象方法来实现多态</p>
+<p>动画和音效方法的逻辑如下</p>
+<ul>
+<li>游戏主类调用地图类更新</li>
+<li>地图类调用所有实体的新建/更新逻辑</li>
+<li>敌人根据当前状态调用相应绘图逻辑</li>
+</ul>
+<p>控制器和地图一会再说，先来说敌人类的更新方法</p>
+<ul>
+<li>判断敌人当前状态</li>
+<li>执行对应的动画/声音（哈希表）（更新策略）
+与其他类的交互/生命周期等在地图处理，以节拍为更新信号。最后在控制器绘制</li>
+</ul>
+<p>我们尝试创建一只史莱姆 <code>Slime</code>
+首先继承 <code>Enemy</code>
+为了绘制动画，我们需要数组来存储动画帧</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510202332606.png" alt="image.png"></p>
+<p>所有资源的加载都应该在控制器进行，所以</p>
+<p>写了史莱姆的攻击动画
+问题：Enemy（敌人）类的代码冗余，史莱姆或者其他实体继承敌人类后应该只重写攻击方式和动画，其他直接复用敌人类代码。需要修改敌人类和史莱姆的攻击方法
+目前的敌人类逻辑是：
+敌人类初始化：
+敌人状态：
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510144204314.png" alt="image.png"></p>
+<p>敌人实体在与玩家交互时会在上述6种状态间切换。所有敌人实体目前均只有这6种状态。</p>
+<p>敌人状态会与敌人动画绑定，根据不同的状态来调用不同的sprite，使用哈希表来做状态绑定。所有敌人实体都需要这个属性，写到父类里面做多态</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510145208594.png" alt="image.png"></p>
+<p>我们不希望所有子类共享一个哈希表，所以在子类重写一个哈希表覆盖</p>
+
 	<style>
   .feedback--answer {
     display: inline-block;
@@ -251,9 +442,6 @@
   });
 </script>
 <br />
-<div class="td-page-meta__lastmod">
-  Last modified April 19, 2025: <a href="https://github.com/google/docsy-example/commit/f9b45dedbef59a08491e826f1f2c6aa2080e54a7">src (f9b45de)</a>
-</div>
 
 </div>
 

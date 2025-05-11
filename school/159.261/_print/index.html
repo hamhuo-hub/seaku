@@ -55,10 +55,10 @@
         <a class="nav-link" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="/school/"><span>Course</span></a>
+        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link active" href="/school/"><span>MasseyCourse</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/note_myself/"><span>NoteSelf</span></a>
@@ -131,7 +131,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-2269717e7dfd551af80f6e1d0353c006">159.261 Assignment1</a></li>
+<li>2: <a href="#pg-032fecef88740f0180ddce73914a8b59">159.261 Assignment1</a></li>
 
 
     
@@ -158,7 +158,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>4: <a href="#pg-b6c4731b5e0a4f6ddb969332b304156e">Rythem game</a></li>
+<li>4: <a href="#pg-d68288886ebcb4c0e8afed7d08c811e1">Rythem game</a></li>
 
 
     
@@ -166,7 +166,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>5: <a href="#pg-dca373a879a40d568f9200df62cb6945"></a></li>
+<li>5: <a href="#pg-b333b0c8d3beb89507e10eaeb6a8d35e"></a></li>
 
 
     
@@ -230,7 +230,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-2269717e7dfd551af80f6e1d0353c006">2 - 159.261 Assignment1</h1>
+	<h1 id="pg-032fecef88740f0180ddce73914a8b59">2 - 159.261 Assignment1</h1>
     <div class="lead">Snake Game</div>
 	<h4 id="420">4/20</h4>
 <p>Demo1</p>
@@ -368,9 +368,94 @@ like we need store more element, or reduce capicy for saving space</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-b6c4731b5e0a4f6ddb969332b304156e">4 - Rythem game</h1>
+	<h1 id="pg-d68288886ebcb4c0e8afed7d08c811e1">4 - Rythem game</h1>
     
-	
+	<h4 id="58">5/8</h4>
+<p>写了定时器，输入BPM可以控制实体移动
+需要完善逻辑，尽可能改成以节拍控制，根据不同节拍数控制实体动作</p>
+<p>需求，攻击模式设计。继承enemie类重写移动策略</p>
+<p>以节拍为单位，共两种策略-移动与攻击（初步设定攻击时静止）
+移动目标是靠近玩家，攻击无目标，但是攻击频率固定。</p>
+<p>问题：玩家在快速击键时会快速移动（floating）忽略节拍 &ndash; 缺少移动计数，增加一个移动计数</p>
+<p>目前的设计是以帧为单位更新的，所有输入在一帧内计算。为了保证绘图时按照帧为单位，游戏中按照节拍为单位，需要限制更新。
+所有需要计算的变量在节拍开始时初始化完毕，无论该节拍内存在几帧，节拍时间固定。也就是说绘图只是两个节拍状态之间的过度，变量在节拍之间的修改会被忽略（冻结）</p>
+<h4 id="510">5/10</h4>
+<p>梳理游戏流程：
+我们已经有一个基础的游戏引擎类，该类有如下方法</p>
+<p>数学方法
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150432521.png" alt="image.png"></p>
+<p>绘图方法
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150506105.png" alt="image.png"></p>
+<p>资源加载
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150618208.png" alt="image.png"></p>
+<p>接口
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150712674.png" alt="image.png"></p>
+<p>监听
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150738414.png" alt="image.png"></p>
+<p>该类是最底层的游戏引擎，继承该类只需要重写绘制逻辑即可。其中的  <br>
+<code>paintCompoent()</code>方法可视为绘制那些对象？
+<code>update()</code> 可视为怎样绘制对象？</p>
+<p>游戏引擎是一个接口/抽象类，其目的是要求游戏主类继承游戏引擎并重写其中绘制方法（需要绘制那些对象/如何绘制），因此我们需要创建一个游戏主类来协调所有游戏的对象 <code>GameController</code> 该对象继承引擎，因此可视为引擎的实现类</p>
+<p>游戏主类/游戏控制器的职责如下</p>
+<ul>
+<li>新建所有对象</li>
+<li>控制协调所有对象</li>
+<li>调用对象的更新方法</li>
+<li>负责资源的加载</li>
+</ul>
+<p>在讲游戏引擎如何使用之前，先来说游戏中的所有对象有什么属性和方法
+首先敌人类</p>
+<p>敌人在游戏中的作用是，随节拍移动并接近玩家，攻击玩家。目标是杀死玩家。因此敌人类需要</p>
+<ul>
+<li>
+<p>一个全局的节拍器来控制移动时机。这个节拍器需要==保证全局单例==。</p>
+</li>
+<li>
+<p>当前坐标来计算路径。</p>
+</li>
+<li>
+<p>血量</p>
+</li>
+<li>
+<p>攻击力</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510153820369.png" alt="image.png"></p>
+</li>
+<li>
+<p>动画/绘制方式</p>
+</li>
+<li>
+<p>声音/打击反馈</p>
+</li>
+</ul>
+<p>前三个没什么可说的，主要是动画和声音。因为所有实现类都有自己的音效和动画。所以需要写一个抽象方法来实现多态</p>
+<p>动画和音效方法的逻辑如下</p>
+<ul>
+<li>游戏主类调用地图类更新</li>
+<li>地图类调用所有实体的新建/更新逻辑</li>
+<li>敌人根据当前状态调用相应绘图逻辑</li>
+</ul>
+<p>控制器和地图一会再说，先来说敌人类的更新方法</p>
+<ul>
+<li>判断敌人当前状态</li>
+<li>执行对应的动画/声音（哈希表）（更新策略）
+与其他类的交互/生命周期等在地图处理，以节拍为更新信号。最后在控制器绘制</li>
+</ul>
+<p>我们尝试创建一只史莱姆 <code>Slime</code>
+首先继承 <code>Enemy</code>
+为了绘制动画，我们需要数组来存储动画帧</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510202332606.png" alt="image.png"></p>
+<p>所有资源的加载都应该在控制器进行，所以</p>
+<p>写了史莱姆的攻击动画
+问题：Enemy（敌人）类的代码冗余，史莱姆或者其他实体继承敌人类后应该只重写攻击方式和动画，其他直接复用敌人类代码。需要修改敌人类和史莱姆的攻击方法
+目前的敌人类逻辑是：
+敌人类初始化：
+敌人状态：
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510144204314.png" alt="image.png"></p>
+<p>敌人实体在与玩家交互时会在上述6种状态间切换。所有敌人实体目前均只有这6种状态。</p>
+<p>敌人状态会与敌人动画绑定，根据不同的状态来调用不同的sprite，使用哈希表来做状态绑定。所有敌人实体都需要这个属性，写到父类里面做多态</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510145208594.png" alt="image.png"></p>
+<p>我们不希望所有子类共享一个哈希表，所以在子类重写一个哈希表覆盖</p>
+
 </div>
 
 
@@ -385,7 +470,7 @@ like we need store more element, or reduce capicy for saving space</p>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-dca373a879a40d568f9200df62cb6945">5 - </h1>
+	<h1 id="pg-b333b0c8d3beb89507e10eaeb6a8d35e">5 - </h1>
     
 	<h1 id="snake-game--assignment-1">Snake Game — Assignment 1</h1>
 <p><em>by Hamhuo</em></p>
