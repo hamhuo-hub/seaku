@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>个人笔记 on Hamhuo</title>
+    <link>https://example.docsy.dev/noteself/</link>
+    <description>Recent content in 个人笔记 on Hamhuo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://example.docsy.dev/noteself/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3月17日</title>
+      <link>https://example.docsy.dev/noteself/dairy/3%E6%9C%8817%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/3%E6%9C%8817%E6%97%A5/</guid>
+      <description>&lt;h4 id=&#34;零-大学只有两件事-寻找对象和寻找自我-这两件事完成一件就很了不起&#34;&gt;零. 大学只有两件事, 寻找对象和寻找自我, 这两件事完成一件就很了不起&lt;/h4&gt;&#xA;&lt;h4 id=&#34;一-建议每个程序员都能搭建一个自己的博客&#34;&gt;一. 建议每个程序员都能搭建一个自己的博客&lt;/h4&gt;&#xA;&lt;p&gt;一个百度谷歌搜索你的名字就能访问的个人名片&lt;/p&gt;&#xA;&lt;p&gt;博客不需要多么复杂, 学习笔记, 生活感悟, 一些日常生活的灵感, 个人哲学都可以写到上面&lt;/p&gt;&#xA;&lt;h4 id=&#34;二-几个非常有用的网站&#34;&gt;二. 几个非常有用的网站&lt;/h4&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    //到百度搜下什么叫&amp;#34;出国机场&amp;#34;&#xA;&#x9;1. https://github.com/goeep/tuijianvpn&#xA;&#xA;&#x9;//java语言 是缺少资源/实验室/学长的情况下最适合入门和找实习的语言, 因为网上教程多&#xA;&#x9;2. https://javabetter.cn/&#xA;&#x9;3. https://liaoxuefeng.com/?src=redirect&#xA;&#xA;&#x9;//推荐所有人学习python, 大致了解下也好&#xA;&#x9;4. https://liaoxuefeng.com/books/python/introduction/index.html&#xA;&#xA;&#x9;//大二的线代大一的高数好好听, 后续忘记了没关系, 这种思维模式会支撑你学习其他领域&#xA;&#x9;5. https://www.3blue1brown.com/&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;三-对于希望实习的学弟&#34;&gt;三. 对于希望实习的学弟&lt;/h4&gt;&#xA;&lt;p&gt;来自学长的凉经&lt;/p&gt;&#xA;&lt;p&gt;雅思越早过越合适, 举个例子, 福建某985大三没有课程强制要求计院学生实习, 为什么? 因为厦大学生只用三年就可以修完所有学分并且专业技能达到职业标准. 这并不意味学校惨无人道, 这意味着公司秋招和春招是在大三进行的, 大一下就要开始确定方向并开始准备, 大二就要尝试实习, 大三正式拿到实习offer&lt;/p&gt;&#xA;&lt;p&gt;因此雅思越早完成就可以空出时间慢慢寻找自我&lt;/p&gt;&#xA;&lt;p&gt;四. 小心其他人突然抛出的观点&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docsy 折腾日志</title>
+      <link>https://example.docsy.dev/noteself/docsy_init/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/docsy_init/</guid>
+      <description>&lt;h4 id=&#34;docsy调色&#34;&gt;Docsy调色&lt;/h4&gt;&#xA;&lt;p&gt;docsy的默认颜色只有蓝色和白色希望美化为更加现代的风格&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250513125859815.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;于是查阅了Docsy的日志所有的样式文件都可以在scss样式表中重写&lt;/p&gt;&#xA;&lt;p&gt;目录如下 &lt;code&gt;scss/_variables_project.scss&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h5 id=&#34;背景色&#34;&gt;背景色&lt;/h5&gt;&#xA;&lt;p&gt;使用最浅的 &lt;code&gt;#FFFBDE&lt;/code&gt; 作为背景色&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-scss&#34; data-lang=&#34;scss&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8d8687&#34;&gt;/*&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8d8687&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8d8687&#34;&gt;Projects can override this file. For details, see:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8d8687&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8d8687&#34;&gt;https://www.docsy.dev/docs/adding-content/lookandfeel/#project-style-files&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8d8687&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8d8687&#34;&gt;*/&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ef6155&#34;&gt;$body-bg&lt;/span&gt;&lt;span style=&#34;color:#5bc4bf&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f99b15&#34;&gt;#FFFBDE&lt;/span&gt;;  &lt;span style=&#34;color:#8d8687&#34;&gt;// 确保没有语法错误&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;ctrl + f5&lt;/code&gt; 强制慢刷新&lt;/p&gt;&#xA;&lt;h5 id=&#34;标题色&#34;&gt;标题色&lt;/h5&gt;</description>
+    </item>
+    <item>
+      <title>Ubantu 随笔</title>
+      <link>https://example.docsy.dev/noteself/ubantu_init/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/ubantu_init/</guid>
+      <description>&lt;h4 id=&#34;ubantu-的中文打字問題&#34;&gt;Ubantu 的中文打字問題&lt;/h4&gt;&#xA;&lt;p&gt;一開始在Reddit上推薦基於fcitx4的“搜狗輸入法”，實際體驗下來由於架構過時了導致在最新版本的Ubantu上會出現面板閃爍，崩潰的問題&lt;/p&gt;&#xA;&lt;p&gt;朋友推薦下選擇 RIME，但是fcitx架構已經安裝抱着廢物利用的想法選擇了RIME的分支“Fcitx-RIME”&lt;/p&gt;&#xA;&lt;p&gt;日常文字輸入還好，但是筆者日用筆記本是 Obsidian，輸入法在這個軟件居然不起作用，歷經多方波折瞭解到 QT的移植軟件由於兼容性的問題不內置fcitx的支持&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;PS: 確實有兼容性問題，但是Obsidian是因爲Snap收錄時沒有添加輸入支持，直接下載官方的Appimage文件運行就好，綠色無污染&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;實在不想折騰。不得不換用IBUS，下面記錄下Ibus-rime在Ubantu的安裝&lt;/p&gt;&#xA;&lt;p&gt;Ubantu 收錄了 rime&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get install ibus-rime&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完成後需要在語言地區加入中文，並更換輸入架構爲IBus&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250501170758225.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;完成後打開終端，設置IBus架構&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ ibus-setup&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250428210813014.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;要在IBus首選項中加入RIME，沒有的點選Add就可以看到&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250428210813015.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;架構設置完畢後打開系統設置選單，在鍵盤中加入中文鍵盤佈局設置輸入元爲RIME&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250428210813017.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250428210813018.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;註銷重啓&lt;/strong&gt;&lt;/em&gt;， 這個很重要，重啓後即可使用&lt;/p&gt;&#xA;&lt;p&gt;如果在某些軟件無法輸入中文，把下列系統變量加入bashrc&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gedit ~/.bashrc&#xA;# 或者&#xA;vim ~/.bashrc&#xA;# 加入下列變量&#xA;export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;&#xA;export QT_IM_MODULE=&amp;#34;ibus&amp;#34;&#xA;export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250428210813019.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;重新加載配置文件&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ source ~/.bashrc&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;結束&lt;/p&gt;&#xA;&lt;h4 id=&#34;linux-下的-picgo-與-obsidian-使用&#34;&gt;Linux 下的 Picgo 與 Obsidian 使用&lt;/h4&gt;&#xA;&lt;p&gt;白板“Obsidian” 在官網有適用於 Debian系的 Appiamge&lt;/p&gt;&#xA;&lt;p&gt;下載完畢後右鍵點擊&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250501171008218.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;將視爲可執行文件選項選中&lt;/p&gt;&#xA;&lt;p&gt;雙擊即可運行&lt;/p&gt;&#xA;&lt;h5 id=&#34;製作快捷方式&#34;&gt;製作快捷方式&lt;/h5&gt;&#xA;&lt;p&gt;在 &lt;code&gt;/usr/share/applications&lt;/code&gt; 目錄下存放着許多 &lt;code&gt;desktop&lt;/code&gt; 後綴的文件&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/20250501171217665.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/2%E6%9C%8810%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/2%E6%9C%8810%E6%97%A5/</guid>
+      <description>&lt;p&gt;知识网络的构建非常有效&#xA;完成了知识体系梳理, 让知识点之间互相联系, 达到互相补充的目的, 达到系统性学习的要求&#xA;使用Obisidian后完成单元的时间从1个月缩短至5天&lt;/p&gt;&#xA;&lt;p&gt;目前的问题:&#xA;在知识点构建过程会引用未知知识点, 如果使用深度优先策略会导致单个知识点构建时间过长&#xA;使用广度优先策略会导致知识点构建不充分, 导致难以理解甚至错误&lt;/p&gt;&#xA;&lt;p&gt;todo:&#xA;找到构建知识点的策略&lt;/p&gt;&#xA;&lt;p&gt;待实践:&#xA;层次递进法（分层次学习）&lt;/p&gt;&#xA;&lt;p&gt;先广度遍历建立基础，再针对难点深度学习。&#xA;先粗略标注知识点（例如在 Obsidian 中使用标签），然后逐步填充内容。&#xA;设定“&lt;em&gt;&lt;strong&gt;深度阈值&lt;/strong&gt;&lt;/em&gt;”，例如最多深入两层，避免陷入细节漩涡。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;关键路径法（关键知识点优先）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;找出知识体系中的核心概念（如“动机图”或“概念网络”），优先构建这些关键点。&#xA;采用“知识辐射”策略，从&lt;em&gt;&lt;strong&gt;核心知识点&lt;/strong&gt;&lt;/em&gt;向外扩展，保证整体理解不受阻碍。&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;自适应探索法（按难度动态调整）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;在学习过程中动态调整策略：遇到理解困难时，切换为局部深度探索，否则维持广度推进。&#xA;利用&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;问题驱动学习（Problem-Based Learning, PBL），遇到卡点时再深入，而非预先穷举所有相关知识。&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;时间配额法（限制单个知识点时间）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;设定时间上限，例如每个&lt;em&gt;&lt;strong&gt;知识点最多20分钟&lt;/strong&gt;&lt;/em&gt;，如果仍有未解决的问题，则标记为“待深入”，后续再集中攻克。&#xA;通过设定学习周期（如“5天初步构建，10天复盘深化”）来避免单点耗时过多。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/2%E6%9C%8811%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/2%E6%9C%8811%E6%97%A5/</guid>
+      <description>&lt;p&gt;太忙了, 忘记写日志了&lt;/p&gt;&#xA;&lt;p&gt;实践了&lt;code&gt;层次递进法&lt;/code&gt; 将任务量缩减分层遍历任务, 逐层深入, 在一天完成了&lt;code&gt;MySQL&lt;/code&gt; 模块的整体结构&lt;/p&gt;&#xA;&lt;p&gt;归纳如下, 遍历层数限制为2层, 当知识点层数超过2层时采取两种策略&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI 归纳, 减少搜索深度&lt;/li&gt;&#xA;&lt;li&gt;放弃, 继续广度学习&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;第一种策略很好理解, AI将深度的理论归纳为表层结果, 减少厚度&lt;/p&gt;&#xA;&lt;p&gt;第二种策略的理论基础是, 知识点并非树状而是网状结构&lt;/p&gt;&#xA;&lt;p&gt;并发编程下有子节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163428470.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;子节点下还有 &lt;code&gt;孙&lt;/code&gt; 节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163437158.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这看起来是层层递进的树结构, 但是总体来看:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212163553822.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;这是一张网络, 当广度搜索时原先的节点在不同的搜索区域会&lt;code&gt;升级&lt;/code&gt;, 从子节点升级为父节点, 从而达到&#xA;缩小厚度的结果&lt;/p&gt;&#xA;&lt;p&gt;比如搜索路径 并发编程&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212164020208.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;此时 &lt;code&gt;AQS&lt;/code&gt; 是第三层节点, 学习自旋锁和CLH锁时就应该放弃&lt;/p&gt;&#xA;&lt;p&gt;放弃后转为广度搜索, 开始遍历之前的二级节点&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/hamhuo-hub/HamPic/img/img/20250212164241043.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;此时在广度搜索基础上, &lt;code&gt;AQS&lt;/code&gt; 自动降级了, 通俗来讲就是学习AQS的基础打牢了, 可以将任意的二级节点作为基础向下遍历了&lt;/p&gt;&#xA;&lt;p&gt;上述可知, 层级学习的核心是广度搜索结合深度搜索, 前提是有系统的学习路径, 思想是逐层递进, 优先搭建网络, 之后丰满节点&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;阅读:&lt;/p&gt;&#xA;&lt;p&gt;***问题驱动学习（Problem-Based Learning, PBL）&lt;/p&gt;&lt;/blockquote&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/2%E6%9C%8819%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/2%E6%9C%8819%E6%97%A5/</guid>
+      <description>&lt;p&gt;站点成功注册到google&#xA;其中几个要点&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;默认的 hugo server 指令会在所有页面拒绝索引, 要使用 hugo &amp;ndash;gc 或者 hugo&lt;/li&gt;&#xA;&lt;li&gt;google收录的sitemap有一个陈年bug, 站点地图必须使用双斜线并且末尾加斜线&lt;/li&gt;&#xA;&lt;li&gt;百度收录推荐用www但是加上前缀会导致跳转, 盲猜是个bug&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/2%E6%9C%8820%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/2%E6%9C%8820%E6%97%A5/</guid>
+      <description>&lt;p&gt;项目开始了&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;高兴 加入了天才噜噜噜的群&lt;/li&gt;&#xA;&lt;li&gt;高兴 redis缓存一致模型我一个人搞出来了&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/2%E6%9C%8827%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/2%E6%9C%8827%E6%97%A5/</guid>
+      <description>&lt;p&gt;尝试投递了第一批简历, 0面试&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;太着急了, 八股, 力扣没有准备充分, 但是这个不是主要原因&lt;/li&gt;&#xA;&lt;li&gt;主要原因是简历的问题, 拷打业务准备不充分&#xA;解决:&lt;/li&gt;&#xA;&lt;li&gt;10天冲刺计划&#xA;计划:&#xA;- 个人端口完成 2/28&#xA;- 简历完成 2/27&#xA;- 每日力扣 两题, 只做热门题 10天 两遍&#xA;- 面渣背诵加上热门50题 10天 两遍&#xA;- 小组模块完成 3天&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/3%E6%9C%8814%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/3%E6%9C%8814%E6%97%A5/</guid>
+      <description>&lt;p&gt;在接收他人观点之前首先明确自己的观点&#xA;否则会被PUA, 他人强加的观点是立不住脚的, 无论表述上是否符合客观事实, 缺少论证的观点任何人都可以拒绝接受&#xA;日常生活中不需要十分谨慎的判断其他人说的每句话, 只要小心反问,诘问具有强烈感情的观点就好&#xA;比如&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;你不现在开始学, 难道是不打算保研了吗?&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;交了这么多钱, 还没办法出国, 你不就是败家吗!&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;呵, 瞎忙活些什么, 一天天的就知道卷, 把宿舍风气都败坏了&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;哼, 早告诉你,你成不了事~&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;对于这些感情色彩强烈的表述, 抛去客观情况不论, 首先立场上就不应该接受, 作为平等个体, 在任何情况下抛出的观点一定是站在说话者自身立场上的. 我们没有任何理由接收他人立场上的观点,&lt;/p&gt;&#xA;&lt;p&gt;但是这存在例外. 只有非常了解某人实际生活和背景的人才能综合种种因素站在他人的立场上抛出观点(比如父母).&lt;/p&gt;&#xA;&lt;p&gt;对于干系至深之人所抛出的观点可能带有强烈感情色彩, 但在反驳之前请三思.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/3%E6%9C%881%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/3%E6%9C%881%E6%97%A5/</guid>
+      <description>&lt;p&gt;完成了redis的分页和 redis + mysql 悲观锁的一致双写&#xA;今天通宵完成笔记和国际化模块的工作&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Oauth2+Spring Cloud Gateway的项目架构准备好&lt;/li&gt;&#xA;&lt;li&gt;完成鉴权模型的笔记, 流程图梳理完毕&lt;/li&gt;&#xA;&lt;li&gt;redis的八股, 花点钱买热门50八股开始背&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/3%E6%9C%8828%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/3%E6%9C%8828%E6%97%A5/</guid>
+      <description>&lt;p&gt;进入任何新领域之前都应该先找教程, 先找视频教程, 而不是直接上手&lt;/p&gt;&#xA;&lt;h4 id=&#34;final-stage-4-9&#34;&gt;final stage 4-9&lt;/h4&gt;&#xA;&lt;h5 id=&#34;review-stage&#34;&gt;Review stage&lt;/h5&gt;&#xA;&lt;p&gt;Review all java course&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Java se + se note + se interview&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Java web + web note + web interview&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;web Socket&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;gateway&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Spring MVC + mvc note + mvc interview&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Spring Boot + boot note + boot interview&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Spring cloud + cloud note + cloud interview&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Redis&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;microservice&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;MySQL&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/3%E6%9C%889%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/3%E6%9C%889%E6%97%A5/</guid>
+      <description>&lt;p&gt;pdd和taotian笔试&#xA;不可谓不惨烈&lt;/p&gt;&#xA;&lt;p&gt;在原子的学习时间内必须有测试看到学习效果&lt;/p&gt;&#xA;&lt;p&gt;提问, 没有问题是不对的, 一定是不专心&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/4%E6%9C%889%E6%97%A5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/4%E6%9C%889%E6%97%A5/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://medium.com/%E8%81%B7%E4%BA%BA%E7%B0%A1%E5%A0%B1%E8%88%87%E5%95%86%E6%A5%AD%E6%80%9D%E7%B6%AD/%E4%BA%BA%E7%94%9F%E5%B0%B1%E6%98%AF%E5%9C%A8%E5%8F%96%E6%8D%A8-%E8%80%8C%E8%A6%8B%E8%AD%98%E5%89%87%E8%AE%93%E6%88%91%E5%80%91%E7%95%B6%E5%8F%96%E5%89%87%E5%8F%96-%E7%95%B6%E6%8D%A8%E5%89%87%E6%8D%A8-%E6%9C%89%E4%BA%86%E8%A6%8B%E8%AD%98-%E6%88%91%E5%80%91%E5%89%87%E4%BB%A5%E5%B9%B3%E5%B8%B8%E5%BF%83%E5%8E%BB%E7%9C%8B%E5%BE%85%E4%B8%80%E5%88%87%E9%81%B8%E6%93%87-7b8ba02575f0&#34;&gt;Loss and Go&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;很多看起來非完成不可的事情，其實想通了並沒有那麼重要，因為這些是偽工作。無論是在職場上還是在生活中，提高效率都需要從拒絕偽工作開始。這與前面提到的人生需要減法是同樣的道理。&lt;/p&gt;&#xA;&lt;p&gt;一個人的效率提升到一定程度後就很難再提高，唯一能夠控制的就是&lt;em&gt;&lt;strong&gt;少做一點事情&lt;/strong&gt;&lt;/em&gt;，而不是擠壓時間把所有的事情&lt;em&gt;&lt;strong&gt;隨便做完&lt;/strong&gt;&lt;/em&gt;。&lt;/p&gt;&#xA;&lt;p&gt;找到最重要的工作，並優先完成&lt;/p&gt;&#xA;&lt;p&gt;避免成為偽工作者(消極的接受所有工作，或是從指派的工作中&lt;em&gt;&lt;strong&gt;找一些容易的工作&lt;/strong&gt;&lt;/em&gt;)&lt;/p&gt;&#xA;&lt;p&gt;==永遠超出對方的期待==, 獲得成長空間比薪水重要&lt;/p&gt;&#xA;&lt;p&gt;如果做事情想從五十分的水準提高到九十分，得靠先進的科學和技術。兩個人同樣做一件事，一個人完全靠經驗，另一人掌握了先進的技術，在其他條件相同的情況下，後者一定能做得比前者好。&lt;/p&gt;&#xA;&lt;p&gt;很多時候，事情難以開始，一天拖過一天，是因為目標不切實際、很難實現所導致的，&lt;br&gt;&#xA;因此只要設定切合實際的目標，有了正確的策略，就可以讓心態更積極，避免拖延。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy/nextstep/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy/nextstep/</guid>
+      <description>&lt;p&gt;26/3/2024-13/4/2025&#xA;日记结束，完成Java整体学习初步窥探了java奥秘&#xA;春招结束，国内的学习也告一段落。我将离开中国，前往世界至南-新西兰&#xA;我对自己很满意，喜欢软件因此尝试自学java。收获了坚定的意志与更好的自己。结识了许多朋友。&lt;/p&gt;&#xA;&lt;p&gt;接下来，这个博客将成为我的日记本，记录我在未来的成长。&lt;/p&gt;&#xA;&lt;p&gt;14/4/2025&lt;/p&gt;&#xA;&lt;p&gt;@Hamhuo 于北京&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

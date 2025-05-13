@@ -34,8 +34,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Code War">
   <meta name="twitter:description" content="Hamhuo">
-<link rel="preload" href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" as="style" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
-<link href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" rel="stylesheet" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
+<link rel="preload" href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" as="style" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
+<link href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" rel="stylesheet" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -53,13 +53,13 @@
         <a class="nav-link active" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link" href="/school/"><span>Courses</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/school/"><span>MasseyCourse</span></a>
+        <a class="nav-link" href="/machinelearning/"><span>MachineLearning</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/note_myself/"><span>NoteSelf</span></a>
+        <a class="nav-link" href="/noteself/"><span>Noteself</span></a>
       </li>
       </ul>
   </div>
@@ -85,29 +85,47 @@
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-codewar-li">
   <a href="/codewar/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__section tree-root" id="m-codewar"><span class="td-sidebar-nav-active-item">Code War</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarfindprime-li">
-  <a href="/codewar/findprime/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a>
+  <input type="checkbox" id="m-codewarfindprime-check"/>
+  <label for="m-codewarfindprime-check"><a href="/codewar/findprime/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewargetmiddle-li">
-  <a href="/codewar/getmiddle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a>
+  <input type="checkbox" id="m-codewargetmiddle-check"/>
+  <label for="m-codewargetmiddle-check"><a href="/codewar/getmiddle/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnarcissisticnumber-li">
-  <a href="/codewar/narcissisticnumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a>
+  <input type="checkbox" id="m-codewarnarcissisticnumber-check"/>
+  <label for="m-codewarnarcissisticnumber-check"><a href="/codewar/narcissisticnumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnumberfun-li">
-  <a href="/codewar/numberfun/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a>
+  <input type="checkbox" id="m-codewarnumberfun-check"/>
+  <label for="m-codewarnumberfun-check"><a href="/codewar/numberfun/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarvalidatepin-li">
-  <a href="/codewar/validatepin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a>
+  <input type="checkbox" id="m-codewarvalidatepin-check"/>
+  <label for="m-codewarvalidatepin-check"><a href="/codewar/validatepin/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarpangramchecker-li">
-  <a href="/codewar/pangramchecker/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a>
+  <input type="checkbox" id="m-codewarpangramchecker-check"/>
+  <label for="m-codewarpangramchecker-check"><a href="/codewar/pangramchecker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarphonenumber-li">
-  <a href="/codewar/phonenumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a>
+  <input type="checkbox" id="m-codewarphonenumber-check"/>
+  <label for="m-codewarphonenumber-check"><a href="/codewar/phonenumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarspinwords-li">
-  <a href="/codewar/spinwords/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a>
+  <input type="checkbox" id="m-codewarspinwords-check"/>
+  <label for="m-codewarspinwords-check"><a href="/codewar/spinwords/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarstringsplit-li">
-  <a href="/codewar/stringsplit/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a>
+  <input type="checkbox" id="m-codewarstringsplit-check"/>
+  <label for="m-codewarstringsplit-check"><a href="/codewar/stringsplit/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -131,10 +149,11 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/sad/" data-taxonomy-term="sad"><span class="taxonomy-label">SAD</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -142,8 +161,8 @@
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">10</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   
@@ -159,7 +178,6 @@
     Code War</li>
   </ol>
 </nav>
-            
 <div class="td-content">
 	<h1>Code War</h1>
   
@@ -167,7 +185,7 @@
 		
   </header>
 	
-  <div class="section-index">
+	<div class="section-index">
     
     
     <hr class="panel-line">
@@ -226,64 +244,8 @@
                 <p>Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore (&rsquo;_&rsquo;).</p>
             </div>
         </div>
-<style>
-  .feedback--answer {
-    display: inline-block;
-  }
-  .feedback--answer-no {
-    margin-left: 1em;
-  }
-  .feedback--response {
-    display: none;
-    margin-top: 1em;
-  }
-  .feedback--response__visible {
-    display: block;
-  }
-</style>
-<div class="d-print-none">
-<h2 class="feedback--title">Feedback</h2>
-<p class="feedback--question">Was this page helpful?</p>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
-<p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-<p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-</div>
-<script>
-  const yesButton = document.querySelector('.feedback--answer-yes');
-  const noButton = document.querySelector('.feedback--answer-no');
-  const yesResponse = document.querySelector('.feedback--response-yes');
-  const noResponse = document.querySelector('.feedback--response-no');
-  const disableButtons = () => {
-    yesButton.disabled = true;
-    noButton.disabled = true;
-  };
-  const sendFeedback = (value) => {
-    if (typeof gtag !== 'function') return;
-    gtag('event', 'page_helpful', {
-      'event_category': 'Helpful',
-      'event_label': window.location.pathname,
-      'value': value
-    });
-  };
-  yesButton.addEventListener('click', () => {
-    yesResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback( 100 );
-  });
-  noButton.addEventListener('click', () => {
-    noResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback(0);
-  });
-</script>
-<br />
 <div class="td-page-meta__lastmod">
-  Last modified April 8, 2025: <a href="https://github.com/google/docsy-example/commit/07975afa01b5241ca1fae98824ae6f04b06e9a83">update deepml (07975af)</a>
+  Last modified April 8, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/07975afa01b5241ca1fae98824ae6f04b06e9a83">update deepml (07975af)</a>
 </div>
 </div>
 

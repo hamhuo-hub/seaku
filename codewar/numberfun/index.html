@@ -37,8 +37,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="NumberFun">
   <meta name="twitter:description" content="You might know some pretty large perfect squares. But what about the NEXT one?">
-<link rel="preload" href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" as="style" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
-<link href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" rel="stylesheet" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
+<link rel="preload" href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" as="style" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
+<link href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" rel="stylesheet" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -56,13 +56,13 @@
         <a class="nav-link active" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link" href="/school/"><span>Courses</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/school/"><span>MasseyCourse</span></a>
+        <a class="nav-link" href="/machinelearning/"><span>MachineLearning</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/note_myself/"><span>NoteSelf</span></a>
+        <a class="nav-link" href="/noteself/"><span>Noteself</span></a>
       </li>
       </ul>
   </div>
@@ -88,29 +88,47 @@
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-codewar-li">
   <a href="/codewar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-codewar"><span class="">Code War</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarfindprime-li">
-  <a href="/codewar/findprime/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a>
+  <input type="checkbox" id="m-codewarfindprime-check"/>
+  <label for="m-codewarfindprime-check"><a href="/codewar/findprime/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewargetmiddle-li">
-  <a href="/codewar/getmiddle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a>
+  <input type="checkbox" id="m-codewargetmiddle-check"/>
+  <label for="m-codewargetmiddle-check"><a href="/codewar/getmiddle/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnarcissisticnumber-li">
-  <a href="/codewar/narcissisticnumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a>
+  <input type="checkbox" id="m-codewarnarcissisticnumber-check"/>
+  <label for="m-codewarnarcissisticnumber-check"><a href="/codewar/narcissisticnumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-codewarnumberfun-li">
-  <a href="/codewar/numberfun/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="td-sidebar-nav-active-item">NumberFun</span></a>
+  <input type="checkbox" id="m-codewarnumberfun-check" checked/>
+  <label for="m-codewarnumberfun-check"><a href="/codewar/numberfun/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="td-sidebar-nav-active-item">NumberFun</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarvalidatepin-li">
-  <a href="/codewar/validatepin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a>
+  <input type="checkbox" id="m-codewarvalidatepin-check"/>
+  <label for="m-codewarvalidatepin-check"><a href="/codewar/validatepin/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarpangramchecker-li">
-  <a href="/codewar/pangramchecker/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a>
+  <input type="checkbox" id="m-codewarpangramchecker-check"/>
+  <label for="m-codewarpangramchecker-check"><a href="/codewar/pangramchecker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarphonenumber-li">
-  <a href="/codewar/phonenumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a>
+  <input type="checkbox" id="m-codewarphonenumber-check"/>
+  <label for="m-codewarphonenumber-check"><a href="/codewar/phonenumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarspinwords-li">
-  <a href="/codewar/spinwords/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a>
+  <input type="checkbox" id="m-codewarspinwords-check"/>
+  <label for="m-codewarspinwords-check"><a href="/codewar/spinwords/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarstringsplit-li">
-  <a href="/codewar/stringsplit/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a>
+  <input type="checkbox" id="m-codewarstringsplit-check"/>
+  <label for="m-codewarstringsplit-check"><a href="/codewar/stringsplit/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -134,10 +152,11 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/sad/" data-taxonomy-term="sad"><span class="taxonomy-label">SAD</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -145,8 +164,8 @@
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">10</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   
@@ -164,7 +183,6 @@
     NumberFun</li>
   </ol>
 </nav>
-            
 <div class="td-content">
 	<h1>NumberFun</h1>
 	<div class="lead">You might know some pretty large perfect squares. But what about the NEXT one?</div>
@@ -190,130 +208,74 @@
 <p>To be honest, there is no better way to utilize hardware instructions than by designing an algorithm yourself.</p>
 <p>However, we can use an existing algorithm here.</p>
 <p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250329032635129.png" alt="image.png"></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">long</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">findNextSquare</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">long</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sq</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">// perfect number should end with 0, 9, 5, 4, 1  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">back</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#000;font-weight:bold">)(</span><span style="color:#000">sq</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">10</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">// indicate input is perfect square or not  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">back</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">back</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">9</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">back</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">5</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">back</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">4</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">back</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&amp;&amp;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">back</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">6</span><span style="color:#000;font-weight:bold">){</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">1L</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">// maybe a perfect number  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">else</span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">// find square root  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">// use repeated substraction        </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">factor</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">while</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sq</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">){</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">sq</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">-=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">factor</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">factor</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">+=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">2</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">        
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">long</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sqrt</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">sq</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sqrt</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">sqrt</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">else</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">1L</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Test cases</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">test1</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">144</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NumberFun</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">findNextSquare</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">121</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">test2</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NumberFun</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">findNextSquare</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">155</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">test3</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">320356</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NumberFun</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">findNextSquare</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">319225</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">test4</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">15241630849L</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NumberFun</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">findNextSquare</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">15241383936L</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">test5</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NumberFun</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">findNextSquare</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">342786627</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">randomTest1</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">long</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">input</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">long</span><span style="color:#000;font-weight:bold">)(</span><span style="color:#000">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">random</span><span style="color:#000;font-weight:bold">()</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">100000L</span><span style="color:#000;font-weight:bold">)</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">long</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">square</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">input</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">input</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">square</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">input</span><span style="color:#ce5c00;font-weight:bold">*</span><span style="color:#000">2</span><span style="color:#ce5c00;font-weight:bold">+</span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">),</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">NumberFun</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">findNextSquare</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">square</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>The key part is type conversion—we need to convert <code>int</code> to <code>long</code>. Be careful, as the result of our calculation may exceed the range of <code>int</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> <span style="color:#fec418">long</span> <span style="color:#06b6ef">findNextSquare</span>(<span style="color:#fec418">long</span> sq) {  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// perfect number should end with 0, 9, 5, 4, 1  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#fec418">int</span> back <span style="color:#5bc4bf">=</span> (<span style="color:#fec418">int</span>)(sq <span style="color:#5bc4bf">%</span> 10);  
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// indicate input is perfect square or not  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">if</span>(back <span style="color:#5bc4bf">!=</span> 0 <span style="color:#5bc4bf">&amp;&amp;</span> back <span style="color:#5bc4bf">!=</span> 9 <span style="color:#5bc4bf">&amp;&amp;</span> back <span style="color:#5bc4bf">!=</span> 5 <span style="color:#5bc4bf">&amp;&amp;</span> back <span style="color:#5bc4bf">!=</span> 4 <span style="color:#5bc4bf">&amp;&amp;</span> back <span style="color:#5bc4bf">!=</span> 1 <span style="color:#5bc4bf">&amp;&amp;</span> back <span style="color:#5bc4bf">!=</span> 6){  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> <span style="color:#5bc4bf">-</span>1L;  
+</span></span><span style="display:flex;"><span>    }  
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// maybe a perfect number  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">else</span>{  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// find square root  </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// use repeated substraction        </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#fec418">int</span> factor <span style="color:#5bc4bf">=</span> 1, i <span style="color:#5bc4bf">=</span> 0;  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">while</span>(sq <span style="color:#5bc4bf">&gt;</span> 0){  
+</span></span><span style="display:flex;"><span>            sq <span style="color:#5bc4bf">-=</span> factor;  
+</span></span><span style="display:flex;"><span>            i<span style="color:#5bc4bf">++</span>;  
+</span></span><span style="display:flex;"><span>            factor <span style="color:#5bc4bf">+=</span> 2;  
+</span></span><span style="display:flex;"><span>        }        
+</span></span><span style="display:flex;"><span>        <span style="color:#fec418">long</span> sqrt <span style="color:#5bc4bf">=</span> i<span style="color:#5bc4bf">+</span>1;  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span>(sq <span style="color:#5bc4bf">==</span> 0) <span style="color:#815ba4">return</span> sqrt<span style="color:#5bc4bf">*</span>sqrt;  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">else</span> <span style="color:#815ba4">return</span> <span style="color:#5bc4bf">-</span>1L;  
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Test cases</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">test1</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(144, NumberFun.<span style="color:#06b6ef">findNextSquare</span>(121));  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">test2</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#5bc4bf">-</span>1, NumberFun.<span style="color:#06b6ef">findNextSquare</span>(155));  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">test3</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(320356, NumberFun.<span style="color:#06b6ef">findNextSquare</span>(319225));  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">test4</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(15241630849L, NumberFun.<span style="color:#06b6ef">findNextSquare</span>(15241383936L));  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">test5</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#5bc4bf">-</span>1, NumberFun.<span style="color:#06b6ef">findNextSquare</span>(342786627));  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">randomTest1</span>() {  
+</span></span><span style="display:flex;"><span>    <span style="color:#fec418">long</span> input <span style="color:#5bc4bf">=</span> (<span style="color:#fec418">long</span>)(Math.<span style="color:#06b6ef">random</span>()<span style="color:#5bc4bf">*</span>100000L)<span style="color:#5bc4bf">+</span>1;  
+</span></span><span style="display:flex;"><span>    <span style="color:#fec418">long</span> square <span style="color:#5bc4bf">=</span> input<span style="color:#5bc4bf">*</span>input;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    assertEquals(square<span style="color:#5bc4bf">+</span>(input<span style="color:#5bc4bf">*</span>2<span style="color:#5bc4bf">+</span>1), NumberFun.<span style="color:#06b6ef">findNextSquare</span>(square));  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The key part is type conversion—we need to convert <code>int</code> to <code>long</code>. Be careful, as the result of our calculation may exceed the range of <code>int</code>.</p>
 <p>For example:</p>
 <p><code>return (long) * (long);</code></p>
 <p>is different from</p>
 <p><code>return (long)(int * int);</code></p>
 <p>The latter may cause a loss of accuracy.</p>
 
-	<style>
-  .feedback--answer {
-    display: inline-block;
-  }
-  .feedback--answer-no {
-    margin-left: 1em;
-  }
-  .feedback--response {
-    display: none;
-    margin-top: 1em;
-  }
-  .feedback--response__visible {
-    display: block;
-  }
-</style>
-<div class="d-print-none">
-<h2 class="feedback--title">Feedback</h2>
-<p class="feedback--question">Was this page helpful?</p>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
-<p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-<p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-</div>
-<script>
-  const yesButton = document.querySelector('.feedback--answer-yes');
-  const noButton = document.querySelector('.feedback--answer-no');
-  const yesResponse = document.querySelector('.feedback--response-yes');
-  const noResponse = document.querySelector('.feedback--response-no');
-  const disableButtons = () => {
-    yesButton.disabled = true;
-    noButton.disabled = true;
-  };
-  const sendFeedback = (value) => {
-    if (typeof gtag !== 'function') return;
-    gtag('event', 'page_helpful', {
-      'event_category': 'Helpful',
-      'event_label': window.location.pathname,
-      'value': value
-    });
-  };
-  yesButton.addEventListener('click', () => {
-    yesResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback( 100 );
-  });
-  noButton.addEventListener('click', () => {
-    noResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback(0);
-  });
-</script>
-<br />
-<div class="td-page-meta__lastmod">
-  Last modified April 7, 2025: <a href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
+	<div class="td-page-meta__lastmod">
+  Last modified April 7, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
 </div>
 
 </div>

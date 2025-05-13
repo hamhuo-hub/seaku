@@ -37,8 +37,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Palindrome">
   <meta name="twitter:description" content="ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.">
-<link rel="preload" href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" as="style" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
-<link href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" rel="stylesheet" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
+<link rel="preload" href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" as="style" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
+<link href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" rel="stylesheet" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -56,13 +56,13 @@
         <a class="nav-link active" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link" href="/school/"><span>Courses</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/school/"><span>MasseyCourse</span></a>
+        <a class="nav-link" href="/machinelearning/"><span>MachineLearning</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/note_myself/"><span>NoteSelf</span></a>
+        <a class="nav-link" href="/noteself/"><span>Noteself</span></a>
       </li>
       </ul>
   </div>
@@ -88,29 +88,47 @@
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-codewar-li">
   <a href="/codewar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-codewar"><span class="">Code War</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarfindprime-li">
-  <a href="/codewar/findprime/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a>
+  <input type="checkbox" id="m-codewarfindprime-check"/>
+  <label for="m-codewarfindprime-check"><a href="/codewar/findprime/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewargetmiddle-li">
-  <a href="/codewar/getmiddle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a>
+  <input type="checkbox" id="m-codewargetmiddle-check"/>
+  <label for="m-codewargetmiddle-check"><a href="/codewar/getmiddle/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnarcissisticnumber-li">
-  <a href="/codewar/narcissisticnumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a>
+  <input type="checkbox" id="m-codewarnarcissisticnumber-check"/>
+  <label for="m-codewarnarcissisticnumber-check"><a href="/codewar/narcissisticnumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnumberfun-li">
-  <a href="/codewar/numberfun/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a>
+  <input type="checkbox" id="m-codewarnumberfun-check"/>
+  <label for="m-codewarnumberfun-check"><a href="/codewar/numberfun/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-codewarvalidatepin-li">
-  <a href="/codewar/validatepin/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="td-sidebar-nav-active-item">Palindrome</span></a>
+  <input type="checkbox" id="m-codewarvalidatepin-check" checked/>
+  <label for="m-codewarvalidatepin-check"><a href="/codewar/validatepin/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="td-sidebar-nav-active-item">Palindrome</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarpangramchecker-li">
-  <a href="/codewar/pangramchecker/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a>
+  <input type="checkbox" id="m-codewarpangramchecker-check"/>
+  <label for="m-codewarpangramchecker-check"><a href="/codewar/pangramchecker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarphonenumber-li">
-  <a href="/codewar/phonenumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a>
+  <input type="checkbox" id="m-codewarphonenumber-check"/>
+  <label for="m-codewarphonenumber-check"><a href="/codewar/phonenumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarspinwords-li">
-  <a href="/codewar/spinwords/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a>
+  <input type="checkbox" id="m-codewarspinwords-check"/>
+  <label for="m-codewarspinwords-check"><a href="/codewar/spinwords/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarstringsplit-li">
-  <a href="/codewar/stringsplit/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a>
+  <input type="checkbox" id="m-codewarstringsplit-check"/>
+  <label for="m-codewarstringsplit-check"><a href="/codewar/stringsplit/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -134,10 +152,11 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/sad/" data-taxonomy-term="sad"><span class="taxonomy-label">SAD</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -145,8 +164,8 @@
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">10</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   
@@ -164,7 +183,6 @@
     Palindrome</li>
   </ol>
 </nav>
-            
 <div class="td-content">
 	<h1>Palindrome</h1>
 	<div class="lead">ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.</div>
@@ -197,25 +215,25 @@
 <li>ASII code to range numbers, use <code>String.length</code> to limit digits length</li>
 </ol>
 <p>==be aware of ture and false==  we can simply coding</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#8f5902;font-style:italic">// 1416ms  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">boolean</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pin</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#8f5902;font-style:italic">// Your code here...  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">l</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pin</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">length</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">//        boolean o = (l == 4) || (l == 6) ? true : false;  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">              </span><span style="color:#8f5902;font-style:italic">// boolean o = (l==4) || (l==6);  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#8f5902;font-style:italic">//        for reach can&#39;t apply to string  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">for</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">c</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pin</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">toCharArray</span><span style="color:#000;font-weight:bold">())</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">c</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">48</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">||</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">c</span><span style="color:#ce5c00;font-weight:bold">&gt;</span><span style="color:#000">57</span><span style="color:#000;font-weight:bold">){</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">o</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">o</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#8d8687">// 1416ms  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> <span style="color:#fec418">boolean</span> <span style="color:#06b6ef">validatePin</span>(String pin) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// Your code here...  </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#fec418">int</span> l <span style="color:#5bc4bf">=</span> pin.<span style="color:#06b6ef">length</span>();  
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">//        boolean o = (l == 4) || (l == 6) ? true : false;  </span>
+</span></span><span style="display:flex;"><span>              <span style="color:#8d8687">// boolean o = (l==4) || (l==6);  </span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">//        for reach can&#39;t apply to string  </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">for</span>(<span style="color:#fec418">char</span> c : pin.<span style="color:#06b6ef">toCharArray</span>()) {  
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span>(c<span style="color:#5bc4bf">&lt;</span>48 <span style="color:#5bc4bf">||</span> c<span style="color:#5bc4bf">&gt;</span>57){  
+</span></span><span style="display:flex;"><span>                o <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">false</span>;  
+</span></span><span style="display:flex;"><span>            }        }        <span style="color:#815ba4">return</span> o;  
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><ol start="2">
 <li>use built-in regex Patterns <code>String.match()</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">boolean</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pin</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pin</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">matches</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;\\d{4}|\\d{6}&#34;</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p><code>\d</code> means 0-9, but java can not use \d so replace with <code>\\d</code>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> <span style="color:#fec418">boolean</span> <span style="color:#06b6ef">validatePin</span>(String pin) {
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> pin.<span style="color:#06b6ef">matches</span>(<span style="color:#48b685">&#34;\\d{4}|\\d{6}&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p><code>\d</code> means 0-9, but java can not use \d so replace with <code>\\d</code>
 match 4 or 6 digits use <code>\\d{4}</code> but remember no space before or after like
 <code> \\d{4}</code> or <code>\\d{4} </code></p>
 <ol start="3">
@@ -223,106 +241,50 @@ match 4 or 6 digits use <code>\\d{4}</code> but remember no space before or afte
 </ol>
 <p>we need compile patterns every time which is time-consuming
 with pre-compile we can save performance</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Pattern</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pattern</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Pattern</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">compile</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;\\d{4}|\\d{6}&#34;</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">boolean</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pin</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">// pre compile improve performance  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">pattern</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">matcher</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">pin</span><span style="color:#000;font-weight:bold">).</span><span style="color:#c4a000">matches</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>test-case</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">validPins</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;0000&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1111&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;123456&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;098765&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;000000&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;090909&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">nonDigitCharacters</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34; a234&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;.234&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;utp4564utp&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;newline&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#5c35cc;font-weight:bold">@Test</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">void</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">invalidLengths</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;12&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;123&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;12345&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234567&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34; 1234&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34; 1234 &#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1234 &#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;1.234&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;00000000&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;00000&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">assertEquals</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Solution</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">validatePin</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;00000a&#34;</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div>
-	<style>
-  .feedback--answer {
-    display: inline-block;
-  }
-  .feedback--answer-no {
-    margin-left: 1em;
-  }
-  .feedback--response {
-    display: none;
-    margin-top: 1em;
-  }
-  .feedback--response__visible {
-    display: block;
-  }
-</style>
-<div class="d-print-none">
-<h2 class="feedback--title">Feedback</h2>
-<p class="feedback--question">Was this page helpful?</p>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
-<p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-<p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-</div>
-<script>
-  const yesButton = document.querySelector('.feedback--answer-yes');
-  const noButton = document.querySelector('.feedback--answer-no');
-  const yesResponse = document.querySelector('.feedback--response-yes');
-  const noResponse = document.querySelector('.feedback--response-no');
-  const disableButtons = () => {
-    yesButton.disabled = true;
-    noButton.disabled = true;
-  };
-  const sendFeedback = (value) => {
-    if (typeof gtag !== 'function') return;
-    gtag('event', 'page_helpful', {
-      'event_category': 'Helpful',
-      'event_label': window.location.pathname,
-      'value': value
-    });
-  };
-  yesButton.addEventListener('click', () => {
-    yesResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback( 100 );
-  });
-  noButton.addEventListener('click', () => {
-    noResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback(0);
-  });
-</script>
-<br />
-<div class="td-page-meta__lastmod">
-  Last modified April 7, 2025: <a href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#815ba4">static</span> Pattern pattern <span style="color:#5bc4bf">=</span> Pattern.<span style="color:#06b6ef">compile</span>(<span style="color:#48b685">&#34;\\d{4}|\\d{6}&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> <span style="color:#fec418">boolean</span> <span style="color:#06b6ef">validatePin</span>(String pin) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// pre compile improve performance  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">return</span> pattern.<span style="color:#06b6ef">matcher</span>(pin).<span style="color:#06b6ef">matches</span>();  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>test-case</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">validPins</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">true</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;1234&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">true</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;0000&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">true</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;1111&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">true</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;123456&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">true</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;098765&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">true</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;000000&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">true</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;090909&#34;</span>));  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">nonDigitCharacters</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34; a234&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;.234&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;utp4564utp&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;newline&#34;</span>));  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#5bc4bf">@Test</span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#fec418">void</span> <span style="color:#06b6ef">invalidLengths</span>() {  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;1&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;12&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;123&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;12345&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;1234567&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34; 1234&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34; 1234 &#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;1234 &#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;1.234&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;00000000&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;00000&#34;</span>));  
+</span></span><span style="display:flex;"><span>    assertEquals(<span style="color:#815ba4">false</span>, Solution.<span style="color:#06b6ef">validatePin</span>(<span style="color:#48b685">&#34;00000a&#34;</span>));  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+	<div class="td-page-meta__lastmod">
+  Last modified April 7, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
 </div>
 
 </div>

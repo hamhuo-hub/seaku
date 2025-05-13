@@ -37,8 +37,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="SpinWords">
   <meta name="twitter:description" content="Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.">
-<link rel="preload" href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" as="style" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
-<link href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" rel="stylesheet" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
+<link rel="preload" href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" as="style" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
+<link href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" rel="stylesheet" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -56,13 +56,13 @@
         <a class="nav-link active" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link" href="/school/"><span>Courses</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/school/"><span>MasseyCourse</span></a>
+        <a class="nav-link" href="/machinelearning/"><span>MachineLearning</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/note_myself/"><span>NoteSelf</span></a>
+        <a class="nav-link" href="/noteself/"><span>Noteself</span></a>
       </li>
       </ul>
   </div>
@@ -88,29 +88,47 @@
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-codewar-li">
   <a href="/codewar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-codewar"><span class="">Code War</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarfindprime-li">
-  <a href="/codewar/findprime/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a>
+  <input type="checkbox" id="m-codewarfindprime-check"/>
+  <label for="m-codewarfindprime-check"><a href="/codewar/findprime/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewargetmiddle-li">
-  <a href="/codewar/getmiddle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a>
+  <input type="checkbox" id="m-codewargetmiddle-check"/>
+  <label for="m-codewargetmiddle-check"><a href="/codewar/getmiddle/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnarcissisticnumber-li">
-  <a href="/codewar/narcissisticnumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a>
+  <input type="checkbox" id="m-codewarnarcissisticnumber-check"/>
+  <label for="m-codewarnarcissisticnumber-check"><a href="/codewar/narcissisticnumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="">IsNarcissistic</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnumberfun-li">
-  <a href="/codewar/numberfun/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a>
+  <input type="checkbox" id="m-codewarnumberfun-check"/>
+  <label for="m-codewarnumberfun-check"><a href="/codewar/numberfun/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarvalidatepin-li">
-  <a href="/codewar/validatepin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a>
+  <input type="checkbox" id="m-codewarvalidatepin-check"/>
+  <label for="m-codewarvalidatepin-check"><a href="/codewar/validatepin/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarpangramchecker-li">
-  <a href="/codewar/pangramchecker/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a>
+  <input type="checkbox" id="m-codewarpangramchecker-check"/>
+  <label for="m-codewarpangramchecker-check"><a href="/codewar/pangramchecker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarphonenumber-li">
-  <a href="/codewar/phonenumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a>
+  <input type="checkbox" id="m-codewarphonenumber-check"/>
+  <label for="m-codewarphonenumber-check"><a href="/codewar/phonenumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-codewarspinwords-li">
-  <a href="/codewar/spinwords/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="td-sidebar-nav-active-item">SpinWords</span></a>
+  <input type="checkbox" id="m-codewarspinwords-check" checked/>
+  <label for="m-codewarspinwords-check"><a href="/codewar/spinwords/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="td-sidebar-nav-active-item">SpinWords</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarstringsplit-li">
-  <a href="/codewar/stringsplit/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a>
+  <input type="checkbox" id="m-codewarstringsplit-check"/>
+  <label for="m-codewarstringsplit-check"><a href="/codewar/stringsplit/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -134,10 +152,11 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/sad/" data-taxonomy-term="sad"><span class="taxonomy-label">SAD</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -145,8 +164,8 @@
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">10</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   
@@ -164,7 +183,6 @@
     SpinWords</li>
   </ol>
 </nav>
-            
 <div class="td-content">
 	<h1>SpinWords</h1>
 	<div class="lead">Write a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.</div>
@@ -188,107 +206,51 @@
 <code>String.join()</code></p></blockquote>
 <p>Test Sample is complex, we can process to beauty input</p>
 <p>first try</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">spinWords</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sentence</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">//TODO: Code stuff here  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">StringBuilder</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">result</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">new</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">StringBuilder</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">StringBuilder</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">word</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">new</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">StringBuilder</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">count</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">for</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sentence</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">length</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">char</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">ch</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sentence</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">charAt</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ch</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#4e9a06">&#39; &#39;</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">count</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&gt;=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">else</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#000;font-weight:bold">());</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34; &#34;</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">word</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">new</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">StringBuilder</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">count</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">continue</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">ch</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">count</span><span style="color:#ce5c00;font-weight:bold">++</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sentence</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">length</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">count</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&gt;=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">5</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">                </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">else</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#000;font-weight:bold">());</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">reverse</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">StringBuilder</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">StringBuilder</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">result</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">new</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">StringBuilder</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">for</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">length</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">-</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&gt;=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">--</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">append</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">word</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">charAt</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">i</span><span style="color:#000;font-weight:bold">));</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">result</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>That way too difficult. Actually, <code>StringBuilder</code> has method reverse</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> String <span style="color:#06b6ef">spinWords</span>(String sentence) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">//TODO: Code stuff here  </span>
+</span></span><span style="display:flex;"><span>    StringBuilder result <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> StringBuilder();  
+</span></span><span style="display:flex;"><span>    StringBuilder word <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> StringBuilder();  
+</span></span><span style="display:flex;"><span>    <span style="color:#fec418">int</span> count <span style="color:#5bc4bf">=</span> 0;  
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">for</span> (<span style="color:#fec418">int</span> i <span style="color:#5bc4bf">=</span> 0; i <span style="color:#5bc4bf">&lt;</span> sentence.<span style="color:#06b6ef">length</span>(); i<span style="color:#5bc4bf">++</span>) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#fec418">char</span> ch <span style="color:#5bc4bf">=</span> sentence.<span style="color:#06b6ef">charAt</span>(i);  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> (ch <span style="color:#5bc4bf">==</span> <span style="color:#48b685">&#39; &#39;</span>) {  
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span>(count <span style="color:#5bc4bf">&gt;=</span> 5) {  
+</span></span><span style="display:flex;"><span>                result.<span style="color:#06b6ef">append</span>(reverse(word));  
+</span></span><span style="display:flex;"><span>            }            <span style="color:#815ba4">else</span> {  
+</span></span><span style="display:flex;"><span>                result.<span style="color:#06b6ef">append</span>(word.<span style="color:#06b6ef">toString</span>());  
+</span></span><span style="display:flex;"><span>            }            result.<span style="color:#06b6ef">append</span>(<span style="color:#48b685">&#34; &#34;</span>);  
+</span></span><span style="display:flex;"><span>            word <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> StringBuilder(<span style="color:#48b685">&#34;&#34;</span>);  
+</span></span><span style="display:flex;"><span>            count <span style="color:#5bc4bf">=</span> 0;  
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">continue</span>;  
+</span></span><span style="display:flex;"><span>        }        word.<span style="color:#06b6ef">append</span>(ch);  
+</span></span><span style="display:flex;"><span>        count<span style="color:#5bc4bf">++</span>;  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> (i <span style="color:#5bc4bf">==</span> sentence.<span style="color:#06b6ef">length</span>() <span style="color:#5bc4bf">-</span> 1) {  
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">if</span>(count <span style="color:#5bc4bf">&gt;=</span> 5) {  
+</span></span><span style="display:flex;"><span>                result.<span style="color:#06b6ef">append</span>(reverse(word));  
+</span></span><span style="display:flex;"><span>            }            <span style="color:#815ba4">else</span> result.<span style="color:#06b6ef">append</span>(word.<span style="color:#06b6ef">toString</span>());  
+</span></span><span style="display:flex;"><span>        }    }    <span style="color:#815ba4">return</span> result.<span style="color:#06b6ef">toString</span>();  
+</span></span><span style="display:flex;"><span>}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> String <span style="color:#06b6ef">reverse</span>(StringBuilder word) {  
+</span></span><span style="display:flex;"><span>    StringBuilder result <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> StringBuilder();  
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">for</span> (<span style="color:#fec418">int</span> i <span style="color:#5bc4bf">=</span> word.<span style="color:#06b6ef">length</span>() <span style="color:#5bc4bf">-</span> 1; i <span style="color:#5bc4bf">&gt;=</span> 0; i<span style="color:#5bc4bf">--</span>) {  
+</span></span><span style="display:flex;"><span>        result.<span style="color:#06b6ef">append</span>(word.<span style="color:#06b6ef">charAt</span>(i));  
+</span></span><span style="display:flex;"><span>    }    <span style="color:#815ba4">return</span> result.<span style="color:#06b6ef">toString</span>();  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>That way too difficult. Actually, <code>StringBuilder</code> has method reverse</p>
 <p>we can preprocess to separated words, and join in space.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">spinWords</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">String</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sentence</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline">  </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">//preprocess  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">[]</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">words</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sentence</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">split</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34; &#34;</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">// what if replaced with enhanced-loop?  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#8f5902;font-style:italic">//  words[i] is directly modified because we assign a new string to the same index in the array.    //for(int i=0; i&lt;words.length; i++) {  </span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">words</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">length</span><span style="color:#000;font-weight:bold">()</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&gt;=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">5</span><span style="color:#000;font-weight:bold">){</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">words</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">new</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">StringBuilder</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">words</span><span style="color:#ce5c00;font-weight:bold">[</span><span style="color:#000">i</span><span style="color:#ce5c00;font-weight:bold">]</span><span style="color:#000;font-weight:bold">).</span><span style="color:#c4a000">reverse</span><span style="color:#000;font-weight:bold">().</span><span style="color:#c4a000">toString</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">String</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">join</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#34; &#34;</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">words</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline"></span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div>
-	<style>
-  .feedback--answer {
-    display: inline-block;
-  }
-  .feedback--answer-no {
-    margin-left: 1em;
-  }
-  .feedback--response {
-    display: none;
-    margin-top: 1em;
-  }
-  .feedback--response__visible {
-    display: block;
-  }
-</style>
-<div class="d-print-none">
-<h2 class="feedback--title">Feedback</h2>
-<p class="feedback--question">Was this page helpful?</p>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
-<p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-<p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-</div>
-<script>
-  const yesButton = document.querySelector('.feedback--answer-yes');
-  const noButton = document.querySelector('.feedback--answer-no');
-  const yesResponse = document.querySelector('.feedback--response-yes');
-  const noResponse = document.querySelector('.feedback--response-no');
-  const disableButtons = () => {
-    yesButton.disabled = true;
-    noButton.disabled = true;
-  };
-  const sendFeedback = (value) => {
-    if (typeof gtag !== 'function') return;
-    gtag('event', 'page_helpful', {
-      'event_category': 'Helpful',
-      'event_label': window.location.pathname,
-      'value': value
-    });
-  };
-  yesButton.addEventListener('click', () => {
-    yesResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback( 100 );
-  });
-  noButton.addEventListener('click', () => {
-    noResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback(0);
-  });
-</script>
-<br />
-<div class="td-page-meta__lastmod">
-  Last modified April 7, 2025: <a href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> String <span style="color:#06b6ef">spinWords</span>(String sentence)  {  
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">//preprocess  </span>
+</span></span><span style="display:flex;"><span>    String<span style="color:#5bc4bf">[]</span> words <span style="color:#5bc4bf">=</span> sentence.<span style="color:#06b6ef">split</span>(<span style="color:#48b685">&#34; &#34;</span>);  
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// what if replaced with enhanced-loop?  </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">//  words[i] is directly modified because we assign a new string to the same index in the array.    //for(int i=0; i&lt;words.length; i++) {  </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> (words<span style="color:#5bc4bf">[</span>i<span style="color:#5bc4bf">]</span>.<span style="color:#06b6ef">length</span>() <span style="color:#5bc4bf">&gt;=</span> 5){  
+</span></span><span style="display:flex;"><span>            words<span style="color:#5bc4bf">[</span>i<span style="color:#5bc4bf">]</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> StringBuilder(words<span style="color:#5bc4bf">[</span>i<span style="color:#5bc4bf">]</span>).<span style="color:#06b6ef">reverse</span>().<span style="color:#06b6ef">toString</span>();  
+</span></span><span style="display:flex;"><span>        }    }    <span style="color:#815ba4">return</span> String.<span style="color:#06b6ef">join</span>(<span style="color:#48b685">&#34; &#34;</span>, words);  
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+	<div class="td-page-meta__lastmod">
+  Last modified April 7, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
 </div>
 
 </div>

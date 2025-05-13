@@ -37,8 +37,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="IsNarcissistic">
   <meta name="twitter:description" content="A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).">
-<link rel="preload" href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" as="style" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
-<link href="/scss/main.min.48c25d0a5a23a1e8cae94d6c5e7622061e5345cf098171b1d6ee41d8e309e6c8.css" rel="stylesheet" integrity="sha256-SMJdClojoejK6U1sXnYiBh5TRc8JgXGx1u5B2OMJ5sg=" crossorigin="anonymous">
+<link rel="preload" href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" as="style" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
+<link href="/scss/main.min.c1da2c32d17adde69a37ab55568cf6d6a4a587e237212290770e01d4de4a7198.css" rel="stylesheet" integrity="sha256-wdosMtF63eaaN6tVVoz21qSlh&#43;I3ISKQdw4B1N5KcZg=" crossorigin="anonymous">
 <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -56,13 +56,13 @@
         <a class="nav-link active" href="/codewar/"><span>Code War</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/graphicsai/"><span>Graphics and AI</span></a>
+        <a class="nav-link" href="/school/"><span>Courses</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/school/"><span>MasseyCourse</span></a>
+        <a class="nav-link" href="/machinelearning/"><span>MachineLearning</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/note_myself/"><span>NoteSelf</span></a>
+        <a class="nav-link" href="/noteself/"><span>Noteself</span></a>
       </li>
       </ul>
   </div>
@@ -88,29 +88,47 @@
     <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
-  <nav class="td-sidebar-nav collapse" id="td-section-nav">
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pe-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-codewar-li">
   <a href="/codewar/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-codewar"><span class="">Code War</span></a>
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarfindprime-li">
-  <a href="/codewar/findprime/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a>
+  <input type="checkbox" id="m-codewarfindprime-check"/>
+  <label for="m-codewarfindprime-check"><a href="/codewar/findprime/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarfindprime"><span class="">FindPrime</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewargetmiddle-li">
-  <a href="/codewar/getmiddle/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a>
+  <input type="checkbox" id="m-codewargetmiddle-check"/>
+  <label for="m-codewargetmiddle-check"><a href="/codewar/getmiddle/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewargetmiddle"><span class="">GetMiddle</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-codewarnarcissisticnumber-li">
-  <a href="/codewar/narcissisticnumber/" class="align-left ps-0 active td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="td-sidebar-nav-active-item">IsNarcissistic</span></a>
+  <input type="checkbox" id="m-codewarnarcissisticnumber-check" checked/>
+  <label for="m-codewarnarcissisticnumber-check"><a href="/codewar/narcissisticnumber/" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-codewarnarcissisticnumber"><span class="td-sidebar-nav-active-item">IsNarcissistic</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarnumberfun-li">
-  <a href="/codewar/numberfun/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a>
+  <input type="checkbox" id="m-codewarnumberfun-check"/>
+  <label for="m-codewarnumberfun-check"><a href="/codewar/numberfun/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarnumberfun"><span class="">NumberFun</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarvalidatepin-li">
-  <a href="/codewar/validatepin/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a>
+  <input type="checkbox" id="m-codewarvalidatepin-check"/>
+  <label for="m-codewarvalidatepin-check"><a href="/codewar/validatepin/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarvalidatepin"><span class="">Palindrome</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarpangramchecker-li">
-  <a href="/codewar/pangramchecker/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a>
+  <input type="checkbox" id="m-codewarpangramchecker-check"/>
+  <label for="m-codewarpangramchecker-check"><a href="/codewar/pangramchecker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarpangramchecker"><span class="">PangramChecker</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarphonenumber-li">
-  <a href="/codewar/phonenumber/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a>
+  <input type="checkbox" id="m-codewarphonenumber-check"/>
+  <label for="m-codewarphonenumber-check"><a href="/codewar/phonenumber/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarphonenumber"><span class="">PhoneNumber</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarspinwords-li">
-  <a href="/codewar/spinwords/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a>
+  <input type="checkbox" id="m-codewarspinwords-check"/>
+  <label for="m-codewarspinwords-check"><a href="/codewar/spinwords/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarspinwords"><span class="">SpinWords</span></a></label>
+  
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-codewarstringsplit-li">
-  <a href="/codewar/stringsplit/" class="align-left ps-0 td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a>
+  <input type="checkbox" id="m-codewarstringsplit-check"/>
+  <label for="m-codewarstringsplit-check"><a href="/codewar/stringsplit/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-codewarstringsplit"><span class="">StringSplit</span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -134,10 +152,11 @@
             <div class="taxonomy taxonomy-terms-cloud taxo-tags">
       <h5 class="taxonomy-title">Tag Cloud</h5>
       <ul class="taxonomy-terms">
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/gaming/" data-taxonomy-term="gaming"><span class="taxonomy-label">Gaming</span><span class="taxonomy-count">4</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/oj/" data-taxonomy-term="oj"><span class="taxonomy-label">OJ</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/sad/" data-taxonomy-term="sad"><span class="taxonomy-label">SAD</span><span class="taxonomy-count">3</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -145,8 +164,8 @@
       <ul class="taxonomy-terms">
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/codewar/" data-taxonomy-term="codewar"><span class="taxonomy-label">CodeWar</span><span class="taxonomy-count">9</span></a></li>
         <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/ml/" data-taxonomy-term="ml"><span class="taxonomy-label">ML</span><span class="taxonomy-count">1</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">9</span></a></li>
-        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">2</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/school/" data-taxonomy-term="school"><span class="taxonomy-label">School</span><span class="taxonomy-count">10</span></a></li>
+        <li><a class="taxonomy-term" href="https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/" data-taxonomy-term="%E6%97%A5%E5%BF%97"><span class="taxonomy-label">日志</span><span class="taxonomy-count">3</span></a></li>
         </ul>
     </div>
   
@@ -164,7 +183,6 @@
     IsNarcissistic</li>
   </ol>
 </nav>
-            
 <div class="td-content">
 	<h1>IsNarcissistic</h1>
 	<div class="lead">A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).</div>
@@ -194,117 +212,61 @@
 <p>Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function</p>
 <p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250330031909536.png" alt="image.png"></p>
 <p>We just use MATH.POW for start</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">boolean</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">isNarcissistic</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">number</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">if</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">number</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">){</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">temp</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">number</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sum</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">count</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">String</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">valueOf</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">temp</span><span style="color:#000;font-weight:bold">).</span><span style="color:#c4a000">length</span><span style="color:#000;font-weight:bold">();</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">while</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">temp</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">!=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">sum</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">+=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">Math</span><span style="color:#000;font-weight:bold">.</span><span style="color:#c4a000">pow</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">temp</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">%</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">10</span><span style="color:#000;font-weight:bold">,</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">count</span><span style="color:#000;font-weight:bold">);</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#000">temp</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">temp</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">10</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#000;font-weight:bold">}</span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">boolean</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">isNarcissistic</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">sum</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#ce5c00;font-weight:bold">==</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">number</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">isNarcissistic</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div><p>Actually ,There are only few narcissistic numbers in the signed 32-bit
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>    <span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> <span style="color:#fec418">boolean</span> <span style="color:#06b6ef">isNarcissistic</span>(<span style="color:#fec418">int</span> number) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span>(number <span style="color:#5bc4bf">&lt;</span> 0){  
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">return</span> <span style="color:#815ba4">false</span>;  
+</span></span><span style="display:flex;"><span>        }        <span style="color:#fec418">int</span> temp <span style="color:#5bc4bf">=</span> number;  
+</span></span><span style="display:flex;"><span>        <span style="color:#fec418">int</span> sum <span style="color:#5bc4bf">=</span> 0;  
+</span></span><span style="display:flex;"><span>        <span style="color:#fec418">int</span> count <span style="color:#5bc4bf">=</span> String.<span style="color:#06b6ef">valueOf</span>(temp).<span style="color:#06b6ef">length</span>();  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">while</span>(temp <span style="color:#5bc4bf">!=</span> 0) {  
+</span></span><span style="display:flex;"><span>            sum <span style="color:#5bc4bf">+=</span> Math.<span style="color:#06b6ef">pow</span>(temp <span style="color:#5bc4bf">%</span> 10, count);  
+</span></span><span style="display:flex;"><span>            temp <span style="color:#5bc4bf">=</span> temp <span style="color:#5bc4bf">/</span> 10;  
+</span></span><span style="display:flex;"><span>        }        <span style="color:#fec418">boolean</span> isNarcissistic <span style="color:#5bc4bf">=</span> sum <span style="color:#5bc4bf">==</span> number;  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> isNarcissistic;  
+</span></span><span style="display:flex;"><span>    }}
+</span></span></code></pre></div><p>Actually ,There are only few narcissistic numbers in the signed 32-bit
 with switch case, is easy to flow through all cases</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">static</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">boolean</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">isNarcissistic</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">int</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">number</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#204a87;font-weight:bold">switch</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">number</span><span style="color:#000;font-weight:bold">)</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000;font-weight:bold">{</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">0</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">2</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">3</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">4</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">5</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">6</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">7</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">8</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">9</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">153</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">370</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">371</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">407</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1_634</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">8_208</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">9_474</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">54_748</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">92_727</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">93_084</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">548_834</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">1_741_725</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">4_210_818</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">9_800_817</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">9_926_315</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">24_678_050</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">24_678_051</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">88_593_477</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">146_511_208</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">472_335_975</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">534_494_836</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">case</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#000">912_985_153</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">        </span><span style="color:#204a87;font-weight:bold">default</span><span style="color:#000;font-weight:bold">:</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">            </span><span style="color:#204a87;font-weight:bold">return</span><span style="color:#f8f8f8;text-decoration:underline"> </span><span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">;</span><span style="color:#f8f8f8;text-decoration:underline">  
-</span></span></span><span style="display:flex;"><span><span style="color:#f8f8f8;text-decoration:underline">    </span><span style="color:#000;font-weight:bold">}}</span><span style="color:#f8f8f8;text-decoration:underline">
-</span></span></span></code></pre></div>
-	<style>
-  .feedback--answer {
-    display: inline-block;
-  }
-  .feedback--answer-no {
-    margin-left: 1em;
-  }
-  .feedback--response {
-    display: none;
-    margin-top: 1em;
-  }
-  .feedback--response__visible {
-    display: block;
-  }
-</style>
-<div class="d-print-none">
-<h2 class="feedback--title">Feedback</h2>
-<p class="feedback--question">Was this page helpful?</p>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
-<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
-<p class="feedback--response feedback--response-yes">
-  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-<p class="feedback--response feedback--response-no">
-  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
-</p>
-</div>
-<script>
-  const yesButton = document.querySelector('.feedback--answer-yes');
-  const noButton = document.querySelector('.feedback--answer-no');
-  const yesResponse = document.querySelector('.feedback--response-yes');
-  const noResponse = document.querySelector('.feedback--response-no');
-  const disableButtons = () => {
-    yesButton.disabled = true;
-    noButton.disabled = true;
-  };
-  const sendFeedback = (value) => {
-    if (typeof gtag !== 'function') return;
-    gtag('event', 'page_helpful', {
-      'event_category': 'Helpful',
-      'event_label': window.location.pathname,
-      'value': value
-    });
-  };
-  yesButton.addEventListener('click', () => {
-    yesResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback( 100 );
-  });
-  noButton.addEventListener('click', () => {
-    noResponse.classList.add('feedback--response__visible');
-    disableButtons();
-    sendFeedback(0);
-  });
-</script>
-<br />
-<div class="td-page-meta__lastmod">
-  Last modified April 7, 2025: <a href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#815ba4">public</span> <span style="color:#815ba4">static</span> <span style="color:#fec418">boolean</span> <span style="color:#06b6ef">isNarcissistic</span>(<span style="color:#fec418">int</span> number) {  
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">switch</span> (number) {  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 0:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 1:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 2:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 3:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 4:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 5:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 6:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 7:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 8:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 9:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 153:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 370:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 371:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 407:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 1_634:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 8_208:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 9_474:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 54_748:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 92_727:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 93_084:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 548_834:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 1_741_725:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 4_210_818:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 9_800_817:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 9_926_315:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 24_678_050:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 24_678_051:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 88_593_477:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 146_511_208:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 472_335_975:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 534_494_836:  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">case</span> 912_985_153:  
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">return</span> <span style="color:#815ba4">true</span>;  
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">default</span>:  
+</span></span><span style="display:flex;"><span>            <span style="color:#815ba4">return</span> <span style="color:#815ba4">false</span>;  
+</span></span><span style="display:flex;"><span>    }}
+</span></span></code></pre></div>
+	<div class="td-page-meta__lastmod">
+  Last modified April 7, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/7e82e672d773901eacefb716c710650cdc413da6">update codewar (7e82e67)</a>
 </div>
 
 </div>
