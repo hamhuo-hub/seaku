@@ -5,18 +5,21 @@
     <loc>https://example.docsy.dev/school/159.225/assignment1/assignment1/</loc>
   </url><url>
     <loc>https://example.docsy.dev/school/159.225/</loc>
-    <lastmod>2025-03-12T22:46:23+08:00</lastmod>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/noteself/dairy/3%E6%9C%8817%E6%97%A5/</loc>
   </url><url>
-    <loc>https://example.docsy.dev/school/159.261/assignment/assignment1/assignment1/</loc>
+    <loc>https://example.docsy.dev/school/159.261/assignment1/assignment1/</loc>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url><url>
-    <loc>https://example.docsy.dev/school/159.261/assignment/assignment2/assignment2/</loc>
+    <loc>https://example.docsy.dev/school/159.261/assignment2/assignment2/</loc>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/school/159.225/week4_5/</loc>
     <lastmod>2025-04-02T09:35:35+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/machinelearning/dinov2/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/codewar/findprime/</loc>
     <lastmod>2025-04-07T23:51:50+08:00</lastmod>
@@ -54,18 +57,20 @@
     <loc>https://example.docsy.dev/codewar/stringsplit/</loc>
     <lastmod>2025-04-07T23:51:50+08:00</lastmod>
   </url><url>
-    <loc>https://example.docsy.dev/school/159.261/week9/</loc>
-  </url><url>
     <loc>https://example.docsy.dev/school/159.225/week8_9/lab8/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/school/159.225/week8_9/lab9/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/school/159.261/</loc>
-    <lastmod>2025-03-12T22:46:23+08:00</lastmod>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/noteself/docsy_init/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/noteself/ubantu_init/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/noteself/dairy/2%E6%9C%8810%E6%97%A5/</loc>
   </url><url>
@@ -88,9 +93,10 @@
     <loc>https://example.docsy.dev/noteself/dairy/4%E6%9C%889%E6%97%A5/</loc>
   </url><url>
     <loc>https://example.docsy.dev/noteself/dairy/nextstep/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/categories/</loc>
-    <lastmod>2025-05-11T11:13:20+08:00</lastmod>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/codewar/</loc>
     <lastmod>2025-04-08T10:56:20+08:00</lastmod>
@@ -99,39 +105,45 @@
     <lastmod>2025-04-08T10:56:20+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/school/</loc>
-    <lastmod>2025-05-11T11:13:20+08:00</lastmod>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/tags/gaming/</loc>
-    <lastmod>2025-05-11T11:13:20+08:00</lastmod>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/machinelearning/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/categories/ml/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/tags/ml/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/noteself/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/tags/oj/</loc>
     <lastmod>2025-04-08T10:56:20+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/tags/sad/</loc>
-    <lastmod>2025-05-11T11:13:20+08:00</lastmod>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/categories/school/</loc>
-    <lastmod>2025-05-11T11:13:20+08:00</lastmod>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/search/</loc>
     <lastmod>2025-02-04T17:14:28+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/tags/</loc>
-    <lastmod>2025-05-11T11:13:20+08:00</lastmod>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/categories/%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/tags/%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2025-05-13T16:34:01+08:00</lastmod>
   </url><url>
     <loc>https://example.docsy.dev/</loc>
-    <lastmod>2025-05-06T08:31:17+08:00</lastmod>
+    <lastmod>2025-05-14T19:16:33+08:00</lastmod>
   </url>
 </urlset>
