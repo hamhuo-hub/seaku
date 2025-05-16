@@ -18,25 +18,25 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Assignment2 | Hamhuo</title>
-<meta name="description" content="Rythem Game">
+<meta name="description" content="Slapocalypse">
 <meta property="og:url" content="https://example.docsy.dev/school/159.261/assignment2/assignment2/">
   <meta property="og:site_name" content="Hamhuo">
   <meta property="og:title" content="Assignment2">
-  <meta property="og:description" content="Rythem Game">
+  <meta property="og:description" content="Slapocalypse">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="school">
-    <meta property="article:modified_time" content="2025-05-14T19:16:33+08:00">
+    <meta property="article:modified_time" content="2025-05-16T23:12:52+08:00">
     <meta property="article:tag" content="Gaming">
 
   <meta itemprop="name" content="Assignment2">
-  <meta itemprop="description" content="Rythem Game">
-  <meta itemprop="dateModified" content="2025-05-14T19:16:33+08:00">
-  <meta itemprop="wordCount" content="89">
+  <meta itemprop="description" content="Slapocalypse">
+  <meta itemprop="dateModified" content="2025-05-16T23:12:52+08:00">
+  <meta itemprop="wordCount" content="416">
   <meta itemprop="keywords" content="Gaming">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Assignment2">
-  <meta name="twitter:description" content="Rythem Game">
+  <meta name="twitter:description" content="Slapocalypse">
 <link rel="preload" href="/scss/main.min.efa4f5cb71c380c3b004e82688c50336ed879ede78e66421e634308a89b04c3f.css" as="style" integrity="sha256-76T1y3HDgMOwBOgmiMUDNu2Hnt545mQh5jQwiomwTD8=" crossorigin="anonymous">
 <link href="/scss/main.min.efa4f5cb71c380c3b004e82688c50336ed879ede78e66421e634308a89b04c3f.css" rel="stylesheet" integrity="sha256-76T1y3HDgMOwBOgmiMUDNu2Hnt545mQh5jQwiomwTD8=" crossorigin="anonymous">
 <script
@@ -215,7 +215,7 @@
 </nav>
 <div class="td-content">
 	<h1>Assignment2</h1>
-	<div class="lead">Rythem Game</div>
+	<div class="lead">Slapocalypse</div>
 	<header class="article-meta">
 		<div class="taxonomy taxonomy-terms-article taxo-tags">
   <h5 class="taxonomy-title">Tags:</h5>
@@ -231,124 +231,269 @@
 </div>
 
   </header>
-	<h4 id="目录">目录</h4>
+	<h4 id="solid-代码设计原则">SOLID 代码设计原则</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172654852.png" alt="image.png"></p>
+<p>单一职责原则 一个类只有一个需要修改的原因</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172744932.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172749149.png" alt="image.png"></p>
+<p>比如邮件类</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172820208.png" alt="image.png"></p>
+<p>评价一个类的职责是否足够单一，我们并没有一个非常明确的、可以量化的标准，可以说，这是件非常主观、仁者见仁智者见智的事情。实际上，在真正的软件开发中，我们也没必要过于未雨绸缪，过度设计。所以，我们可以<strong>先写一个粗粒度的类，满足业务需求。随着业务的发展，如果粗粒度的类越来越庞大，代码越来越多，这个时候，我们就可以将这个粗粒度的类，拆分成几个更细粒度的类。这就是所谓的持续重构</strong>。</p>
+<p>判断原则如下：</p>
 <ul>
-<li>游戏引擎</li>
-<li>游戏架构
-<ul>
-<li>core 核心类库</li>
-<li>entity 角色实体类</li>
-<li>role 角色接口</li>
+<li>类中的代码行数、函数或者属性过多，会影响代码的可读性和可维护性，我们就需要考虑对类进行拆分</li>
+<li>类依赖的其他类过多，或者依赖类的其他类过多，不符合高内聚、低耦合的设计思想，我们就需要考虑对类进行拆分</li>
+<li>私有方法过多，我们就要考虑能否将私有方法独立到新的类中，设置为public方法，共更多的类使用，从而提高代码的复用性</li>
+<li>比较难给类起一个合适的名字，很难用一个业务名称概况，或者只能用一些笼统的Manager、Context之类的词语来命名，这就说明类的职责定义不够清晰</li>
+<li>类中大量的方法都是集中操作类的某几个属性，比如，在UserInfo例子中，如果一半的方法都是在操作address信息，那就可以考虑将这几个属性和对应的方法拆分出来。</li>
 </ul>
-</li>
-<li>开发细节
-<ul>
-<li>Enemies 敌人</li>
-</ul>
-</li>
-</ul>
-<h4 id="游戏引擎">游戏引擎</h4>
-<p>我们已经有一个基础的游戏引擎类 <code>GameEngine</code>，该类有如下方法</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150432521.png" alt="image.png"></p>
-<blockquote>
-<p><em>数学方法</em></p></blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150506105.png" alt="image.png"></p>
-<blockquote>
-<p><em>绘图方法</em></p></blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150618208.png" alt="image.png"></p>
-<blockquote>
-<p><em>资源加载</em></p></blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511112434697.png" alt="image.png"></p>
-<blockquote>
-<p><em>接口</em></p></blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510150738414.png" alt="image.png"></p>
-<blockquote>
-<p><em>监听</em></p></blockquote>
-<p>游戏引擎是一个接口/抽象类，作为最底层的游戏引擎，其封装了游戏绘制运行所需的所有方法。只需要实现游戏引擎的接口即可（需要绘制那些对象/如何绘制），</p>
-<ul>
-<li><code>paintCompoent()</code>方法可视为绘制那些对象</li>
-<li><code>update()</code> 可视为怎样绘制对象</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511112434697.png" alt="image.png"></p>
-<blockquote>
-<p><em>需要重写的接口</em></p></blockquote>
-<p>游戏引擎作为封装游戏加载方法的抽象类，需要实现类编写绘制逻辑。</p>
-<h4 id="游戏架构">游戏架构</h4>
-<p>敌人，玩家，地图是该游戏最基础的组件并且特殊的实体需要继承相应接口，需要角色接口以及角色类包。
-职责如下</p>
-<ul>
-<li>移动算法</li>
-<li>动画逻辑/交互逻辑</li>
-<li>基础属性</li>
-</ul>
-<p>其中地图较为特殊，地图类负责创建和销毁实体。 <code>GameMap</code></p>
-<ul>
-<li>销毁/创建实体</li>
-<li>地图布局</li>
-</ul>
-<p>上述实体分别抽象为接口，放在 <code>role</code> 和 <code>entity</code> 下
-<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511121548345.png" alt="image.png"></p>
-<blockquote>
-<p><em>实体结构</em></p></blockquote>
-<p>游戏控制器作为引擎实现类来实际绘制所有游戏的对象 <code>GameController</code>
-职责如下</p>
-<ul>
-<li>对象更新</li>
-<li>资源加载</li>
-</ul>
-<p>节拍器 <code>Conductor</code> 负责节奏控制，是所有对象的更新信号并且全局唯一</p>
-<p>因为动画较多，创建 <code>Animation</code> 类统一管理</p>
-<p>以及其他全局枚举，不在此展开</p>
-<p>包括游戏引擎，上述是游戏核心类，放在 <code>core</code> 核心类库中</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511121727652.png" alt="image.png"></p>
-<blockquote>
-<p><em>核心类库</em></p></blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511122131090.png" alt="image.png"></p>
-<blockquote>
-<p><em>架构鸟瞰</em></p></blockquote>
-<h4 id="开发细节">开发细节</h4>
-<p>绘制时所有实体同时绘制，所以抽象敌人和英雄为角色类</p>
-<h4 id="角色类">角色类</h4>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511183140792.png" alt="image.png"></p>
-<blockquote>
-<p><em>角色类图</em></p></blockquote>
-<p>角色类含有所有实体的基础属性</p>
-<ul>
-<li>血量</li>
-<li>坐标</li>
-<li>状态</li>
-<li>攻击力</li>
-<li>动画资源</li>
-<li>声音资源</li>
-<li>全局节拍器</li>
-</ul>
-<h4 id="动画类">动画类</h4>
-<h5 id="敌人类">敌人类</h5>
-<p>敌人在游戏中的作用是，随节拍移动并接近玩家，攻击玩家。目标是杀死玩家。
-敌人类继承角色类的属性并要求实现移动算法</p>
-<ul>
-<li>
-<p>移动算法</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511183403889.png" alt="image.png"></p>
-</li>
-</ul>
-<p>创建一只史莱姆 <code>Slime</code> 继承自 <code>Enemy</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250511184648329.png" alt="image.png"></p>
-<p>史莱姆类的动画资源应该由控制器加载并作为参数传入</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510202332606.png" alt="image.png"></p>
-<p>写了史莱姆的攻击动画
-问题：Enemy（敌人）类的代码冗余，史莱姆或者其他实体继承敌人类后应该只重写攻击方式和动画，其他直接复用敌人类代码。需要修改敌人类和史莱姆的攻击方法
-目前的敌人类逻辑是：
-敌人类初始化：
-敌人状态：
-<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510144204314.png" alt="image.png"></p>
-<p>敌人实体在与玩家交互时会在上述6种状态间切换。所有敌人实体目前均只有这6种状态。</p>
-<p>敌人状态会与敌人动画绑定，根据不同的状态来调用不同的sprite，使用哈希表来做状态绑定。所有敌人实体都需要这个属性，写到父类里面做多态</p>
-<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250510145208594.png" alt="image.png"></p>
-<p>我们不希望所有子类共享一个哈希表，所以在子类重写一个哈希表覆盖</p>
+<h4 id="设计模式---策略模式">设计模式 - 策略模式</h4>
+<p>背景，一款App需要实现支付功能</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172112955.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172124545.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172147703.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172207073.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172223095.png" alt="image.png"></p>
+<p>多种模式下必须使用if-else</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172236297.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172302010.png" alt="image.png"></p>
+<p>直接修改源码的代码块叫做 反开闭代码块</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172343358.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172413406.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172432734.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515172443925.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173248867.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173258893.png" alt="image.png"></p>
+<p>引入策略模式
+在策略模式（Strategy Pattern）中一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173317841.png" alt="image.png"></p>
+<p>拆分类</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173338724.png" alt="image.png"></p>
+<p>抽象</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173405965.png" alt="image.png"></p>
+<p>之后作为流程的一部分，隐藏背后细节</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173514802.png" alt="image.png"></p>
+<p>用户在使用时只需传入相关参数即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173820291.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173925158.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515174429788.png" alt="image.png"></p>
+<p>其中Context是上下文，负责维护策略类</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173945739.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515173950880.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515174143860.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515174201635.png" alt="image.png"></p>
+<p>伪代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 策略接口声明了某个算法各个不同版本间所共有的操作。上下文会使用该接口来</span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">// 调用有具体策略定义的算法。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">interface</span> <span style="color:#fec418">Strategy</span> is
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">execute</span>(a, b)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 具体策略会在遵循策略基础接口的情况下实现算法。该接口实现了它们在上下文</span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">// 中的互换性。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">ConcreteStrategyAdd</span> <span style="color:#815ba4">implements</span> Strategy is
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">execute</span>(a, b) is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> a <span style="color:#5bc4bf">+</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">ConcreteStrategySubtract</span> <span style="color:#815ba4">implements</span> Strategy is
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">execute</span>(a, b) is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> a <span style="color:#5bc4bf">-</span> b
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">ConcreteStrategyMultiply</span> <span style="color:#815ba4">implements</span> Strategy is
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">execute</span>(a, b) is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> a <span style="color:#5bc4bf">*</span> b
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 上下文定义了客户端关注的接口。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">Context</span> is
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 上下文会维护指向某个策略对象的引用。上下文不知晓策略的具体类。上下</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 文必须通过策略接口来与所有策略进行交互。</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">private</span> strategy: Strategy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 上下文通常会通过构造函数来接收策略对象，同时还提供设置器以便在运行</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 时切换策略。</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">setStrategy</span>(Strategy strategy) is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">strategy</span> <span style="color:#5bc4bf">=</span> strategy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 上下文会将一些工作委派给策略对象，而不是自行实现不同版本的算法。</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">executeStrategy</span>(<span style="color:#fec418">int</span> a, <span style="color:#fec418">int</span> b) is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">return</span> strategy.<span style="color:#06b6ef">execute</span>(a, b)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 客户端代码会选择具体策略并将其传递给上下文。客户端必须知晓策略之间的差</span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">// 异，才能做出正确的选择。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">ExampleApplication</span> is
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">main</span>() is
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        创建上下文对象<span style="color:#ef6155">。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        读取第一个数<span style="color:#ef6155">。</span>
+</span></span><span style="display:flex;"><span>        读取最后一个数<span style="color:#ef6155">。</span>
+</span></span><span style="display:flex;"><span>        从用户输入中读取期望进行的行为<span style="color:#ef6155">。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> (action <span style="color:#5bc4bf">==</span> addition) then
+</span></span><span style="display:flex;"><span>            context.<span style="color:#06b6ef">setStrategy</span>(<span style="color:#815ba4">new</span> ConcreteStrategyAdd())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> (action <span style="color:#5bc4bf">==</span> subtraction) then
+</span></span><span style="display:flex;"><span>            context.<span style="color:#06b6ef">setStrategy</span>(<span style="color:#815ba4">new</span> ConcreteStrategySubtract())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">if</span> (action <span style="color:#5bc4bf">==</span> multiplication) then
+</span></span><span style="display:flex;"><span>            context.<span style="color:#06b6ef">setStrategy</span>(<span style="color:#815ba4">new</span> ConcreteStrategyMultiply())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        result <span style="color:#5bc4bf">=</span> context.<span style="color:#06b6ef">executeStrategy</span>(First number, Second number)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        打印结果<span style="color:#ef6155">。</span>
+</span></span></code></pre></div><h4 id="有限状态机">有限状态机</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182923857.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515180928186.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515180928187.png" alt="image.png"></p>
+<p>程序在任意时刻仅可处于几种有限的状态中。 在任何一个特定状态中， 程序的行为都不相同， 且可瞬间从一个状态切换到另一个状态。 不过， 根据当前状态， 程序可能会切换到另外一种状态， 也可能会保持当前状态不变。 这些数量有限且预先定义的状态切换规则被称为 <em><strong>转移</strong></em>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515181251580.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515181251581.png" alt="image.png"></p>
+<p>基于条件语句的状态机就会暴露其最大的弱点。 为了能根据当前状态选择完成相应行为的方法， 绝大部分方法中会包含复杂的条件语句。 修改其转换逻辑可能会涉及到修改所有方法中的状态条件语句， 导致代码的维护工作非常艰难。</p>
+<h4 id="设计模式---状态模式">设计模式 - 状态模式</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515180803223.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515180810016.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515181313032.png" alt="image.png"></p>
+<p>状态模式建议为对象的所有可能状态新建一个类， 然后将所有状态的对应行为抽取到这些类中。</p>
+<p>原始对象被称为 上下文 <strong>context</strong>， 它并不会自行实现所有行为， 而是会保存一个指向表示当前状态的状态对象的引用， 且将所有与状态相关的工作委派给该对象。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515183419882.png" alt="image.png"></p>
+<p>将上下文转换为另外一种状态， 则需将当前活动的状态对象替换为另外一个代表新状态的对象。 采用这种方式是有前提的： 所有状态类都必须遵循同样的接口， 而且上下文必须仅通过接口与这些对象进行交互。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515183437284.png" alt="image.png"></p>
+<p>上下文
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515181328488.png" alt="image.png"></p>
+<p>手机类容纳所有状态</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515181657484.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182128703.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182140557.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182154212.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182210717.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182224756.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182238642.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182302106.png" alt="image.png"></p>
+<p>java</p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182329325.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182414352.png" alt="image.png"></p>
+<h5 id="伪代码">伪代码</h5>
+<div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 音频播放器（Audio­Player）类即为上下文。它还会维护指向状态类实例的引用，</span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">// 该状态类则用于表示音频播放器当前的状态。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">AudioPlayer</span> is
+</span></span><span style="display:flex;"><span>    field state: State
+</span></span><span style="display:flex;"><span>    field UI, volume, playlist, currentSong
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    constructor <span style="color:#06b6ef">AudioPlayer</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">state</span> <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> ReadyState(<span style="color:#815ba4">this</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// 上下文会将处理用户输入的工作委派给状态对象。由于每个状态都以不</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// 同的方式处理输入，其结果自然将依赖于当前所处的状态。</span>
+</span></span><span style="display:flex;"><span>        UI <span style="color:#5bc4bf">=</span> <span style="color:#815ba4">new</span> UserInterface()
+</span></span><span style="display:flex;"><span>        UI.<span style="color:#06b6ef">lockButton</span>.<span style="color:#06b6ef">onClick</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">clickLock</span>)
+</span></span><span style="display:flex;"><span>        UI.<span style="color:#06b6ef">playButton</span>.<span style="color:#06b6ef">onClick</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">clickPlay</span>)
+</span></span><span style="display:flex;"><span>        UI.<span style="color:#06b6ef">nextButton</span>.<span style="color:#06b6ef">onClick</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">clickNext</span>)
+</span></span><span style="display:flex;"><span>        UI.<span style="color:#06b6ef">prevButton</span>.<span style="color:#06b6ef">onClick</span>(<span style="color:#815ba4">this</span>.<span style="color:#06b6ef">clickPrevious</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 其他对象必须能切换音频播放器当前所处的状态。</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">changeState</span>(state: State) is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">state</span> <span style="color:#5bc4bf">=</span> state
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>	<span style="color:#8d8687">// UI 方法会将执行工作委派给当前状态。</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickLock</span>() is
+</span></span><span style="display:flex;"><span>        state.<span style="color:#06b6ef">clickLock</span>()
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPlay</span>() is
+</span></span><span style="display:flex;"><span>        state.<span style="color:#06b6ef">clickPlay</span>()
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickNext</span>() is
+</span></span><span style="display:flex;"><span>        state.<span style="color:#06b6ef">clickNext</span>()
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPrevious</span>() is
+</span></span><span style="display:flex;"><span>        state.<span style="color:#06b6ef">clickPrevious</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 状态可调用上下文的一些服务方法。</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">startPlayback</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// ……</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">stopPlayback</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// ……</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">nextSong</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// ……</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">previousSong</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// ……</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">fastForward</span>(time) is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// ……</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">rewind</span>(time) is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// ……</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 所有具体状态类都必须实现状态基类声明的方法，并提供反向引用指向与状态相</span>
+</span></span><span style="display:flex;"><span><span style="color:#8d8687">// 关的上下文对象。状态可使用反向引用将上下文转换为另一个状态。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">abstract</span> <span style="color:#815ba4">class</span> <span style="color:#fec418">State</span> is
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">protected</span> field player: AudioPlayer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 上下文将自身传递给状态构造函数。这可帮助状态在需要时获取一些有用的</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 上下文数据。</span>
+</span></span><span style="display:flex;"><span>    constructor <span style="color:#06b6ef">State</span>(player) is
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">this</span>.<span style="color:#06b6ef">player</span> <span style="color:#5bc4bf">=</span> player
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">abstract</span> method <span style="color:#06b6ef">clickLock</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">abstract</span> method <span style="color:#06b6ef">clickPlay</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">abstract</span> method <span style="color:#06b6ef">clickNext</span>()
+</span></span><span style="display:flex;"><span>    <span style="color:#815ba4">abstract</span> method <span style="color:#06b6ef">clickPrevious</span>()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 具体状态会实现与上下文状态相关的多种行为。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">LockedState</span> <span style="color:#815ba4">extends</span> State is
+</span></span><span style="display:flex;"><span>    <span style="color:#8d8687">// 当你解锁一个锁定的播放器时，它可能处于两种状态之一。</span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickLock</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#06b6ef">if</span> (player.<span style="color:#06b6ef">playing</span>)
+</span></span><span style="display:flex;"><span>            player.<span style="color:#06b6ef">changeState</span>(<span style="color:#815ba4">new</span> PlayingState(player))
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">else</span>
+</span></span><span style="display:flex;"><span>            player.<span style="color:#06b6ef">changeState</span>(<span style="color:#815ba4">new</span> ReadyState(player))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPlay</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// 已锁定，什么也不做。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickNext</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// 已锁定，什么也不做。</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPrevious</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#8d8687">// 已锁定，什么也不做。</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8d8687">// 它们还可在上下文中触发状态转换。</span>
+</span></span><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">ReadyState</span> <span style="color:#815ba4">extends</span> State is
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickLock</span>() is
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">changeState</span>(<span style="color:#815ba4">new</span> LockedState(player))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPlay</span>() is
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">startPlayback</span>()
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">changeState</span>(<span style="color:#815ba4">new</span> PlayingState(player))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickNext</span>() is
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">nextSong</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPrevious</span>() is
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">previousSong</span>()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#815ba4">class</span> <span style="color:#fec418">PlayingState</span> <span style="color:#815ba4">extends</span> State is
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickLock</span>() is
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">changeState</span>(<span style="color:#815ba4">new</span> LockedState(player))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPlay</span>() is
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">stopPlayback</span>()
+</span></span><span style="display:flex;"><span>        player.<span style="color:#06b6ef">changeState</span>(<span style="color:#815ba4">new</span> ReadyState(player))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickNext</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#06b6ef">if</span> (event.<span style="color:#06b6ef">doubleclick</span>)
+</span></span><span style="display:flex;"><span>            player.<span style="color:#06b6ef">nextSong</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">else</span>
+</span></span><span style="display:flex;"><span>            player.<span style="color:#06b6ef">fastForward</span>(5)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    method <span style="color:#06b6ef">clickPrevious</span>() is
+</span></span><span style="display:flex;"><span>        <span style="color:#06b6ef">if</span> (event.<span style="color:#06b6ef">doubleclick</span>)
+</span></span><span style="display:flex;"><span>            player.<span style="color:#06b6ef">previous</span>()
+</span></span><span style="display:flex;"><span>        <span style="color:#815ba4">else</span>
+</span></span><span style="display:flex;"><span>            player.<span style="color:#06b6ef">rewind</span>(5)
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182714337.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182720401.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182730988.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250515182742614.png" alt="image.png"></p>
+<h4 id="设计策略---观察者模式">设计策略 - 观察者模式</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516190725620.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516190745027.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516190758962.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516190803333.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516190840790.png" alt="image.png">
+<img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516190854301.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516191025256.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516190938406.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516191102465.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/hamhuo-hub/HamPic@img/img/20250516191228302.png" alt="image.png"></p>
 
 	<div class="td-page-meta__lastmod">
-  Last modified May 14, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/57357c5619486a1c844d4bdba13783e5ff6b4626">5/13 (57357c5)</a>
+  Last modified May 16, 2025: <a data-proofer-ignore href="https://github.com/google/docsy-example/commit/4568a766527e31efe771f78932aa49d077d350e2">5/16 (4568a76)</a>
 </div>
 
 </div>
