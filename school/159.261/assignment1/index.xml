@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>日志 on Hamhuo</title>
+    <link>https://example.docsy.dev/school/159.261/assignment1/</link>
+    <description>Recent content in 日志 on Hamhuo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://example.docsy.dev/school/159.261/assignment1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assignment1</title>
+      <link>https://example.docsy.dev/school/159.261/assignment1/assignment1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/school/159.261/assignment1/assignment1/</guid>
+      <description>&lt;h1 id=&#34;snake-game--assignment-1&#34;&gt;Snake Game — Assignment 1&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;by Hamhuo&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;-introduction&#34;&gt;🕹 Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This project is a classic Snake game implemented using Java AWT and a custom GameEngine. &lt;br&gt;&#xA;The player controls a snake moving on a 25×25 grid, growing longer by eating apples. &lt;br&gt;&#xA;The game ends if the snake hits the wall or collides with itself.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-highlights&#34;&gt;✨ Highlights&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-efficient-direction-control&#34;&gt;1. Efficient Direction Control&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The snake&amp;rsquo;s movement direction is managed using &lt;strong&gt;numeric encoding combined with XOR operations&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Direct reversal (e.g., moving from LEFT to RIGHT immediately) is prevented with a simple and efficient one-line check:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#2f1e2e;background-color:#e7e9db;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#815ba4&#34;&gt;if&lt;/span&gt; ((direction.&lt;span style=&#34;color:#06b6ef&#34;&gt;getValue&lt;/span&gt;() &lt;span style=&#34;color:#5bc4bf&#34;&gt;^&lt;/span&gt; d.&lt;span style=&#34;color:#06b6ef&#34;&gt;getValue&lt;/span&gt;()) &lt;span style=&#34;color:#5bc4bf&#34;&gt;!=&lt;/span&gt; 2) {  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#815ba4&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#06b6ef&#34;&gt;direction&lt;/span&gt; &lt;span style=&#34;color:#5bc4bf&#34;&gt;=&lt;/span&gt; d;  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;This approach is cleaner and more efficient than traditional if-else chains.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-flexible-speed-and-length-configuration&#34;&gt;2. Flexible Speed and Length Configuration&lt;/h3&gt;&#xA;&lt;p&gt;Before starting the game, a settings dialog allows players to customize:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

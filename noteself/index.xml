@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>个人笔记 on Hamhuo</title>
+    <title>Noteselves on Hamhuo</title>
     <link>https://example.docsy.dev/noteself/</link>
-    <description>Recent content in 个人笔记 on Hamhuo</description>
+    <description>Recent content in Noteselves on Hamhuo</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="https://example.docsy.dev/noteself/index.xml" rel="self" type="application/rss+xml" />
@@ -104,6 +104,34 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.docsy.dev/noteself/dairy/nextstep/</guid>
       <description>&lt;p&gt;26/3/2024-13/4/2025&#xA;日记结束，完成Java整体学习初步窥探了java奥秘&#xA;春招结束，国内的学习也告一段落。我将离开中国，前往世界至南-新西兰&#xA;我对自己很满意，喜欢软件因此尝试自学java。收获了坚定的意志与更好的自己。结识了许多朋友。&lt;/p&gt;&#xA;&lt;p&gt;接下来，这个博客将成为我的日记本，记录我在未来的成长。&lt;/p&gt;&#xA;&lt;p&gt;14/4/2025&lt;/p&gt;&#xA;&lt;p&gt;@Hamhuo 于北京&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy2/5.27/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy2/5.27/</guid>
+      <description>&lt;h4 id=&#34;考研准备阶段&#34;&gt;考研准备阶段&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;学长的经验分享会，整理笔记&#xA;下一步&lt;/li&gt;&#xA;&lt;li&gt;确定备考教材，试卷&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;游戏编程&#34;&gt;游戏编程&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;整理情况/没有办法使用AI&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;下一步&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;现有系统建模&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;习思想复习&#34;&gt;习思想复习&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;整理目前所有资料，建立文件夹&#xA;下一步&lt;/li&gt;&#xA;&lt;li&gt;确定复习计划表&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy2/5.28/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy2/5.28/</guid>
+      <description>&lt;h4 id=&#34;考研准备阶段&#34;&gt;考研准备阶段&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;确定备考教材/课程/资料&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;王道 408/ 竞成&lt;/li&gt;&#xA;&lt;li&gt;数学下载中&lt;/li&gt;&#xA;&lt;li&gt;英语词汇&lt;/li&gt;&#xA;&lt;li&gt;政治8再开始&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;确定作息时间&#xA;卡在晚饭后的半个小时看下心情&#xA;下一步&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;过渡测试/确定时间表规划是否合适&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;确定课程/老师&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;游戏编程&#34;&gt;游戏编程&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;归档&#xA;下一步&lt;/li&gt;&#xA;&lt;li&gt;等待高级游戏编程，使用Unity重构&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;习思想复习&#34;&gt;习思想复习&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;整理目前所有资料，建立文件夹&lt;/li&gt;&#xA;&lt;li&gt;一天4小时，注意总结就行&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy2/5.29/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy2/5.29/</guid>
+      <description>&lt;p&gt;时间表中存在一些问题&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;带新思想课本&lt;/li&gt;&#xA;&lt;li&gt;课程选择仍需时间。明天整理所有科目考纲&lt;/li&gt;&#xA;&lt;li&gt;晚上一定要以7:00为界，否则会挤占晚上的时间&lt;/li&gt;&#xA;&lt;li&gt;中午可以早一点开始&lt;/li&gt;&#xA;&lt;li&gt;晚上早点睡调整时差,上午开始时间调整为7:30开始&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;今天探索了408结构和考纲设置，尝试整理了计组考纲&#xA;调整计划，按照整理出的考纲设置学习计划。&lt;/p&gt;&#xA;&lt;p&gt;目前数学课程完整，英语已经开始，408正在处理&#xA;政治课程尚不明，政治具有即时性B站应有最新的课程&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.docsy.dev/noteself/dairy2/5.30/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.docsy.dev/noteself/dairy2/5.30/</guid>
+      <description>&lt;p&gt;数一高数基础阶段 张宇基础30讲&#xA;时间安排确定 96学时 共 29-5天&lt;/p&gt;&#xA;&lt;p&gt;408 计组+操作系统基础阶段 王道领学班&#xA;时间安排确定 40天 计组+操作系统+c 同时开始对照着学&lt;/p&gt;&#xA;&lt;p&gt;书籍&#xA;如果pdf不方便就买书&lt;/p&gt;&#xA;&lt;p&gt;准备政治安排&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
